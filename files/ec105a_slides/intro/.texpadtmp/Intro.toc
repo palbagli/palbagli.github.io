@@ -1,0 +1,9 @@
+\select@language {greek}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Conceptos}{2}{0}{1}
+\select@language {greek}
+\select@language {spanish}
+\select@language {greek}
+\select@language {spanish}
+\beamer@sectionintoc {2}{Aplicaci\'on}{22}{0}{2}
+\beamer@sectionintoc {3}{M\'as conceptos}{57}{0}{3}

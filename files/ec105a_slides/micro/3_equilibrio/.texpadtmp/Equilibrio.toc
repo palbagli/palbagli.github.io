@@ -1,0 +1,4 @@
+\select@language {spanish}
+\beamer@sectionintoc {1}{Equilibrio de Mercado}{2}{0}{1}
+\beamer@sectionintoc {2}{An\'alisis de Bienestar}{52}{0}{2}
+\beamer@sectionintoc {3}{Pol\IeC {\'\i }tica Econ\'omica}{66}{0}{3}

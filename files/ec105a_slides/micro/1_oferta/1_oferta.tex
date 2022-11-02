@@ -1,0 +1,1601 @@
+
+\documentclass[dvipsnames,table]{beamer}
+%\documentclass{beamer}
+%\usepackage{beamerthemesplit} 
+%\usetheme{Berkeley}
+%\usecolortheme{dolphin}
+\usetheme{Szeged}
+
+\usepackage{amsfonts}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\setbeamertemplate{navigation symbols}{}
+%\usepackage[utf8]{inputenc}
+%\usepackage[dvips]{graphicx}
+\usepackage{cancel}
+%\usepackage{bm}
+\usepackage{ae,aecompl,amsmath,amsbsy}
+
+\beamertemplateballitem
+
+\usepackage{tikz}
+\usepackage{pbox}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+
+\newtheorem{mydef}{Definición}
+\newcommand{\peq}[1]{{\scriptscriptstyle{#1}}} 
+\newcommand{\rp}[1]{\left(#1\right)}
+
+\usetikzlibrary{babel,decorations.pathreplacing,decorations.markings}
+
+\title{EAE105A \\ Introducción a la Economía}
+\subtitle{II. Microeconomía: Teoría de la Oferta} 
+\author{Pinjas Albagli}
+\institute{Instituto de Economía \\ Pontificia Universidad Católica de Chile}
+\date{Primer Semestre de 2018}
+
+\begin{document}
+
+	\maketitle 
+	
+	\section{Introducción}
+
+		\begin{frame}
+			\frametitle{La Curva de Oferta}
+			\begin{mydef}
+				\textbf{Cantidad ofrecida ($\mathbf{q^\peq{s}}$):} Cantidad de un bien que los vendedores quieren y pueden vender.
+			\end{mydef}
+			\begin{mydef}
+				\textbf{Función de oferta:} Función que relaciona la cantidad ofrecida de un bien con su precio, manteniendo constantes la tecnología de producción y los precios de los insumos. $$q^\peq{s}=f\left(p,\overline{w},\overline{r},\overline{\text{tecnología}},\overline{\text{otros factores...}}\right)$$
+			\end{mydef}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{La Curva de Oferta}
+			\begin{mydef}
+				\textbf{Ley de la oferta:} Con todo lo demás constante, la cantidad ofrecida de un bien ($q^\peq{s}$) aumenta cuando su precio ($p$) aumenta.
+			\end{mydef}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{La Curva de Oferta}
+			Tradicionalmente la graficamos al revés: $$p^\peq{s}=f^\peq{-1}\left(q,\overline{w},\overline{r},\overline{\text{tecnología}},\overline{\text{otros factores...}}\right)$$
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=1]
+					\draw[<->, thick] (0,4) -- (0,0) -- (4,0);
+					\draw plot [domain=0:ln(20)](\x,{exp(\x)/5});
+					\node [right] at (3,4) {$S$};
+					\node [below] at (4,0) {$q$};
+					\node [left] at (0,4) {$p$};
+				\end{tikzpicture}
+				%\caption{Curva de Oferta}
+			\end{figure}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{La Curva de Oferta}
+			De esta manera, la curva de oferta refleja el mínimo precio que un productor estaría dispuesto a aceptar a cambio de vender una unidad adicional. Es decir, el \textbf{costo marginal de producción}. $$\text{Ley de la oferta}\implies\text{la curva de oferta tiene pendiente positiva}$$
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{La Curva de Oferta}
+			Es \textbf{muy} importante distinguir entre:
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Cambio en la cantidad ofrecida:} Cuando cambia $p$ y se mantienen constantes otros determinantes de la oferta, se produce un movimiento en/sobre/através de la curva de oferta.
+					\item \textbf{Cambio en la oferta:} Cuando cambia alguno de los determinantes de la oferta que no están representados en los ejes del gráfico (es decir, cualquiera distinto de $p$), cambia la cantidad ofrecida a cada precio, por lo que se desplaza la curva de oferta.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}
+		
+		
+	\section{Fundamento Teórico}
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Estudiaremos la decisión de producción de una firma tomadora de precios (tanto en el mercado de su producto como en los mercados de insumos).
+			
+			Modelaremos a la empresa como una organización que contrata factores productivos ($L$ y $K$, a los que paga $w$ y $r$ respectivamente) que usa como insumos en la producción de un bien y cuyo objetivo es maximizar sus ganancias ($\pi$).
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Definamos algunos conceptos:
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Ingreso total ($\mathbf{IT}$):} Cantidad que la firma recibe por la venta de $q$ unidades a precio $p$. $$IT\left(q\right)=p\cdot q$$
+					\item \textbf{Costo total ($\mathbf{CT}$):} Valor de mercado de los insumos que la empresa utiliza en la producción de $q$ unidades. Incluye costos explícitos y costos implícitos.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+				\begin{itemize}
+					\item \textbf{Costos explícitos:} Costos de los insumos que requieren que la empresa desembolse dinero.
+					\item \textbf{Costos implícitos:} Costos de los insumos que \textbf{no} requieren que la empresa desembolse dinero.
+					\item \textbf{Utilidad contable:} Ingreso total menos costos explícitos.
+					\item \textbf{Utilidad económica:} Ingreso total menos costo total $$\pi\left(q\right)=IT\left(q\right)-CT\left(q\right)$$
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+				\begin{itemize}
+					\item \textbf{Función de producción:} Relación entre la cantidad de insumos utilizados y la cantidad producida (PT, producto total) del bien. $$q=F\left(K,L\right)$$
+					\item \textbf{Producto medio ($\mathbf{PMe}$):} Cantidad producida por unidad del factor en promedio. $$PMe Z=\frac{q}{Z}$$
+					\item \textbf{Producto marginal ($\mathbf{PMg}$):} Cambio en la producción que se obtiene al usar una unidad adicional del insumo.$$PMg Z=\frac{\Delta q}{\Delta Z}=\frac{F\left(Y,Z+1\right)-F\left(Y,Z\right)}{\left(Z+1\right)-Z}$$			
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+				Suponemos que PT es creciente en el uso de factores, pero a tasa decreciente. Es decir,
+				\begin{itemize}
+					\item $F\left(K,L\right)$ es creciente en sus argumentos
+					\item $PMg Z$ es decreciente en $Z$
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Ejemplo:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{5cm}{!}{
+					\begin{tabular}{|l|c|c|c|}\hline
+						$L$&$q=F\rp{K_\peq{0},L}$&$\frac{q}{L}$&$\frac{\Delta q}{\Delta L}$ \\ [1ex] \hline
+						0	 &	0  								 &	   --    	 &														\\
+							 &										 &						 &		100											\\ \hline
+						1	 &	100								 &		100		 	 &														\\
+							 &										 &						 &		 80											\\ \hline
+						2	 &	180								 &		 90			 &														\\
+							 &										 &						 &		 60											\\ \hline
+						3	 &	240								 &		 80			 &														\\
+							 &										 &						 &		 40											\\ \hline
+						4	 &	280								 &		 70			 &														\\
+							 &										 &						 &		 20											\\ \hline
+						5	 &	300								 &		 60			 &														\\
+							 &										 &						 &		  -- 										\\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=.017]
+					\draw [<->,thick] (0,350) -- (0,0) -- (550,0);
+					\draw [dashed,help lines] (100,0) -- (100,100) -- (0,100);
+					\draw [dashed,help lines] (200,0) -- (200,180) -- (0,180);
+					\draw [dashed,help lines] (300,0) -- (300,240) -- (0,240);
+					\draw [dashed,help lines] (400,0) -- (400,280) -- (0,280);
+					\draw [dashed,help lines] (500,0) -- (500,300) -- (0,300);
+					\draw [dashed,help lines] (200,90) -- (0,90);
+					\draw [dashed,help lines] (300,80) -- (0,80);
+					\draw [dashed,help lines] (400,70) -- (0,70);
+					\draw [dashed,help lines] (500,60) -- (0,60);
+					\draw [dashed,help lines] (200,80) -- (0,80);
+					\draw [dashed,help lines] (300,60) -- (0,60);
+					\draw [dashed,help lines] (400,40) -- (0,40);
+					\draw [dashed,help lines] (500,20) -- (0,20);
+					\draw [blue] (0,0) -- (100,100) -- (200,180) -- (300,240) -- (400,280) -- (500,300);
+					\draw [fill,blue] (0,0) circle [radius=5];
+					\draw [fill,blue] (100,100) circle [radius=8];
+					\draw [fill,blue] (200,180) circle [radius=5];
+					\draw [fill,blue] (300,240) circle [radius=5];
+					\draw [fill,blue] (400,280) circle [radius=5];
+					\draw [fill,blue] (500,300) circle [radius=5];
+					\draw [teal] (100,100) -- (200,90) -- (300,80) -- (400,70) -- (500,60);
+					\draw [fill,teal] (100,100) circle [radius=6];
+					\draw [fill,teal] (200,90) circle [radius=5];
+					\draw [fill,teal] (300,80) circle [radius=5];
+					\draw [fill,teal] (400,70) circle [radius=5];
+					\draw [fill,teal] (500,60) circle [radius=5];
+					\draw [red] (100,100) -- (200,80) -- (300,60) -- (400,40) -- (500,20);
+					\draw [fill,red] (100,100) circle [radius=4];
+					\draw [fill,red] (200,80) circle [radius=5];
+					\draw [fill,red] (300,60) circle [radius=5];
+					\draw [fill,red] (400,40) circle [radius=5];
+					\draw [fill,red] (500,20) circle [radius=5];
+					\node [right,blue] at (500,300) {$PT$};
+					\node [right,teal] at (500,60) {$PMeL$};
+					\node [right,red] at (500,20) {$PMgL$};
+					\node [below] at (550,0) {$L$};
+					\node [below] at (0,0) {\tiny 0};
+					\node [below] at (100,0) {\tiny 1};
+					\node [below] at (200,0) {\tiny 2};
+					\node [below] at (300,0) {\tiny 3};
+					\node [below] at (400,0) {\tiny 4};
+					\node [below] at (500,0) {\tiny 5};
+					\node [left] at (0,300) {\tiny 300};
+					\node [left] at (0,280) {\tiny 280};
+					\node [left] at (0,240) {\tiny 240};
+					\node [left] at (0,180) {\tiny 180};
+					\node [left] at (0,100) {\tiny 100};
+					\node [left] at (0,90) {\tiny 90};
+					\node [left] at (0,80) {\tiny 80};
+					\node [left] at (0,70) {\tiny 70};
+					\node [left] at (0,60) {\tiny 60};
+					\node [left] at (0,40) {\tiny 40};
+					\node [left] at (0,20) {\tiny 20};
+				\end{tikzpicture}
+			\end{figure}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Notar que:
+			\begin{itemize}
+				\item Cuando $PMgL>0$, $PT$ crece con $L$
+				\item La tasa de crecimiento de $PT$ está dada por $PMgL$
+				\item $PMgL$ decreciente $\implies$ $PT$ crece a tasa decreciente
+				\item Cuando $PMgL>PMeL$, $PMeL$ crece. Cuando $PMgL<PMeL$, $PMeL$ cae y cuando $PMgL=PMeL$, $PMeL$ no cambia.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			¿Qué pasa con el costo total a medida que aumenta la producción?
+			\begin{itemize}
+				\item $F\rp{K,L} \text{ creciente }\implies$ si aumenta $q$ es porque se está usando más $K$, más $L$, o más de ambos.
+				\item La empresa es tomadora de precios en mercados de factores $\implies w \text{ y } r$ están fijos.
+				\item Luego, $\Delta^\peq{+}q\implies\Delta^\peq{+}CT\rp{q}$.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Todavía podemos decir algo más:
+			\begin{itemize}
+				\item Rendimiento decreciente en los factores ($PMg$ decreciente) $\implies$ la cantidad adicional de insumo necesaria para producir una unidad adicional es cada vez mayor.
+				\item En otras palabras, la unidad adicional es cada vez más cara.
+				\item Luego, $CT\rp{q}$ crece a tasa creciente a medida que aumenta la producción.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Volviendo al ejemplo anterior...
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{7cm}{!}{
+					\begin{tabular}{|l|c|c|c|c|}\hline
+						$L$&$q$&Costo de $K_\peq{0}$ &	Costo de $L$&Costo total  \\ [1ex] \hline
+						0	 & 0 &	\$30  						 &	  \$0    	 	&		\$30			\\ \hline
+						1	 &100&	\$30  						 &	  \$20    	&		\$50			\\ \hline
+						2	 &180&	\$30  						 &	  \$40    	&		\$70			\\ \hline
+						3	 &240&	\$30  						 &	  \$60    	&		\$90			\\ \hline
+						4	 &280&	\$30  						 &	  \$80    	&		\$110			\\ \hline
+						5	 &300&	\$30  						 &	  \$100   	&		\$130			\\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=.04]
+					\draw [<->,thick] (0,140) -- (0,0) -- (155,0);
+					\draw [dashed,help lines] (50,0) -- (50,50) -- (0,50);
+					\draw [dashed,help lines] (90,0) -- (90,70) -- (0,70);
+					\draw [dashed,help lines] (120,0) -- (120,90) -- (0,90);
+					\draw [dashed,help lines] (140,0) -- (140,110) -- (0,110);
+					\draw [dashed,help lines] (150,0) -- (150,130) -- (0,130);
+					\draw [teal] (0,30) -- (50,50) -- (90,70) -- (120,90) -- (140,110) -- (150,130);
+					\draw [fill,teal] (0,30) circle [radius=2];
+					\draw [fill,teal] (50,50) circle [radius=2];
+					\draw [fill,teal] (90,70) circle [radius=2];
+					\draw [fill,teal] (120,90) circle [radius=2];
+					\draw [fill,teal] (140,110) circle [radius=2];
+					\draw [fill,teal] (150,130) circle [radius=2];
+					\node [right,teal] at (150,130) {$CT\rp{q}$};
+					\node [below right] at (155,0) {$q$};
+					\node [left] at (0,140) {$CT$};
+					\node [below] at (0,0) {\tiny 0};
+					\node [below] at (50,0) {\tiny 100};
+					\node [below] at (90,0) {\tiny 180};
+					\node [below] at (120,0) {\tiny 240};
+					\node [below] at (140,0) {\tiny 280};
+					\node [below] at (150,0) {\tiny 300};
+					\node [left] at (0,30) {\tiny 30};
+					\node [left] at (0,50) {\tiny 50};
+					\node [left] at (0,70) {\tiny 70};
+					\node [left] at (0,90) {\tiny 90};
+					\node [left] at (0,110) {\tiny 110};
+					\node [left] at (0,130) {\tiny 130};
+				\end{tikzpicture}
+			\end{figure}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Podemos descomponer el costo total en:
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Costos fijos ($\mathbf{CF}$):} Costos que \textbf{no} varían con la cantidad producida.
+					\item \textbf{Costos variables ($\mathbf{CV}$):} Costos que varían con la cantidad producida.
+				\end{itemize}
+			\end{mydef}
+			$$CT=CF+CV$$
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=.04]
+					\draw [<->,thick] (0,140) -- (0,0) -- (155,0);
+					%\draw [dashed,help lines] (50,0) -- (50,50) -- (0,50);
+					%\draw [dashed,help lines] (90,0) -- (90,70) -- (0,70);
+					%\draw [dashed,help lines] (120,0) -- (120,90) -- (0,90);
+					%\draw [dashed,help lines] (140,0) -- (140,110) -- (0,110);
+					%\draw [dashed,help lines] (150,0) -- (150,130) -- (0,130);
+					\draw [teal] (0,30) -- (50,50) -- (90,70) -- (120,90) -- (140,110) -- (150,130);
+					\draw [brown] (0,30) -- (50,30) -- (90,30) -- (120,30) -- (140,30) -- (150,30);
+					\draw [blue] (0,0) -- (50,20) -- (90,40) -- (120,60) -- (140,80) -- (150,100);
+					\draw [fill,teal] (0,30) circle [radius=2];
+					\draw [fill,teal] (50,50) circle [radius=2];
+					\draw [fill,teal] (90,70) circle [radius=2];
+					\draw [fill,teal] (120,90) circle [radius=2];
+					\draw [fill,teal] (140,110) circle [radius=2];
+					\draw [fill,teal] (150,130) circle [radius=2];
+					\draw [fill,brown] (0,30) circle [radius=2];
+					\draw [fill,brown] (50,30) circle [radius=2];
+					\draw [fill,brown] (90,30) circle [radius=2];
+					\draw [fill,brown] (120,30) circle [radius=2];
+					\draw [fill,brown] (140,30) circle [radius=2];
+					\draw [fill,brown] (150,30) circle [radius=2];
+					\draw [fill,blue] (0,0) circle [radius=2];
+					\draw [fill,blue] (50,20) circle [radius=2];
+					\draw [fill,blue] (90,40) circle [radius=2];
+					\draw [fill,blue] (120,60) circle [radius=2];
+					\draw [fill,blue] (140,80) circle [radius=2];
+					\draw [fill,blue] (150,100) circle [radius=2];
+					\node [right,teal] at (150,130) {$CT\rp{q}$};
+					\node [right,brown] at (150,30) {$CF\rp{q}$};
+					\node [right,blue] at (150,100) {$CV\rp{q}$};
+					\node [left] at (0,140) {Costo};
+					%\node [below] at (0,0) {\tiny 0};
+					%\node [below] at (50,0) {\tiny 100};
+					%\node [below] at (90,0) {\tiny 180};
+					%\node [below] at (120,0) {\tiny 240};
+					%\node [below] at (140,0) {\tiny 280};
+					%\node [below] at (150,0) {\tiny 300};
+					%\node [left] at (0,30) {\tiny 30};
+					%\node [left] at (0,50) {\tiny 50};
+					%\node [left] at (0,70) {\tiny 70};
+					%\node [left] at (0,90) {\tiny 90};
+					%\node [left] at (0,110) {\tiny 110};
+					%\node [left] at (0,130) {\tiny 130};
+				\end{tikzpicture}
+			\end{figure}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Más conceptos importantes...
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Costo total medio ($\mathbf{CMeT}$):} $CMeT\rp{q}=\frac{CT\rp{q}}{q}$.
+					\item \textbf{Costo variable medio ($\mathbf{CMeV}$):} $CMeV\rp{q}=\frac{CV\rp{q}}{q}$.
+					\item \textbf{Costo fijo medio ($\mathbf{CMeF}$):} $CMeF\rp{q}=\frac{CF}{q}$.
+					\item \textbf{Costo marginal ($\mathbf{CMg}$):} $CMg\rp{q}=\frac{\Delta CT\rp{q}}{\Delta q}=\frac{CT\rp{q+1}-CT\rp{q}}{\rp{q+1}-q}$.
+				\end{itemize}
+			\end{mydef}
+			Desde luego, $$CMeT=CMeF+CMeV$$
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Suponemos que generalmente tienen el siguiente comportamiento
+			\begin{figure}[htbp!]
+				\centering
+					\begin{tikzpicture}[scale=0.015]
+						\draw [<->,thick] (40,300) -- (40,0) -- (450,0);
+						\draw [red] plot [domain=50:270] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [teal] plot [domain=50:400] (\x,{(.06*\x-10)^2+50}); %CMeV
+						\draw [blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [brown] plot [domain=50:450] (\x,{10000/\x}); %CMeF
+						\node [below] at (450,0) {$q$};
+						\node [left] at (40,300) {Costos};
+						\node [right,red] at (270,289.32) {$CMg$};
+						\node [right,teal] at (400,246) {$CMeV$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\node [above,brown] at (450,200/9) {$CMeF$};
+					\end{tikzpicture}
+			\end{figure}	
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			En el ejemplo anterior:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{10.5cm}{!}{
+					\begin{tabular}{|l|c|c|c|c|c|c|c|c|}\hline
+						$L$&$q$&$CF$&	$CV$&$CT$	& $CMeF$							&	$CMeV$							 &	$CMeT$	 					 &	$CMg$					 \\ [1ex] \hline 
+						0	 & 0 &\$30&\$0  &\$30	&		--								&		--								 &		--		 					 &	--									 \\ \hline
+						1	 &100&\$30&\$20 &\$50	&\$$0.3$/u						&	\$$0.2$/u						 &\$$0.5$/u						 &	\$$0.2$/u 					 \\ \hline
+						2	 &180&\$30&\$40 &\$70	&\$$0.1\overline{6}$/u&\$$0,\overline{2}$/u	 &\$$0.3\overline{8}$/u&	\$$0.25$/u 					 \\ \hline
+						3	 &240&\$30&\$60 &\$90	&\$$0.125$/u					&	\$$0.25$/u					 &\$$0.375$/u					 &	\$$0,\overline{3}$/u \\ \hline
+						4	 &280&\$30&\$80 &\$110&\$$0.107$/u					&	\$$0.29$/u					 &\$$0.393$/u					 &	\$$0.5$/u 					 \\ \hline
+						5	 &300&\$30&\$100&\$130&\$$0.1$/u	 					&	\$$0,\overline{3}$/u &\$$0.4\overline{3}$/u&	\$$1$/u 						 \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=.05]
+					\draw [<->,thick] (40,110) -- (40,0) -- (160,0);
+					%\draw [dashed,help lines] (50,0) -- (50,20) -- (40,20);
+					%\draw [dashed,help lines] (90,0) -- (90,200/9) -- (40,200/9);
+					%\draw [dashed,help lines] (120,0) -- (120,25) -- (40,25);
+					%\draw [dashed,help lines] (140,0) -- (140,200/7) -- (40,200/7);
+					%\draw [dashed,help lines] (150,0) -- (150,100/3) -- (40,100/3);
+					%\draw [dashed,help lines] (50,30) -- (40,30);
+					%\draw [dashed,help lines] (90,100/6) -- (40,100/6);
+					%\draw [dashed,help lines] (120,100/8) -- (40,100/8);
+					%\draw [dashed,help lines] (140,300/28) -- (40,300/28);
+					%\draw [dashed,help lines] (150,10) -- (40,10);
+					\draw [teal] (50,20) -- (90,200/9) -- (120,25) -- (140,200/7) -- (150,100/3);
+					\draw [fill,teal] (50,20) circle [radius=2];
+					\draw [fill,teal] (90,200/9) circle [radius=1.5];
+					\draw [fill,teal] (120,25) circle [radius=1.5];
+					\draw [fill,teal] (140,200/7) circle [radius=1.5];
+					\draw [fill,teal] (150,100/3) circle [radius=1.5];
+					\node [right,teal] at (150,100/3) {$CMeV\rp{q}$};
+					\draw [brown] (50,30) -- (90,100/6) -- (120,100/8) -- (140,300/28) -- (150,10);
+					\draw [fill,brown] (50,30) circle [radius=1.5];
+					\draw [fill,brown] (90,100/6) circle [radius=1.5];
+					\draw [fill,brown] (120,100/8) circle [radius=1.5];
+					\draw [fill,brown] (140,300/28) circle [radius=1.5];
+					\draw [fill,brown] (150,10) circle [radius=1.5];
+					\node [right,brown] at (150,10) {$CMeF\rp{q}$};
+					\draw [red] (50,20) -- (90,25) -- (120,100/3) -- (140,50) -- (150,100);
+					\draw [fill,red] (50,20) circle [radius=1];
+					\draw [fill,red] (90,25) circle [radius=1.5];
+					\draw [fill,red] (120,100/3) circle [radius=1.5];
+					\draw [fill,red] (140,50) circle [radius=1.5];
+					\draw [fill,red] (150,100) circle [radius=1.5];
+					\node [right,red] at (150,100) {$CMg\rp{q}$};
+					\draw [blue] (50,50) -- (90,350/9) -- (120,300/8) -- (140,1100/28) -- (150,130/3);
+					\draw [fill,blue] (50,50) circle [radius=1.5];
+					\draw [fill,blue] (90,350/9) circle [radius=1.5];
+					\draw [fill,blue] (120,300/8) circle [radius=1.5];
+					\draw [fill,blue] (140,1100/28) circle [radius=1.5];
+					\draw [fill,blue] (150,130/3) circle [radius=1.5];
+					\node [right,blue] at (150,130/3) {$CMeT\rp{q}$};
+					\node [below] at (160,0) {$q$};
+					\node [left] at (40,110) {Costos};
+					%\node [below] at (50,0) {\tiny 100};
+					%\node [below] at (90,0) {\tiny 180};
+					%\node [below] at (120,0) {\tiny 240};
+					%\node [below] at (140,0) {\tiny 280};
+					%\node [below] at (150,0) {\tiny 300};
+					%\node [left] at (0,30) {\tiny 30};
+					%\node [left] at (0,50) {\tiny 50};
+					%\node [left] at (0,70) {\tiny 70};
+					%\node [left] at (0,90) {\tiny 90};
+					%\node [left] at (0,110) {\tiny 110};
+					%\node [left] at (0,130) {\tiny 130};
+				\end{tikzpicture}
+			\end{figure}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Si definimos el corto plazo como el horizonte temporal en que $K$ es fijo y el largo plazo como el horizonte en que es variable,
+			\begin{figure}
+				\begin{tikzpicture}[scale=1]
+					\tiny
+						\draw [->, thick] (0,0)-- (0,0) -- (8,0) node [below] {$q$};
+						\draw [->, thick] (0,0)-- (0,0) -- (0,5) node [left] {Costo};
+						\draw [blue,thick] (0.2,3.7) to [out=290,in=180] (3.75,1);
+						\draw [blue,thick] (3.75,1) to [out=360,in=260] (7.6,3.9);
+						\node [above,blue] at (7.5,4) {$CMeT^\peq{LP}$};
+						\draw [red,thick] (0.5,3.3) to [out=280,in=180] (1.5,2.2);
+						\draw [red,thick] (1.5,2.2) to [out=360,in=255] (2.8,3.3);
+						\draw [fill] (0.75,2.65) circle [radius =0.06];
+						\node [below] at (0.75,2.55){$a$};
+						\node [left,red] at (2.8,3.3){$CMeT^\peq{CP}_\peq{0}$};
+						\draw [red,thick] (2,2.6) to [out=280,in=180] (3.75,1);
+						\draw [red,thick] (3.75,1) to [out=360,in=255] (5.3,2.6);
+						\draw [fill] (3.75,1) circle [radius =0.06];
+						\node [below] at (3.75,1) {$b$};
+						\node [left,red] at (5.1,2) {$CMeT^\peq{CP}_\peq{1}$};
+						\draw [red,thick] (4.8,3.4) to [out=280,in=180] (6,2.3);
+						\draw [red,thick] (6,2.3) to [out=360,in=270] (7.4,3.5);
+						\draw [fill] (7.32,3) circle [radius =0.06];
+						\node [below] at (7.32,3) {$c$};
+						\node [left,red] at (7.22,3.2) {$CMeT^\peq{CP}_\peq{2}$};
+				\end{tikzpicture}
+			\end{figure}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Economías de escala:} $CMeT^\peq{LP}$ disminuye cuando aumenta $q$
+					\item \textbf{Deseconomías de escala:} $CMeT^\peq{LP}$ aumenta cuando aumenta $q$
+					\item \textbf{Economías constantes de escala:} $CMeT^\peq{LP}$ no cambia cuando aumenta $q$
+				\end{itemize}
+			\end{mydef}
+			Recordando que $CMeT\rp{q}=\frac{CT\rp{q}}{q}$ y que $CT\rp{q}$ es una función creciente, notamos que la pregunta relevante es ¿$CT$ aumenta proporcionalmente más, menos o lo mismo que $q$? 
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Haremos una última definición antes de modelar la decisión de producción de la firma para obtener su función de oferta
+			
+			\begin{mydef}
+				\textbf{Ingreso marginal ($\mathbf{IMg}$):} Cambio en el ingreso total al producir y vender una unidad adicional.
+				$$IMg\rp{q}=\frac{\Delta IT\rp{q}}{\Delta q}=\frac{IT\rp{q+1}-IT\rp{q}}{\rp{q+1}-q}$$
+			\end{mydef}
+		\end{frame}			
+		
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Suponemos que el objetivo de la firma es escoger la cantidad $q=q^\peq{s}$ que maximiza $\pi\rp{q}=IT\rp{q}-CT\rp{q}$. El cambio en la utilidad económica de la empresa al aumentar la producción en una unidad esta dado por $$\Delta \pi = IMg\rp{q}-CMg\rp{q}$$
+		\end{frame}					
+		
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			¿Qué podemos decir de $q^\peq{s}$, la cantidad que maximiza las ganancias? Notar que:
+			\begin{itemize}
+				\item $CT\rp{q} \text{ creciente}\implies CMg\rp{q}\geq0$.
+				\item Si $IMg\rp{q_\peq{0}}>CMg\rp{q_\peq{0}}$ (lo que significa que $IMg\rp{q_\peq{0}}>0$), el aumento del ingreso total causado por un aumento de la producción es mayor que el aumento en el costo total. En $q_\peq{0}$ es posible incrementar las ganancias aumentando la producción.
+			\end{itemize}
+		\end{frame}
+			
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			\begin{itemize}
+				\item Si $IMg\rp{q_\peq{1}}<CMg\rp{q_\peq{1}}$ y 
+				\begin{enumerate}[(a)]
+					\item $IMg\rp{q_\peq{1}}<0$, al disminuir la producción aumenta el ingreso total y se reduce el costo total.
+					\item $IMg\rp{q_\peq{1}}>0$, al disminuir la producción, la reducción del ingreso total es menor que la reducción del costo total.
+				\end{enumerate}
+				En ambos casos es posible aumentar las ganancias reduciendo la producción a una menor que $q_\peq{1}$.
+			\end{itemize}
+		\end{frame}	
+			
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Luego,
+			\begin{itemize}
+				\item $q^\peq{s}$ no puede ser una cantidad como $q_\peq{0}$. Es decir, $$IMg\rp{q^\peq{s}}\ngtr CMg\rp{q^\peq{s}}$$
+				\item $q^\peq{s}$ no puede ser una cantidad como $q_\peq{1}$. Es decir, $$IMg\rp{q^\peq{s}}\nless CMg\rp{q^\peq{s}}$$
+			\end{itemize}
+			Por lo tanto, $q^\peq{s}$ debe ser una cantidad tal que $$IMg\rp{q^\peq{s}}=CMg\rp{q^\peq{s}}$$
+		\end{frame}				
+		
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			\textbf{Conclusión:} La firma maximiza ganancias escogiendo la cantidad cuyo costo marginal de producción es igual a su ingreso marginal.
+			Notar que esta conclusión es más general que el caso de la firma competitiva (tomadora de precios).
+		\end{frame}
+						
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			Ejemplo:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{8.5cm}{!}{
+					\begin{tabular}{|l|c|c|c|c|c|c|}\hline
+						$q$&$IT$&$CT$&$\pi$&$IMg$&$CMg$&$\Delta\pi$\\ [1ex] \hline 
+						0	 &\$0 &\$3 &\$-3 & --	 &	-- & --				 \\ \hline
+						1	 &\$6 &\$5 &\$1	 &\$6/u&\$2/u&\$4/u		 \\ \hline
+						2	 &\$12&\$8 &\$4	 &\$6/u&\$3/u&\$3/u		 \\ \hline
+						3	 &\$18&\$12&\$6	 &\$6/u&\$4/u&\$2/u		 \\ \hline
+						4	 &\$24&\$17&\$7	 &\$6/u&\$5/u&\$1/u		 \\ \hline
+						5	 &\$30&\$23&\$7	 &\$6/u&\$6/u&\$0/u		 \\ \hline
+						6	 &\$36&\$30&\$6	 &\$6/u&\$7/u&\$-1/u	 \\ \hline
+						7	 &\$42&\$38&\$4	 &\$6/u&\$8/u&\$-2/u	 \\ \hline
+						8	 &\$48&\$47&\$1	 &\$6/u&\$9/u&\$-3/u	 \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			En un mercado competitivo las firmas son tomadoras de precios. En otras palabras, el precio al que pueden vender cada unidad no varía con la cantidad ofrecida $$p\rp{q^\peq{s}}=p \text{, } \forall q^\peq{s}>0$$
+			Por lo tanto, el ingreso marginal de una empresa competitiva es constante: $$IMg\rp{q}=p$$
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			\textbf{Conclusión:} La empresa tomadora de precios maximiza ganancias escogiendo la cantidad cuyo costo marginal de producción es igual al precio de mercado. $$CMg\rp{q^\peq{s}}=p$$
+			En otras palabras, la oferta de la empresa competitiva es su curva de costo marginal. \textbf{Pero...}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			¿Qué pasa si la cantidad que iguala $CMg\rp{q^\peq{s}}=p$ genera un ingreso total que no es suficiente para cubrir los costos evitables?
+			\begin{itemize}
+				\item \textbf{CP:} Aunque cese temporalmente la producción, los costos fijos están comprometidos y deben pagarse. Son inevitables. La firma cierra si no cubre sus costos medios variables.
+				\item \textbf{LP:} Existe la posibilidad de salir del mercado y cesar todos los compromisos. Todos los costos son evitables. La firma abandona el mercado si no cubre sus costos medios totales.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Teoría de la Firma}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{subfigure}[b]{0.49\textwidth}
+					\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=0.015]
+							\draw [<->,thick] (40,300) -- (40,0) -- (450,0);
+							\draw [brown] plot [domain=50:270] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+							\draw [blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+							\draw [teal] plot [domain=50:400] (\x,{(.06*\x-10)^2+50}); %CMeV
+							\node [below] at (450,0) {$q$};
+							\node [left] at (40,300) {$p$};
+							\node [right,brown] at (270,289.32) {$CMg$};
+							\node [above,red] at (270,289.32) {$S^\peq{CP}$};
+							\node [right,blue] at (400,271) {$CMeT$};
+							\node [right,teal] at (400,246) {$CMeV$};
+							\draw [red,ultra thick] (40,0)--(40,50);
+							\draw [red,dashed,ultra thick] (40,50)--(1000/6,50);
+							\draw [red,ultra thick] plot [domain=1000/6:270] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+					\end{tikzpicture}
+					}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.49\textwidth}
+					\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=0.015]
+							\draw [<->,thick] (40,300) -- (40,0) -- (450,0);
+							\draw [brown] plot [domain=50:270] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+							\node [above,red] at (270,289.32) {$S^\peq{LP}$};
+							\draw [blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+							\node [below] at (450,0) {$q$};
+							\node [left] at (40,300) {$p$};
+							\node [right,brown] at (270,289.32) {$CMg$};
+							\node [right,blue] at (400,271) {$CMeT$};
+							\draw [red,ultra thick] (40,0)--(40,103.9948385);
+							\draw [red,dashed,ultra thick] (40,103.9948385)--(201.0329763,103.9948385);
+							\draw [red,ultra thick] plot [domain=201.0329763:270] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+					\end{tikzpicture}
+					}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+	\section{La Curva de Oferta}
+
+		\begin{frame}
+			\frametitle{Determinantes de la Oferta}
+				\begin{itemize}
+					\item \textbf{Precios de los insumos:} $\Delta^\peq{+}p_\peq{z}\implies\Delta^\peq{+}CMg\rp{q}$
+					\item \textbf{Tecnología:} Avances tecnológicos permiten producir lo mismo usando menos recursos $\implies\Delta^\peq{-}CMg\rp{q}$
+					\item \textbf{Expectativas:} Si se espera $\Delta^\peq{+}p_\peq{x}$ en el futuro, hay incentivo a almacenar parte de la producción para posponer la venta. Del mismo modo, las expectativas respecto de $p_\peq{z}$ y/o tecnología alteran incentivos.
+					\item \textbf{Cantidad de vendedores:} Si hay más vendedores, aumenta la oferta de mercado
+				\end{itemize}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Oferta Individual y Oferta de Mercado}
+			\begin{mydef}
+				La \textbf{oferta de mercado} es la suma (horizontal) de las ofertas individuales $$Q^\peq{s}\rp{p}=\sum_\peq{i=1}^{n}{q_\peq{i}^\peq{s}\rp{p}}$$
+			\end{mydef}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Oferta Individual y Oferta de Mercado}
+			Ejemplo 1: 2 empresas con ofertas idénticas $$p=0.5q^\peq{s}_\peq{1}+0.5$$
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{4.5cm}{!}{
+					\begin{tabular}{|l|c|c|c|}\hline
+						$p$&$q^\peq{s}_\peq{A}$&$q^\peq{s}_\peq{B}$&$Q^\peq{s}$\\ [1ex] \hline 
+						0	 &				0	 				 &				0	 				 &			0		 \\ \hline
+					  0,5&				0 				 &				0	 				 &			0		 \\ \hline
+						1	 &				1					 &				1	 				 &			2		 \\ \hline
+					  1,5&				2					 &				2	 				 &			4		 \\ \hline
+						2	 &				3					 &				3	 				 &			6		 \\ \hline
+					  2,5&				4					 &				4	 				 &			8		 \\ \hline
+						3	 &				5					 &				5	 				 &		 10		 \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Oferta Individual y Oferta de Mercado}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,0)--(0,1);
+							\draw [red,ultra thick] plot [domain=0:11](\x,{\x+1});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$q$};
+							\node [left] at (0,1) {\tiny 0,5};
+							\node [right,red] at (11,12) {$S_\peq{A}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,0)--(0,1);
+							\draw [red,ultra thick] plot [domain=0:11](\x,{\x+1});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$q$};
+							\node [left] at (0,1) {\tiny 0,5};
+							\node [right,red] at (11,12) {$S_\peq{B}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,0)--(0,1);
+							\draw [red,ultra thick] plot [domain=0:12](\x,{0.5*\x+1});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$Q$};
+							\node [left] at (0,1) {\tiny 0,5};
+							\node [right,red] at (12,7) {$S_\peq{A+B}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oferta Individual y Oferta de Mercado}
+			Ejemplo 2: 2 empresas con ofertas distintas 
+			\begin{align*}
+				q_\peq{A}^\peq{s}&=\left\{
+					\begin{array}{ll}
+						0  & \mbox{si } p < 1 \\
+						2p+1  & \mbox{si } p \geq 1 
+					\end{array}
+				\right. \\
+				& \\
+			  q_\peq{B}^\peq{s}&=\left\{
+					\begin{array}{ll}
+						0  & \mbox{si } p < 2 \\
+						2p  & \mbox{si } p \geq 2 
+					\end{array}
+				\right.
+			\end{align*}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Oferta Individual y Oferta de Mercado}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{4.5cm}{!}{
+					\begin{tabular}{|l|c|c|c|}\hline
+						$p$&$q^\peq{s}_\peq{A}$&$q^\peq{s}_\peq{B}$&$Q^\peq{s}$\\ [1ex] \hline 
+						0	 &				0	 				 &				0	 				 &			0		 \\ \hline
+					  1	 &				3 				 &				0	 				 &			3		 \\ \hline
+						2	 &				5					 &				4	 				 &			9		 \\ \hline
+					  3	 &				7					 &				6	 				 &		 13		 \\ \hline
+						4	 &				9					 &				8	 				 &		 17		 \\ \hline
+					  5	 &			 11					 &			 10	 				 &		 21		 \\ \hline
+						6	 &			 13					 &			 12	 				 &		 25		 \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Oferta Individual y Oferta de Mercado}
+			La oferta de mercado está descrita por la función
+			\begin{equation*}
+				Q^\peq{s}=\left\{
+					\begin{array}{ll}
+						0  		& \mbox{si } p < 1 \\
+						2p+1  & \mbox{si } 1 \leq p < 2 \\
+						4p+1	& \mbox{si } p \geq 2
+					\end{array}
+				\right.
+			\end{equation*}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Oferta Individual y Oferta de Mercado}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,0)--(0,2);
+							\draw [red,dashed,ultra thick] (0,2)--(3,2);
+							\draw [red,ultra thick] plot [domain=3:12](\x,{\x-1});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$q$};
+							\node [below] at (3,0) {\tiny 3};
+							\node [left] at (0,2) {\tiny 1};
+							\draw [dashed] (3,0)--(3,2);
+							\node [right,red] at (12,11) {$S_\peq{A}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,0)--(0,4);
+							\draw [red,dashed,ultra thick] (0,4)--(4,4);
+							\draw [red,ultra thick] plot [domain=4:12](\x,{\x});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$q$};
+							\node [below] at (4,0) {\tiny 4};
+							\node [left] at (0,4) {\tiny 2};
+							\draw [dashed] (4,0)--(4,4);
+							\node [right,red] at (12,12) {$S_\peq{B}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,0)--(0,2);
+							\draw [red,dashed,ultra thick] (0,2)--(3,2);
+							\draw [red,dashed,ultra thick] (5,4)--(9,4);
+							\draw [red,ultra thick] plot [domain=3:5](\x,{\x-1});
+							\draw [red,ultra thick] plot [domain=9:12](\x,{0.5*\x-0.5});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$Q$};
+							\node [below] at (3,0) {\tiny 3};
+							\node [below] at (5,0) {\tiny 5};
+							\node [below] at (9,0) {\tiny 9};
+							\node [left] at (0,2) {\tiny 1};
+							\node [left] at (0,4) {\tiny 2};
+							\draw [dashed] (3,0)--(3,2);
+							\draw [dashed] (5,0)--(5,4);
+							\draw [dashed] (9,0)--(9,4);
+							\draw [dashed] (0,4)--(5,4);
+							\node [right,red] at (12,5.5) {$S_\peq{A+B}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			\begin{mydef}
+				\textbf{Elasticidad precio de la oferta:} Una medida de cuánto responde $q^\peq{s}$ respecto al cambio en $p$. $$\varepsilon_\peq{q,p}\equiv\frac{\Delta\%q^\peq{s}}{\Delta\%p}$$
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			Notar que
+			\begin{align*}
+				\frac{\Delta\%q^\peq{s}}{\Delta\%p}&=\frac{\Delta q^\peq{s}/q^\peq{s}}{\Delta p/p} \\
+																					 &=\frac{1}{\Delta p / \Delta q^\peq{s}}\cdot\frac{p}{q^\peq{s}}								
+			\end{align*}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			$\text{Ley de la oferta }\implies\varepsilon_\peq{q,p}\geq0$
+			\begin{itemize}
+				\item $\varepsilon_\peq{q,p}>1\implies$ oferta elástica ($\Delta\%q^\peq{s}>\Delta\%p$).
+				\item $\varepsilon_\peq{q,p}=1\implies$ oferta de elasticidad unitaria ($\Delta\%q^\peq{s}=\Delta\%p$).
+				\item $\varepsilon_\peq{q,p}<1\implies$ oferta inelástica ($\Delta\%q^\peq{s}<\Delta\%p$).
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			Ejemplo: oferta lineal $$p=a+b\cdot q^\peq{s}$$ con $b>0$. 
+			
+			\vspace{.3cm}
+			¿Qué podemos decir sobre $\varepsilon_\peq{q,p}$?
+			\begin{itemize}
+				\item $a>0\implies\varepsilon_\peq{q,p}>1$
+				\item $a=0\implies\varepsilon_\peq{q,p}=1$
+				\item $a<0\implies\varepsilon_\peq{q,p}<1$
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			Si calculamos el cambio porcentual como $$\Delta\%x=\frac{x_\peq{final}-x_\peq{inicial}}{x_\peq{inicial}}$$ obtendremos resultados distintos dependiendo del punto de partida. Por eso usamos el método del punto medio $$\Delta\%x=\frac{x_\peq{final}-x_\peq{inicial}}{\rp{\frac{x_\peq{inicial}+x_\peq{final}}{2}}}$$
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			Ejemplo: $p=q^\peq{s}+3$
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed,teal] (0,4)--(1*2,4)--(1*2,0);
+									\draw [dashed,teal] (0,5)--(2*2,5)--(2*2,0);
+									\draw [<->,thick] (0,6) -- (0,0) -- (3*2,0);
+									\draw [red,ultra thick] plot [domain=0:3*2] (\x,{.5*\x+3});
+									\node [below] at (2*3,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\draw [fill,teal] (1*2,4) circle [radius=.08];
+									\node [above,teal] at (1*2,4) {A};
+									\draw [fill,teal] (2*2,5) circle [radius=.08];
+									\node [above,teal] at (2*2,5) {B};
+									\node [below] at (1*2,0) {1};
+									\node [below] at (2*2,0) {2};
+									\node [left] at (0,4) {4};
+									\node [left] at (0,5) {5};
+									\node [right,red] at (6,6) {$S$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			Ejemplos: (a) Oferta perfectamente inelástica
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed] (0,4)--(100/30,4);
+									\draw [dashed] (0,5)--(100/30,5);
+									\draw [<->,thick] (0,6) -- (0,0) -- (180/30,0);
+									\draw [teal,ultra thick] (100/30,0)--(100/30,5.9);
+									\node [below] at (180/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,right] at (100/30,5.9) {$S$};
+									\draw [fill,blue] (100/30,4) circle [radius=.08];
+									\node [above left,blue] at (100/30,4) {\small $A$};
+									\draw [fill,blue] (100/30,5) circle [radius=.08];
+									\node [above left,blue] at (100/30,5) {\small $B$};
+									\node [below] at (100/30,0) {\tiny 100};
+									\node [left] at (0,4) {\tiny 4};
+									\node [left] at (0,5) {\tiny 5};
+									\node [right] at (180/30,5.5) {$\Delta\%p=22,\overline{2}\%$};
+									\node [right] at (180/30,4.5) {$\Delta\%q^\peq{s}=0\%$};
+									\node [right] at (180/30,3.5) {$\varepsilon_\peq{q,p}=0$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			(b) Oferta inelástica
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed] (0,4)--(100/30,4)--(100/30,0);
+									\draw [dashed] (0,5)--(110/30,5)--(110/30,0);
+									\draw [<->,thick] (0,6) -- (0,0) -- (180/30,0);
+									\draw [teal,ultra thick] plot [domain=70/30:120/30] (\x,{3*\x-6});
+									\node [below] at (180/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,right] at (120/30,3*120/30-6) {$S$};
+									\draw [fill,blue] (100/30,4) circle [radius=.08];
+									\node [above left,blue] at (100/30,4) {\small $A$};
+									\draw [fill,blue] (110/30,5) circle [radius=.08];
+									\node [above left,blue] at (110/30,5) {\small $B$};
+									\node [below] at (100/30,0) {\tiny 100};
+									\node [below] at (112/30,0) {\tiny 110};
+									\node [left] at (0,4) {\tiny 4};
+									\node [left] at (0,5) {\tiny 5};
+									\node [right] at (180/30,5.5) {$\Delta\%p=22,\overline{2}\%$};
+									\node [right] at (180/30,4.5) {$\Delta\%q^\peq{s}=9.52\%$};
+									\node [right] at (180/30,3.5) {$\varepsilon_\peq{q,p}=0.43$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			(c) Oferta elástica unitaria
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed] (0,4)--(100/30,4)--(100/30,0);
+									\draw [dashed] (0,5)--(125/30,5)--(125/30,0);
+									\draw [<->,thick] (0,6) -- (0,0) -- (180/30,0);
+									\draw [teal,ultra thick] plot [domain=0:140/30] (\x,{1.2*\x});
+									\node [below] at (180/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,right] at (140/30,1.2*140/30) {$S$};
+									\draw [fill,blue] (100/30,4) circle [radius=.08];
+									\node [above left,blue] at (100/30,4) {\small $A$};
+									\draw [fill,blue] (125/30,5) circle [radius=.08];
+									\node [above left,blue] at (125/30,5) {\small $B$};
+									\node [below] at (100/30,0) {\tiny 100};
+									\node [below] at (125/30,0) {\tiny 125};
+									\node [left] at (0,4) {\tiny 4};
+									\node [left] at (0,5) {\tiny 5};
+									\node [right] at (180/30,5.5) {$\Delta\%p=22,\overline{2}\%$};
+									\node [right] at (180/30,4.5) {$\Delta\%q^\peq{s}=22,\overline{2}\%$};
+									\node [right] at (180/30,3.5) {$\varepsilon_\peq{q,p}=1$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			(d) Oferta elástica
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed] (0,4)--(100/30,4)--(100/30,0);
+									\draw [dashed] (0,5)--(200/30,5)--(200/30,0);
+									\draw [<->,thick] (0,6) -- (0,0) -- (210/30,0);
+									\draw [teal,ultra thick] plot [domain=50/30:210/30] (\x,{0.3*\x+3});
+									\node [below] at (210/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,right] at (210/30,0.3*210/30+3) {$S$};
+									\draw [fill,blue] (100/30,4) circle [radius=.08];
+									\node [above left,blue] at (100/30,4) {\small $A$};
+									\draw [fill,blue] (200/30,5) circle [radius=.08];
+									\node [above left,blue] at (200/30,5) {\small $B$};
+									\node [below] at (100/30,0) {\tiny 100};
+									\node [below] at (200/30,0) {\tiny 125};
+									\node [left] at (0,4) {\tiny 4};
+									\node [left] at (0,5) {\tiny 5};
+									\node [right] at (210/30,5.5) {$\Delta\%p=22,\overline{2}\%$};
+									\node [right] at (210/30,4.5) {$\Delta\%q^\peq{s}=66,\overline{6}\%$};
+									\node [right] at (210/30,3.5) {$\varepsilon_\peq{q,p}=3$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			(e) Oferta perfectamente elástica
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [<->,thick] (0,6) -- (0,0) -- (180/30,0);
+									\draw [teal,ultra thick] (0,4)--(180/30,4);
+									\node [below] at (180/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,right] at (180/30,4) {$S$};
+									\node [left] at (0,4) {\tiny 4};
+									\node [right] at (200/30,5.5) {Si $p>4$, $q^\peq{s}\to\infty$};
+									\node [right] at (200/30,4) {Si $p=4$, $q^\peq{s}$ indefinida};
+									\node [right] at (200/30,2.5) {Si $p<4$, $q^\peq{s}=0$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			Determinantes de la elasticidad precio de la oferta:
+			\begin{itemize}
+				\item Flexibilidad para cambiar la cantidad producida (Ej: terrenos vs. televisores)
+				\item Posibilidades de sustitución (Ej: trigo vs. maíz)
+				\item Horizonte temporal
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			La elasticidad no es (necesariamente) constante...
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.5]
+									\draw [dashed,help lines] (4.1,6.5)--(4.1,15);
+									\draw [<->,thick] (0,15) -- (0,6.5) -- (8,6.5);
+									\draw [teal,ultra thick] plot [domain=0:4] (\x,{5-10/(\x-5)});
+									\node [below] at (8,6.5) {$q$};
+									\node [below] at (4.1,6.5) {$\overline{q}$};
+									\node [left] at (0,15) {$p$};
+									\node [teal,right] at (4,15) {$S$};
+									%\node [right] at (200/30,5.5) {Si $p>4$, $q^\peq{s}\to\infty$};
+									%\node [right] at (200/30,4) {Si $p=4$, $q^\peq{s}$ indefinida};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			La oferta de mercado en el largo plazo es perfectamente elástica bajo los siguientes supuestos
+				\begin{itemize}
+					\item Firmas tomadoras de precios
+					\item Libre entrada y salida
+					\item Firmas homogéneas (misma función de costos)
+				\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			Al haber libre entrada y salida,
+				\begin{itemize}
+					\item Si $\pi\rp{q^\peq{s}\rp{p}}>0\implies$ entran firmas, desplazando la oferta de corto plazo. $p$ cae.
+					\item Si $\pi\rp{q^\peq{s}\rp{p}}<0\implies$ salen firmas, desplazando la oferta de corto plazo. $p$ sube.
+				\end{itemize}
+			Por lo tanto, en equilibrio $$\pi=0$$
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			Pero $$\pi=\rp{p-CMeT}\cdot q$$
+			Luego, $$\pi=0 \text{ y } q>0\implies p=CMeT$$
+			También sabemos que $p=CMg$. Por lo tanto, debe ser cierto que $$CMeT=CMg$$
+			Lo que ocurre en la escala eficiente. Concluimos que $$p=CMeT_\peq{min}$$
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			\begin{mydef}
+				\textbf{Elasticidad precio-insumo de la oferta:} Una medida de cuánto responde la cantidad ofrecida de un bien $x$ respecto al cambio en el precio de un insumo $z$. $$\varepsilon_\peq{q_\peq{x},p_\peq{z}}\equiv\frac{\Delta\%q^\peq{s}_\peq{x}}{\Delta\%p_\peq{z}}$$
+			\end{mydef}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Elasticidad de la Oferta}
+			Determinantes de la elasticidad precio-insumo de la oferta:
+			\begin{itemize}
+				\item Intensidad con que se usa el insumo
+				\item Posibilidad de sustitución del insumo
+			\end{itemize}
+		\end{frame}
+			
+	\section{Análisis de Bienestar}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			\begin{mydef}
+				\textbf{Excedente del productor ($\mathbf{EP}$):} Diferencia entre lo que recibe un vendedor por un bien y el costo en que incurre para proporcionarlo.
+			\end{mydef}
+		\end{frame}	
+	
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Ejemplo:
+			\begin{itemize}
+				\item Sea $c_\peq{i}$ el costo en que incurre el individuo $i$ para vender una unidad del bien $x$.
+				\item Cada individuo vende a lo más una unidad $\implies$ la decisión es vender o no.
+				\item Sea $p$ el precio al que se puede vender una unidad.
+			\end{itemize}
+		\end{frame}	
+			
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Decisión racional: $$\text{Si}\left\{
+					\begin{array}{ll}
+						p<c_\peq{i} & \text{no vende} \\
+						p=c_\peq{i} & \text{está indiferente} \\
+						p>c_\peq{i}	& \text{vende}
+					\end{array}
+				\right.$$
+			\textit{Nota:}  supondremos que, en caso de indiferencia, vende. Este supuesto es irrelevante para nuestras conclusiones.
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Supongamos que hay 4 vendedores:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{4cm}{!}{
+					\begin{tabular}{|c|c|}\hline
+						$i$&$c_\peq{i}$ \\  \hline 
+						 A & \$500/u 		\\ 
+						 B & \$600/u 		\\ 
+						 C & \$800/u 		\\ 
+						 D & \$900/u 		\\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Caso 1: Se licita la compra de 1 unidad del bien $x$ (se comprará al vendedor que ofrezca el menor precio).
+			\begin{itemize}
+				\item Precio cae rápidamente hasta que $A$ ofrece $\$\rp{600-\delta}$ con $\delta>0$ y pequeño. (¿Por qué no hasta $c_\peq{A}=\$500$?)
+				\item $A$ vende su unidad de $x$ a $\$600$ y le costó $\$500\implies$ su excedente es $EP_\peq{A}^\peq{caso 1}=\$100/u\cdot1u=\$100$.
+			\end{itemize}
+			\textit{Nota:} pensemos en $\delta$ muy pequeño, es decir $\delta\rightarrow0$.
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Caso 2: Se licita la compra de 2 unidades, ambas al mismo precio (pero a distintos vendedores).
+			\begin{itemize}
+				\item Subasta termina cuando $A$ y/o $B$ ofrece $\$\rp{800-\delta}$ con $\delta>0$ y pequeño. 
+				\item $EP_\peq{A}^\peq{caso 2}=\rp{\$800/u-\$500/u}\cdot1u=\$300$.
+				\item $EP_\peq{B}^\peq{caso 2}=\rp{\$800/u-\$600/u}\cdot1u=\$200$.
+				\item $EP_\peq{Total}^\peq{caso 2}=\$200+\$300=\$500$.
+			\end{itemize}
+			\textit{Nota:} Estamos pensando de nuevo en $\delta\rightarrow0$.
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Caso general: Nos abstraemos de la licitación, dejando que el precio varíe libremente. De esta manera, obtenemos la oferta del mercado.
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{8cm}{!}{
+					\begin{tabular}{|c|c|c|}\hline
+						$p$								&Vendedores		 &$Q^\peq{s}$ \\  \hline 
+						$0\leq p<500$ 		& $\emptyset$  &	$0$ \\ 
+						$500\leq p<600$ 	& $\{A\}$ 		 &	$1$ \\ 
+						$600\leq p<800$ 	& $\{A,B\}$ 	 &	$2$ \\ 
+						$800\leq p<900$ 	& $\{A,B,C\}$  &	$3$ \\
+						$900\leq p<\infty$ & $\{A,B,C,D\}$&	$4$ \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.6]
+									\draw [dashed,help lines] (2,0)--(2,5);
+									\draw [dashed,help lines] (4,0)--(4,6);
+									\draw [dashed,help lines] (0,6)--(2,6);
+									\draw [dashed,help lines] (6,0)--(6,8);
+									\draw [dashed,help lines] (4,8)--(0,8);
+									\draw [dashed,help lines] (8,0)--(8,9);
+									\draw [dashed,help lines] (0,9)--(6,9);
+									\draw [<->,thick] (0,10) -- (0,0) -- (10,0);
+									\draw [red,ultra thick] (0,0)--(0,5);
+									\draw [red,ultra thick,dashed] (0,5)--(2,5);
+									\draw [red,ultra thick] (2,5)--(2,6);
+									\draw [red,ultra thick,dashed] (2,6)--(4,6);
+									\draw [red,ultra thick] (4,6)--(4,8);
+									\draw [red,ultra thick,dashed] (4,8)--(6,8);
+									\draw [red,ultra thick] (6,8)--(6,9);
+									\draw [red,ultra thick,dashed] (6,9)--(8,9);
+									\draw [red,ultra thick] (8,9)--(8,10);
+									\node [below] at (10,0) {$Q$};
+									\node [left] at (0,10) {$p$};
+									\node [red,right] at (8,10) {$S$};
+									\node [left] at (0,9) {\tiny 900};
+									\node [left] at (0,8) {\tiny 800};
+									\node [left] at (0,6) {\tiny 600};
+									\node [left] at (0,5) {\tiny 500};
+									\node [left] at (0,9) {\tiny 900};
+									\node [left] at (0,8) {\tiny 800};
+									\node [left] at (0,6) {\tiny 600};
+									\node [below] at (2,0) {\tiny 1};
+									\node [below] at (4,0) {\tiny 2};
+									\node [below] at (6,0) {\tiny 3};
+									\node [below] at (8,0) {\tiny 4};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.6]
+									\draw [fill=green,opacity=0.2] (0,5) -- (2,5) -- (2,6) -- (0,6);
+									\draw [dashed,help lines] (2,0)--(2,5);
+									\draw [dashed,help lines] (4,0)--(4,6);
+									\draw [dashed,help lines] (0,6)--(2,6);
+									\draw [dashed,help lines] (6,0)--(6,8);
+									\draw [dashed,help lines] (4,8)--(0,8);
+									\draw [dashed,help lines] (8,0)--(8,9);
+									\draw [dashed,help lines] (0,9)--(6,9);
+									\draw [<->,thick] (0,10) -- (0,0) -- (10,0);
+									\draw [red,ultra thick] (0,0)--(0,5);
+									\draw [red,ultra thick,dashed] (0,5)--(2,5);
+									\draw [red,ultra thick] (2,5)--(2,6);
+									\draw [red,ultra thick,dashed] (2,6)--(4,6);
+									\draw [red,ultra thick] (4,6)--(4,8);
+									\draw [red,ultra thick,dashed] (4,8)--(6,8);
+									\draw [red,ultra thick] (6,8)--(6,9);
+									\draw [red,ultra thick,dashed] (6,9)--(8,9);
+									\draw [red,ultra thick] (8,9)--(8,10);
+									\node [below] at (10,0) {$Q$};
+									\node [left] at (0,10) {$p$};
+									\node [red,right] at (8,10) {$S$};
+									\node [left] at (0,9) {\tiny 900};
+									\node [left] at (0,8) {\tiny 800};
+									\node [left] at (0,6) {\tiny 600};
+									\node [left] at (0,5) {\tiny 500};
+									\node [left] at (0,9) {\tiny 900};
+									\node [left] at (0,8) {\tiny 800};
+									\node [left] at (0,6) {\tiny 600};
+									\node [below] at (2,0) {\tiny 1};
+									\node [below] at (4,0) {\tiny 2};
+									\node [below] at (6,0) {\tiny 3};
+									\node [below] at (8,0) {\tiny 4};
+									\node at (1,5.5) {\tiny $EP^\peq{caso 1}_\peq{A}$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.6]
+									\draw [fill=blue,opacity=0.2] (0,5) -- (2,5) -- (2,8) -- (0,8);
+									\draw [fill=purple,opacity=0.2] (2,6) -- (4,6) -- (4,8) -- (2,8);
+									\draw [dashed,help lines] (2,0)--(2,5);
+									\draw [dashed,help lines] (4,0)--(4,6);
+									\draw [dashed,help lines] (0,6)--(2,6);
+									\draw [dashed,help lines] (6,0)--(6,8);
+									\draw [dashed,help lines] (4,8)--(0,8);
+									\draw [dashed,help lines] (8,0)--(8,9);
+									\draw [dashed,help lines] (0,9)--(6,9);
+									\draw [<->,thick] (0,10) -- (0,0) -- (10,0);
+									\draw [red,ultra thick] (0,0)--(0,5);
+									\draw [red,ultra thick,dashed] (0,5)--(2,5);
+									\draw [red,ultra thick] (2,5)--(2,6);
+									\draw [red,ultra thick,dashed] (2,6)--(4,6);
+									\draw [red,ultra thick] (4,6)--(4,8);
+									\draw [red,ultra thick,dashed] (4,8)--(6,8);
+									\draw [red,ultra thick] (6,8)--(6,9);
+									\draw [red,ultra thick,dashed] (6,9)--(8,9);
+									\draw [red,ultra thick] (8,9)--(8,10);
+									\node [below] at (10,0) {$Q$};
+									\node [left] at (0,10) {$p$};
+									\node [red,right] at (8,10) {$S$};
+									\node [left] at (0,9) {\tiny 900};
+									\node [left] at (0,8) {\tiny 800};
+									\node [left] at (0,6) {\tiny 600};
+									\node [left] at (0,5) {\tiny 500};
+									\node [left] at (0,9) {\tiny 900};
+									\node [left] at (0,8) {\tiny 800};
+									\node [left] at (0,6) {\tiny 600};
+									\node [below] at (2,0) {\tiny 1};
+									\node [below] at (4,0) {\tiny 2};
+									\node [below] at (6,0) {\tiny 3};
+									\node [below] at (8,0) {\tiny 4};
+									\node at (1,7) {\tiny $EP^\peq{caso 2}_\peq{A}$};
+									\node at (3,7) {\tiny $EP^\peq{caso 2}_\peq{B}$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.6]
+									\draw [fill=green,opacity=0.2] (0,5) -- (2,5) -- (2,6) -- (0,6);
+									\draw [fill=blue,opacity=0.2] (0,6) -- (2,6) -- (2,8) -- (0,8);
+									\draw [fill=purple,opacity=0.2] (2,6) -- (4,6) -- (4,8) -- (2,8);
+									\draw [dashed,help lines] (2,0)--(2,5);
+									\draw [dashed,help lines] (4,0)--(4,6);
+									\draw [dashed,help lines] (0,6)--(2,6);
+									\draw [dashed,help lines] (6,0)--(6,8);
+									\draw [dashed,help lines] (4,8)--(0,8);
+									\draw [dashed,help lines] (8,0)--(8,9);
+									\draw [dashed,help lines] (0,9)--(6,9);
+									\draw [<->,thick] (0,10) -- (0,0) -- (10,0);
+									\draw [red,ultra thick] (0,0)--(0,5);
+									\draw [red,ultra thick,dashed] (0,5)--(2,5);
+									\draw [red,ultra thick] (2,5)--(2,6);
+									\draw [red,ultra thick,dashed] (2,6)--(4,6);
+									\draw [red,ultra thick] (4,6)--(4,8);
+									\draw [red,ultra thick,dashed] (4,8)--(6,8);
+									\draw [red,ultra thick] (6,8)--(6,9);
+									\draw [red,ultra thick,dashed] (6,9)--(8,9);
+									\draw [red,ultra thick] (8,9)--(8,10);
+									\node [below] at (10,0) {$Q$};
+									\node [left] at (0,10) {$p$};
+									\node [red,right] at (8,10) {$S$};
+									\node [left] at (0,9) {\tiny 900};
+									\node [left] at (0,8) {\tiny 800};
+									\node [left] at (0,6) {\tiny 600};
+									\node [left] at (0,5) {\tiny 500};
+									\node [left] at (0,9) {\tiny 900};
+									\node [left] at (0,8) {\tiny 800};
+									\node [left] at (0,6) {\tiny 600};
+									\node [below] at (2,0) {\tiny 1};
+									\node [below] at (4,0) {\tiny 2};
+									\node [below] at (6,0) {\tiny 3};
+									\node [below] at (8,0) {\tiny 4};
+									\node at (1,7) {\tiny $\Delta EP_\peq{A}$};
+									\node at (3,7) {\tiny $\Delta EP_\peq{B}$};
+									\node at (1,5.5) {\tiny $EP^\peq{caso 1}_\peq{A}$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			\begin{mydef}
+				\textbf{Vendedor marginal:} El primer vendedor que saldría del mercado si el precio fuera más bajo.
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Notar que:
+			\begin{itemize}
+				\item Para cualquier cantidad, el precio dado por la curva de oferta corresponde al costo del vendedor marginal.
+				\item El excedente del productor es el área entre la curva de oferta y el precio de mercado.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			\begin{itemize}
+				\item Cuando sube el precio de $p_\peq{0}$ a $p_\peq{1}$, $EP$ aumenta por dos motivos:
+					\begin{enumerate}
+						\item Las unidades ($q_\peq{0}$) que antes se vendían a $p_\peq{0}$ ahora se venden a $p_\peq{1}>p_\peq{0}$.
+						\item Se venden más unidades ($q_\peq{1}-q_\peq{0}$) con $p_\peq{1}>\text{costo marginal}$.
+					\end{enumerate}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Lo anterior es válido en general para cualquier curva de oferta...
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.5]
+									\draw [fill=red,opacity=0.2] (0,0) -- (4,4) -- (0,4);
+									\draw [fill=blue,opacity=0.2] (0,4) -- (4,4) -- (4,7) -- (0,7);
+									\draw [fill=green,opacity=0.2] (4,4) -- (4,7) -- (7,7);
+									\draw [teal,ultra thick] plot [domain=0:9] (\x,{\x});
+									\draw [<->,thick] (0,10) -- (0,0) -- (10,0);
+									\draw [red] (4,0)--(4,4)--(0,4);
+									\draw [blue] (7,0)--(7,7)--(0,7);
+									\node [below] at (10,0) {$q$};
+									\node [left] at (0,10) {$p$};
+									\node [teal,right] at (9,9) {$S$};
+									\draw [fill,red] (4,4) circle [radius=.2];
+									\draw [fill,blue] (7,7) circle [radius=.2];
+									\node [left] at (0,4) {$p_\peq{0}$};
+									\node [left] at (0,7) {$p_\peq{1}$};
+									\node [below] at (4,0) {$q_\peq{0}$};
+									\node [below] at (7,0) {$q_\peq{1}$};
+									\node [below] at (0,0) {$0$};
+									\draw [decorate,decoration={brace,amplitude=6pt,mirror},xshift=0.2pt,yshift=-0.2pt](0,-.8) -- (4,-.8) node[black,midway,yshift=-0.5cm] {\tiny \pbox{\textwidth}{$q_\peq{0}$ unidades \\ más caras}};
+									\draw [decorate,decoration={brace,amplitude=6pt,mirror},xshift=0.2pt,yshift=-0.2pt](4,-.8) -- (7,-.8) node[black,midway,yshift=-0.5cm] {\tiny \pbox{\textwidth}{$\rp{q_\peq{1}-q_\peq{0}}$ unidades \\ adicionales}};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Por último, notar que
+			\begin{itemize}
+				\item El costo marginal es el cambio en el costo variable:$$
+					\begin{array}{ll}
+						CMg\rp{q}	&= CT\rp{q+1} - CT\rp{q} \\
+											&= CV\rp{q+1}+CF-\rp{CV\rp{q}+CF} \\
+											&= CV\rp{q+1} - CV\rp{q} \\
+					\end{array}$$
+				\item Luego, el costo variable es el área bajo la curva de costo marginal.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.5]
+									\draw [fill=blue,opacity=0.2] (0,0)--(1,0)--(1,1)--(0,1);
+									\draw [fill=blue,opacity=0.2] (1,0)--(2,0)--(2,2)--(1,2);
+									\draw [fill=blue,opacity=0.2] (2,0)--(3,0)--(3,3)--(2,3);
+									\draw [fill=blue,opacity=0.2] (3,0)--(4,0)--(4,4)--(3,4);
+									\draw [fill=blue,opacity=0.2] (4,0)--(5,0)--(5,5)--(4,5);
+									\draw [fill=blue,opacity=0.2] (5,0)--(6,0)--(6,6)--(5,6);
+									\draw [fill=blue,opacity=0.2] (6,0)--(7,0)--(7,7)--(6,7);
+									\draw [fill=blue,opacity=0.2] (7,0)--(8,0)--(8,8)--(7,8);
+									\draw[dashed] (0,1)--(1,1);
+									\draw [dashed] (1,0)--(1,2);
+									\draw [dashed] (0,2)--(2,2);
+									\draw [dashed] (2,0)--(2,3);
+									\draw [dashed] (0,3)--(3,3);
+									\draw [dashed] (3,0)--(3,4);
+									\draw [dashed] (0,4)--(4,4);
+									\draw [dashed] (4,0)--(4,5);
+									\draw [dashed] (0,5)--(5,5);
+									\draw [dashed] (5,0)--(5,6);
+									\draw [dashed] (0,6)--(6,6);
+									\draw [dashed] (6,0)--(6,7);
+									\draw [dashed] (0,7)--(7,7);
+									\draw [dashed] (7,0)--(7,8);
+									\draw [dashed] (0,8)--(8,8);
+									\draw [dashed] (8,0)--(8,9);
+									\draw [dashed] (0,9)--(8,9);
+									\draw [teal,ultra thick] plot [domain=0:9] (\x,{1+\x});
+									\draw [<->,thick] (0,11) -- (0,0) -- (10,0);
+									\node [below] at (10,0) {$q$};
+									\node [left] at (0,11) {$p$};
+									\node [teal,right] at (9,10) {$CMg\rp{q}$};
+									\draw [fill,blue] (0,1) circle [radius=.15];
+									\draw [fill,blue] (1,2) circle [radius=.15];
+									\draw [fill,blue] (2,3) circle [radius=.15];
+									\draw [fill,blue] (3,4) circle [radius=.15];
+									\draw [fill,blue] (4,5) circle [radius=.15];
+									\draw [fill,blue] (5,6) circle [radius=.15];
+									\draw [fill,blue] (6,7) circle [radius=.15];
+									\draw [fill,blue] (7,8) circle [radius=.15];
+									\draw [fill,blue] (8,9) circle [radius=.15];
+									\node [left] at (0,1) {\tiny $CV\rp{1}-CV\rp{0}$};
+									\node [left] at (0,2) {\tiny $CV\rp{2}-CV\rp{1}$};
+									\node [left] at (0,3) {\tiny $CV\rp{3}-CV\rp{2}$};
+									\node [left,rotate=-90] at (-1,4) {\large...};
+									\node [left] at (0,6) {\tiny $CV\rp{q_\peq{0}-2}-CV\rp{q_\peq{0}-3}$};
+									\node [left] at (0,7) {\tiny $CV\rp{q_\peq{0}-1}-CV\rp{q_\peq{0}-2}$};
+									\node [left] at (0,8) {\tiny $CV\rp{q_\peq{0}}-CV\rp{q_\peq{0}-1}$};
+									\node [left] at (0,9) {\tiny $CV\rp{q_\peq{0}+1}-CV\rp{q_\peq{0}}$};
+									\node [below] at (0,0) {\tiny 0};
+									\node [below] at (1,0) {\tiny 1};
+									\node [below] at (2,0) {\tiny 2};
+									\node [below] at (3,0) {\tiny 3};
+									\node [below] at (4,0) {\large ...};
+									\node [rotate=90] at (5,-1) {\tiny $q_\peq{0}-3$};
+									\node [rotate=90] at (6,-1) {\tiny $q_\peq{0}-2$};
+									\node [rotate=90] at (7,-1) {\tiny $q_\peq{0}-1$};
+									\node [below] at (8,0) {\tiny $q_\peq{0}$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.5]
+									\draw [fill=blue,opacity=0.2] (0,0)--(0,1)--(8,9)--(8,0);
+									\draw [dashed] (0,9)--(8,9)--(8,0);
+									\draw [teal,ultra thick] plot [domain=0:9] (\x,{1+\x});
+									\draw [<->,thick] (0,11) -- (0,0) -- (10,0);
+									\node [below] at (10,0) {$q$};
+									\node [left] at (0,11) {$p$};
+									\node [teal,right] at (9,10) {$S$};
+									\draw [fill,blue] (8,9) circle [radius=.15];
+									\node [below] at (0,0) {\tiny 0};
+									\node [below] at (8,0) {\tiny $q_\peq{0}$};
+									\node [left]  at (0,9) {\tiny $p_\peq{0}$};
+									\node at (5,3) {$CV$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.5]
+									\draw [fill=green,opacity=0.2] (0,1)--(0,9)--(8,9)--(0,1);
+									\draw [dashed] (0,9)--(8,9)--(8,0);
+									\draw [teal,ultra thick] plot [domain=0:9] (\x,{1+\x});
+									\draw [<->,thick] (0,11) -- (0,0) -- (10,0);
+									\node [below] at (10,0) {$q$};
+									\node [left] at (0,11) {$p$};
+									\node [teal,right] at (9,10) {$S$};
+									\draw [fill,blue] (8,9) circle [radius=.15];
+									\node [below] at (0,0) {\tiny 0};
+									\node [below] at (8,0) {\tiny $q_\peq{0}$};
+									\node [left]  at (0,9) {\tiny $p_\peq{0}$};
+									\node at (3,6.5) {$EP$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Por lo que podemos concluir que 
+			\begin{itemize}
+				\item $EP=IT-CV$, es decir no considera el costo fijo.
+				\item Luego, $EP\neq\pi$.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Productor}
+			Sin embargo,
+			\begin{itemize}
+				\item $\Delta EP = \Delta\pi$:$$
+					\begin{array}{ll}
+					\Delta \pi &= \pi\rp{q^\peq{s}_\peq{1}} - \pi\rp{q^\peq{s}_\peq{0}} \\
+										 &= IT\rp{q^\peq{s}_\peq{1}}-CV\rp{q^\peq{s}_\peq{1}}-CF-\rp{IT\rp{q^\peq{s}_\peq{0}}-CV\rp{q^\peq{s}_\peq{0}}-CF}\\
+										 &= IT\rp{q^\peq{s}_\peq{1}}-CV\rp{q^\peq{s}_\peq{1}} - \rp{IT\rp{q^\peq{s}_\peq{0}}-CV\rp{q^\peq{s}_\peq{0}}} \\
+										 &= EP_\peq{1}-EP_\peq{0}\\
+										 &= \Delta EP
+					\end{array}$$ 
+			\end{itemize}
+		\end{frame}
+	
+\end{document}

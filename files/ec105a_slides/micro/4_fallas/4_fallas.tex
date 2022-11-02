@@ -1,0 +1,2336 @@
+
+\documentclass[dvipsnames,table,leqno]{beamer}
+%\documentclass{beamer}
+%\usepackage{beamerthemesplit} 
+%\usetheme{Berkeley}
+%\usecolortheme{dolphin}
+\usetheme{Szeged}
+
+\usepackage{amsfonts}
+\usepackage{txfonts}
+\usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[dvips]{graphicx}
+\usepackage{cancel}
+%\usepackage{bm}
+\usepackage{ae,aecompl,amsmath,amsbsy}
+\setbeamertemplate{navigation symbols}{}
+
+\beamertemplateballitem
+
+\usepackage{tikz}
+\usepackage{pbox}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{centernot}
+\usepackage{etoolbox}
+\usepackage{pgfplots}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\usetikzlibrary{babel,decorations.pathreplacing,decorations.markings}
+\decimalpoint
+
+\newtheorem{mydef}{Definición}
+\newcommand{\peq}[1]{{\scriptscriptstyle{#1}}} 
+\newcommand{\rp}[1]{\left(#1\right)}
+\newcommand{\sqp}[1]{\left[#1\right]}
+
+\title{EAE105A \\ Introducción a la Economía}
+\subtitle{II. Microeconomía: Fallas de Mercado} 
+\author{Pinjas Albagli}
+\institute{Instituto de Economía \\ Pontificia Universidad Católica de Chile}
+\date{Primer Semestre de 2018}
+
+\begin{document}
+
+	\maketitle 
+	
+		\begin{frame}
+			\frametitle{Fallas de Mercado}
+			En esta sección estudiaremos situaciones en las que la asignación de equilibrio del mercado no es eficiente y cómo la política económica puede producir una asignación eficiente.
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Fallas de Mercado}
+			\begin{mydef}
+				\textbf{Falla de mercado:} Situación en la cual el mercado, por sí solo, no asigna los recursos eficientemente.
+					\begin{itemize}
+						\item \textbf{Poder de mercado:} Capacidad que tiene un solo actor económico (o un grupo pequeño de actores económicos) de ejercer influencia considerable en los precios del mercado.
+						\item \textbf{Externalidad:} Impacto de las acciones de una persona sobre el bienestar de otras.
+					\end{itemize}
+			\end{mydef}
+		\end{frame}
+	
+	\section{Poder de Mercado}
+
+		\begin{frame}
+			\frametitle{Poder de Mercado}
+			\centering
+				\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+					\tikzset{
+					solid node/.style={rectangle,draw,inner sep=1.5,fill=teal,opacity=.8},
+					hollow node/.style={rectangle,draw,inner sep=1.5}
+					}
+					\tikzstyle{level 1}=[level distance=30mm,sibling distance=25mm]
+					\tikzstyle{level 2}=[level distance=10mm,sibling distance=15mm]
+					\node(0)[solid node]{\textbf{Cantidad de empresas}}
+					child{node(1)[hollow node]{\pbox{\textwidth}{Monopolio}}
+					edge from parent node[left,xshift=-3]{\pbox{\textwidth}{Una\\empresa}}
+					}
+					child{node(2)[hollow node]{\pbox{\textwidth}{Oligopolio}}
+					edge from parent node[left]{\pbox{\textwidth}{Pocas\\empresas}}
+					}
+					child{node(3)[solid node,yshift=1.35cm]{\textbf{Grado de diferenciación}}
+					child{node[hollow node]{\pbox{\textwidth}{Competencia\\monopolística}} edge from parent node[left,xshift=-.2cm]{\pbox{\textwidth}{Productos\\diferenciados}}}
+					child{node[hollow node]{\pbox{\textwidth}{Competencia\\perfecta}} edge from parent node[right,xshift=.2cm]{\pbox{\textwidth}{Productos\\idénticos}}}
+					edge from parent node[right,xshift=-.3cm,yshift=.5cm]{\pbox{\textwidth}{Muchas\\empresas}}
+					};
+			\end{tikzpicture}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{mydef}
+				\textbf{Monopolio:} Empresa que es la única vendedora de un producto que no tiene sustitutos cercanos.
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Causa principal: barreras a la entrada. Pueden producirse, por ejemplo, por...
+			\begin{itemize}
+				\item Un recurso clave para la producción es propiedad de una sola empresa.
+					\begin{itemize}
+						\item Ejemplo: diamantes.
+					\end{itemize}
+				\item Gobierno concede a una sola empresa el derecho exclusivo de vender un bien.
+					\begin{itemize}
+						\item Ej: patentes y derechos de propiedad intelectual.
+					\end{itemize}
+					\item Características del proceso productivo: economías de escala.
+						\begin{itemize}
+							\item Ejemplo: distribución de agua potable.
+						\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{mydef}
+				\textbf{Monopolio natural:} Monopolio que surge cuando una sola empresa ofrece un bien o servicio al mercado completo a un costo menor del que tendrían varias empresas.
+			\end{mydef}
+			
+			\vspace{.1cm}
+			Esto ocurre cuando hay economías de escala en el rango relevante de producción.
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\centering
+			\begin{tikzpicture}[scale=0.05]
+				\draw [ultra thick,teal] plot [domain=9.5:100](\x,{1000/\x});
+				\draw [dashed,help lines] (50,0) -- (50,20) -- (0,20);
+				\draw [dashed,help lines] (0,100) -- (10,100) -- (10,0);
+				\draw [<->,ultra thick] (0,110) -- (0,0) -- (130,0);
+				\node [below] at (130,0) {$q$};
+				\node [left] at (0,110) {$p$};
+				\node [right] at (100,10) {$CMeT\rp{q}$};
+				\node [below] at (50,0) {$q_\peq{1}$};
+				\node [below] at (10,0) {$q_\peq{0}$};
+				\node [left] at (0,20) {$CMeT\left(q_\peq{1}\right)$};
+				\node [left] at (0,100) {$CMeT\left(q_\peq{0}\right)$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			¿Cómo decide $q^\peq{s}$ y $p^\peq{s}$ el monopolio?
+			\begin{itemize}
+				\item Ya vimos que para maximizar sus ganancias una empresa escoge la cantidad que iguala $$CMg\rp{q}=IMg\rp{q}$$
+				\item La diferencia entre los comportamientos de la empresa competitiva y del monopolio radica en la forma de su ingreso marginal.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item La firma competitiva es tomadora de precios y su ingreso marginal es constante.
+				\item En esencia, enfrenta una demanda perfectamente elástica (en el precio de mercado).
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item El monopolio enfrenta la demanda del mercado, que suele tener pendiente negativa.
+				\item Su ingreso marginal no es constante
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{figure}[hbtp!]
+				\centering
+				\begin{subfigure}[b]{0.49\textwidth}
+					\begin{tikzpicture}[scale=1]
+						\draw[ultra thick,teal] (0,3)--(4.5,3);
+						\node [right,teal] at (4.5,3) {$D$};
+						\draw [<->,ultra thick] (0,5)--(0,0)--(5,0);
+						\node [below] at (5,0) {$q$};
+						\node [left] at (0,5) {$p$};
+						\node at (2.5,5) {\underline{Firma competitiva}};
+						\node [below] at (0,0) {\tiny 0};
+					\end{tikzpicture}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.49\textwidth}
+					\begin{tikzpicture}[scale=1]
+						\draw[ultra thick,teal] plot [domain=0:4] (\x,{4-\x});
+						\node [above right,teal] at (4,0) {$D$};
+						\draw [<->,ultra thick] (0,5)--(0,0)--(5,0);
+						\node [below] at (5,0) {$q$};
+						\node [left] at (0,5) {$p$};
+						\node at (2.5,5) {\underline{Monopolio}};
+						\node [below] at (0,0) {\tiny 0};
+					\end{tikzpicture}
+				\end{subfigure}
+			\end{figure}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Cuando el monopolio aumenta la producción se producen dos efectos sobre su ingreso total:
+			\begin{itemize}
+				\item Efecto producto (por la unidad marginal): $$\Delta^\peq{+}q\implies\Delta^\peq{+}\rp{p\cdot q}$$
+				\item Efecto precio (por las unidades inframarginales): $$\Delta^\peq{+}q\implies\Delta^\peq{-}p^\peq{d}\rp{q}\implies\Delta^\peq{-}\rp{p\cdot q}$$  
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item Empresa competitiva: $$IMg\rp{q}=p$$
+				\item Monopolio: $$IMg\rp{q}<p\rp{q}$$ (ver pizarra)
+			\end{itemize}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Monopolio}
+			Ejemplo:
+			\begin{table}[htbp!]
+				\centering
+				%\resizebox{8.5cm}{!}{
+					\begin{tabular}{|l|c|c|c|c|}\hline
+						$q$&	$p$	&$IT$&$IMe$&$IMg$\\ [1ex] \hline 
+						0u &\$11/u&\$0 &\$11/u& --	 \\ \hline
+						1u &\$10/u&\$10&\$10/u&\$10/u \\ \hline
+						2u &\$9/u	&\$18&\$9/u	&\$8/u\\ \hline
+						3u &\$8/u &\$24&\$8/u &\$6/u\\ \hline
+						4u &\$7/u	&\$28&\$7/u	&\$4/u\\ \hline
+						5u &\$6/u	&\$30&\$6/u	&\$2/u\\ \hline
+						6u &\$5/u	&\$30&\$5/u	&\$0/u\\ \hline
+						7u &\$4/u	&\$28&\$4/u &\$-2/u\\ \hline
+						8u &\$3/u	&\$24&\$3/u	&\$-4/u\\ \hline
+					\end{tabular}%}
+			\end{table}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{figure}[htbp!]
+				\centering
+					\begin{tikzpicture}[scale=0.425]
+						\draw [<->,ultra thick] (0,12) -- (0,0) -- (12,0);
+						\draw [ultra thick,teal] (0,11)--(1,10)--(2,9)--(3,8)--(4,7)--(5,6)--(6,5)--(7,4)--(8,3);
+						\draw [fill,teal] (0,11) circle [radius=.2cm];
+						\draw [fill,teal] (1,10) circle [radius=.2cm];
+						\draw [fill,teal] (2,9) circle [radius=.2cm];
+						\draw [fill,teal] (3,8) circle [radius=.2cm];
+						\draw [fill,teal] (4,7) circle [radius=.2cm];
+						\draw [fill,teal] (5,6) circle [radius=.2cm];
+						\draw [fill,teal] (6,5) circle [radius=.2cm];
+						\draw [fill,teal] (7,4) circle [radius=.2cm];
+						\draw [fill,teal] (8,3) circle [radius=.2cm];
+						\node [below right, teal] at (8,3) {$D=IMe$};
+						\draw [ultra thick,purple] (0,11)--(.5,10)--(1.5,8)--(2.5,6)--(3.5,4)--(4.5,2)--(5.5,0)--(6.5,-2)--(7.5,-4);
+						\draw [fill,purple] (.5,10) circle [radius=.2cm];
+						\draw [fill,purple] (1.5,8) circle [radius=.2cm];
+						\draw [fill,purple] (2.5,6) circle [radius=.2cm];
+						\draw [fill,purple] (3.5,4) circle [radius=.2cm];
+						\draw [fill,purple] (4.5,2) circle [radius=.2cm];
+						\draw [fill,purple] (5.5,0) circle [radius=.2cm];
+						\draw [fill,purple] (6.5,-2) circle [radius=.2cm];
+						\draw [fill,purple] (7.5,-4) circle [radius=.2cm];
+						\node [above right, purple] at (8,-4) {$IMg$};
+						\node [below] at (0,0) {\tiny 0};
+					\end{tikzpicture}
+			\end{figure}	
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			En general:
+			\begin{figure}[htbp!]
+				\centering
+					\begin{tikzpicture}[scale=0.0125]
+						%\draw [ultra thick,teal] plot [domain=0:400] (\x,{400-\x}); % D
+						%\draw [ultra thick,purple] plot [domain=0:220] (\x,{400-2*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						%\node [right,purple] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+					\end{tikzpicture}
+			\end{figure}	
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{figure}[htbp!]
+				\centering
+					\begin{tikzpicture}[scale=0.0125]
+						\draw [ultra thick,teal] plot [domain=0:400] (\x,{400-\x}); % D
+						%\draw [ultra thick,purple] plot [domain=0:220] (\x,{400-2*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						%\node [right,purple] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\node [above right,teal] at (400,0) {$D$};
+					\end{tikzpicture}
+			\end{figure}	
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{figure}[htbp!]
+				\centering
+					\begin{tikzpicture}[scale=0.0125]
+						\draw [ultra thick,teal] plot [domain=0:400] (\x,{400-\x}); % D
+						\draw [ultra thick,purple] plot [domain=0:220] (\x,{400-2*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,purple] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\node [above right,teal] at (400,0) {$D$};
+					\end{tikzpicture}
+			\end{figure}	
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{figure}[htbp!]
+				\centering
+					\begin{tikzpicture}[scale=0.0125]
+						%\draw [dashed,help lines] (0,228.2134689)--(171.7865311,228.2134689)--(171.7865311,0);
+						\draw [dashed,help lines] (171.7865311,0)--(171.7865311,56.4269378);
+						\draw [ultra thick,teal] plot [domain=00:400] (\x,{400-\x}); % D
+						\draw [ultra thick,purple] plot [domain=00:220] (\x,{400-2*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,purple] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\draw [fill,blue] (171.7865311,56.4269378) circle [radius=8];
+						%\draw [fill,blue] (171.7865311,228.2134689) circle [radius=8];
+						\node [below] at (171.7865311,0) {\tiny $q^\peq{*}_\peq{M}$};
+						\node [above right,teal] at (400,0) {$D$};
+					\end{tikzpicture}
+			\end{figure}	
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{figure}[htbp!]
+				\centering
+					\begin{tikzpicture}[scale=0.0125]
+						\draw [dashed,help lines] (0,228.2134689)--(171.7865311,228.2134689)--(171.7865311,0);
+						%\draw [dashed,help lines] (171.7865311,0)--(171.7865311,56.4269378);
+						\draw [ultra thick,teal] plot [domain=00:400] (\x,{400-\x}); % D
+						\draw [ultra thick,purple] plot [domain=00:220] (\x,{400-2*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,purple] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\draw [fill,blue] (171.7865311,56.4269378) circle [radius=8];
+						\draw [fill,blue] (171.7865311,228.2134689) circle [radius=8];
+						\node [below] at (171.7865311,0) {\tiny $q^\peq{*}_\peq{M}$};
+						\node [left] at (0,228.2134689) {\tiny $p^\peq{*}_\peq{M}$};
+						\node [above right,teal] at (400,0) {$D$};
+					\end{tikzpicture}
+			\end{figure}	
+		\end{frame}			
+	
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{figure}[htbp!]
+				\centering
+					\begin{tikzpicture}[scale=0.0125]
+						\draw [fill,opacity=.3,blue] (0,228.2134689)--(171.7865311,228.2134689)--(171.7865311,108.3061483)--(0,108.3061483);
+						\draw [dashed,help lines] (0,228.2134689)--(171.7865311,228.2134689)--(171.7865311,0);
+						\draw [dashed,help lines] (0,108.3061483)--(171.7865311,108.3061483);
+						\draw [ultra thick,teal] plot [domain=0:400] (\x,{400-\x}); % D
+						\draw [ultra thick,purple] plot [domain=0:220] (\x,{400-2*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,purple] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\draw [fill,blue] (171.7865311,56.4269378) circle [radius=8];
+						\draw [fill,blue] (171.7865311,228.2134689) circle [radius=8];
+						\draw [fill,blue] (171.7865311,108.3061483) circle [radius=8];
+						\node [below] at (171.7865311,0) {\tiny $q^\peq{*}_\peq{M}$};
+						\node [left] at (0,228.2134689) {\tiny $p^\peq{*}_\peq{M}$};
+						\node [left] at (0,108.3061483) {\tiny $CMeT^\peq{*}_\peq{M}$};
+						\node [above right,teal] at (400,0) {$D$};
+					\end{tikzpicture}
+			\end{figure}	
+		\end{frame}				
+	
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{figure}[htbp!]
+				\centering
+					\begin{tikzpicture}[scale=0.0125]
+						\draw [fill,opacity=.3,black] (171.7865311,56.4269378)--(171.7865311,228.2134689)--(230.19,169.81)--plot [domain=171.7865311:230.19] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50})--cycle;
+						\draw [dashed,help lines] (0,228.2134689)--(171.7865311,228.2134689)--(171.7865311,0);
+						\draw [dashed,help lines] (0,56.4269378)--(171.7865311,56.4269378);
+						\draw [dashed,help lines] (230.19,0)--(230.19,169.81)--(0,169.81);
+						\draw [ultra thick,teal] plot [domain=0:400] (\x,{400-\x}); % D
+						\draw [ultra thick,purple] plot [domain=0:220] (\x,{400-2*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,purple] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\draw [fill,blue] (171.7865311,56.4269378) circle [radius=8];
+						\draw [fill,blue] (171.7865311,228.2134689) circle [radius=8];
+						%\draw [fill,blue] (171.7865311,108.3061483) circle [radius=8];
+						\draw [fill,blue] (230.19,169.81) circle [radius=8];
+						\node [below] at (171.7865311,0) {\tiny $q^\peq{*}_\peq{M}$};
+						\node [below] at (230.19,0) {\tiny $q^\peq{*}_\peq{C}$};
+						\node [left] at (0,228.2134689) {\tiny $p^\peq{*}_\peq{M}$};
+						\node [left] at (0,169.81) {\tiny $p^\peq{*}_\peq{C}$};
+						\node [left] at (0,56.4269378) {\tiny $CMg^\peq{*}_\peq{M}$};
+						\node [above right,teal] at (400,0) {$D$};
+					\end{tikzpicture}
+			\end{figure}	
+		\end{frame}					
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Notar que el monopolio \textbf{no} tiene curva de oferta
+			\begin{itemize}
+				\item La curva de oferta responde qué cantidad querría ofrecer la firma para cada precio. Esta pregunta sólo tiene sentido en el caso de una firma tomadora de precios.
+				\item De hecho no podemos separar la decisión de producción del monopolio de la curva de demanda que enfrenta.
+			\end{itemize}
+		\end{frame}		
+	
+		\begin{frame}
+			\frametitle{Monopolio}
+			Ejemplo: costo marginal constante
+			\begin{itemize}
+				\item Demanda: $p=a-bq\implies IMg\rp{q}=a-2bq$
+				\item Costo marginal: $CMg\rp{q}=c$
+				\item Este ejemplo podría representar a la industria farmaceútica en presencia de patentes.
+			\end{itemize}
+		\end{frame}							
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Resolviendo:
+			\begin{itemize}
+				\item Asignación eficiente: $p=CMg$ $$q^\peq{*}_\peq{C}=\frac{a-c}{b}$$ $$p^\peq{*}_\peq{C}=c$$
+				\item Equilibrio monopólico: $IMg=CMg$ $$q^\peq{*}_\peq{M}=\frac{a-c}{2b}<q^\peq{*}_\peq{C}$$ $$p^\peq{*}_\peq{M}=\frac{a+c}{2}>p^\peq{*}_\peq{C} \text{ }\rp{a>c}$$
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\centering
+			\begin{tikzpicture}[scale=1]
+				\draw [dashed,help lines] (0,2.5)--(1.5,2.5)--(1.5,0);
+				\draw [dashed,help lines] (3,1)--(3,0);
+				\draw [ultra thick,teal] plot [domain=0:4] (\x,{1});
+				\draw [ultra thick,teal] plot [domain=0:4] (\x,{4-\x});
+				\draw [ultra thick,purple] plot [domain=0:2.25] (\x,{4-2*\x});
+				\draw [<->,ultra thick] (5,0)--(0,0)--(0,5);
+				\draw [fill,blue] (1.5,1) circle [radius=.08];
+				\draw [fill,blue] (1.5,2.5) circle [radius=.08];
+				\draw [fill,blue] (3,1) circle [radius=.08];
+				\node [below] at (1.5,0) {\tiny $q^\peq{*}_\peq{M}$};
+				\node [below] at (3,0) {\tiny $q^\peq{*}_\peq{C}$};
+				\node [left] at (0,2.5) {\tiny $p^\peq{*}_\peq{M}$};
+				\node [left] at (0,1) {\tiny $p^\peq{*}_\peq{C}=c$};
+				\node [left] at (0,5) {$p$};
+				\node [below] at (5,0) {$q$};
+				\node [right,teal] at (4,1) {\small $CMg\rp{q}$};
+				\node [below right,purple] at (2.25,-.5) {\small $IMg\rp{q}$};
+				\node [above right,teal] at (4,0) {\small $D$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{mydef}
+				\textbf{Discriminación de precios:} Práctica de negocios que consiste en cobrar precios distintos por el mismo bien a clientes distintos (o por cantidades distintas).
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			La discriminación de precios
+			\begin{itemize}
+				\item Requiere algún grado de poder de mercado $\implies$ no es posible en competencia perfecta.
+				\item Es una estrategia racional para un monopolio: si lo hace es porque así maximiza ganancias.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item Requiere la capacidad de separar a los clientes según su disposición a pagar (geográficamente, por edad, por ingresos, etc.)
+				\item No es factible si hay posibilidades de arbitraje.
+				\begin{mydef}
+					\textbf{Arbitraje:} Comprar en un mercado a precio bajo y vender en otro mercado a precio alto.
+				\end{mydef}
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{mydef}
+				\textbf{Discriminación perfecta:} El monopolio conoce la disposición a pagar de cada cliente (o por cada unidad), lo que le permite cobrar a cada cliente (o por cada unidad) exactamente su disposición a pagar.
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Ejemplo: $CT\rp{q}=cq\implies CMg\rp{q}=CMeT\rp{q}=c$
+			\begin{figure}[htbp!]
+				\centering
+				\begin{subfigure}[b]{0.49\textwidth}
+					\begin{tikzpicture}[scale=1]
+						\draw [fill,opacity=.2,blue] (0,4)--(0,2.5)--(1.5,2.5);
+						\draw [fill,opacity=.2,green] (0,2.5)--(1.5,2.5)--(1.5,1)--(0,1);
+						\draw [fill,opacity=.2,black] (1.5,2.5)--(1.5,1)--(3,1);
+						\draw [dashed,help lines] (0,2.5)--(1.5,2.5)--(1.5,0);
+						\draw [ultra thick,teal] plot [domain=0:4] (\x,{1});
+						\draw [ultra thick,teal] plot [domain=0:4] (\x,{4-\x});
+						\draw [ultra thick,purple] plot [domain=0:2.25] (\x,{4-2*\x});
+						\draw [<->,ultra thick] (5,0)--(0,0)--(0,5);
+						\draw [fill,blue] (1.5,1) circle [radius=.08];
+						\draw [fill,blue] (1.5,2.5) circle [radius=.08];
+						\node [below] at (1.5,0) {\tiny $q^\peq{*}_\peq{M}$};
+						\node [left] at (0,2.5) {\tiny $p^\peq{*}_\peq{M}$};
+						\node [left] at (0,1) {\tiny $c$};
+						\node [above] at (0.5,2.5) { $\mathbf{EC}$}; 
+						\node at (0.5,1.75) {$\mathbf{\pi}$}; 
+						\node at (1.8,1.75) {$\mathbf{PS}$};
+						\node [left] at (0,5) {$p$};
+						\node [below] at (5,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+					\end{tikzpicture}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.49\textwidth}
+					\begin{tikzpicture}[scale=1]
+						\draw [ultra thick,white] plot [domain=0:2.25] (\x,{4-2*\x});
+						\draw [fill,opacity=.2,green] (0,4)--(0,1)--(3,1);
+						\draw [dashed,help lines] (3,1)--(3,0);
+						\draw [ultra thick,teal] plot [domain=0:4] (\x,{1});
+						\draw [ultra thick,teal] plot [domain=0:4] (\x,{4-\x});
+						\draw [<->,ultra thick] (5,0)--(0,0)--(0,5);
+						\draw [fill,blue] (3,1) circle [radius=.08];
+						\node [below] at (3,0) {\tiny $q^\peq{*}_\peq{M}$};
+						\node [left] at (0,1) {\tiny $c$};
+						\node at (1.2,1.75) {$\mathbf{\pi}$};
+						\node [left] at (0,5) {$p$};
+						\node [below] at (5,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+					\end{tikzpicture}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item En el caso de discriminación de precios perfecta, el resultado es eficiente. El monopolio extrae todo el excedente a los consumidores y produce la cantidad eficiente.
+				\item En general es difícil que se dé la discriminación de precios perfecta.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item Cuando la discriminación de precios no es perfecta el análisis es más complejo.
+					\begin{itemize}
+						\item $ET$ puede aumentar, disminuir o no cambiar respecto del equilibrio sin discriminación de precios.
+						\item Lo que sí sabemos es que $\pi$ debe aumentar. De lo contrario el monopolio no discriminaría.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Algunos ejemplos de discriminación de precios:
+			\begin{itemize}
+				\item Boletos de cine
+				\item Pasajes aéreos
+				\item Cupones de descuento
+				\item Ayuda financiera
+				\item Descuentos por volumen
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Política pública: 4 enfoques
+			\begin{itemize}
+				\item Leyes antimonopolio
+				\item Regulación
+				\item Propiedad pública
+				\item No hacer nada
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{mydef}
+				\textbf{Ley antimonopolio:} Cuerpo legal que busca promover y proteger la libre competencia.
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Institucionalidad de la libre competencia en Chile
+			\begin{itemize}
+				\item Modelo judicial dividido:
+				\begin{itemize}
+					\item Órgano administrativo investiga (Fiscalía Nacional Económica)
+					\item Tribunal especializado resuelve (Tribunal de Defensa de la Libre Competencia)
+				\end{itemize}
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Fiscalía Nacional Económica (FNE):
+			\begin{itemize}
+				\item Servicio público dirigido por el Fiscal Nacional Económico
+				\item Supervisado por el Presidente de la República a través del Ministerio de Economía
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Funciones de la FNE:
+			\begin{itemize}
+				\item Realizar investigaciones vinculadas a situaciones que contravengan la legislación de defensa de la libre competencia.
+				\item Tiene facultad para presentar requerimientos (demandas ante el TDLC) y proponer sanciones o medidas correctivas que procedan.
+				\item Velar por el cumplimiento de las medidas que establezca el TDLC en sus fallos/sentencias/resoluciones.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Tribunal de Defensa de la Libre Competencia (TDLC):
+			\begin{itemize}
+				\item Órgano jurisdiccional especial e independiente
+				\item Sujeto a la superintendencia directiva, correccional y económica de la Corte Suprema
+				\item Integrado por 5 Ministros, tres de los cuales son abogados y dos son economistas.  Los acuerdos o decisiones se adoptan por mayoría y, en caso de empate, dirime su Presidente.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Funciones del TDLC:
+			\begin{itemize}
+				\item Prevenir, corregir y sancionar los atentados a la libre competencia aplicando las normas contenidas en el Decreto Ley Nº 211.
+				\item Conocer y resolver las demandas o requerimientos presentados por el Fiscal Nacional Económico.
+				\item Conocer y resolver consultas presentadas por particulares o la FNE respceto de asuntos que puedan atenten contra la libre competencia.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item Dictar instrucciones de carácter general
+				\item Proponer al Presidente de la República la modificación o derogación de preceptos legales y reglamentarios que estime contrarios a la libre competencia.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Conductas que son materia de investigación por parte de la FNE:
+			\begin{itemize}
+				\item Colusiones o acuerdos horizontales
+				\begin{itemize}
+					\item Acuerdos de precios
+					\item Reparto de mercado
+					\item Reparto de cuotas de producción
+					\item Licitaciones colusivas
+				\end{itemize}
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item Abuso de posición dominante
+				\begin{itemize}
+					\item Precios excesivos
+					\item Discriminación arbitraria de precios
+					\item Precios predatorios
+					\item Negativa de venta o compra de bienes y servicios
+					\item Fijación de precios
+					\item Restricciones verticales
+				\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item Competencia desleal (realizada con el objetivo de alcanzar, mantener o incrementar una posición dominante)
+				\item Operaciones de concentración
+				\begin{itemize}
+					\item Integración vertical
+					\item Integración horizontal
+					\item Integración de conglomerados
+				\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Las leyes antimonopolio tienen tanto costos como beneficios
+			\begin{itemize}
+				\item A veces las prácticas que se persiguen tienen motivos de eficiencia.
+				\item Por ejemplo, a veces las empresas se fusionan para reducir costos.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\textbf{Regulación:}
+			\begin{itemize}
+				\item Enfoque común en el caso de los monopolios naturales.
+				\item Ejemplo: fijación de tarifas en distribución de agua potable y electricidad por parte de organismos gubernamentales.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			Problema: no es obvio qué precio establecer
+			\begin{itemize}
+				\item ¿$p=CMg$? A primera vista parece razonable, pero...
+				\begin{itemize}
+					\item Economías de escala $\implies CMg<CMeT$
+					\item Luego, $p=CMg\implies\pi<0$.
+					\item El monopolio abandonaría el mercado con esta regulación.
+				\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\centering
+			\begin{tikzpicture}[scale=1]
+				\draw [fill,opacity=.2,green] (0,4/3)--(3,4/3)--(3,1)--(0,1);
+				\draw [dashed,help lines] (0,4/3)--(3,4/3)--(3,0);
+				\draw [dashed,help lines] (0,1)--(3,1);
+				\draw [ultra thick,teal] plot [domain=0:5] (\x,{1});
+				\draw [ultra thick,teal] plot [domain=0:4] (\x,{4-\x});
+				\draw [ultra thick,purple] plot [domain=.25:5] (\x,{1/\x+1});
+				\draw [<->,ultra thick] (5,0)--(0,0)--(0,5);
+				\draw [fill,blue] (3,4/3) circle [radius=.08];
+				\draw [fill,blue] (3,1) circle [radius=.08];
+				\node [below] at (3,0) {\tiny $q_\peq{0}$};
+				\node [left] at (0,4/3) {\tiny $CMeT_\peq{0}$};
+				\node [left] at (0,1) {\tiny $p_\peq{0}$};
+				\node [right,teal] at (5,1) {\tiny $CMg\rp{q}$};
+				\node [right,purple] at (5,1.2) {\tiny $CMeT\rp{q}$};
+				\node [above] at (1.5,.9) {$\mathbf{\pi_\peq{0}}<0$};
+				\node [above right,teal] at (4,0) {\tiny $D$};
+				\node [left] at (0,5) {$p$};
+				\node [below] at (5,0) {$q$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item El gobierno puede subsidiar al monopolio, pero para gastar requiere recaudar impuestos.
+				\item Otra alternativa es fijar $p=CMeT\implies\pi=0$. En este caso el monopolio no abandona el mercado.
+				\item Pero ya no es cierto que $p=CMg\implies$ hay pérdida social (aunque menor que sin regulación).
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\begin{itemize}
+				\item En ambos casos el monopolio no tiene incentivos a invertir en reducciones de costos porque no disfrutará de los beneficios.
+				\item En la práctica el regualdor resuelve permitiendo que el monopolio se quede con parte de los beneficios.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\textbf{Propiedad pública:}
+			\begin{itemize}
+				\item El gobierno administra directamente el monopolio.
+				\item Enfoque común en varios países europeos.
+				\item En general los economistas prefieren la propiedad privada sobre la pública (incentivos a reducir costos).
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Monopolio}
+			\textbf{No hacer nada:}
+			\textbf{Propiedad pública:}
+			\begin{itemize}
+				\item A veces el costo de la solución puede ser mayor que el problema que intenta resolver.
+				\item Según Stigler, la ``falla del mercado'' es mucho menor que la ``falla política''.
+			\end{itemize}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			\begin{mydef}
+				\textbf{Competencia monopolística:} Estructura de mercado en la cual muchas empresas venden productos similares, pero \textbf{no} idénticos (productos diferenciados).
+			\end{mydef}
+		\end{frame}		
+	
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Modelaremos una situación con las siguientes características:
+			\begin{itemize}
+				\item Grupo grande de vendedores compite por el mismo grupo de clientes
+				\item Productos diferenciados $\implies$ cada empresa enfrenta demanda con pendiente negativa
+				\item Libre entrada y salida $\implies\pi=0$ en el equilibrio de largo plazo
+			\end{itemize}
+		\end{frame}				
+
+
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Decisión de la firma:
+			\begin{itemize}
+				\item Cada empresa es en esencia un monopolio local sobre su variedad de producto
+				\item La decisión de producción está dada por la regla $IMg\rp{q}=CMg\rp{q}$.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			\begin{figure}[htbp!]
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.009]
+						\draw [fill,opacity=.3,green] (0,132.08081)--(129.63,132.08081)--(129.63,85.185)--(0,85.185);
+						\draw [dashed,help lines] (0,132.08081)--(129.63,132.08081)--(129.63,0);
+						\draw [dashed,help lines] (0,85.185)--(129.63,85.185);
+						%\draw [dashed,help lines] (0,56.4269378)--(171.7865311,56.4269378);
+						%\draw [dashed,help lines] (230.19,0)--(230.19,169.81)--(0,169.81);
+						\draw [ultra thick,teal] plot [domain=0:300] (\x,{150-.5*\x}); % D
+						\draw [ultra thick,purple] plot [domain=0:190] (\x,{150-\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,purple] at (190,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\draw [fill,blue] (129.63,20.37) circle [radius=8];
+						\draw [fill,blue] (129.63,85.185) circle [radius=8];
+						\draw [fill,blue] (129.63,132.08081) circle [radius=8];
+						%\draw [fill,blue] (171.7865311,228.2134689) circle [radius=8];
+						%\draw [fill,blue] (171.7865311,108.3061483) circle [radius=8];
+						%\draw [fill,blue] (230.19,169.81) circle [radius=8];
+						\node [below] at (129.63,0) {\tiny $q^\peq{*}_\peq{i}$};
+						%\node [below] at (230.19,0) {\tiny $q^\peq{*}_\peq{C}$};
+						\node [left] at (0,85.185) {\tiny $p^\peq{*}_\peq{i}$};
+						\node [left] at (0,132.08081) {\tiny $CMeT^\peq{*}_\peq{i}$};
+						%\node [left] at (0,56.4269378) {\tiny $CMg^\peq{*}_\peq{M}$};
+						\node [above right,teal] at (300,0) {$D$};
+						\node at (225,430) {\underline{$\mathbf{\pi_\peq{i}<0}$}};
+					\end{tikzpicture}
+				\end{subfigure}	
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.009]
+						\draw [fill,opacity=.3,green] (0,228.2134689)--(171.7865311,228.2134689)--(171.7865311,108.3061483)--(0,108.3061483);
+						\draw [dashed,help lines] (0,228.2134689)--(171.7865311,228.2134689)--(171.7865311,0);
+						\draw [dashed,help lines] (0,108.3061483)--(171.7865311,108.3061483);
+						\draw [ultra thick,teal] plot [domain=0:400] (\x,{400-\x}); % D
+						\draw [ultra thick,purple] plot [domain=0:220] (\x,{400-2*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,purple] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\draw [fill,blue] (171.7865311,56.4269378) circle [radius=8];
+						\draw [fill,blue] (171.7865311,228.2134689) circle [radius=8];
+						\draw [fill,blue] (171.7865311,108.3061483) circle [radius=8];
+						\node [below] at (171.7865311,0) {\tiny $q^\peq{*}_\peq{i}$};
+						\node [left] at (0,228.2134689) {\tiny $p^\peq{*}_\peq{i}$};
+						\node [left] at (0,108.3061483) {\tiny $CMeT^\peq{*}_\peq{i}$};
+						\node [above right,teal] at (400,0) {$D$};
+						\node at (225,430) {\underline{$\mathbf{\pi_\peq{i}>0}$}};
+					\end{tikzpicture}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Pero
+			\begin{itemize}
+				\item $\pi>0\implies$ incentivo a entrar $\implies$ más sustitutos $\implies\Delta^\peq{-}$Demanda de cada firma$\implies\Delta^\peq{-}\pi$ 
+				\item $\pi<0\implies$ incentivo a salir $\implies$ menos sustitutos $\implies\Delta^\peq{+}$Demanda de cada firma$\implies\Delta^\peq{+}\pi$
+				\item En equilibrio la cantidad de empresas es tal que $\pi=0\implies$ tangencia entre curvas de demanda y $CMeT$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=0.0125]
+					\draw [dashed,help lines] (0,134.6506)--(126.729,134.6506)--(126.729,0);
+					%\draw [dashed,help lines] (0,108.3061483)--(171.7865311,108.3061483);
+					\draw [ultra thick,teal] plot [domain=0:274.6634] (\x,{250-.910205*\x}); % D
+					\draw [ultra thick,purple] plot [domain=0:160] (\x,{250-2*.910205*\x}); % IMg
+					\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+					\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); % CMeT
+					\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+					\node [below] at (450,0) {$q$};
+					\node [below] at (0,0) {\tiny 0};
+					\node [right,purple] at (160,-41.2656) {$IMg$};
+					\node [left] at (0,450) {$p$};
+					\node [right,teal] at (290,362.28) {$CMg$};
+					\node [right,blue] at (400,271) {$CMeT$};
+					\draw [fill,blue] (126.729,19.300986) circle [radius=8];
+					\draw [fill,blue] (126.729,134.6506) circle [radius=8];
+					\node [below] at (126.729,0) {\tiny $q^\peq{*}_\peq{i}$};
+					\node [left] at (0,134.6506) {\tiny $p^\peq{*}_\peq{i}=CMeT^\peq{*}_\peq{i}$};
+					\node [above right,teal] at (274.6634,0) {$D$};
+				\end{tikzpicture}
+			\end{figure}	
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Conclusiones:
+			\begin{itemize}
+				\item Al igual que en monopolio, $p^\peq{*}>CMg$
+				\item Al igual que en competencia perfecta, $p^\peq{*}=CMeT$ (es decir $\pi=0$)
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Competencia monopolística versus competencia perfecta
+			\begin{figure}[htbp!]
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.008]
+						\draw [dashed,help lines] (0,134.6506)--(126.729,134.6506)--(126.729,0);
+						%\draw [dashed,help lines] (0,108.3061483)--(171.7865311,108.3061483);
+						\draw [ultra thick,teal] plot [domain=0:274.6634] (\x,{250-.910205*\x}); % D
+						\draw [ultra thick,purple] plot [domain=0:160] (\x,{250-2*.910205*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); % CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,purple] at (160,-41.2656) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\draw [fill,blue] (126.729,19.300986) circle [radius=8];
+						\draw [fill,blue] (126.729,134.6506) circle [radius=8];
+						\node [below] at (126.729,0) {\tiny $q^\peq{*}_\peq{CM}$};
+						\node [left] at (0,134.6506) {\tiny $p^\peq{*}_\peq{CM}=CMeT^\peq{*}_\peq{CM}$};
+						\node [above right,teal] at (274.6634,0) {$D$};
+						\node at (225,430) {\underline{Empresa en CM}};
+					\end{tikzpicture}
+				\end{subfigure}	
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.008]
+						\draw [dashed,help lines] (201.033,103.99484)--(201.033,0);
+						\draw [ultra thick,white] plot [domain=0:220] (\x,{400-2*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,purple] plot [domain=0:450] (\x,{103.99484}); % P
+						\draw [ultra thick,blue] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); %CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,white] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {$CMg$};
+						\node [right,blue] at (400,271) {$CMeT$};
+						\draw [fill,blue] (201.033,103.99484) circle [radius=8];
+						\node [below] at (201.033,0) {\tiny $q^\peq{*}_\peq{CP}$};
+						\node [left] at (0,103.99484) {\tiny $p^\peq{*}_\peq{CP}=CMeT^\peq{*}_\peq{CP}$};
+						\node at (225,430) {\underline{Empresa en CP}};
+					\end{tikzpicture}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Diferencias con competencia perfecta:
+			\begin{itemize}
+				\item \textbf{Exceso de capacidad:} En el largo plazo las empresas en CP producen a la escala eficiente. Empresas en CM producen a una escala menor. Podrían reducir su $CMeT$ aumentando la escala, pero no aprovechan esta oportunidad porque tendrían que cobrar más barato ($\Delta^\peq{-}p$).
+				\item \textbf{Margen sobre costo marginal:} Empresa en CP está indiferente entre vender una unidad adicional o no al precio de equilibrio. Empresa en CM querría vender más al precio de equilibrio porque $p^\peq{*}>CMg\rp{q^\peq{*}}$.
+			\end{itemize}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Pérdida social:
+			\begin{itemize}
+				\item $p>CMg\implies$ hay compradores con disposición a pagar mayor que CMg que no están comprando (como en el caso del monopolio).
+				\item La cantidad de empresas en equilibrio podría no ser eficiente ya que la entrada produce externalidades:
+					\begin{itemize}
+						\item Externalidad positiva: mayor variedad de productos
+						\item Externalidad negativa: menores ganancias para empresas incumbentes (``business stealing'')
+					\end{itemize}
+			\end{itemize}
+		\end{frame}		
+	
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Pero también es importante el escenario contrafactual:
+			\begin{itemize}
+				\item La variedad de productos tiene un valor intrínseco al ampliar los conjuntos de elección de los consumidores. 
+				\item La variedad también proporciona un beneficio externo.
+				\item Si la alternativa es un mundo sin variedad de productos, no es claro qué es mejor.
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Publicidad:
+			\begin{itemize}
+				\item $p>CMg$ genera incentivo a buscar formas de atraer a nuevos clientes.
+				\item Debate:
+					\begin{itemize}
+						\item ¿La sociedad malgasta sus recursos en publicidad?
+						\item ¿La publicidad sirve para algún propósito útil?
+					\end{itemize}
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Crítica:
+			\begin{itemize}
+				\item Sirve para manipular los gustos de los consumidores.
+					\begin{itemize}
+						\item Gran parte de la publicidad es más psicológica que informativa.
+						\item Genera un deseo que no existiría en ausencia de publicidad.
+					\end{itemize}
+				\item Reduce la competencia.
+					\begin{itemize}
+						\item Convence a los consumidores de que los productos son más diferentes de lo que son en realidad.
+						\item Los consumidores se fijan menos en las diferencias de precios.
+						\item Una demanda menos elástica permite un mayor margen sobre el costo marginal.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}		
+				
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Defensa:
+			\begin{itemize}
+				\item Proporciona información a los consumidores.
+					\begin{itemize}
+						\item Precios, aparición de nuevos productos, localización de las tiendas.
+						\item Facilita la toma de decisiones.
+					\end{itemize}
+				\item Estimula la competencia.
+					\begin{itemize}
+						\item Consumidores más informados aprovechan mejor las diferencias de precios.
+						\item Facilita la entrada de nuevas empresas.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Competencia Monopolística}
+			Un argumento más sutil a favor:
+			\begin{itemize}
+				\item Entrega más información de lo que se observa a simple vista.
+					\begin{itemize}
+						\item Disposición de la empresa a gastar en publicidad puede ser una \textbf{señal} de la calidad del producto para los consumidores.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			Un juego (en forma normal o estratégica) está compuesto por 3 elementos:
+			\begin{itemize}
+				\item Un conjunto de jugadores. Supondremos 2: $$J_\peq{i}, \ i\in\{1,2\}$$
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{itemize}
+				\item Un conjunto de acciones disponibles para cada jugador. Supondremos 2 por jugador: $$J_\peq{1}\text{ escoge } a\in\{a_\peq{1},a_\peq{2}\}$$ $$J_\peq{2}\text{ escoge } b\in\{b_\peq{1},b_\peq{2}\}$$
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{itemize}
+				\item Una función de pagos para cada jugador que depende de las acciones de ambos: $$u_\peq{i}\rp{a,b}, \ i\in\{1,2\}$$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			Podemos representar el juego a través de la siguiente matriz de pagos
+			\begin{table}[htbp!]
+				\centering
+				%\resizebox{10cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$b_\peq{1}$&$b_\peq{2}$ \\ [1ex] \hline
+						$a_\peq{1}$						 &$\rp{u_\peq{1}\rp{a_\peq{1},b_\peq{1}},u_\peq{2}\rp{a_\peq{1},b_\peq{1}}}$&$\rp{u_\peq{1}\rp{a_\peq{1},b_\peq{2}},u_\peq{2}\rp{a_\peq{1},b_\peq{2}}}$ \\ [1ex] \hline 
+						$a_\peq{2}$						 &$\rp{u_\peq{1}\rp{a_\peq{2},b_\peq{1}},u_\peq{2}\rp{a_\peq{2},b_\peq{1}}}$&$\rp{u_\peq{1}\rp{a_\peq{2},b_\peq{2}},u_\peq{2}\rp{a_\peq{2},b_\peq{2}}}$ \\ [1ex] \hline 
+					\end{tabular}%}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{itemize}
+				\item El objetivo de cada jugador es maximizar su función de pago, pero debe considerar las reacciones del otro jugador.
+				\item El jugador debe decidir qué acción maximizaría su pago ante (condicional en) cada acción del rival.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{mydef}
+				\textbf{Mejor respuesta:} Función que indica la acción que maximiza el pago del jugador $i$ para cada acción posible del jugador $j$ ($j,i\in\{1,2\},j\neq i$). $$r_\peq{1}\rp{b}\in\{a_\peq{1},a_\peq{2}\}$$ $$r_\peq{2}\rp{a}\in\{b_\peq{1},b_\peq{2}\}$$
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			Aterrizando conceptos: dilema del prisionero
+			\begin{itemize}
+				\item La policía detiene a 2 delincuentes pero no tiene evidencia suficiente para condenarlos y necesita que confiesen el uno en contra del otro.
+				\item Los encierran en celdas separadas para prevenir que se comuniquen y le dicen a cada uno que si testifica contra el otro, saldrá libre y recibirá un premio, siempre y cuando el otro no testifique en su contra.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			Escenarios posibles:
+			\begin{itemize}
+				\item Si ninguno testifica, ambos salen libres y sin premio.
+				\item Si uno testifica, el otro va a prisión.
+				\item Si ambos testifican, ambos van a prisión pero con premio por confesar.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			El juego:
+			\begin{itemize}
+				\item Ambos jugadores deciden simultáneamente sus acciones: testificar ($T$) o no ($N$).
+				\item Si ninguno testifica (cooperan entre ellos), cada uno recibe un pago de 1. $$u_\peq{1}\rp{N,N}=u_\peq{2}\rp{N,N}=1$$
+				\item Si ambos testifican (no cooperan), obtienen 0 cada uno. $$u_\peq{1}\rp{T,T}=u_\peq{2}\rp{T,T}=0$$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{itemize}
+				\item Si uno testifica y el otro no, el que testifica queda con pago 2 y el otro con pago -1 $$u_\peq{1}\rp{N,T}=u_\peq{2}\rp{T,N}=-1$$ $$u_\peq{1}\rp{T,N}=u_\peq{2}\rp{N,T}=2$$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$T$ \\ [1ex] \hline
+						$N$						 &$\rp{1,1}$&$\rp{-1,2}$ \\ [1ex] \hline 
+						$T$						 &$\rp{2,-1}$&$\rp{0,0}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$T$ \\ [1ex] \hline
+						$N$						 &$\rp{1,1}$&$\rp{-1,2}$ \\ [1ex] \hline 
+						$T$						 &$\rp{\color{blue}\underline{{\color{black}2}}\color{black},-1}$&$\rp{0,0}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$T$ \\ [1ex] \hline
+						$N$						 &$\rp{1,1}$&$\rp{-1,2}$ \\ [1ex] \hline 
+						$T$						 &$\rp{\color{blue}\underline{{\color{black}2}}\color{black},-1}$&$\rp{\color{blue}\underline{{\color{black}0}}\color{black},0}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$T$ \\ [1ex] \hline
+						$N$						 &$\rp{1,1}$&$\rp{-1,\color{green}\underline{{\color{black}2}}\color{black}}$ \\ [1ex] \hline 
+						$T$						 &$\rp{\color{blue}\underline{{\color{black}2}}\color{black},-1}$&$\rp{\color{blue}\underline{{\color{black}0}}\color{black},0}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$T$ \\ [1ex] \hline
+						$N$						 &$\rp{1,1}$&$\rp{-1,\color{green}\underline{{\color{black}2}}\color{black}}$ \\ [1ex] \hline 
+						$T$						 &$\rp{\color{blue}\underline{{\color{black}2}}\color{black},-1}$&$\rp{\color{blue}\underline{{\color{black}0}}\color{black},\color{green}\underline{{\color{black}0}}\color{black}}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			Mejores respuestas:
+			\begin{table}[htbp!]
+				\centering
+				%\resizebox{9cm}{!}{
+					\begin{tabular}{|c|c|}\hline
+						$J_\peq{1}$				 &$J_\peq{2}$\\ [1ex] \hline
+						$r_\peq{1}\rp{N}=T$&$r_\peq{2}\rp{N}=T$ \\ [1ex] 
+						$r_\peq{1}\rp{T}=T$&$r_\peq{2}\rp{T}=T$ \\ [1ex] \hline 
+					\end{tabular}%}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{mydef}
+				\textbf{Estrategia dominante:} Estrategia que es la mejor respuesta de un jugador para todas las acciones del otro jugador. Escogerá esta acción independientemente de lo que haga el otro.
+			\end{mydef}
+			En este ejemplo testificar (no cooperar) es una estrategia dominante para ambos jugadores.
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{mydef}
+				\textbf{Equilibrio de Nash:} Situación en que ningún jugador tiene incentivos a cambiar de estrategia ya que cada uno está jugando su mejor respuesta a la estrategia del otro (las estrategias de equilibrio son mutuas mejores respuestas).
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría de Juegos}
+			\begin{itemize}
+				\item En este ejemplo el equilibrio de Nash es $\rp{T,T}$ con pagos $\rp{0,0}$.
+				\item Si ambos jugadores cooperaran (perfil de estrategias $\rp{N,N}$) podrían obtener un mejor resultado para ambos (perfil de pagos $\rp{1,1}$), pero sus incentivos individuales impiden la cooperación en equilibrio.
+			\end{itemize}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{mydef}
+				\textbf{Oligopolio:} Estructura de mercado en la cual pocos vendedores ofrecen productos similares o idénticos.
+			\end{mydef}
+		\end{frame}		
+	
+		\begin{frame}
+			\frametitle{Oligopolio}
+			Al haber pocas empresas se genera:
+			\begin{itemize}
+				\item Interdependencia: Las acciones de cada empresa influyen en las ganancias de las demas (interacción estratégica).
+				\item Tentación de cooperar: El oligopolio podría aumentar las ganancias de cada una de las empresas que lo componen si se coordinaran y actuaran como un monopolio (colusión).
+			\end{itemize}
+		\end{frame}	
+	
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Colusión:} Acuerdo entre las empresas de un mercado sobre las cantidades que producirán o los precios que cobrarán.
+					\item \textbf{Cartel:} Grupo de empresas que se coluden.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			Ejemplo: juego de colusión en un duopolio (estático)
+			\begin{itemize}
+				\item 2 empresas, $J_\peq{1}$ y $J_\peq{2}$ con funciones de costo típicas e idénticas (ver pizarra).
+				\item Curva de demanda de mercado con pendiente negativa (ver pizarra).
+			\end{itemize}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{itemize}
+				\item El bien producido por una empresa es sustituto perfecto del bien producido por la otra.
+				\item El precio de mercado es el mismo para los productos de ambas empresas y la cantidad demandada depende de este precio.
+			\end{itemize}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			Las condiciones de costos y demanda son las siguientes
+			\begin{figure}[htbp!]
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.008]
+						\draw [dashed,help lines] (0,103.99484)--(201.033,103.99484)--(201.033,0);
+						%\draw [dashed,help lines] (0,108.3061483)--(171.7865311,108.3061483);
+						%\draw [ultra thick,teal] plot [domain=0:274.6634] (\x,{250-.910205*\x}); % D
+						%\draw [ultra thick,purple] plot [domain=0:160] (\x,{250-2*.910205*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,purple] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); % CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						%\node [right,purple] at (160,-41.2656) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {\tiny $CMg$};
+						\node [right,purple] at (400,271) {\tiny $CMeT$};
+						\draw [fill,blue] (201.033,103.99484) circle [radius=8];
+						\node [below] at (201.033,0) {\tiny 3.000};
+						\node [left] at (0,103.99484) {\tiny 6.000};
+						%\node [above right,teal] at (274.6634,0) {$D$};
+						\node at (230,430) {\scriptsize \underline{Costos de cada firma}};
+					\end{tikzpicture}
+				\end{subfigure}	
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.008]
+						\draw [dashed,help lines] (0,103.99484)--(201.033,103.99484)--(201.033,0);
+						%\draw [dashed,help lines] (0,1.3*128.45104)--(4/6*201.033,1.3*128.45104)--(4/6*201.033,0);
+						\draw [ultra thick,white] plot [domain=0:220] (\x,{400-2*\x}); 
+						\draw [ultra thick,teal] plot [domain=0:311.664] (\x,{292.96937-.94001746*\x}); % D
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,white] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						%\draw [fill,blue] (4/6*201.033,1.3*128.45104) circle [radius=8];
+						\draw [fill,blue] (201.033,103.99484) circle [radius=8];
+						\node [below] at (201.033,0) {\tiny 6.000};
+						%\node [below] at (4/6*201.033,0) {\tiny 4.000};
+						%\node [left] at (0,1.3*128.45104) {\tiny 9.000};
+						\node [left] at (0,103.99484) {\tiny 6.000};
+						\node [above right,teal] at (311.664,0) {\tiny $D$};
+						\node at (230,430) {\scriptsize \underline{Demanda de mercado}};
+					\end{tikzpicture}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{itemize}
+				\item Las empresas participan en un acuerdo de colusión.
+				\item Cada una tienen dos estrategias disponibles: cumplir ($C$) o hacer trampa ($T$).
+			\end{itemize}
+		\end{frame}			
+	
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{itemize}
+				\item Si ambas cumplen, actuarán como un monopolio y se repartirán la ganancia.
+				\item Producirán $4.000$ unidades semanales y cobrarán $\$9.000$ por unidad.
+			\end{itemize}
+		\end{frame}					
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{itemize}
+				\item Supongamos que se reparten la producción en partes iguales, $2.000$ unidades cada una.
+				\item $CMeT\rp{2.000}=\$8.000/\text{u}\implies\pi_\peq{1}=\pi_\peq{2}=\$2.000.000$
+				\item En la notación del juego, $$u_\peq{1}\rp{C,C}=u_\peq{2}\rp{C,C}=2$$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{figure}[htbp!]
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.008]
+					\draw [fill,opacity=.2,green] (0,1.3*128.45104)--(4/6*201.033,1.3*128.45104)--(4/6*201.033,128.45104)--(0,128.45104);
+						\draw [dashed,help lines] (0,128.45104)--(2/3*201.033,128.45104)--(2/3*201.033,0);
+						\draw [dashed,help lines] (0,1.3*128.45104)--(450,1.3*128.45104);
+						\draw [dashed,help lines] (2/3*201.033,128.45104)--(2/3*201.033,1.3*128.45104);
+						%\draw [dashed,help lines] (0,108.3061483)--(171.7865311,108.3061483);
+						%\draw [ultra thick,teal] plot [domain=0:274.6634] (\x,{250-.910205*\x}); % D
+						%\draw [ultra thick,purple] plot [domain=0:160] (\x,{250-2*.910205*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,purple] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); % CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						%\node [right,purple] at (160,-41.2656) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {\tiny $CMg$};
+						\node [right,purple] at (400,271) {\tiny $CMeT$};
+						\draw [fill,blue] (2/3*201.033,128.45104) circle [radius=8];
+						\draw [fill,blue] (2/3*201.033,1.3*128.45104) circle [radius=8];
+						\node [below] at (2/3*201.033,0) {\tiny 2.000};
+						\node [left] at (0,1.3*128.45104) {\tiny 9.000};
+						\node [left] at (0,128.45104) {\tiny 8.000};
+						%\node [above right,teal] at (274.6634,0) {$D$};
+						\node at (230,430) {\scriptsize \underline{Ambas cumplen}};
+					\end{tikzpicture}
+				\end{subfigure}	
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.008]
+						\draw [dashed,help lines] (0,1.3*128.45104)--(4/6*201.033,1.3*128.45104)--(4/6*201.033,0);
+						\draw [ultra thick,white] plot [domain=0:220] (\x,{400-2*\x}); 
+						\draw [ultra thick,teal] plot [domain=0:311.664] (\x,{292.96937-.94001746*\x}); % D
+						\draw [ultra thick,purple] plot [domain=0:155.832] (\x,{292.96937-2*.94001746*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=80:240] (\x,{((27/1250)*\x-24/5)*\x + 300}); % CMgT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,white] at (220,-40) {$IMg$};
+						\node [right,teal] at (240,392.16) {\tiny $\sum{CMg}$};
+						\node [above,teal] at (311.664,0) {\tiny $D$};
+						\node [above right,purple] at (155.832,0) {\tiny $IMg$};
+						\node [left] at (0,450) {$p$};
+						\draw [fill,blue] (4/6*201.033,1.3*128.45104) circle [radius=8];
+						\draw [fill,blue] (132.731,43.429597) circle [radius=8];
+						%\draw [fill,blue] (201.033,103.99484) circle [radius=8];
+						%\node [below] at (201.033,0) {\tiny 6.000};
+						\node [below] at (4/6*201.033,0) {\tiny 4.000};
+						\node [left] at (0,1.3*128.45104) {\tiny 9.000};
+						%\node [left] at (0,103.99484) {\tiny 6.000};
+						\node at (230,430) {\scriptsize \underline{Mercado}};
+					\end{tikzpicture}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{itemize}
+				\item Pero, como $p>CMg$, cada empresa podría aumentar sus ganancias produciendo más que lo acordado.
+				\item Supongamos que una hace trampa y produce $3.000$ unidades mientras la otra cumple el acuerdo y produce $2.000$.
+				\item La cantidad ofrecida es $5.000$ y el precio dado por la curva de demanda es $\$7.500/\text{u}$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{itemize}
+				\item La empresa que hace trampa produce a $CMeT\rp{3.000}=\$6.000/\text{u}\implies\pi_\peq{i}=\$4.500.000$.
+				\item La empresa que cumple sigue produciendo a $CMeT\rp{2.000}=\$8.000/\text{u}\implies\pi_\peq{j}=\$-1.000.000$.
+				\item En la notación del juego, $$u_\peq{1}\rp{T,C}=u_\peq{2}\rp{C,T}=4.5$$ $$u_\peq{1}\rp{C,T}=u_\peq{2}\rp{T,C}=-1$$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{figure}[htbp!]
+				\centering
+				%\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=0.0125]
+							\draw [fill,opacity=.2,green] (0,116.22294)--(4/6*201.033,116.22294)--(4/6*201.033,128.45104)--(0,128.45104);
+							\draw [dashed,help lines] (0,128.45104)--(2/3*201.033,128.45104)--(2/3*201.033,0);
+							\draw [dashed,help lines] (0,116.22294)--(450,116.22294);
+							\draw [dashed,help lines] (2/3*201.033,128.45104)--(2/3*201.033,116.22294);
+							%\draw [dashed,help lines] (0,108.3061483)--(171.7865311,108.3061483);
+							%\draw [ultra thick,teal] plot [domain=0:274.6634] (\x,{250-.910205*\x}); % D
+							%\draw [ultra thick,purple] plot [domain=0:160] (\x,{250-2*.910205*\x}); % IMg
+							\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+							\draw [ultra thick,purple] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); % CMeT
+							\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+							\node [below] at (450,0) {$q$};
+							\node [below] at (0,0) {\tiny 0};
+							%\node [right,purple] at (160,-41.2656) {$IMg$};
+							\node [left] at (0,450) {$p$};
+							\node [right,teal] at (290,362.28) {\tiny $CMg$};
+							\node [right,purple] at (400,271) {\tiny $CMeT$};
+							\draw [fill,blue] (2/3*201.033,128.45104) circle [radius=4];
+							\draw [fill,blue] (2/3*201.033,116.22294) circle [radius=4];
+							\node [below] at (2/3*201.033,0) {\tiny 2.000};
+							\node [left] at (0,116.22294) {\tiny 7.500};
+							\node [left] at (0,128.45104) {\tiny 8.000};
+							%\node [above right,teal] at (274.6634,0) {$D$};
+							\node at (230,430) {\scriptsize \underline{Empresa que cumple}};
+						\end{tikzpicture}
+					%}
+				%\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{figure}[htbp!]
+				\centering
+				%\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=0.0125]
+							\draw [fill,opacity=.2,green] (0,116.22294)--(201.033,116.22294)--(201.033,103.99484)--(0,103.99484);
+							\draw [dashed,help lines] (0,103.99484)--(201.033,103.99484)--(201.033,0);
+							\draw [dashed,help lines] (0,116.22294)--(450,116.22294);
+							\draw [dashed,help lines] (201.033,103.99484)--(201.033,116.22294);
+							%\draw [dashed,help lines] (0,108.3061483)--(171.7865311,108.3061483);
+							%\draw [ultra thick,teal] plot [domain=0:274.6634] (\x,{250-.910205*\x}); % D
+							%\draw [ultra thick,purple] plot [domain=0:160] (\x,{250-2*.910205*\x}); % IMg
+							\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+							\draw [ultra thick,purple] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); % CMeT
+							\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+							\node [below] at (450,0) {$q$};
+							\node [below] at (0,0) {\tiny 0};
+							%\node [right,purple] at (160,-41.2656) {$IMg$};
+							\node [left] at (0,450) {$p$};
+							\node [right,teal] at (290,362.28) {\tiny $CMg$};
+							\node [right,purple] at (400,271) {\tiny $CMeT$};
+							\draw [fill,blue] (201.033,103.99484) circle [radius=4];
+							\draw [fill,blue] (201.033,116.22294) circle [radius=4];
+							\node [below] at (201.033,0) {\tiny 3.000};
+							\node [left] at (0,116.22294) {\tiny 7.500};
+							\node [left] at (0,103.99484) {\tiny 6.000};
+							%\node [above right,teal] at (274.6634,0) {$D$};
+							\node at (230,430) {\scriptsize \underline{Empresa que hace trampa}};
+						\end{tikzpicture}
+					%}
+				%\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{figure}[htbp!]
+				\centering
+				%\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=0.0125]
+						\draw [dashed,help lines] (0,124.52458)--(175.91409,124.52458)--(175.91409,0);
+						\draw [ultra thick,white] plot [domain=0:220] (\x,{400-2*\x}); 
+						\draw [ultra thick,teal] plot [domain=0:311.664] (\x,{292.96937-.94001746*\x}); % D
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,white] at (220,-40) {$IMg$};
+						\node [above,teal] at (311.664,0) {\tiny $D$};
+						\node [left] at (0,450) {$p$};
+						\draw [fill,blue] (175.91409,124.52458) circle [radius=8];
+						%\node [below] at (201.033,0) {\tiny 6.000};
+						\node [below] at (5/6*201.033,0) {\tiny 5.000};
+						\node [left] at (0,135.49059) {\tiny 7.500};
+						%\node [left] at (0,103.99484) {\tiny 6.000};
+						\node at (230,430) {\scriptsize \underline{Mercado}};
+						\end{tikzpicture}
+					%}
+				%\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{itemize}
+				\item Por último, si ambas hacen trampa y producen $3.000$ unidades cada una, el precio será $6.000$.
+				\item $CMeT\rp{3.000}=\$6.000/\text{u}\implies\pi_\peq{1}=\pi_\peq{2}=\$0.$
+				\item En la notación del juego, $$u_\peq{1}\rp{T,T}=u_\peq{2}\rp{T,T}=0$$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{figure}[htbp!]
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.008]
+						\draw [dashed,help lines] (0,103.99484)--(201.033,103.99484)--(201.033,0);
+						%\draw [dashed,help lines] (0,108.3061483)--(171.7865311,108.3061483);
+						%\draw [ultra thick,teal] plot [domain=0:274.6634] (\x,{250-.910205*\x}); % D
+						%\draw [ultra thick,purple] plot [domain=0:160] (\x,{250-2*.910205*\x}); % IMg
+						\draw [ultra thick,teal] plot [domain=50:290] (\x,{(.0072*\x-1.2)*\x+(.06*\x-10)^2+50}); % CMg
+						\draw [ultra thick,purple] plot [domain=50:400] (\x,{(.06*\x-10)^2+50+10000/\x}); % CMeT
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						%\node [right,purple] at (160,-41.2656) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						\node [right,teal] at (290,362.28) {\tiny $CMg$};
+						\node [right,purple] at (400,271) {\tiny $CMeT$};
+						\draw [fill,blue] (201.033,103.99484) circle [radius=8];
+						\node [below] at (201.033,0) {\tiny 3.000};
+						\node [left] at (0,103.99484) {\tiny 6.000};
+						%\node [above right,teal] at (274.6634,0) {$D$};
+						\node at (230,430) {\scriptsize \underline{Ambas hacen trampa}};
+					\end{tikzpicture}
+				\end{subfigure}	
+				\begin{subfigure}[b]{0.49\textwidth}
+					\centering
+					\begin{tikzpicture}[scale=0.008]
+						\draw [dashed,help lines] (0,103.99484)--(201.033,103.99484)--(201.033,0);
+						%\draw [dashed,help lines] (0,1.3*128.45104)--(4/6*201.033,1.3*128.45104)--(4/6*201.033,0);
+						\draw [ultra thick,white] plot [domain=0:220] (\x,{400-2*\x}); 
+						\draw [ultra thick,teal] plot [domain=180:240] (\x,{((27/1250)*\x-24/5)*\x + 300-100}); % CMgT
+						\draw [ultra thick,teal] plot [domain=0:311.664] (\x,{292.96937-.94001746*\x}); % D
+						\draw [<->,ultra thick] (0,450) -- (0,0) -- (450,0);
+						\node [below] at (450,0) {$q$};
+						\node [below] at (0,0) {\tiny 0};
+						\node [right,white] at (220,-40) {$IMg$};
+						\node [left] at (0,450) {$p$};
+						%\draw [fill,blue] (4/6*201.033,1.3*128.45104) circle [radius=8];
+						\draw [fill,blue] (201.033,103.99484) circle [radius=8];
+						\node [below] at (201.033,0) {\tiny 6.000};
+						%\node [below] at (4/6*201.033,0) {\tiny 4.000};
+						%\node [left] at (0,1.3*128.45104) {\tiny 9.000};
+						\node [left] at (0,103.99484) {\tiny 6.000};
+						\node [above right,teal] at (311.664,0) {\tiny $D$};
+						\node [right,teal] at (240,292.16) {\tiny $\sum{CMg}$};
+						\node at (230,430) {\scriptsize \underline{Mercado}};
+					\end{tikzpicture}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$T$&$C$ \\ [1ex] \hline
+						$T$						 &$\rp{0,0}$&$\rp{4.5,-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,4.5}$&$\rp{2,2}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$T$&$C$ \\ [1ex] \hline
+						$T$						 &$\rp{\color{blue}\underline{{\color{black}0}}\color{black},0}$&$\rp{4.5,-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,4.5}$&$\rp{2,2}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$T$&$C$ \\ [1ex] \hline
+						$T$						 &$\rp{\color{blue}\underline{{\color{black}0}}\color{black},0}$&$\rp{\color{blue}\underline{{\color{black}4.5}}\color{black},-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,4.5}$&$\rp{2,2}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$T$&$C$ \\ [1ex] \hline
+						$T$						 &$\rp{\color{blue}\underline{{\color{black}0}}\color{black},\color{green}\underline{{\color{black}0}}\color{black}}$&$\rp{\color{blue}\underline{{\color{black}4.5}}\color{black},-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,4.5}$&$\rp{2,2}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$T$&$C$ \\ [1ex] \hline
+						$T$						 &$\rp{\color{blue}\underline{{\color{black}0}}\color{black},\color{green}\underline{{\color{black}0}}\color{black}}$&$\rp{\color{blue}\underline{{\color{black}4.5}}\color{black},-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,\color{green}\underline{{\color{black}4.5}}\color{black}}$&$\rp{2,2}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			Mejores respuestas:
+			\begin{table}[htbp!]
+				\centering
+				%\resizebox{9cm}{!}{
+					\begin{tabular}{|c|c|}\hline
+						$J_\peq{1}$				 &$J_\peq{2}$\\ [1ex] \hline
+						$r_\peq{1}\rp{T}=T$&$r_\peq{2}\rp{T}=T$ \\ [1ex] 
+						$r_\peq{1}\rp{C}=T$&$r_\peq{2}\rp{C}=T$ \\ [1ex] \hline 
+					\end{tabular}%}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			\begin{itemize}
+				\item En equlibrio ambas empresas hacen trampa y el acuerdo de colusión no se sostiene.
+				\item Se trata de un dilema del prisionero: si cooperaran obtendrían un mejor resultado pero sus incentivos individuales inhiben la cooperación.
+			\end{itemize}
+		\end{frame}	
+	
+		\begin{frame}
+			\frametitle{Oligopolio}
+			Algunas consideraciones:
+			\begin{itemize}
+				\item La colusión es sostenible en equilibrio en un contexto de juegos repetidos (bajo ciertas condiciones).
+				\item Cuando no hay equilibrio colusivo (modelo estático), la cantidad de empresas afecta el resultado. $$\Delta^\peq{+}n\implies\text{mercado más parecido a competencia perfecta}$$
+			\end{itemize}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			En su decisión marginal de producción el oligopolista enfrenta dos incentivos:
+			\begin{itemize}
+				\item \textbf{Efecto producción:} $p>CMg\implies\Delta^\peq{+}\pi_\peq{i}$ al vender la unidad adicional.
+				\item \textbf{Efecto precio:} $\Delta^\peq{+}q_\peq{i}\implies\Delta^\peq{+}Q\implies\Delta^\peq{-}p\implies\Delta^\peq{-}\pi_peq{i}$.
+				\item A medida que aumenta la cantidad de empresas, el efecto precio se va haciendo menos relevante.
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			Política pública:
+			\begin{itemize}
+				\item La cooperación entre oligopolistas genera una mayor pérdida social (equilibrio monopólico).
+				\item Un objetivo de política pública relevante es inducir a los oligopolios a competir en lugar de cooperar.
+				\item Una herramienta disponible son las leyes antimonopolio.
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			Leyes antimonopolio:
+			\begin{itemize}
+				\item Suelen prohibir los acuerdos entre empresas sobre cuotas de producción y fijación de precios.
+				\item También se usan para impedir fusiones que causarían que una sola empresa tuviera excesivo poder en el mercado.
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Oligopolio}
+			Controversia:
+			\begin{itemize}
+				\item ¿Qué tipo de conducta se debe prohibir?
+				\item Se ha prohibido algunas prácticas de negocio cuyo efecto no es evidente:
+					\begin{itemize}
+						\item Precios de reventa (exigir un precio de venta a público a los minoristas).
+						\item Precios depredatorios.
+						\item Venta atada.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}	
+		
+	\section{Externalidades}
+	
+		\begin{frame}
+			\frametitle{Externalidades}
+			\begin{mydef}
+				\textbf{Externalidad:} efecto no compensado de las acciones de una persona o empresa sobre el bienestar de un tercero
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Externalidades}
+			Hasta aquí habíamos supesto que:
+				\begin{itemize}
+					\item Nadie más que los participantes del mercado obtiene beneficios $$\implies BMg \text{ privado} = BMg \text{ social}$$
+					\item No existen costos adicionales a los que deben asumir las empresas que participan en el mercado $$\implies CMg \text{ privado} = CMg \text{ social}$$
+				\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Externalidades}
+				\begin{itemize}
+					\item Bajo estos supuestos, el bienestar de la sociedad puede ser medido como la suma del excedente del productor y el excedente del consumidor. En presencia de externalidades, esto ya no es cierto.
+					\item La existencia de efectos secundarios ligados al consumo o la producción implica que el equilibrio del mercado es ineficiente desde el punto de vista de la sociedad.
+				\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Externalidades}
+			Ejemplos:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{11.5cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+																 &Externalidad en la producción&Externalidad en el consumo\\ [1ex] \hline
+						Externalidad positiva&\parbox{4cm}{\begin{itemize}\item Difusión tecnológica\item Agricultores y apicultores\end{itemize}}&\parbox{4cm}{\begin{itemize}\item Educación\item Vacunas\end{itemize}}\\ [1ex] \hline
+						Externalidad negativa&\parbox{4cm}{\begin{itemize}\item Contaminación ambiental\item Construcción de edificios\end{itemize}}&\parbox{4cm}{\begin{itemize}\item Música a alto volumen\item Cigarro\end{itemize}} \\ [1ex] \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Externalidades}
+			Ejemplo: Contaminación
+			
+			\centering
+			\begin{tikzpicture}[scale=0.0125]
+				\draw [fill=black,opacity=0.2] (100,100) -- (100,200) -- (50,150);
+				\draw [dashed,help lines] (0,100) -- (100,100) -- (100,0);
+				\draw [dashed,help lines] (100,100) -- (100,200);
+				\draw [dashed,help lines] (0,150) -- (50,150) -- (50,0);
+				\draw [ultra thick,teal] plot [domain=0:200](\x,{200-\x});
+				\draw [ultra thick,purple] plot [domain=0:200](\x,{\x+100});
+				\draw [ultra thick,teal] plot [domain=0:300](\x,{\x});
+				\draw [<->,ultra thick] (0,350) -- (0,0) -- (350,0);
+				\node [below] at (350,0) {$q$};
+				\node [left] at (0,350) {$p$};
+				\node [right,teal] at (300,300) {\tiny $S$};
+				\node [above right,teal] at (200,0) {\tiny $D$};
+				\node [above right,purple] at (200,300) {\tiny $CMg_\peq{\text{social}}$};
+				\node [left] at (0,100) {\tiny $p^{*}_\peq{M}$};
+				\node [below] at (100,0) {\tiny $q^{*}_\peq{M}$};
+				\node [left] at (0,150) {\tiny $p^{*}_\peq{S}$};
+				\node [below] at (50,0) {\tiny $q^{*}_\peq{S}$};
+			\end{tikzpicture}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Externalidades}
+			Ejemplo: Educación
+			
+			\centering
+			\begin{tikzpicture}[scale=0.0125]
+				\draw [dashed,help lines] (0,100) -- (100,100) -- (100,0);
+				\draw [dashed,help lines] (100,100) -- (100,200);
+				\draw [dashed,help lines] (0,150) -- (150,150) -- (150,0);
+				\draw [fill=black,opacity=0.2] (100,100) -- (100,200) -- (150,150);
+				\draw [ultra thick,teal] plot [domain=0:200](\x,{200-\x});
+				\draw [ultra thick,purple] plot [domain=0:300](\x,{300-\x});
+				\draw [ultra thick,teal] plot [domain=0:300](\x,{\x});
+				\draw [<->,ultra thick] (0,350) -- (0,0) -- (350,0);
+				\node [below] at (350,0) {$q$};
+				\node [left] at (0,350) {$p$};
+				\node [right,teal] at (300,300) {\tiny $S$};
+				\node [above right,teal] at (200,0) {\tiny $D$};
+				\node [above right,purple] at (300,0) {\tiny $BMg_\peq{\text{social}}$};
+				\node [left] at (0,100) {\tiny $p^{*}_\peq{M}$};
+				\node [below] at (100,0) {\tiny $q^{*}_\peq{M}$};
+				\node [left] at (0,150) {\tiny $p^{*}_\peq{S}$};
+				\node [below] at (150,0) {\tiny $q^{*}_\peq{S}$};
+			\end{tikzpicture}
+		\end{frame}			
+	
+		\begin{frame}
+			\frametitle{Externalidades}
+			Modelo:
+			\begin{align}
+				\text{Demanda: } p^\peq{d}&=a-bq^\peq{d}& \\
+				\text{Oferta: }  p^\peq{s}&=c+dq^\peq{s}& \\
+				BMg \text{ social: } p^\peq{d}&=a-bq^\peq{d}+E\\
+				\text{No-impuesto: } p^\peq{d}&=p^\peq{s}=p& \\
+				\text{Equilibrio: } q^\peq{d}&=q^\peq{s}=q^\peq{*}&
+			\end{align}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Externalidades}
+			donde
+			\begin{itemize}
+				\item $E>0\implies$ externalidad positiva
+				\item $E<0\implies$ externalidad negativa
+			\end{itemize}
+		\end{frame}	
+	
+		\begin{frame}
+			\frametitle{Externalidades}
+			Resolviendo:
+			\begin{align*}
+				\text{Equilibrio de mercado: } q^\peq{*}_\peq{M}&=\frac{a-c}{b+d}& \\
+				\text{Óptimo social: }  q^\peq{*}_\peq{S}&=\frac{a-c}{b+d}+\frac{E}{b+d}& \\
+			\end{align*}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Externalidades}
+			Estudiaremos dos tipos de solución al problema de las externalidades:
+				\begin{itemize}
+					\item Soluciones privadas
+					\item Soluciones de política pública
+				\end{itemize}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Externalidades}
+			Soluciones privadas:
+				\begin{itemize}
+					\item Códigos y sanciones morales
+					\item Instituciones de beneficencia
+					\item Integración de negocios
+					\item Contratos
+				\end{itemize}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Externalidades}
+				\textbf{Teorema de Coase:} 
+				
+				\vspace{.3cm}
+				Si 
+					\begin{itemize}
+						\item las partes involucradas pueden negociar sin costos de transacción y
+						\item los derechos de propiedad están plenamente asignados.
+					\end{itemize}
+					Entonces,
+					\begin{itemize}
+						\item las partes (el mercado) resolverán el problema asignando eficientemente los recursos, independientemente de la asignación de los derechos de propiedad.
+					\end{itemize}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Externalidades}
+			Hay dos enfoques de política pública:
+				\begin{itemize}
+					\item Políticas de orden y control: regulación (exigir o prohibir actividades)
+					\item Políticas basadas en el mercado: impuestos/subsidios correctivos, permisos transables
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Externalidades}
+			Objeciones a las políticas de orden y control:
+				\begin{itemize}
+					\item Requieren información detallada
+					\item No consideran heterogeneidad (por ejemplo en costos de reducir la contaminación)
+					\item No son contingentes a los costos de las empresas (que varían en el tiempo)
+					\item Generalmente ineficientes
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Externalidades}
+			Impuestos y subsidios:
+				\begin{itemize}
+					\item Si $q^\peq{*}_\peq{M}>q^\peq{*}_\peq{S}$ se puede implementar un impuesto para reducir la cantidad.
+					\item Si $q^\peq{*}_\peq{M}<q^\peq{*}_\peq{S}$ se puede implementar un subsidio para incrementar la cantidad.
+					\item El monto del impuesto/subsidio ideal (que elimina la ineficiencia) es el costo/beneficio externo de la actividad.
+				\end{itemize}
+		\end{frame}	
+	
+		\begin{frame}
+			\frametitle{Externalidades}
+			Permisos transables:
+				\begin{itemize}
+					\item Una forma de reducir la contaminación hasta una cantidad objetivo es emitir permisos para contaminar.
+					\item Ejemplo: si se desea reducir la contaminación a un nivel $\overline{c}$, basta con emitir $\overline{c}$ permisos para emitir una unidad de contaminación y repartirlos entre las empresas.
+				\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Externalidades}
+				\begin{itemize}
+					\item Si las empresas pueden negociar libremente los permisos entre ellas, aquellas con menores costos de reducción de contaminación venderán a aquellas con mayores costos.
+					\item En equilibrio se logra la cantidad deseada de contaminación, pero en una forma eficiente.
+				\end{itemize}
+		\end{frame}	
+	
+	\section{Bienes Públicos y Recursos Comunes}
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			Para entender el problema de los bienes públicos y los recursos comunes, nos concentraremos en 2 características de los bienes que nos permitirán clasificarlos en 4 categorías.
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{itemize}
+				\item \textbf{Excluibilidad:} Es posible impedir que una persona lo consuma.
+					\begin{itemize}
+						\item Ejemplos de bienes excluibles: un chocolate, ideas con patente, carreteras con peaje, bienes físicos en general.
+						\item Ejemplos de bienes no excluibles: ideas sin patente, defensa nacional, peces en el mar, espectáculo de fuegos artificiales.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{itemize}
+				\item \textbf{Rivalidad en el consumo:} El consumo de una por parte de una persona reduce el consumo potencial de otras (se gasta).
+					\begin{itemize}
+						\item Ejemplos de bienes rivales: un chocolate, bienes físicos en general, carreteras congestionadas.
+						\item Ejemplos de bienes no rivales: ideas en general, espectáculo de fuegos artificiales, sistemas de advertencia de catástrofe.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			Clasificación:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{11.5cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+											&Excluible				& No excluible		 \\ [1ex] \hline
+						Rival			&\parbox{5cm}{Bienes privados\tiny\begin{itemize}\item Vaso de helado \item Autopista congestionada con peaje\end{itemize}}&\parbox{5cm}{Recursos comunes\tiny\begin{itemize}\item Peces en el mar \item Autopista congestionada libre de peaje\end{itemize}} \\ [1ex] \hline
+						No rival	&\parbox{5cm}{Bienes reservados\tiny\begin{itemize}\item TV por cable\item Autopista no congestionada con peaje\end{itemize}}&\parbox{5cm}{Bienes públicos\tiny\begin{itemize}\item Defensa nacional\item Autopista no congestionada y libre de peaje\end{itemize}}	 \\ [1ex] \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{mydef}
+				\textbf{Bien público:} Bien que no es excluible ni rival en el consumo.
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			Ejemplo: provisión de alumbrado público
+			\begin{itemize}
+				\item 2 vecinos, $J_\peq{1}$ y $J_\peq{2}$
+				\item Cada uno valora el alumbrado público en $\$3$
+				\item Costo de provisión de alumbrado público es $\$4$
+				\item Notar que el costo es menor que la suma de las valoraciones
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{itemize}
+				\item Basta que un vecino contribuya para que se provea el alumbrado público
+				\item Si ambos contribuyen, el costo se reparte en partes iguales, $\$2$ c/u
+				\item Si sólo uno contribuye, paga $\$4$
+				\item Costo de provisión de alumbrado público es $\$4$
+				\item Si ninguno contribuye, no se provee el servicio
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{itemize}
+				\item Ambos vecinos deciden simultáneamente entre contribuir ($C$) y no contribuir ($N$) 
+				\item Si ambos contribuyen, cada uno paga $\$2$ por un bien que valora en $\$3$, obteniendo un excedente de $\$1$ $$u_\peq{1}\rp{C,C}=u_\peq{2}\rp{C,C}=1$$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{itemize}
+				\item Si uno contribuye y el otro no, el que contribuye paga $\$4$ por un bien que valora en $\$3$, obteniendo un excedente de $\$-1$, mientras el que no lo hace obtiene un beneficio de $\$3$ sin pagar $$u_\peq{1}\rp{N,C}=u_\peq{2}\rp{C,N}=3$$ $$u_\peq{1}\rp{C,N}=u_\peq{2}\rp{N,C}=-1$$ 
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{itemize}
+				\item Por último, si ninguno contribuye no se provee el servicio y ambos tienen excedente de $\$0$ $$u_\peq{1}\rp{N,N}=u_\peq{2}\rp{N,N}=0$$ 
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$C$ \\ [1ex] \hline
+						$N$						 &$\rp{0,0}$&$\rp{3,-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,3}$&$\rp{1,1}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$C$ \\ [1ex] \hline
+						$N$						 &$\rp{\color{blue}\underline{{\color{black}0}}\color{black},0}$&$\rp{3,-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,3}$&$\rp{1,1}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$C$ \\ [1ex] \hline
+						$N$						 &$\rp{\color{blue}\underline{{\color{black}0}}\color{black},0}$&$\rp{\color{blue}\underline{{\color{black}3}}\color{black},-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,3}$&$\rp{1,1}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$C$ \\ [1ex] \hline
+						$N$						 &$\rp{\color{blue}\underline{{\color{black}0}}\color{black},\color{green}\underline{{\color{black}0}}\color{black}}$&$\rp{\color{blue}\underline{{\color{black}3}}\color{black},-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,3}$&$\rp{1,1}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$N$&$C$ \\ [1ex] \hline
+						$N$						 &$\rp{\color{blue}\underline{{\color{black}0}}\color{black},\color{green}\underline{{\color{black}0}}\color{black}}$&$\rp{\color{blue}\underline{{\color{black}3}}\color{black},-1}$ \\ [1ex] \hline 
+						$C$						 &$\rp{-1,\color{green}\underline{{\color{black}3}}\color{black}}$&$\rp{1,1}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			Mejores respuestas:
+			\begin{table}[htbp!]
+				\centering
+				%\resizebox{9cm}{!}{
+					\begin{tabular}{|c|c|}\hline
+						$J_\peq{1}$				 &$J_\peq{2}$\\ [1ex] \hline
+						$r_\peq{1}\rp{N}=N$&$r_\peq{2}\rp{N}=N$ \\ [1ex] 
+						$r_\peq{1}\rp{C}=N$&$r_\peq{2}\rp{C}=N$ \\ [1ex] \hline 
+					\end{tabular}%}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{itemize}
+				\item En equlibrio ningún vecino contribuye y no se provee alumbrado público.
+				\item Se trata de un dilema del prisionero: si cooperaran obtendrían un mejor resultado pero sus incentivos individuales inhiben la cooperación. Ambos tienen incentivos a actuar como parásitos o \emph{free-riders}
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			\begin{mydef}
+				\textbf{Parásito o \emph{free-rider}:} Persona que recibe el beneficio de un bien evadiendo el pago
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			``¿Para qué pagar por el bien si otro lo hace por mí?''
+			\begin{itemize}
+				\item Al tratarse de un bien no-excluible y no-rival en el consumo, se genera una \textbf{externalidad positiva}: cuando un individuo paga, otros pueden consumir el bien sin pagar.
+				\item Conclusion: el problema del \emph{free-rider} impide que el mercado provea los bienes públicos en forma eficiente.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Bienes Públicos}
+			Política pública:
+			\begin{itemize}
+				\item El gobierno puede proveer directamente el bien público o financiar la provisión a través de privados.
+				\item Pero no es tan sencillo: debe determinar qué tipo de bienes y en qué cantidad financiar.
+				\item Dificultad: no es fácil estimar el valor del bien para la sociedad. Individuos no tienen incentivos a revelar su verdadera valoración.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			\begin{mydef}
+				\textbf{Recurso Común:} Bien que no es excluible, pero sí rival en el consumo.
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			Ejemplo: terreno compartido para pastar
+			\begin{itemize}
+				\item 2 pastores, $J_\peq{1}$ y $J_\peq{2}$
+				\item Deciden simultáneamente cuánto pastarán sus ovejas
+				\item Dos alternativas: media jornada (M) o jornada completa (C)
+				\item Si una oveja pasta más, se puede vender a mejor precio pero perjudica la reproducción del pasto
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$M$&$C$ \\ [1ex] \hline
+						$M$						 &$\rp{5,5}$&$\rp{1,6}$ \\ [1ex] \hline 
+						$C$						 &$\rp{6,1}$&$\rp{3,3}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$M$&$C$ \\ [1ex] \hline
+						$M$						 &$\rp{5,5}$&$\rp{1,6}$ \\ [1ex] \hline 
+						$C$						 &$\rp{\color{blue}\underline{{\color{black}6}}\color{black},1}$&$\rp{3,3}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$M$&$C$ \\ [1ex] \hline
+						$M$						 &$\rp{5,5}$&$\rp{1,6}$ \\ [1ex] \hline 
+						$C$						 &$\rp{\color{blue}\underline{{\color{black}6}}\color{black},1}$&$\rp{\color{blue}\underline{{\color{black}3}}\color{black},3}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$M$&$C$ \\ [1ex] \hline
+						$M$						 &$\rp{5,5}$&$\rp{1,\color{green}\underline{{\color{black}6}}\color{black}}$ \\ [1ex] \hline 
+						$C$						 &$\rp{\color{blue}\underline{{\color{black}6}}\color{black},1}$&$\rp{\color{blue}\underline{{\color{black}3}}\color{black},3}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+						$J_\peq{1}$/$J_\peq{2}$&$M$&$C$ \\ [1ex] \hline
+						$M$						 &$\rp{5,5}$&$\rp{1,\color{green}\underline{{\color{black}6}}\color{black}}$ \\ [1ex] \hline 
+						$C$						 &$\rp{\color{blue}\underline{{\color{black}6}}\color{black},1}$&$\rp{\color{blue}\underline{{\color{black}3}}\color{black},\color{green}\underline{{\color{black}3}}\color{black}}$ \\ [1ex] \hline 
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			Mejores respuestas:
+			\begin{table}[htbp!]
+				\centering
+				%\resizebox{9cm}{!}{
+					\begin{tabular}{|c|c|}\hline
+						$J_\peq{1}$				 &$J_\peq{2}$\\ [1ex] \hline
+						$r_\peq{1}\rp{M}=C$&$r_\peq{2}\rp{M}=C$ \\ [1ex] 
+						$r_\peq{1}\rp{C}=C$&$r_\peq{2}\rp{C}=C$ \\ [1ex] \hline 
+					\end{tabular}%}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			\begin{itemize}
+				\item En equlibrio ambos pastores explotan el recurso en jornada completa.
+				\item Si cooperaran obtendrían un mejor resultado pero sus incentivos individuales inhiben la cooperación. 
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			\begin{itemize}
+				\item Al tratarse de un bien no-excluible, pero rival en el consumo, se genera una \textbf{externalidad negativa}: cuando un individuo consume, hay menos recurso disponible para el consumo de los demás.
+				\item Conclusion: la externalidad negativa hace que el recurso sea sobreexplotado en equilibrio.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Recursos Comunes}
+			Política pública:
+			\begin{itemize}
+				\item El gobierno puede resolver mediante regulación o impuestos.
+				\item También puede asignar derechos de propiedad, transformando el recurso común en un bien privado.
+			\end{itemize}
+		\end{frame}
+
+\end{document}

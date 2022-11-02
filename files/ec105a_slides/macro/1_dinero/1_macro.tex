@@ -1,0 +1,882 @@
+
+\documentclass[dvipsnames,table,leqno]{beamer}
+%\documentclass{beamer}
+%\usepackage{beamerthemesplit} 
+%\usetheme{Berkeley}
+%\usecolortheme{dolphin}
+\usetheme{Szeged}
+
+\usepackage{amsfonts}
+\usepackage{txfonts}
+\usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[dvips]{graphicx}
+\usepackage{cancel}
+%\usepackage{bm}
+\usepackage{ae,aecompl,amsmath,amsbsy}
+\setbeamertemplate{navigation symbols}{}
+
+\beamertemplateballitem
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{pbox}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{centernot}
+\usepackage{etoolbox}
+\usepackage{pgfplots}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+\usetikzlibrary{babel,decorations.pathreplacing,decorations.markings}
+\decimalpoint
+
+\newtheorem{mydef}{Definición}
+\newcommand{\peq}[1]{{\scriptscriptstyle{#1}}} 
+\newcommand{\rp}[1]{\left(#1\right)}
+\newcommand{\sqp}[1]{\left[#1\right]}
+
+\title{EAE105A \\ Introducción a la Economía}
+\subtitle{III. Macroeconomía} 
+\author{Pinjas Albagli}
+\institute{Instituto de Economía \\ Pontificia Universidad Católica de Chile}
+\date{Primer Semestre de 2018}
+
+\begin{document}
+
+	\maketitle 
+	
+	\section{Introducción}
+	
+		\begin{frame}
+			\frametitle{Introducción}
+			\begin{mydef}
+				\textbf{Macroeconomía:} Estudio de los fenómenos a nivel de toda la economía, como inflación, desempleo y crecimiento económico
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Introducción}
+			Los macroeconomistas abordan preguntas como:
+			\begin{itemize}
+				\item ¿Por qué el ingreso promedio es tan alto en algunos países mientras que es bajo en otros?
+				\item ¿Qué determina el crecimiento de una economía?
+				\item ¿Qué provoca las fluctuaciones en el ritmo de crecimiento del producto y del empleo?
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Introducción}
+			\begin{itemize}
+				\item ¿Por qué los precios aumentan rápidamente en algunas ocasiones y en otras son más estables?
+				\item ¿Qué origina la inflación y cómo se comporta a través del tiempo?
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Introducción}
+			El estudio de la macroeconomía requiere la construcción índices que incluyan mucha información. Los llamamos \textbf{agregados económicos}. Por ejemplo:
+			\begin{itemize}
+				\item Producto Interno Bruto (PIB)
+				\item Índice de Precios al Consumidor (IPC)
+				\item Tasa de desempleo
+				\item Tipo de cambio
+			\end{itemize}
+		\end{frame}
+
+	\section{Agregados Económicos}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			\begin{mydef}
+				\textbf{Producto Interno Bruto (PIB):} Valor de mercado de todos los bienes y servicios finales producidos dentro de un país en un periodo determinado.
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			``Valor de mercado ...''
+			\begin{itemize}
+				\item Suma muchos tipos de productos en una sola medida.
+				\item Suma (literalmente) peras con manzanas. Pero 1 pera + 1 manzana = ¿1 perazana? ¿1 manzapera?
+				\item Para hacerlo pondera por los precios de mercado: $$Y_\peq{t}\equiv\sum_\peq{i=1}^{n_\peq{t}}{p_\peq{i,t}\cdot q_\peq{i,t}}$$
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			``... de todos ...''
+			\begin{itemize}
+				\item Incluye todos los bienes y servicios producidos en la economia y vendidos legalmente en los mercados.
+					\begin{itemize}
+						\item Ejemplo: Servicios de vivienda. En el caso de propietarios se supone que el propietario se arrienda la casa a sí mismo (se imputa un valor de arriendo).
+					\end{itemize}
+				\item No incluye el valor de bienes difíciles de medir:
+					\begin{itemize}
+						\item Bienes producidos y vendidos en forma ilegal.
+						\item Bienes producidos y consumidos en el hogar.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			``... bienes y servicios ...''
+			\begin{itemize}
+				\item Incluye tangibles como intangibles
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			``... finales ...''
+			\begin{itemize}
+				\item El valor de los bienes intermedios (insumos) está incluido en el valor de los bienes finales.
+				\item Se evita la doble contabilidad.
+				\item Con excepción de los bienes intermedios que pasan a inventario:
+					\begin{itemize}
+						\item Adiciones a inventario se suman al PIB
+						\item Reducciones de inventario se restan del PIB
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			Ejemplo:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{11cm}{!}{
+					\begin{tabular}{|l|c|c|c|}\hline
+						\textbf{Fase de producción}&\textbf{Valor de venta}&\textbf{Gasto en bien intermedio}&\textbf{Valor agregado} \\ [1ex] \hline
+						Trigo											 & 24										 & 0															 & 24 \\ [1ex] \hline
+						Harina										 & 33										 & 24															 & 9  \\ [1ex] \hline
+						Panificación							 & 60										 & 33															 & 27 \\ [1ex] \hline
+						Venta	pan									 & 90										 & 60															 & 30 \\ [1ex] \hline
+						Total											 & 207									 & 117														 & 90 \\ [1ex] \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			Ejemplo:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{11cm}{!}{
+					\begin{tabular}{|l|c|c|c|}\hline
+						\textbf{Fase de producción}&\textbf{Valor de venta}&\textbf{Gasto en bien intermedio}&\textbf{Valor agregado} \\ [1ex] \hline
+						Trigo											 & 24										 & 0															 & 24 \\ [1ex] \hline
+						Harina										 & 33										 & 24															 & 9  \\ [1ex] \hline
+						Panificación							 & 60										 & 33															 & 27 \\ [1ex] \hline
+						Venta	pan									 & \textbf{90}					 & 60															 & 30 \\ [1ex] \hline
+						Total											 & 207									 & 117														 & \textbf{90} \\ [1ex] \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			``... producidos ...''
+			\begin{itemize}
+				\item Incluye bienes producidos en el periodo de medición.
+				\item No incluye ventas de bienes usados.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			``... dentro de un país ...''
+			\begin{itemize}
+				\item Incluye todo lo que se produce en el país, sin importar la nacionalidad del productor.
+				\item No incluye la producción de nacionales en el extranjero.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			``... en un periodo determinado.''
+			\begin{itemize}
+				\item Usualmente un año o un trimestre.
+				\item Las cifras trimestrales son desestacionalizadas y anualizadas.
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			Recordemos el diagrama de flujo circular...
+			\centering
+			\begin{tikzpicture}[scale=.7,
+				main node/.style={
+					draw,
+					shape=ellipse,
+					fill=teal,
+					opacity=0.8,
+					minimum width=2cm,
+					minimum height=1cm
+				},
+				sec node/.style={
+					draw,
+					shape=rectangle,
+					fill=green,
+					opacity=0.8,
+					minimum width=2cm,
+					minimum height=1cm
+				},
+				>=latex,
+				auto=right
+			]
+				\node[main node] (inputs) at (0,-3) {\parbox{3.5cm}{\centering \tiny \textbf{Mercado de factores \\ de la producción}
+				\begin{itemize}
+					\item Familias venden
+					\item Empresas compran
+				\end{itemize}
+				}};
+				\node[sec node] (households) at  (5,0) {\parbox{3.5cm}{\centering \tiny \textbf{Familias}
+				\begin{itemize}
+					\item Compran y consumen bienes y servicios
+					\item Son propietarias y vendedoras de factores de producción
+				\end{itemize}
+				}};
+				\node[sec node] (firms) at (-5,0) {\parbox{3.5cm}{\centering \tiny \textbf{Empresas}
+				\begin{itemize}
+					\item Producen y venden bienes y servicios
+					\item Contratan y utilizan factores de la producción
+				\end{itemize}
+				}};
+				\node[main node] (goods) at (0,3) {\parbox{3.5cm}{\centering \tiny \textbf{Mercado de \\ bienes y servicios}
+				\begin{itemize}
+					\item Empresas venden
+					\item Familias compran
+				\end{itemize}
+				}};
+				\draw[<-, to path={-| (\tikztotarget)}] 
+					(goods)  edge[red,thick] (firms)
+					(inputs) edge[red,thick] (households);
+				\draw[->, to path={-| (\tikztotarget)}]
+					(goods)	edge[red,thick]  (households)
+					(inputs) edge[red,thick] (firms);
+				\draw[->,blue,thick] (-2.9,4)-- (-6,4)--(-6,1.3);
+				\draw[<-,blue,thick] (-2.9,-4)-- (-6,-4)--(-6,-1.3);
+				\draw[->,blue,thick] (-2.9,4)-- (-6,4)--(-6,1.3);
+				\draw[->,blue,thick] (2.9,-4)-- (6,-4)--(6,-1.4);
+				\draw[<-,blue,thick] (2.9,4)-- (6,4)--(6,1.45);
+				\node [blue] at (-5,4.5) {\tiny ingreso};
+				\node [blue] at (-4.5,-4.5) {\tiny salarios, rentas y beneficios};
+				\node [blue] at (5,-4.5) {\tiny ingreso};
+				\node [blue] at (5,4.5) {\tiny gasto};
+				\node [red] at (-4.2,2) {\tiny \pbox{1cm}{venta de bienes y servicios}};
+				\node [red] at (-4.1,-2) {\tiny \pbox{1cm}{factores de la producción}};
+				\node [red] at (4.2,-2) {\tiny \pbox{0.8cm}{trabajo, tierra y capital}};
+				\node [red] at (4.2,2) {\tiny \pbox{1cm}{compra de bienes y servicios}};
+			\end{tikzpicture}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			\begin{itemize}
+				\item Cada transacción involucra dos partes: un comprador y un vendedor. $$\implies\text{Renta}=\text{Gasto}$$
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			El PIB mide dos cosas a la vez:
+			\begin{itemize}
+				\item El ingreso de todos los miembros de una economía.
+				\item El gasto total en los bienes y servicios producidos en la economía.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			Podemos descomponer el PIB en distintos tipos de gasto: $$Y\equiv C+I+G+XN$$
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			\begin{itemize}
+				\item \textbf{Consumo ($\mathbf{C}$):} Gasto de los hogares en bienes (tanto durables como no durables) y servicios, con excepción de las compras de viviendas nuevas.
+				\item \textbf{Inversión ($\mathbf{I}$):} Compras de bienes y servicios que se utilizarán en el futuro para producir más bienes y servicios. Incluye gasto en equipo de capital, inventarios y estructuras, además de las compras de viviendas nuevas por parte de los hogares.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			\begin{itemize}
+				\item \textbf{Gasto de gobierno ($\mathbf{G}$):} Gasto en bienes y servicios (para consumo o inversión) por parte de la administración pública. Incluye salarios de funcionarios y gasto en obras públicas.
+					\begin{itemize}
+						\item Cuando el gobierno paga un beneficio de protección social, no se contabiliza como gasto de gobierno por cuanto representa una transferencia. Las transferencias no se hacen a cambio de un bien o servicio. Alteran el ingreso de los hogares, pero no reflejan la producción de la economía.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Producto Interno Bruto}
+			\begin{itemize}
+				\item \textbf{Exportaciones netas ($\mathbf{XN}$):} Diferencia entre las compras de bienes producidos internamente por parte de extranjeros (exportaciones) y las compras domésticas de bienes extranjeros (importaciones).
+					\begin{itemize}
+						\item Se restan las importaciones porque ya están incluidas en $C$, $I$ o $G$. Al sumar y restar, las compras de bienes producidos en el extranjero no afectan la medición del PIB.
+					\end{itemize}			 
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{PIB Nominal y PIB Real}
+			Si aumenta el gasto de un periodo al siguiente, debe ser cierta al menos una de las siguientes afirmaciones
+			\begin{itemize}
+				\item La economía está produciendo más bienes ($\Delta^\peq{+}Q$).
+				\item Los bienes están siendo transandos a precios más altos ($\Delta^\peq{+}P$)
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{PIB Nominal y PIB Real}
+			Es útil poder distinguir entre estos dos efectos para estudiar la evolución de una economía. Por ello hacemos la siguiente distinción:
+			\begin{itemize}
+				\item \textbf{PIB nominal ($\mathbf{Y_\peq{t}^\peq{N}}$):} Producción de bienes y servicios valorada a precios corrientes (precios del periodo de medición). $$Y_\peq{t}^\peq{N}\equiv\sum_\peq{i=1}^{n_\peq{t}}p_\peq{i,t}\cdot q_\peq{i,t}$$
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{PIB Nominal y PIB Real}
+			\begin{itemize}
+				\item \textbf{PIB real ($\mathbf{Y_\peq{t}^\peq{R}}$):} Producción de bienes y servicios valorada a precios constantes (precios de un periodo base). $$Y_\peq{t}^\peq{R}\equiv\sum_\peq{i=1}^{n_\peq{t}}p_\peq{i,0}\cdot q_\peq{i,t}$$
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{PIB Nominal y PIB Real}
+			\begin{itemize}
+				\item Variaciones del PIB nominal reflejan variaciones tanto en $Q$ como en $P$.
+				\item Variaciones del PIB real sólo reflejan variaciones de $Q$ porque mantiene los precios constantes.
+				\item Para medir el crecimiento de la economía usamos el PIB real.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Deflactor del PIB}
+			Al tener una medida que caputura cambios en $P$ y $Q$ y otra que captura sólo cambios en $Q$, podemos construir una medida que captura sólo cambios en $P$.
+			\begin{mydef}
+				\textbf{Deflactor del PIB:} Medida del nivel de precios calculada como la razón del PIB nominal sobre el PIB real multiplicada por 100. $$D_\peq{t}\equiv\frac{Y^\peq{N}_\peq{t}}{Y^\peq{R}_\peq{t}}\times 100$$
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Deflactor del PIB}
+			\begin{itemize}
+				\item El deflactor del PIB mide el nivel de precios en relación al nivel de precios del año base.
+				\item El cambio porcentual del deflactor del PIB es entonces una medida de la tasa de inflación: $$\hat{\pi_\peq{t}}=\frac{D_\peq{t}-D_\peq{t-1}}{D_\peq{t-1}}\times100$$
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Deflactor del PIB}
+			Ejemplo (año base 2010):
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{11cm}{!}{
+					\begin{tabular}{|l|c|c|c|c|c|c|c|}\hline
+						\textbf{Año}&$\mathbf{p_\peq{\text{pan}}}$&$\mathbf{q_\peq{\text{pan}}}$&$\mathbf{p_\peq{\text{tomate}}}$&$\mathbf{q_\peq{\text{tomate}}}$&$Y^\peq{N}$&$Y^\peq{R}$&$D_\peq{t}$\\ [1ex] \hline
+						2010				& $\$500/\text{kg}$						& $100\text{kg}$							& $\$300/\text{kg}$							 & 	$50\text{kg}$									&$\$65.000$	&$\$65.000$	&	$100$			\\ [1ex] \hline
+						2011				&$\$1.000/\text{kg}$					& $150\text{kg}$							&$\$1.200/\text{kg}$						 & $100\text{kg}$									&$\$207.000$&$\$105.000$& $257.1$		\\ [1ex] \hline
+						2012				&$\$1.500/\text{kg}$					& $200\text{kg}$							& $\$700/\text{kg}$							 & $150\text{kg}$									&$\$405.000$&$\$145.000$&	$279.3$		\\ [1ex] \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El PIB como medida de bienestar}
+			\begin{itemize}
+				\item PIB real es mejor indicador de binestar que PIB nominal:
+					\begin{itemize}
+						\item Al medir producción de bienes y servicios, refleja capacidad de satisfacer necesidades y deseos de la población.
+					\end{itemize}
+				\item Un mejor indicador es el PIB (real) per cápita: $$y^\peq{R}_\peq{t}\equiv\frac{Y^\peq{R}_\peq{t}}{\text{población}_\peq{t}}$$ 
+			\end{itemize}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{El PIB como medida de bienestar}
+			\begin{itemize}
+				\item No es un indicador perfecto:
+					\begin{itemize}
+						\item No captura cosas importantes como valor del ocio, calidad ambiental o distribución del ingreso.
+					\end{itemize}
+				\item Pero es un buen indicador:
+					\begin{itemize}
+						\item Tiene alta correlación con variables como esperanza de vida, alfabetismo, ingesta calórica, uso de internet e incluso cantidad de medallas olímpicas.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Índice de Precios al Consumidor}
+			\begin{itemize}
+				\item Si su salario aumenta en un 10\%, ¿significa que usted es un 10\% más rico?
+				\item El valor del dinero reside en su capacidad para comprar bienes.
+					\begin{itemize}
+						\item La pregunta relevante es si podrá comprar un 10\% más de bienes y servicios.
+						\item La respuesta depende de la evolución de los precios.
+					\end{itemize}
+			\end{itemize}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Índice de Precios al Consumidor}
+			\begin{mydef}
+				\textbf{Índice de Precios al Consumidor (IPC):} Medida del costo total de los bienes y servicios comprados por un consumidor representativo.
+			\end{mydef}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Índice de Precios al Consumidor}
+			\begin{itemize}
+				\item El IPC es un indicador del nivel de precios.
+				\item$\Delta^\peq{+}IPC\implies$ agente representativo necesita más dinero para mantener el nivel de consumo.
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Índice de Precios al Consumidor}
+			Cálculo del IPC:
+			\begin{itemize}
+				\item Se determina (y fija) canasta representativa a través de encuestas.
+				\item Se calcula el valor de la canasta a precios corrientes.
+				\item Se elige un año base y se calcula el índice: $$IPC_\peq{t}=\frac{\text{Valor canasta}_\peq{t}}{\text{Valor canasta}_\peq{0}}\times100=\frac{\sum\limits_\peq{i=1}^\peq{n}{p_\peq{i,t}\cdot\overline{q}_\peq{i}}}{\sum\limits_\peq{i=1}^\peq{n}{p_\peq{i,0}\cdot\overline{q}_\peq{i}}}\times100$$
+			\end{itemize}
+		\end{frame}
+				
+	\begin{frame}
+			\frametitle{Índice de Precios al Consumidor}
+			\begin{itemize}
+				\item La variación cambio porcentual del IPC es una medida de la tasa de inflación: $$\tilde{\pi_\peq{t}}=\frac{IPC_\peq{t}-IPC_\peq{t-1}}{IPC_\peq{t-1}}\times100$$
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Índice de Precios al Consumidor}
+			Ejemplo:
+			\begin{itemize}
+				\item Año base: 2010
+				\item Canasta: 4 bebidas y 2 hamburguesas
+			\end{itemize}
+			\begin{table}[htbp!]
+				\centering
+				%\resizebox{11cm}{!}{
+					\begin{tabular}{|l|c|c|c|c|c|}\hline
+						\textbf{Año}&$\mathbf{p_\peq{\text{b}}}$&$\mathbf{p_\peq{\text{h}}}$&Valor canasta&$\mathbf{IPC}$&$\mathbf{\tilde{\pi}}$\\ [1ex] \hline
+						2010				&$\$1/\text{u}$							& $\$2\text{u}$							& $\$8$	  		& $100$			 	 &											\\ [1ex] \hline
+						2011				&$\$2/\text{u}$							& $\$3\text{u}$							&	$\$14$			& $175$				 &			$75\%$					\\ [1ex] \hline
+						2012				&$\$3/\text{u}$							& $\$4\text{u}$							& $\$20$			& $250$				 &			$43\%$					\\ [1ex] \hline
+					\end{tabular}%}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{IPC como Indicador del Costo de la Vida}
+			Tiene algunos problemas:
+				\begin{itemize}
+					\item \textbf{Sesgo de sustitución:} Canasta fija no admite sustitución entre bienes cuyo precio relativo cambió.
+					\item \textbf{Introducción de nuevos bienes:} Más opciones $\implies$ cada peso vale más.
+					\item \textbf{Cambio no medido en la calidad:} Más calidad $\implies$ valor del dinero aumenta
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{IPC y Deflactor del PIB}
+			Difieren por dos motivos:
+				\begin{itemize}
+					\item Exportaciones e importaciones.
+						\begin{itemize}
+							\item Deflactor: bienes producidos
+							\item IPC: bienes consumidos
+						\end{itemize}
+					\item Canasta fija (IPC) versus canasta variable (deflactor)
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Corrección por Inflación}
+				\begin{itemize}
+					\item La inflación hace que \$1 hoy valga menos que \$1 en el pasado.
+					\item Para comparar cifras de años distintos hay que corregir: $$\text{cifra en } \$_\peq{\text{actuales}}=\text{cifra en } \$_\peq{\text{del pasado}}\times\frac{IPC_\peq{\text{actual}}}{IPC_\peq{\text{del pasado}}}$$
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Corrección por Inflación}
+				\begin{mydef}
+					\textbf{Indexación:} Corrección automática (por ley o contrato) por los efectos de la inflación.
+				\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Corrección por Inflación}
+			En Chile existe la Unidad de Fomento (UF):
+			\begin{itemize}
+				\item Unidad de cuenta (no medio de pago) que se ajusta regularmente según la inflación.
+				\item Es un ``billete'' cuyo poder de compra no varía.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Tasas de Interés Reales y Nominales}
+			\begin{itemize}
+				\item \textbf{Tasa de interés nominal ($\mathbf{i}$):} Ritmo al que aumenta la cantidad de pesos en la cuenta. Es la tasa de interés como usualmente se reporta, sin ajuste por inflación.
+				\item \textbf{Tasa de interés real($\mathbf{r}$):} Ritmo al que aumenta el poder adquisitivo de la cuenta. Es la tasa de interés ajustada por inflación
+			\end{itemize}
+			$$r\approx i-\pi$$
+		\end{frame}	
+
+	\section{Sistema Monetario e Inflación}
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			\begin{mydef}
+				\textbf{Dinero:} Conjunto de activos en una economía que las personas utilizan normalmente para comprar bienes y servicios a otras personas.
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			Funciones del dinero:
+			\begin{itemize}
+				\item \textbf{Medio de cambio:} Árticulo que compradores entregan a vendedores a cambio de bienes y servicios.
+				\item \textbf{Unidad de cuenta:} Criterio que utilizan los individuos para marcar precios y registrar cuentas.
+				\item \textbf{Depósito de valor:} Producto que las personas pueden utilizar para transferir poder adquisitivo del presente al futuro.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			¿Por qué usamos dinero?
+			\begin{itemize}
+				\item La alternativa es el trueque y tiene costos asociados:
+					\begin{itemize}
+						\item Doble coincidencia de deseos
+						\item Divisibilidad de los bienes
+						\item Transporte de los bienes
+					\end{itemize}
+				\item Sin dinero y con $n$ bienes, hay $\frac{n\rp{n-1}}{2}$ precios relativos. Con dinero basta conocer los $n$ precios relativos a la unidad de cuenta.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			Tipos de dinero:
+			\begin{itemize}
+				\item \textbf{Dinero mercancía:} Dinero que adopta la forma de una mercancía que tiene un valor intrínseco. Ejemplos:
+					\begin{itemize}
+						\item Patrón oro
+						\item Cigarros en campo de concentración
+						\item Latas de atún en cárceles
+					\end{itemize}
+				\item \textbf{Dinero fiduciario:} Dinero carente de valor intrínseco que se utiliza por decreto gubernamental.
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			\begin{mydef}
+				\textbf{Liquidez:} Facilidad con la cual un activo se puede convertir al medio de cambio de la economía.
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			Todo Activo puede convertirse en medio de cambio (al momento de la venta):
+			\begin{itemize}
+				\item El dinero es el activo más líquido por definición.
+				\item Los activos con menor liquidez son aquellos que son más difíciles de convertir rápidamente en efectivo sin un descuento importante en su precio de venta.
+			\end{itemize}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			\begin{itemize}
+				\item Ejemplos en grado decreciente de liquidez:
+					\begin{itemize}
+						\item Fondo mutuo
+						\item Cuenta de ahorro
+						\item Auto
+						\item Casa
+					\end{itemize}
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Efectivo:} Billetes y monedas en manos del público.
+					\item \textbf{Depositos a la vista:} Saldos en las cuentas bancarias a los que los depositantes pueden tener acceso girando un cheque.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			Medición del dinero
+			\begin{itemize}
+				\item Si bien resulta natural medir el efectivo, no es el único activo que sirve para comprar bienes y servicios.
+				\item Podríamos incluir:
+					\begin{itemize}
+						\item Saldos en cuenta corriente/Depósitos a la vista
+						\item Cuentas de ahorro
+						\item Fondos de inversión
+					\end{itemize}
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			En resumen, es razonable pensar que además de las monedas y billetes otras cuentas deberían formar parte de la cantidad de dinero, dependiendo del grado de liquidez. Pero no es obvio donde trazar la línea (grado de liquidez). Por eso se definen distintos \textbf{agregados monetarios}:
+			\begin{itemize}
+				\item \textbf{M0:} Efectivo
+				\item \textbf{M1:} M0 + Cuenta corriente + Dep. a la vista
+				\item \textbf{M2:} M1 + Dep. a plazo
+				\item ... y así se van agregando activos cada vez menos líquidos
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Oferta de dinero:} Cantidad de dinero disponible en la economía.
+					\item \textbf{Banco central:} Institución diseñada para supervisar el sistema bancario y regular la cantidad de dinero en la economía.
+					\item \textbf{Política monetaria:} Fijación de la oferta de dinero por los diseñadores de políticas en el banco central.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Reservas:} Depósitos que los bancos han recibido pero no han prestado.
+					\item \textbf{Razón de reservas:} Fracción de los depósitos que los bancos guardan como reservas.
+					\item \textbf{Tasa de encaje:} Proporción mínima de los depósitos que los bancos deben guardar como reservas.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			El banco central tiene la misión de controlar la oferta monetaria pero, como los depósitos a la vista se encuentran en bancos comerciales, la oferta monetaria depende de la conducta de los bancos.
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			Ejemplo 1: Tasa de encaje de 100\%
+			\begin{itemize}
+				\item El banco central emite \$100 en efectivo
+				\item Por simplicidad supongamos que las personas depositan todo el efectivo en el banco A
+							\begin{table}[htbp!]
+								\centering
+								%\resizebox{11cm}{!}{
+									\begin{tabular}{|c|c|}\hline
+										\textbf{Activo} & \textbf{Pasivo} \\ [1ex] \hline
+										Reservas \$100& Depósitos \$100 \\ [1ex] \hline 
+									\end{tabular}%}
+							\end{table}
+				\item La oferta monetaria es \$100 y los bancos no influyen en ella
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			Ejemplo 2: Sistema de reservas fraccionarias
+			\begin{itemize}
+				\item Por simplicidad, supongamos que la razón de reservas es igual a la tasa de encaje y que las personas depositan el 100\% del efectivo.
+				\item El banco central emite \$100 en efectivo y fija una tasa de encaje de 10\%
+				\item Todo el efectivo es depositado en el banco A
+							\begin{table}[htbp!]
+								\centering
+								%\resizebox{11cm}{!}{
+									\begin{tabular}{|c|c|}\hline
+										\textbf{Activo} & \textbf{Pasivo} \\ [1ex] \hline
+										Reservas \$10& Depósitos \$100 \\ [1ex] \hline
+										Préstamos \$90& \\ [1ex] \hline
+									\end{tabular}%}
+							\end{table}
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			\begin{itemize}
+				\item El banco A guarda \$10 y presta \$90
+				\item Todo el efectivo prestado es depositado en el banco B
+							\begin{table}[htbp!]
+								\centering
+								%\resizebox{11cm}{!}{
+									\begin{tabular}{|c|c|}\hline
+										\textbf{Activo} & \textbf{Pasivo} \\ [1ex] \hline
+										Reservas \$9& Depósitos \$90 \\ [1ex] \hline
+										Préstamos \$81& \\ [1ex] \hline
+									\end{tabular}%}
+							\end{table}
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			\begin{itemize}
+				\item El banco B guarda \$9 y presta \$81 que son depositados en el banco C...
+				\item y así sucesivamente...
+				\item ¿Cuánto dinero hay en la economía? 
+							$$\begin{array}{lll}
+									M&=&100+81+72.9+...\\ [1ex]
+									 &=&100+0.9\cdot100+0.9\cdot\rp{0.9\cdot100}+...\\ [1ex]
+									 &=&100\cdot\rp{0.9^\peq{0}+0.9^\peq{1}+0.9^\peq{2}+...}\\ [1ex]
+									 &=&100\cdot\frac{1}{1-0.9}\\ [1ex]
+									 &=&100\cdot10\\ [1ex]
+									 &=&1,000									 
+								\end{array}$$
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{El Dinero y su Oferta}
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Multiplicador del dinero:} Cantidad de dinero que genera el sistema bancario con cada unidad monetaria de reservas.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Corridas Bancarias}
+			\begin{itemize}
+				\item En un sistema de reservas fraccionarias, si todos los depositantes de un banco quisieran retirar sus depósitos al mismo tiempo, no habría suficiente efectivo para cumplir la obligación.
+				\item Un banco en esta situación se ve obligado a cerrar sus puertas hasta que recupere algunos préstamos o el prestamista de última instancia le facilite efectivo.
+				\item En muchos países el gobierno o el banco central garantiza los depósitos, lo que presenta beneficios (estabilidad del sistema) y costos (otorgamiento irresponsable de crédito).
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Banco Central de Chile}
+			Organismo independiente que tiene la responsabilidad de
+			\begin{itemize}
+				\item \textbf{Estabilidad de la moneda:} Evitar que el valor de la moneda se deteriore como resultado de la inflación (objetivo: inflación baja y estable).
+				\item \textbf{Normal funcionamiento de los pagos internos:} Se entiende por sistema de pagos internos el conjunto de instituciones e instrumentos que facilitan la realización de transacciones en la economía.
+				\item \textbf{Normal funcionamiento de los pagos externos:} Se entiende por pagos externos el conjunto de transacciones que los residentes de un país realizan con no residentes.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Banco Central de Chile}
+			Políticas del Banco Central:
+			\begin{itemize}
+				\item \textbf{Política monetaria:} Foco en la estabilidad de precios. Adopción en 1997 de una meta de inflación anual (medida por IPC) de un 3\% con un rango de tolerancia de $\pm$1 punto porcentual, en un horizonte en torno a dos años.
+				\item \textbf{Política cambiaria:} En 1999 se adoptó un régimen de flotación cambiaria.
+				\item \textbf{Política financiera:} El Banco Central es el prestamista de última instancia. Provee de liquidez a las instituciones financieras que enfrentan problemas temporales de caja. Además tiene facultades regulatorias.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Banco Central de Chile}
+			Funciones del Banco Central:
+			\begin{itemize}
+				\item Potestad exclusiva para emitir billetes y acuñar monedas.
+				\item Regulación de la cantidad de dinero y crédito.
+				\item Regulación del sistema financiero y mercado de capitales.
+				\item Facultades para cautelar la estabilidad del sistema financiero.
+				\item A solicitud del Ministerio de Hacienda, funciones como agente fiscal en la contratación de créditos externos e internos.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Banco Central de Chile}
+			\begin{itemize}
+				\item Atribuciones en materias internacionales: participar y cooperar con organismos financieros extranjeros o internacionales, pedir créditos en el exterior, emitir títulos y colocarlos en el extranjero.
+				\item Potestad para formular y administrar las políticas cambiarias.
+				\item Publicar las principales estadísticas macroeconómicas nacionales (\url{http://www.bcentral.cl})
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Banco Central de Chile}
+			Política monetaria e instrumentos:
+			\begin{itemize}
+				\item \textbf{Operaciones de mercado abierto:} Compraventa de bonos del Estado.
+					\begin{itemize}
+						\item Es el instrumento que se usa con más frecuencia.
+						\item Si el Banco Central decide aumentar la oferta monetaria:
+							\begin{itemize}
+								\item Crea más billetes.
+								\item Los utiliza para comprar bonos al público.
+								\item Los billetes quedan en manos de la gente.
+							\end{itemize}
+						\item Si el Banco Central decide reducir la oferta monetaria:
+							\begin{itemize}
+								\item Vende bonos de su cartera al público.
+								\item Obtiene a cambio billetes que ya no estarán en manos de la gente.
+							\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Banco Central de Chile}
+			\begin{itemize}
+				\item \textbf{Tasa de encaje:} 
+					\begin{itemize}
+						\item El Banco Central rara vez altera la tasa de encaje ya que hacerlo frecuentemente perturbaría el negocio bancario
+						\item Si el Banco Central decide aumentar la oferta monetaria:
+							\begin{itemize}
+								\item Reduce la tasa de encaje.
+								\item Los bancos pueden prestar más por cada peso depositado.
+								\item Aumenta el multiplicador del dinero y la oferta monetaria.
+							\end{itemize}
+						\item Si el Banco Central decide reducir la oferta monetaria:
+							\begin{itemize}
+								\item Aumenta la tasa de encaje.
+								\item Los bancos pueden prestar menos por cada peso depositado.
+								\item Disminuye el multiplicador del dinero y la oferta monetaria.
+							\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Banco Central de Chile}
+			\begin{itemize}
+				\item \textbf{Tasa de política monetaria (TPM):} 
+					\begin{itemize}
+						\item Tasa de interés de los préstamos que hace el Banco Central a los bancos comerciales cuando tienen reservas inferiores a las requeridas.
+						\item El Banco Central decide respecto de la TPM una vez al mes.
+						\item Si el Banco Central decide aumentar la oferta monetaria:
+							\begin{itemize}
+								\item Reduce la TPM.
+								\item Los bancos mantienen menos reservas porque es menos costoso pedir prestado de ser necesario.
+								\item Aumenta el multiplicador del dinero y la oferta monetaria.
+							\end{itemize}
+						\item Si el Banco Central decide reducir la oferta monetaria:
+							\begin{itemize}
+								\item Aumenta la TPM.
+								\item Los bancos mantienen más reservas para evitar mayor costo de pedir prestado.
+								\item Disminuye el multiplicador del dinero y la oferta monetaria.
+							\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Banco Central de Chile}
+			Problemas de la política monetaria:
+			\begin{itemize}
+				\item El Banco Central no controla la cantidad de dinero que los hogares deciden mantener depositada en los bancos.
+				\item Tampoco controla la cantidad que deciden prestar los bancos.
+			\end{itemize}
+		\end{frame}
+
+\end{document}

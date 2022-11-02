@@ -1,0 +1,1011 @@
+
+\documentclass[dvipsnames,table]{beamer}
+%\documentclass{beamer}
+%\usepackage{beamerthemesplit} 
+%\usetheme{Berkeley}
+%\usecolortheme{dolphin}
+\usetheme{Szeged}
+
+\usepackage{amsfonts}
+\usepackage[spanish,greek]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[dvips]{graphicx}
+\usepackage{cancel}
+%\usepackage{bm}
+\usepackage{ae,aecompl,amsmath,amsbsy}
+\setbeamertemplate{navigation symbols}{}
+
+\beamertemplateballitem
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+%\usepackage{pgfplots}
+%\usepgfplotslibrary{fillbetween}
+\usepackage{pbox}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+\newtheorem{mydef}{Definición}
+\newtheorem{etim}{Etimología}
+\newcommand{\peq}[1]{{\scriptscriptstyle{#1}}} 
+\newcommand{\rp}[1]{\left(#1\right)}
+\newcounter{sauvegardeenumi}
+\newcommand{\asuivre}{\setcounter{sauvegardeenumi}{\theenumi}}
+\newcommand{\suite}{\setcounter{enumi}{\thesauvegardeenumi}}
+
+\title{EAE105A \\ Introducción a la Economía}
+\subtitle{I. Introducción} 
+\author{Pinjas Albagli}
+\institute{Instituto de Economía \\ Pontificia Universidad Católica de Chile}
+\date{Primer Semestre de 2018}
+
+\begin{document}
+	\selectlanguage{spanish}
+	\maketitle 
+	
+	\section{Conceptos}
+
+		\begin{frame}
+			\frametitle{¿Qué es la economía?}
+			\begin{etim}
+			\selectlanguage{greek}
+			\textbf{Oikonómos:}\selectlanguage{spanish} El que administra un hogar \href{https://translate.google.es/\#el/es/\%CE\%BF\%CE\%B9\%CE\%BA\%CE\%BF\%CE\%BD\%CF\%8C\%CE\%BC\%CE\%BF\%CF\%82}{(ama de llaves)}.
+			\end{etim}
+			\begin{mydef}
+			\textbf{Economía:} Estudio de cómo la sociedad administra sus recursos escasos.
+			\end{mydef}
+			\begin{mydef}
+				\textbf{Escasez:} Carácter limitado de los recursos de la sociedad.
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{¿Qué es la economía?}
+			\textbf{Crítica:} Según Gary Becker, definición amplia que habla sobre el ámbito de la economía pero no dice nada sobre el \textbf{enfoque económico}.
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{¿Qué es la economía?}
+			\textbf{Problema económico:}
+			\begin{itemize}
+				\item Recursos escasos
+				\begin{itemize}
+					\item tienen usos alternativos (\textbf{posibilidades})
+				\end{itemize}
+				\item Objetivos múltiples
+				\begin{itemize}
+					\item tienen importancias diferentes (\textbf{preferencias})
+				\end{itemize}
+			\end{itemize}
+			\vspace{.4cm}
+			$\implies$ Individuos enfrentan \textbf{disyuntivas}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{¿Qué es la economía?}
+			Los \textbf{economistas} estudian cómo las personas y las sociedades toman decisiones.
+			\begin{itemize}
+				\item \textbf{Elección} se aborda desde las preferencias y las alternativas disponibles.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			\begin{mydef}
+				\textbf{Microeconomía:} Estudio de cómo las familias y las empresas toman decisiones e interactúan en los mercados
+			\end{mydef}
+			\vspace{.5cm}
+			Algunos temas de interés:
+			\begin{itemize}
+				\item Educación
+				\item Salud
+				\item Comportamiento organizacional
+				\item Organización industrial
+				\item Ambiente
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			\begin{mydef}
+				\textbf{Macroeconomía:} Estudio de fenómenos de toda la economía en forma agregada
+			\end{mydef}
+			\vspace{.5cm}
+			Algunos temas de interés:
+			\begin{itemize}
+				\item Desempleo
+				\item Inflación
+				\item Crecimiento económico
+				\item Ciclo económico
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			\begin{mydef}
+				\textbf{Afirmaciones positivas:} Enunciados que buscan describir la realidad como es. (Descripción).
+			\end{mydef}
+			\begin{mydef}
+				\textbf{Afirmaciones normativas:} Enunciados que buscan describir la realidad como debería ser. (Prescripción).
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			Los economistas suponemos que los individuos toman decisiones en forma racional.
+			\begin{mydef}
+				\textbf{Racionalidad:} Comportamiento consistente con los objetivos, dada la información disponible.
+				
+				\vspace{.2cm}
+				$\implies$ elegir alternativa preferida entre las disponibles
+				
+				\vspace{.2cm}
+				$\implies$ análisis costo-beneficio
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			No nos referimos sólo a costos explícitos...
+			\begin{mydef}
+				\textbf{Costo de oportunidad:} Lo que se sacrifica con objeto de obtener algo. (Valor de la mejor alternativa).
+			\end{mydef}
+			\begin{mydef}
+				\textbf{Costo hundido:} Costo en el que se ha incurrido y no se puede recuperar.
+			\end{mydef}
+			\vspace{.3cm}
+			Los costos hundidos se realizarán independientemente de la elección
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			Los individuos racionales piensan en términos marginales...
+			\begin{mydef}
+				\textbf{Cambio marginal:} Pequeños ajustes adicionales que se le hacen a un plan de acción.
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			Personas racionales comparan beneficios ($BMg$) y costos ($CMg$) marginales...
+			\begin{mydef}
+				\textbf{Decisión racional:} $BMg\geq CMg$
+			\end{mydef}
+			\vspace{.3cm}
+			En general pensamos en un mundo con
+			\begin{itemize}
+				\item $BMg$ decreciente
+				\item $CMg$ creciente ($PMg$ decreciente)
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			Individuos racionales responden a incentivos...
+			\begin{mydef}
+				\textbf{Incentivo:} Aquello que induce (o inhibe) a las personas a actuar.
+			\end{mydef}
+			\vspace{.3cm}
+			Cambios en beneficios y costos marginales alteran incentivos.
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			\begin{mydef}
+				\textbf{Eficiencia:} Extraer lo más posible de los recursos escasos. (``Tamaño de la torta'').
+			\end{mydef}
+			\begin{mydef}
+				\textbf{Equidad:} Distribuir la riqueza económica de modo igualitario/justo entre los miembros de la sociedad. (``Cómo se reparte la torta'').
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Conceptos generales}
+			\begin{mydef}
+				\textbf{Eficiencia en el sentido de Pareto:} Una asignación factible $X$ es eficiente si no existe otra asignación factible $Y$ tal que en $Y$ al menos un individuo está ``mejor'' que en $X$ y ningún individuo está ``peor''.
+			\end{mydef}
+			\vspace{.3cm}
+			$\implies$ ``no es posible mejorar a uno sin empeorar al otro''
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{La economía como ciencia}
+			\begin{mydef}
+				\href{http://dle.rae.es/?id=9AwuYaT}{\textbf{Ciencias sociales:}} Ciencias que se ocupan de la actividad humana en la sociedad.
+			\end{mydef}
+			\vspace{.3cm}
+			La clave está en la aplicación del \textbf{método científico}
+			
+			\vspace{.4cm}
+			\pbox{\textwidth}{Observación \\ (hechos estilizados)}$\implies$ Teoría $\implies$\pbox{\textwidth}{Observación \\ (datos)}
+			
+			\vspace{.4cm}
+			Ejemplo: Manzana $+$ Newton $=$ Teoría de la gravedad
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{La economía como ciencia}
+			Tres etapas:
+			\begin{enumerate}
+				\item Observación y medición
+				\item Construcción de \href{http://dle.rae.es/?id=PTk5Wk1}{modelos}
+					\begin{itemize}
+						\item Los \textbf{supuestos} cumplen un rol fundamental: simplificar el problema sin afectar sustancialmente la respuesta. Utilidad depende del contexto.
+					\end{itemize}
+				\item Comprobación de modelos
+					\begin{itemize}
+						\item La clave está en el \textbf{poder predictivo}. Para Milton Friedman es más importante que el ``realismo'' de los supuestos.
+					\end{itemize}
+			\end{enumerate}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{La economía como ciencia}
+			Análisis positivo conlleva establecimiento de relaciones causales. Por ejemplo,
+			\begin{itemize}
+				\item $\Delta^\peq{+}$ impuesto específico al alcohol, ¿causaría $\Delta^\peq{-}$ en consumo de alcohol?
+				\item ¿Qué efecto tendrá la reforma educacional sobre la acumulación de capital humano de los estudiantes chilenos?
+			\end{itemize}
+			
+			\vspace{.4cm}
+			Pero... causalidad $\neq$ correlación
+			
+			\vspace{.4cm}
+			\url{http://tylervigen.com/spurious-correlations}
+		\end{frame}	
+	
+		\begin{frame}
+			\frametitle{La economía como ciencia}
+			En general (en ciencias sociales) la causalidad es difícil de establecer debido a la presencia de
+			\begin{itemize}
+				\item \textbf{Variables omitidas:} Un tercer factor no observado es el que genera la correlación
+					\begin{align*}
+						C&\to A\\
+						C&\to B \\
+						A&\not\to B
+					\end{align*}
+								
+				\vspace{.4cm}
+				Ejemplo: $A=\text{encendedor, }B=\text{cáncer, }C=\text{fumar}$
+			\end{itemize}
+		\end{frame}	
+	
+		\begin{frame}
+			\frametitle{La economía como ciencia}
+			\begin{itemize}
+				\item \textbf{Causalidad inversa:}
+					\begin{align*}
+						B&\to A\\
+						&\text{o} \\
+						A&\leftrightarrow B
+					\end{align*}
+				\vspace{.4cm}	
+				Ejemplo: $A=\text{presencia policial, }B=\text{delincuencia}$
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{La economía como ciencia}
+			Entonces... ¿qué podemos hacer?
+			
+			\begin{itemize}
+				\item En la etapa (2) usamos el \emph{ceteris paribus} o ``todo lo demás constante''.
+				\item En la etapa (3) usamos técnicas econométricas o RCTs.
+			\end{itemize}
+		\end{frame}		
+	
+	\section{Aplicación}
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Diagrama de flujo circular}
+						\centering
+			\begin{tikzpicture}[scale=.7,
+				main node/.style={
+					draw,
+					shape=ellipse,
+					fill=teal,
+					opacity=0.8,
+					minimum width=2cm,
+					minimum height=1cm
+				},
+				sec node/.style={
+					draw,
+					shape=rectangle,
+					fill=green,
+					opacity=0.8,
+					minimum width=2cm,
+					minimum height=1cm
+				},
+				>=latex,
+				auto=right
+			]
+				\node[main node] (inputs) at (0,-3) {\parbox{3.5cm}{\centering \tiny \textbf{Mercado de factores \\ de la producción}
+				\begin{itemize}
+					\item Familias venden
+					\item Empresas compran
+				\end{itemize}
+				}};
+				\node[sec node] (households) at  (5,0) {\parbox{3.5cm}{\centering \tiny \textbf{Familias}
+				\begin{itemize}
+					\item Compran y consumen bienes y servicios
+					\item Son propietarias y vendedoras de factores de producción
+				\end{itemize}
+				}};
+				\node[sec node] (firms) at (-5,0) {\parbox{3.5cm}{\centering \tiny \textbf{Empresas}
+				\begin{itemize}
+					\item Producen y venden bienes y servicios
+					\item Contratan y utilizan factores de la producción
+				\end{itemize}
+				}};
+				\node[main node] (goods) at (0,3) {\parbox{3.5cm}{\centering \tiny \textbf{Mercado de \\ bienes y servicios}
+				\begin{itemize}
+					\item Empresas venden
+					\item Familias compran
+				\end{itemize}
+				}};
+				\draw[<-, to path={-| (\tikztotarget)}] 
+					(goods)  edge[red,thick] (firms)
+					(inputs) edge[red,thick] (households);
+				\draw[->, to path={-| (\tikztotarget)}]
+					(goods)	edge[red,thick]  (households)
+					(inputs) edge[red,thick] (firms);
+				\draw[->,blue,thick] (-2.9,4)-- (-6,4)--(-6,1.3);
+				\draw[<-,blue,thick] (-2.9,-4)-- (-6,-4)--(-6,-1.3);
+				\draw[->,blue,thick] (-2.9,4)-- (-6,4)--(-6,1.3);
+				\draw[->,blue,thick] (2.9,-4)-- (6,-4)--(6,-1.4);
+				\draw[<-,blue,thick] (2.9,4)-- (6,4)--(6,1.45);
+				\node [blue] at (-5,4.5) {\tiny ingreso};
+				\node [blue] at (-4.5,-4.5) {\tiny salarios, rentas y beneficios};
+				\node [blue] at (5,-4.5) {\tiny ingreso};
+				\node [blue] at (5,4.5) {\tiny gasto};
+				\node [red] at (-4.2,2) {\tiny \pbox{1cm}{venta de bienes y servicios}};
+				\node [red] at (-4.1,-2) {\tiny \pbox{1cm}{factores de la producción}};
+				\node [red] at (4.2,-2) {\tiny \pbox{0.8cm}{trabajo, tierra y capital}};
+				\node [red] at (4.2,2) {\tiny \pbox{1cm}{compra de bienes y servicios}};
+			\end{tikzpicture}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+			\begin{mydef}
+				\textbf{Frontera de posibilidades de producción (FPP):} curva que describe las combinaciones de producción que una economía puede alcanzar, dados los factores de la producción y la tecnología de que dispone.
+			\end{mydef}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+			Ejemplo:
+			\begin{itemize}
+				\item Economía produce sólo 2 bienes: automóviles y computadores.
+				\item Factores de producción se usan en la producción de automóviles o computadores.
+				\item Tecnología de producción y dotación de factores están fijas.
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{7cm}{!}{
+					\begin{tabular}{|c|c|}\hline
+						Autos & Computadores \\  \hline
+						0 	  &	 99 \\
+						46	  &	 90 \\
+						79	  &	 48 \\
+						92	  &	 0  \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw [<->,thick] (0,120)--(0,0)--(120,0);
+				\draw [dashed,help lines] (0,90.02581754) -- (46,90.02581754)--(46,0);
+				\draw [dashed,help lines] (0,48.06463317) -- (79,48.06463317)--(79,0);
+				\draw [dashed,help lines] (0,100/3) -- (30,100/3)--(30,0);
+				\draw [dashed,help lines] (0,110) -- (79,110)--(79,48.06463317);
+				%\draw [ultra  thick, red] plot [domain=0:100] (\x,{-(1/72)*\x^2+(7/18)*\x+100});
+				\draw [ultra  thick, red] plot [domain=0:ln(100)/.05] (\x,{-exp(.05*\x)+100});
+				\draw [fill,teal] (0,99) circle [radius=2] node [above right] {\small A};
+				\draw [fill,teal] (46,90.02581754) circle [radius=2] node [above right] {\small B};
+				\draw [fill,teal] (79,48.06463317) circle [radius=2] node [above right] {\small C};
+				\draw [fill,teal] (92.10340372,0) circle [radius=2] node [above right] {\small D};
+				\draw [fill,teal] (30,100/3) circle [radius=2] node [above right] {\small F};
+				\draw [fill,teal] (79,110) circle [radius=2] node [above right] {\small E};
+				\node [left] at (0,99) {\tiny 99};
+				\node [left] at (0,90.02581754) {\tiny 90};
+				\node [left] at (0,48.06463317) {\tiny 48};
+				\node [left] at (0,100/3) {\tiny 30};
+				\node [left] at (0,110) {\tiny 110};
+				\node [below] at (0,0) {\tiny 0};
+				\node [below] at (46,0) {\tiny 46};
+				\node [below] at (79,0) {\tiny 79};
+				\node [below] at (92.10340372,0) {\tiny 92};
+				\node [below] at (30,0) {\tiny 30};
+				\node [rotate=90,left] at (-12,90) {Computadores};
+				\node [below] at (60,-5) {Autos};
+			\end{tikzpicture}
+		\end{frame}		
+		
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw[fill=green,opacity=.3] plot[domain=0:ln(100)/.05] (\x,{-exp(.05*\x)+100}) -| (120,120) -- (0,120)--cycle;
+				%\fill [blue,opacity=.3,domain=0:ln(100)/.05,variable=\x] (0, 0) -- plot ({\x}, {-exp(.05*\x)+100}) -- (92.10340372, 0) -- cycle;
+				\draw [<->,thick] (0,120)--(0,0)--(120,0);
+				\draw [dashed,help lines] (0,90.02581754) -- (46,90.02581754)--(46,0);
+				\draw [dashed,help lines] (0,48.06463317) -- (79,48.06463317)--(79,0);
+				\draw [dashed,help lines] (0,100/3) -- (30,100/3)--(30,0);
+				\draw [dashed,help lines] (0,110) -- (79,110)--(79,48.06463317);
+				%\draw [ultra  thick, red] plot [domain=0:100] (\x,{-(1/72)*\x^2+(7/18)*\x+100});
+				\draw [ultra  thick, red] plot [domain=0:ln(100)/.05] (\x,{-exp(.05*\x)+100});
+				\draw [fill,teal] (0,99) circle [radius=2] node [above right] {\small A};
+				\draw [fill,teal] (46,90.02581754) circle [radius=2] node [above right] {\small B};
+				\draw [fill,teal] (79,48.06463317) circle [radius=2] node [above right] {\small C};
+				\draw [fill,teal] (92.10340372,0) circle [radius=2] node [above right] {\small D};
+				\draw [fill,teal] (30,100/3) circle [radius=2] node [above right] {\small F};
+				\draw [fill,teal] (79,110) circle [radius=2] node [above right] {\small E};
+				\node [left] at (0,99) {\tiny 99};
+				\node [left] at (0,90.02581754) {\tiny 90};
+				\node [left] at (0,48.06463317) {\tiny 48};
+				\node [left] at (0,100/3) {\tiny 30};
+				\node [left] at (0,110) {\tiny 110};
+				\node [below] at (0,0) {\tiny 0};
+				\node [below] at (46,0) {\tiny 46};
+				\node [below] at (79,0) {\tiny 79};
+				\node [below] at (92.10340372,0) {\tiny 92};
+				\node [below] at (30,0) {\tiny 30};
+				\node [rotate=90,left] at (-12,90) {Computadores};
+				\node [below] at (60,-5) {Autos};
+			\end{tikzpicture}
+		\end{frame}				
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw[fill=green,opacity=.3] plot[domain=0:ln(100)/.05] (\x,{-exp(.05*\x)+100}) -| (120,120) -- (0,120)--cycle;
+				\fill [blue,opacity=.3,domain=0:ln(100)/.05,variable=\x] (0, 0) -- plot ({\x}, {-exp(.05*\x)+100}) -- (92.10340372, 0) -- cycle;
+				\draw [<->,thick] (0,120)--(0,0)--(120,0);
+				\draw [dashed,help lines] (0,90.02581754) -- (46,90.02581754)--(46,0);
+				\draw [dashed,help lines] (0,48.06463317) -- (79,48.06463317)--(79,0);
+				\draw [dashed,help lines] (0,100/3) -- (30,100/3)--(30,0);
+				\draw [dashed,help lines] (0,110) -- (79,110)--(79,48.06463317);
+				%\draw [ultra  thick, red] plot [domain=0:100] (\x,{-(1/72)*\x^2+(7/18)*\x+100});
+				\draw [ultra  thick, red] plot [domain=0:ln(100)/.05] (\x,{-exp(.05*\x)+100});
+				\draw [fill,teal] (0,99) circle [radius=2] node [above right] {\small A};
+				\draw [fill,teal] (46,90.02581754) circle [radius=2] node [above right] {\small B};
+				\draw [fill,teal] (79,48.06463317) circle [radius=2] node [above right] {\small C};
+				\draw [fill,teal] (92.10340372,0) circle [radius=2] node [above right] {\small D};
+				\draw [fill,teal] (30,100/3) circle [radius=2] node [above right] {\small F};
+				\draw [fill,teal] (79,110) circle [radius=2] node [above right] {\small E};
+				\node [left] at (0,99) {\tiny 99};
+				\node [left] at (0,90.02581754) {\tiny 90};
+				\node [left] at (0,48.06463317) {\tiny 48};
+				\node [left] at (0,100/3) {\tiny 30};
+				\node [left] at (0,110) {\tiny 110};
+				\node [below] at (0,0) {\tiny 0};
+				\node [below] at (46,0) {\tiny 46};
+				\node [below] at (79,0) {\tiny 79};
+				\node [below] at (92.10340372,0) {\tiny 92};
+				\node [below] at (30,0) {\tiny 30};
+				\node [rotate=90,left] at (-12,90) {Computadores};
+				\node [below] at (60,-5) {Autos};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+			\begin{mydef}
+				\textbf{Asignación eficiente:} Una asignación es eficiente si la economía obtiene el mayor provecho posible de los recursos disponibles.
+				
+				\vspace{.5cm}
+				$\iff$ No existe otra asignación factible que permita aumentar la producción de un bien sin disminuir la del otro.
+				
+				\vspace{.5cm}
+				$\iff$ Para producir más de un bien hay que producir menos del otro.
+				
+				\vspace{.5cm}
+				$\iff$ La asignación está en la FPP.
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+			\begin{mydef}
+				\textbf{Asignación ineficiente:} Una asignación es ineficiente si la economía produce menos de lo que podría producir si usara todos los recursos disponibles de la mejor manera posible.
+				
+				\vspace{.5cm}
+				$\iff$ Existen asignaciones factibles que permiten aumentar la producción de un bien sin disminuir la del otro.
+				
+				\vspace{.5cm}
+				$\iff$ La asignación está dentro de la FPP.
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+			\begin{mydef}
+				\textbf{Tasa marginal de transformación ($\mathbf{TMT}$):} Tasa a la que la economía puede transformar un bien en el otro. Mide el costo de oportunidad de un bien en términos de las unidades sacrificadas del otro. Es la pendiente de la FPP.
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+				\begin{itemize}
+					\item Si la FPP es cóncava, la TMT es negativa y de magnitud creciente. La producción de un automóvil adicional requiere cada vez más recursos y la reducción de la producción de computadores libera cada vez menos recursos. El costo de oportunidad de un auto es creciente.
+					\item Si la FPP fuera lineal, la TMT sería negativa y constante. El costo de oportunidad de un automóvil sería constante.
+				\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+				\begin{mydef}
+					\textbf{Mejora tecnológica:} es posible producir más bienes con la misma cantidad de recursos. Alternativamente, se requieren menos recursos para producir la misma cantidad de bienes.
+				\end{mydef}
+				\begin{figure}
+					\begin{subfigure}[b]{0.3\textwidth}
+						\begin{tikzpicture}[scale=.025]
+							\draw [<->,thick] (0,120)--(0,0)--(120,0);
+							\draw [ultra  thick, teal] plot [domain=0:65.78814551] (\x,{-exp(.07*\x)+100});
+							\draw [ultra  thick, red] plot [domain=0:ln(100)/.05] (\x,{-exp(.05*\x)+100});
+							\node [rotate=90,left] at (-12,110) {Computadores};
+							\node [below] at (60,-4) {Autos};
+						\end{tikzpicture}
+					\end{subfigure}
+					\begin{subfigure}[b]{0.3\textwidth}
+						\begin{tikzpicture}[scale=.025]
+							\draw [<->,thick] (0,120)--(0,0)--(120,0);
+							\draw [ultra thick,teal] plot [domain=0:ln(100)/.05] (\x,{-exp(.05*(\x-4.462871027))+80});
+							\draw [ultra thick,red] plot [domain=0:ln(100)/.05] (\x,{-exp(.05*\x)+100});
+							\node [rotate=90,left] at (-12,110) {Computadores};
+							\node [below] at (60,-4) {Autos};
+						\end{tikzpicture}
+					\end{subfigure}
+					\begin{subfigure}[b]{0.3\textwidth}
+						\begin{tikzpicture}[scale=.025]
+							\draw [<->,thick] (0,120)--(0,0)--(120,0);
+							\draw [ultra thick,teal] plot [domain=0:78.24046011] (\x,{-exp(.05*\x)+50});
+							\draw [ultra thick,red] plot [domain=0:ln(100)/.05] (\x,{-exp(.05*\x)+100});
+							\node [rotate=90,left] at (-12,110) {Computadores};
+							\node [below] at (60,-4) {Autos};
+						\end{tikzpicture}
+					\end{subfigure}
+				\end{figure}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 2: FPP}
+				En resumen, el ejemplo de la FPP refleja
+				\begin{itemize}
+					\item Escasez (hay asignaciones que no son factibles)
+					\item Eficiencia (asignaciones en la frontera son eficientes)
+					\item Costo de oportunidad (pendiente o TMT)
+					\item Transformación difícil (curva cóncava, costo de oportunidad creciente)
+					\item Crecimiento económico (la frontera se expande con mejoras tecnológicas)
+				\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			\begin{itemize}
+				\item El comercio puede mejorar el bienestar de todos
+				\item Las personas comercian porque obtienen algo a cambio, no necesariamente por generosidad
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Ventaja absoluta (VA):} Habilidad para producir un bien usando menos insumos que otro productor.
+					\item \textbf{Ventaja comparativa (VC):} Habilidad para producir un bien a un costo de oportunidad más bajo que otro productor.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Modelo:
+			\begin{itemize}
+				\item Economía compuesta por 2 agentes: Robinson y Viernes
+				\item Consumen 2 bienes: peces y manzanas
+				\item Jornada de trabajo de 8 horas
+				\item Bienes divisibles
+				\item Rendimientos constantes en la producción
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Unidades por hora:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{7cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+										 & 	Peces 	& 	Manzanas \\ \hline
+						Robinson & 6 $\peq{p/hr}$ & 4 $\peq{m/hr}$		 \\ \hline
+						Viernes	 & 1 $\peq{p/hr}$ & 2 $\peq{m/hr}$		 \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Minutos por unidad:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{7cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+										 & 			Peces 			& 			Manzanas	 \\ \hline
+						Robinson & 10 $\peq{min/p}$ & 15 $\peq{min/m}$ \\ \hline
+						Viernes	 & 60 $\peq{min/p}$ & 30 $\peq{min/m}$ \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			\begin{itemize}
+				\item Robinson tiene VA en ambos bienes.
+				\item Pero, ¿qué pasa con las VC?
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Costos de oportunidad:
+			\begin{enumerate}
+				\item Costo de una manzana para Robinson
+					\begin{itemize}
+						\item Si dedica 1 hr a producir manzanas, deja de usarla en la producciónd de peces, sacrificando 6 peces para obtener 4 manzanas. $$C^ \peq{R}_ \peq{m}=\frac{6 \peq{p/hr}}{4 \peq{m/hr}}=\frac{3}{2} \peq{p/m}$$
+						\item Alternativamente, para producir una manzana usa 15 minutos en los que habría producido 1.5 peces. $$C^ \peq{R}_ \peq{m}=\frac{15 \peq{min/m}}{10 \peq{min/p}}=\frac{3}{2} \peq{p/m}$$
+					\end{itemize}
+				\asuivre
+			\end{enumerate}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			\begin{enumerate}
+			\suite
+				\item Costo de un pez para Robinson
+					\begin{itemize}
+						\item Si dedica 1 hr a producir peces, deja de usarla en la producciónd de manzanas, sacrificando 4 manzanas para obtener 6 peces. $$C^ \peq{R}_ \peq{p}=\frac{4 \peq{m/hr}}{6 \peq{p/hr}}=\frac{2}{3} \peq{m/p}$$
+						\item Alternativamente, para producir un pez usa 10 minutos en los que habría producido $\frac{2}{3}$ de una manzana. $$C^ \peq{R}_ \peq{p}=\frac{10 \peq{min/p}}{15 \peq{min/m}}=\frac{2}{3} \peq{m/p}$$
+					\end{itemize}
+				\asuivre
+			\end{enumerate}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			\begin{enumerate}
+			\suite
+				\item Costo de una manzana para Viernes
+					\begin{itemize}
+						\item Si dedica 1 hr a producir manzanas, deja de usarla en la producciónd de peces, sacrificando 1 pez para obtener 2 manzanas. $$C^ \peq{V}_\peq{m}=\frac{1 \peq{p/hr}}{2 \peq{m/hr}}=0.5 \peq{p/m}$$
+						\item Alternativamente, para producir una manzana usa 30 minutos en los que habría producido medio pez. $$C^ \peq{V}_\peq{m}=\frac{30 \peq{min/m}}{60 \peq{min/p}}=\frac{1}{2} \peq{p/m}$$
+					\end{itemize}
+				\asuivre
+			\end{enumerate}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			\begin{enumerate}
+			\suite
+				\item Costo de un pez para Viernes
+					\begin{itemize}
+						\item Si dedica 1 hr a producir peces, deja de usarla en la producciónd de manzanas, sacrificando 2 manzanas para obtener 1 pez. $$C^ \peq{V}_\peq{p}=\frac{2 \peq{m/hr}}{1 \peq{p/hr}}=2 \peq{m/p}$$
+						\item Alternativamente, para producir un pez usa 60 minutos en los que habría producido 2 manzanas. $$C^ \peq{V}_\peq{p}=\frac{60 \peq{min/p}}{30 \peq{min/m}}=2 \peq{m/p}$$
+					\end{itemize}
+			\end{enumerate}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Costo de oportunidad:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{7cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+										 & 			1	Pez	 		& 	1	Manzana		 \\ \hline
+						Robinson & $2/3$ manzanas & $3/2$ peces \\ \hline
+						Viernes	 & $2$ manzanas 	& $1/2$ peces\\ \hline
+					\end{tabular}}
+			\end{table}
+			Robinson tiene VC en peces y Viernes en manzanas
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Producción en una jornada de trabajo:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{7cm}{!}{
+					\begin{tabular}{|l|c|c|}\hline
+										 & 			Peces 			& 			Manzanas	 \\ \hline
+						Robinson & 48$\peq{p}$ & 32$\peq{m}$ \\ \hline
+						Viernes	 & 8$\peq{p}$  & 16$\peq{m}$ \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			FPP:
+				\begin{figure}
+					\begin{subfigure}[b]{0.49\textwidth}
+						\begin{tikzpicture}[scale=.07]
+							\node at (25,60) {\underline{Robinson}};
+							\draw [<->,thick] (0,60)--(0,0)--(50,0);
+							\draw [ultra thick, teal] plot [domain=0:32] (\x,{48-1.5*\x});
+							\node [rotate=90,left] at (-12,40) {Peces};
+							\node [below] at (20,-4) {Manzanas};
+							\node [left] at (0,48) {\tiny 48};
+							\node [below] at (32,0) {\tiny 32};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+					\end{subfigure}
+					\begin{subfigure}[b]{0.49\textwidth}
+						\begin{tikzpicture}[scale=.07]
+							\node at (25,60) {\underline{Viernes}};
+							\draw [<->,thick] (0,60)--(0,0)--(50,0);
+							\draw [ultra thick, teal] plot [domain=0:16] (\x,{8-0.5*\x});
+							\node [rotate=90,left] at (-12,40) {Peces};
+							\node [below] at (20,-4) {Manzanas};
+							\node [left] at (0,8) {\tiny 8};
+							\node [below] at (16,0) {\tiny 16};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+					\end{subfigure}
+				\end{figure}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Supongamos las siguientes asignaciones
+				\begin{figure}
+					\begin{subfigure}[b]{0.49\textwidth}
+						\begin{tikzpicture}[scale=.07]
+							\node at (25,60) {\underline{Robinson}};
+							\draw [<->,thick] (0,60)--(0,0)--(50,0);
+							\draw [dashed,help lines] (0,24) -- (16,24) -- (16,0);
+							\draw [ultra thick, teal] plot [domain=0:32] (\x,{48-1.5*\x});
+							\node [rotate=90,left] at (-12,40) {Peces};
+							\node [below] at (20,-4) {Manzanas};
+							\node [left] at (0,48) {\tiny 48};
+							\node [left] at (0,24) {\tiny 24};
+							\node [below] at (32,0) {\tiny 32};
+							\node [below] at (16,0) {\tiny 16};
+							\node [below] at (0,0) {\tiny 0};
+							\draw [fill,red] (16,24) circle [radius=1];
+						\end{tikzpicture}
+					\end{subfigure}
+					\begin{subfigure}[b]{0.49\textwidth}
+						\begin{tikzpicture}[scale=.07]
+							\node at (25,60) {\underline{Viernes}};
+							\draw [<->,thick] (0,60)--(0,0)--(50,0);
+							\draw [dashed,help lines] (0,4) -- (8,4) -- (8,0);
+							\draw [ultra thick, teal] plot [domain=0:16] (\x,{8-0.5*\x});
+							\node [rotate=90,left] at (-12,40) {Peces};
+							\node [below] at (20,-4) {Manzanas};
+							\node [left] at (0,8) {\tiny 8};
+							\node [left] at (0,4) {\tiny 4};
+							\node [below] at (16,0) {\tiny 16};
+							\node [below] at (0,0) {\tiny 0};
+							\node [below] at (8,0) {\tiny 8};
+							\draw [fill,red] (8,4) circle [radius=1];
+						\end{tikzpicture}
+					\end{subfigure}
+				\end{figure}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Supongamos que Robinson ofrece el siguiente trato a Viernes:
+			\begin{table}[htbp!]
+				\begin{itemize}
+					\item Viernes se especializa en manzanas, produciendo 16 en una jornada.
+					\item Robinson dedica 5 horas a producción de peces y 3 a la de manzanas, produciendo 30 peces y 12 manzanas.
+					\item Robinson entrega a Viernes 5 peces a cambio de 5 manzanas.
+				\end{itemize}
+			\end{table}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|c c|c c|}\hline
+										 &\multicolumn{2}{c}{Robinson}\vline&\multicolumn{2}{c}{Viernes}\vline \\
+										 &		 Peces	& Manzanas			&	 		Peces 	& Manzanas 		  \\ \hline
+						Autarquía&   					&   						&  						&  						  \\ 
+					\ \	\ \small producción $=$ consumo&24& 16	& 4						& 8						  \\ \hline
+						Comercio &   					&   						&  						&  						  \\
+					\	\ \ \small producción& 30 &				12			&				0			& 			16			\\
+					\	\ \ \small comercio  & -5 &				+5			&			+5			& 			-5			\\
+					\	\ \ \small consumo   & 25 &				17			&				5			& 			11			\\ \hline
+					Ganancias del comercio& &   						&  						&  						  \\ 
+					\ \ \ \small $\Delta$consumo&+1&	+1&			+1			&				+3			\\ \hline
+					\end{tabular}}
+			\end{table}
+			\centering
+			\textbf{Conclusión:} El comercio mejora el bienestar de ambos
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			FPP con comercio:
+			
+						\centering
+						\begin{tikzpicture}[scale=.09]
+							\draw [dashed,help lines] (0,48)--(16,48)--(16,0);
+							\draw [<->,thick] (0,60)--(0,0)--(50,0);
+							\draw [ultra thick,teal] (0,56)--(16,48)--(48,0);
+							\node [rotate=90,left] at (-12,40) {Peces};
+							\node [below] at (20,-4) {Manzanas};
+							\node [left] at (0,48) {\tiny 48};
+							\node [left] at (0,56) {\tiny 56};
+							\node [below] at (48,0) {\tiny 58};
+							\node [below] at (16,0) {\tiny 16};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			FPP con comercio:
+			
+						\centering
+						\begin{tikzpicture}[scale=.09]
+							\draw [dashed,help lines] (0,48)--(16,48)--(16,0);
+							\draw [dashed,help lines] (0,30)--(28,30)--(28,0);
+							\draw [<->,thick] (0,60)--(0,0)--(50,0);
+							\draw [ultra thick,teal] (0,56)--(16,48)--(48,0);
+							\node [rotate=90,left] at (-12,40) {Peces};
+							\node [below] at (20,-4) {Manzanas};
+							\node [left] at (0,48) {\tiny 48};
+							\node [left] at (0,56) {\tiny 56};
+							\node [left] at (0,30) {\tiny 30};
+							\node [below] at (48,0) {\tiny 58};
+							\node [below] at (16,0) {\tiny 16};
+							\node [below] at (28,0) {\tiny 28};
+							\node [below] at (0,0) {\tiny 0};
+							\draw [fill,red] (28,30) circle [radius=1];
+						\end{tikzpicture}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			En el trato que supusimos la tasa de intercambio es $$p_\peq{m}=\frac{5\peq{p}}{5\peq{m}}=1\peq{p/m}$$ \centering o $$p_\peq{p}=\frac{5\peq{m}}{5\peq{p}}=1\peq{m/p}$$
+			Pero no es el único precio relativo al que podrían intercambiar...
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Para que ocurra el intercambio tiene que ser cierto que un individuo quiere vender y el otro quiere comprar. En general,
+			\begin{itemize}
+				\item Si $p_x<C^\peq{i}_\peq{x}$, el individuo $i$ quiere comprar $x$ porque así obtiene cada unidad de $x$ sacrificando menos unidades de $y$ que las que tendría que sacrificar al producir $x$.
+				\item Si $p_x>C^\peq{i}_\peq{x}$, el individuo $i$ quiere vender $x$ porque así obtiene más unidades de $y$ que las que obtendría produciendo $y$.
+		 \end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			En nuestro ejemplo:
+			\begin{itemize}
+				\item Si $p_m<\frac{1}{2}$, ambos quieren comprar manzanas.
+				\item Si $p_m>\frac{3}{2}$, ambos quieren vender manzanas.
+			\end{itemize}
+			Alternativamente,
+			\begin{itemize}
+				\item Si $p_p<\frac{2}{3}$, ambos quieren comprar peces.
+				\item Si $p_p>2$, ambos quieren vender peces.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Intercambio}
+			Concluimos que los precios relativos compatibles con el intercambio son $$p_\peq{m}\in[1/2,3/2]$$ Alternativamente, $$p_\peq{p}\in[2/3,2]$$
+		\end{frame}
+
+	\section{Más conceptos}
+
+		\begin{frame}
+			\frametitle{Mercados y Competencia}
+			\begin{mydef}
+				\textbf{Mercado:} Instancia en la que se encuentran compradores y vendedores de un conjunto de bienes.
+			\end{mydef}
+			Ejemplos:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{9cm}{!}{
+					\begin{tabular}{|l|l|l|}\hline
+						\textbf{Mercado} &	\textbf{Demandantes} &	\textbf{Oferentes}  \\ \hline
+						Comida 	 				 & Gente ``hambrienta''  & Cocineros 						\\ \hline
+						Educación				 & Estudiantes, padres   & Colegios, profesores \\ \hline
+						Salud						 & Enfermos 						 & Hospitales, médicos  \\ \hline
+						Matrimonio			 & Hombres/Mujeres 		 	 & Mujeres/Hombres 			\\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}
+
+	\begin{frame}
+			\frametitle{Mercados y Competencia}
+			La definición de un mercado es más compleja de lo que aparenta:
+			\begin{itemize}
+				\item Es necesario definir el bien
+					\begin{itemize}
+						\item ¿Cuál es la necesidad que se quiere satisfacer?
+						\item Mientras más estrecha la definición, menos actores y mayor probabilidad de poder de mercado
+						\item Al ampliar la definición de la necesidad, aumentan las posibilidades de sustitución
+						\item Ej: Coca-Cola, bebidas gaseosas, hidratación
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+
+	\begin{frame}
+			\frametitle{Mercados y Competencia}
+			\begin{itemize}
+				\item Es necesario definir la extensión geográfica
+					\begin{itemize}
+						\item Comparación costo beneficio (costo de transporte versus diferencia de precio) determina grado de sustitución
+						\item Ej: pan en Santiago y en Valdivia 
+					\end{itemize}
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Mercados y Competencia}
+			\begin{mydef}
+				\textbf{Economía de mercado:} Economía que asigna los recursos por medio de las decisiones descentralizadas de empresas y hogares cuando interactúan en los mercados de bienes y servicios.
+			\end{mydef}
+			\begin{mydef}
+				\textbf{Precios:} Instrumento de asignación de recursos que refleja tanto el valor que tiene un bien para la sociedad como su costo de producción.
+			\end{mydef}
+		\end{frame}		
+	
+		\begin{frame}
+			\frametitle{Mercados y Competencia}
+			\begin{mydef}
+				\textbf{Grado de competencia:} Grado en que un actor (no) puede afectar el precio de mercado.
+			\end{mydef}
+			\begin{mydef}
+				\textbf{Competencia perfecta:} Situación en la que ningún oferente o demandante puede afectar el precio de mercado a través de decisiones individuales. 
+				
+				$\implies\text{ agentes tomadores de precios}$
+			\end{mydef}
+		\end{frame}				
+	
+		\begin{frame}
+			\frametitle{Mercados y Competencia}
+			\begin{itemize}
+				\item El mecanismo detrás de la competencia es la existencia de un sustituto suficientemente cercano para cada comprador y vendedor.
+				\item La asignación de recursos en un mercado perfectamente competitivo es eficiente.
+			\end{itemize}
+		\end{frame}
+		
+	\begin{frame}
+			\frametitle{Mercados y Competencia}
+			Condiciones que facilitan la competencia perfecta:
+			\begin{itemize}
+				\item Gran cantidad de compradores y vendedores (atomización)
+				\item Libre entrada y salida de oferentes
+				\item Bienes homogéneos
+				\item Información perfecta (acciones) y completa (características)
+			\end{itemize}			
+		\end{frame}				
+		
+\end{document}

@@ -1,0 +1,5 @@
+\select@language {spanish}
+\beamer@sectionintoc {1}{Introducci\'on}{2}{0}{1}
+\beamer@sectionintoc {2}{Fundamento Te\'orico}{7}{0}{2}
+\beamer@sectionintoc {3}{La Curva de Oferta}{38}{0}{3}
+\beamer@sectionintoc {4}{An\'alisis de Bienestar}{64}{0}{4}

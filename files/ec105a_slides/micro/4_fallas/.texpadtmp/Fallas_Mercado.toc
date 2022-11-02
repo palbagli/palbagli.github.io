@@ -1,0 +1,4 @@
+\select@language {spanish}
+\beamer@sectionintoc {1}{Poder de Mercado}{4}{0}{1}
+\beamer@sectionintoc {2}{Externalidades}{118}{0}{2}
+\beamer@sectionintoc {3}{Bienes P\'ublicos y Recursos Comunes}{135}{0}{3}

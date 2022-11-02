@@ -1,0 +1,2335 @@
+
+\documentclass{beamer}
+%\documentclass{beamer}
+%\usepackage{beamerthemesplit} 
+%\usetheme{Berkeley}
+%\usecolortheme{dolphin}
+\usetheme{Szeged}
+
+\usepackage{amsfonts}
+\usepackage{txfonts}
+\usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[dvips]{graphicx}
+\usepackage{cancel}
+%\usepackage{bm}
+\usepackage{ae,aecompl,amsmath,amsbsy}
+\setbeamertemplate{navigation symbols}{}
+
+\beamertemplateballitem
+
+\usepackage{tikz}
+\usepackage{pbox}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{centernot}
+
+\usetikzlibrary{babel,decorations.pathreplacing,decorations.markings}
+
+\newtheorem{mydef}{Definición}
+\newcommand{\peq}[1]{{\scriptscriptstyle{#1}}} 
+\newcommand{\rp}[1]{\left(#1\right)}
+
+\title{EAE105A \\ Introducción a la Economía}
+\subtitle{II. Microeconomía: Teoría de la Demanda} 
+\author{Pinjas Albagli}
+\institute{Instituto de Economía \\ Pontificia Universidad Católica de Chile}
+\date{Primer Semestre de 2018}
+
+\begin{document}
+
+	\maketitle 
+	
+	\section{Introducción}
+
+		\begin{frame}
+			\frametitle{La Curva de Demanda}
+			\begin{mydef}
+				\textbf{Cantidad demandada ($\mathbf{q^\peq{d}}$):} Cantidad de un bien que los compradores están dispuestos y tienen la capacidad de comprar.
+			\end{mydef}
+			\begin{mydef}
+				\textbf{Función de demanda:} Función que relaciona la cantidad demandada de un bien con su precio, manteniendo constantes los precios de otros bienes relacionados, las preferencias del consumidor y su ingreso. $$q^\peq{d}_\peq{x}=f\left(p_\peq{x},\overline{p_\peq{y}},\overline{p_\peq{z}},\overline{m},\overline{\text{otros factores...}}\right)$$
+			\end{mydef}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{La Curva de Demanda}
+			\begin{mydef}
+				\textbf{Ley de la demanda:} Con todo lo demás constante, la cantidad demandada de un bien ($q^\peq{d}$) disminuye cuando su precio ($p$) aumenta.
+			\end{mydef}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{La Curva de Demanda}
+			Tradicionalmente la graficamos al revés: $$p^\peq{d}_\peq{x}=f^\peq{-1}\left(q_\peq{x},\overline{p_\peq{y}},\overline{p_\peq{z}},\overline{m},\overline{\text{otros factores...}}\right)$$
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=3]
+					\draw plot [domain=0.05:1.4](\x,{1-ln(1+\x)});
+					\draw[<->, thick] (0,1.2) -- (0,0) -- (1.6,0);
+					\node [right] at (1.4,.1245312626) {$D$};
+					\node [below] at (1.6,0) {$q$};
+					\node [left] at (0,1.2) {$p$};
+				\end{tikzpicture}
+				%\caption{Curva de demanda}
+			\end{figure}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{La Curva de Demanda}
+			De esta manera, la curva de demanda refleja el máximo precio que un consumidor estaría dispuesto a pagar por una unidad adicional. Es decir, la \textbf{valoración marginal del consumo}. $$\text{Ley de la demanda}\implies\text{la curva de demanda tiene pendiente negativa}$$
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{La Curva de Demanda}
+			Es \textbf{muy} importante distinguir entre:
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Cambio en la cantidad demandada:} Cuando cambia $p$ y se mantienen constantes otros determinantes de la demanda, se produce un movimiento en/sobre/através de la curva de demanda.
+					\item \textbf{Cambio en la demanda:} Cuando cambia alguno de los determinantes de la demanda que no están representados en los ejes del gráfico (es decir, cualquiera distinto de $p$), cambia la cantidad demandada a cada precio, por lo que se desplaza la curva de demanda.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}
+		
+	\section{Fundamento Teórico}
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Estudiaremos la elección de un consumidor tomador de precios.
+			
+			Modelaremos al consumidor como un individuo que consume 2 bienes cuyas cantidades denotaremos por $x$ e $y$. Paga $p_\peq{x}$ y $p_\peq{y}$ por cada unidad de $x$ e $y$ respectivamente. Suponemos que el objetivo del consumidor es maximizar su utilidad $u\rp{x,y}$.
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Definamos algunos conceptos:
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Canasta de consumo $\mathbf{\rp{x,y}}$:} Combinación compuesta por las cantidades $x$ e $y$ de ambos bienes.
+					\item \textbf{Restricción presupuestaria:} El límite en las canastas de consumo que el consumidor puede comprar. $$p_\peq{x}\cdot x + p_\peq{y}\cdot y \leq m$$
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw [ultra  thick, teal] plot [domain=0:100] (\x,{100-\x});
+				\draw [<->,thick] (0,120)--(0,0)--(120,0);
+				\draw [fill,blue] (0,100) circle [radius=2];
+				\draw [fill,blue] (100,0) circle [radius=2];
+				\node [left] at (0,120) {$y$};
+				\node [below] at (120,0) {$x$};
+				\node [left] at (0,100) {\tiny $\frac{m}{p_\peq{y}}$};
+				\node [below] at (100,0) {\tiny $\frac{m}{p_\peq{x}}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw [fill,teal,opacity=.3] (100,0) -- (0,0) -- (0,100);
+				\draw [ultra  thick, teal] plot [domain=0:100] (\x,{100-\x});
+				\draw [<->,thick] (0,120)--(0,0)--(120,0);
+				\draw [fill,blue] (0,100) circle [radius=2];
+				\draw [fill,blue] (100,0) circle [radius=2];
+				\node [left] at (0,120) {$y$};
+				\node [below] at (120,0) {$x$};
+				\node [left] at (0,100) {\tiny $\frac{m}{p_\peq{y}}$};
+				\node [below] at (100,0) {\tiny $\frac{m}{p_\peq{x}}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+				\begin{itemize}
+					\item \textbf{Función de utilidad ($\mathbf{u\rp{\cdot}}$):} Función que representa las preferencias del consumidor.$$\rp{x_\peq{A},y_\peq{A}}\succsim \rp{x_\peq{B},y_\peq{B}}\iff u\rp{x_\peq{A},y_\peq{A}}\geq u\rp{x_\peq{B},y_\peq{B}}$$
+					\item \textbf{Utilidad marginal ($\mathbf{UMg}$):} Cambio en la función de utilidad al aumentar el consumo en una unidad.$$UMg_\peq{x}=u\rp{x+1,y}-u\rp{x,y}$$ $$UMg_\peq{y}=u\rp{x,y+1}-u\rp{x,y}$$
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			\centering
+			\begin{tikzpicture}[scale=.055]
+				\draw [dashed,help lines] (20,0)--(20,44.72135954)--(0,44.72135954);
+				\draw [dashed,help lines] (30,0)--(30,54.77225575)--(0,54.77225575);
+				\draw [dashed,help lines] (80,0)--(80,89.44271908)--(0,89.44271908);
+				\draw [dashed,help lines] (90,0)--(90,94.86832980)--(0,94.86832980);
+				\draw [ultra  thick, teal] plot [domain=0:95] (\x,{10*sqrt(\x)});
+				\draw [<->,thick] (0,100)--(0,0)--(100,0);
+				\node [left] at (0,100) {$y$};
+				\node [below] at (100,0) {$x$};
+				\node [below] at (0,0) {\tiny 0};
+				\node [left] at (0,44.72135954) {\tiny $u\rp{x_\peq{1},y_\peq{0}}$};
+				\node [left] at (0,54.77225575) {\tiny $u\rp{x_\peq{2},y_\peq{0}}$};
+				\node [left] at (0,89.44271908) {\tiny $u\rp{x_\peq{3},y_\peq{0}}$};
+				\node [left] at (0,94.86832980) {\tiny $u\rp{x_\peq{4},y_\peq{0}}$};
+				\node [below] at (20,0) {\tiny $x_\peq{1}$};
+				\node [below] at (30,0) {\tiny $x_\peq{2}$};
+				\node [below] at (80,0) {\tiny $x_\peq{3}$};
+				\node [below] at (90,0) {\tiny $x_\peq{4}$};
+				\node [right,teal] at (95,97.46794345) {$u\rp{x,y_\peq{0}}$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+				\begin{itemize}
+					\item \textbf{Curva de indiferencia ($\mathbf{I}$):} Curva que muestra las canastas de consumo que le proporcionan al consumidor el mismo nivel de utilidad. Hay una para cada nivel de utilidad posible.$$I_\peq{\overline{u}}=\{\rp{x,y}\in\varmathbb{R}_\peq{+}^\peq{2} \ : \ u\rp{x,y} = \overline{u}\}$$
+					\item \textbf{Tasa marginal de sustitución ($\mathbf{TMS}$):} Tasa a la cual un consumidor está dispuesto a intercambiar un bien por otro. Es la pendiente de la curva de indiferencia. $$TMS=\frac{UMg_\peq{x}}{UMg_\peq{y}}$$
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw [<->,thick] (0,100)--(0,0)--(100,0);
+				\draw [ultra  thick, teal] plot [domain=10:100] (\x,{1000/\x});
+				\draw [ultra  thick, teal] plot [domain=15:100] (\x,{1500/\x});
+				\draw [ultra  thick, teal] plot [domain=20:100] (\x,{2000/\x});
+				\draw [ultra  thick, teal] plot [domain=25:100] (\x,{2500/\x});
+				\node [left] at (0,100) {$y$};
+				\node [below] at (100,0) {$x$};
+				\node [right,teal] at (100,1000/100) {\tiny $I_\peq{0}$};
+				\node [right,teal] at (100,1500/100) {\tiny $I_\peq{1}$};
+				\node [right,teal] at (100,2000/100) {\tiny $I_\peq{2}$};
+				\node [right,teal] at (100,2500/100) {\tiny $I_\peq{3}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+				Propiedades de las curvas de indiferencia:
+				\begin{itemize}
+					\item Las curvas de indiferencia más altas son preferidas a las más bajas.
+					\item Las curvas de indiferencia tienen pendiente negativa.
+					\item Las curvas de indiferencia no se cruzan.
+					\item Las curvas de indiferencia son convexas al origen.
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Caso extremo 1: Complementos perfectos
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw [<->,thick] (0,100)--(0,0)--(100,0);
+				\draw [ultra  thick, teal] (20,100)--(20,20)--(100,20);
+				\draw [ultra  thick, teal] (30,100)--(30,30)--(100,30);
+				\draw [ultra  thick, teal] (40,100)--(40,40)--(100,40);
+				\node [left] at (0,100) {$y$};
+				\node [below] at (100,0) {$x$};
+				\node [right,teal] at (100,20) {\tiny $I_\peq{0}$};
+				\node [right,teal] at (100,30) {\tiny $I_\peq{1}$};
+				\node [right,teal] at (100,40) {\tiny $I_\peq{2}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Caso extremo 2: Sustitutos perfectos
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw [ultra  thick, teal] plot [domain=0:50] (\x,{50-\x});
+				\draw [ultra  thick, teal] plot [domain=0:70] (\x,{70-\x});
+				\draw [ultra  thick, teal] plot [domain=0:90] (\x,{90-\x});
+				\draw [<->,thick] (0,100)--(0,0)--(100,0);
+				\node [left] at (0,100) {$y$};
+				\node [below] at (100,0) {$x$};
+				\node [above right,teal] at (50,0) {\tiny $I_\peq{0}$};
+				\node [above right,teal] at (70,0) {\tiny $I_\peq{1}$};
+				\node [above right,teal] at (90,0) {\tiny $I_\peq{2}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Suponemos que el objetivo del consumidor es escoger la cantidad canasta de consumo $\rp{x^{*},y^{*}}$ que maximiza su utilidad dentro del conjunto de canastas que puede comprar, dado su ingreso y los precios de los bienes. Esto se traduce en alcanzar la curva de indiferencia más lejana al origen cumpliendo la restricción presupuestaria.
+		\end{frame}					
+		
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Caracterizando el óptimo:
+			\begin{itemize}
+				\item Si el consumidor gasta \$1 adicional en $x$, puede comprar $\frac{1}{p_\peq{x}}$ unidades adicionales...
+				\item su utilidad aumentará en $\frac{UMg_\peq{x}}{p_\peq{x}}$...
+				\item pero tendrá que dejar de comprar $\frac{1}{p_\peq{y}}$ unidades de $y$...
+				\item y su utilidad disminuirá en $\frac{UMg_\peq{y}}{p_\peq{y}}$.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Por lo tanto,
+			\begin{itemize}
+				\item Si $\frac{UMg_\peq{x}}{p_\peq{x}}>\frac{UMg_\peq{y}}{p_\peq{y}}$, es posible aumentar la utilidad reasignando gasto al bien $x$.
+				\item Si $\frac{UMg_\peq{x}}{p_\peq{x}}<\frac{UMg_\peq{y}}{p_\peq{y}}$, es posible aumentar la utilidad reasignando gasto al bien $y$.
+			\end{itemize}
+			Pero en el óptimo no es posible aumentar la utilidad redistribuyendo el gasto.
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Concluimos que en el óptimo $$\frac{UMg_\peq{x}}{p_\peq{x}}=\frac{UMg_\peq{y}}{p_\peq{y}}$$
+			Reordenando, $$\frac{UMg_\peq{x}}{UMg_\peq{y}}=\frac{p_\peq{x}}{p_\peq{y}}$$ $$TMS=\frac{p_\peq{x}}{p_\peq{y}}$$ $$\implies\text{tangencia entre curva de indiferencia y la RP}$$
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [dashed,help lines] (0,5)--(5,5)--(5,0);
+				%\draw [dashed,help lines] (2.5,0)--(2.5,2.5)--(0,2.5);
+				\draw [ultra thick,red] plot [domain=0:10] (\x,{10-\x});
+				%\draw [ultra thick,teal] plot [domain=1:6] (\x,{6.25/\x});
+				\draw [ultra thick,teal] plot [domain=3:8.2] (\x,{25/\x});
+				\draw [ultra thick,teal] plot [domain=3.5:8.3] (\x,{30/\x});
+				\draw [ultra thick,teal] plot [domain=2.5:8.1] (\x,{20/\x});
+				\draw [<->,thick] (0,10.7)--(0,0)--(10.7,0);
+				\draw [fill,blue] (5,5) circle [radius=.2];
+				\node [right,blue] at (5,5) {\textbf{A}};
+				%\draw [fill,blue] (2.5,2.5) circle [radius=.2];
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (10.7,0) {$x$};
+				%\node [left] at (0,2.5) {\tiny $y_\peq{A}$};
+				%\node [below] at (2.5,0) {\tiny $x_\peq{A}$};
+				\node [left] at (0,5) {\tiny $y^\peq{*}$};
+				\node [below] at (5,0) {\tiny $x^\peq{*}$};
+				%\node [right,teal] at (6,6.25/6) {\tiny $I_\peq{0}$};
+				%\node [right,teal] at (8,25/8) {\tiny $I_\peq{1}$};
+				%\node [above,red] at (5,0) {\tiny $RP_\peq{0}$};
+				%\node [above,red] at (10,0) {\tiny $RP_\peq{1}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Cuando (\emph{ceteris paribus}) aumenta el ingreso, la restricción presupuestaria se desplaza hacia afuera en forma paralela.
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Bien normal o superior:} Un incremento en el ingreso aumenta la cantidad demandada.
+					\item \textbf{Bien inferior:} Un incremento en el ingreso reduce la cantidad demandada.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Ejemplo 1: $x$ e $y$ normales
+			
+			\vspace{.3cm}
+			
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [dashed,help lines] (0,5)--(5,5)--(5,0);
+				\draw [dashed,help lines] (2.5,0)--(2.5,2.5)--(0,2.5);
+				\draw [ultra thick,red] plot [domain=0:10] (\x,{10-\x});
+				\draw [ultra thick,red] plot [domain=0:5] (\x,{5-\x});
+				\draw [ultra thick,teal] plot [domain=1:6] (\x,{6.25/\x});
+				\draw [ultra thick,teal] plot [domain=3:8] (\x,{25/\x});
+				\draw [<->,thick] (0,10.7)--(0,0)--(10.7,0);
+				\draw [fill,blue] (5,5) circle [radius=.2];
+				\node [above right,blue] at (5,5) {\textbf{B}};
+				\draw [fill,blue] (2.5,2.5) circle [radius=.2];
+				\node [above right,blue] at (2.5,2.5) {\textbf{A}};
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (10.7,0) {$x$};
+				\node [left] at (0,2.5) {\tiny $y_\peq{A}$};
+				\node [below] at (2.5,0) {\tiny $x_\peq{A}$};
+				\node [left] at (0,5) {\tiny $y_\peq{B}$};
+				\node [below] at (5,0) {\tiny $x_\peq{B}$};
+				\node [right,teal] at (6,6.25/6) {\tiny $I_\peq{0}$};
+				\node [right,teal] at (8,25/8) {\tiny $I_\peq{1}$};
+				\node [above,red] at (5,0) {\tiny $RP_\peq{0}$};
+				\node [above,red] at (10,0) {\tiny $RP_\peq{1}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Ejemplo 2: $x$ inferior, $y$ normal
+			
+			\vspace{.3cm}
+			
+			\centering
+			\begin{tikzpicture}[scale=2]
+				\draw [dashed,help lines] (0,9)--(1,9)--(1,8);
+				\draw [dashed,help lines] (0,9.8)--(.6,9.8)--(.6,8);
+				\draw [ultra thick,red] plot [domain=0:2] (\x,{10-\x});
+				\draw [ultra thick,red] plot [domain=0:2.4] (\x,{52/5-\x});
+				\draw [ultra thick,teal] plot [domain=.6:2] (\x,{-1*exp(.5*ln(\x-.5)+.3465735903)+10});
+				\draw [ultra thick,teal] plot [domain=.500009:2.5] (\x,{-1*exp(.5*ln(\x-.5)-.4581453655)+10});
+				\draw [<->,thick] (0,10.7)--(0,8)--(2.7,8);
+				\draw [fill,blue] (1,9) circle [radius=.05];
+				\node [above right,blue] at (1,9) {\textbf{A}};
+				\draw [fill,blue] (.6,9.8) circle [radius=.05];
+				\node [above right,blue] at (.6,9.8) {\textbf{B}};
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (2.7,8) {$x$};
+				\node [left] at (0,9) {\tiny $y_\peq{A}$};
+				\node [below] at (1,8) {\tiny $x_\peq{A}$};
+				\node [left] at (0,9.8) {\tiny $y_\peq{B}$};
+				\node [below] at (.6,8) {\tiny $x_\peq{B}$};
+				\node [right,teal] at (2,8.267949192) {\tiny $I_\peq{0}$};
+				\node [right,teal] at (2.5,9.128220211) {\tiny $I_\peq{1}$};
+				\node [below] at (0,8) {\tiny 0};
+				\node [above,red] at (2,8) {\tiny $RP_\peq{0}$};
+				\node [above,red] at (2.4,8) {\tiny $RP_\peq{1}$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Cuando (\emph{ceteris paribus}) cambia el precio relativo, cambia la pendiente de la restricción presupuestaria. Por ejemplo, $$\Delta^\peq{+}p_\peq{x}\implies\Delta^\peq{+}\rp{\frac{p_\peq{x}}{p_\peq{y}}}$$ $$\Delta^\peq{+}p_\peq{y}\implies\Delta^\peq{-}\rp{\frac{p_\peq{x}}{p_\peq{y}}}$$
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Ejemplo: $\Delta^\peq{-}p_\peq{y}$
+			
+			\vspace{.3cm}
+			
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [dashed,help lines] (0,5)--(5,5)--(5,0);
+				\draw [dashed,help lines] (6,0)--(6,8/3)--(0,8/3);
+				\draw [ultra thick,red] plot [domain=0:10] (\x,{10-\x});
+				\draw [ultra thick,red] plot [domain=0:10] (\x,{-2/3*\x+20/3});
+				\draw [ultra thick,teal] plot [domain=3:8] (\x,{-4*\x^(1/2)*5^(1/2)+\x+20});
+				\draw [ultra thick,teal] plot [domain=3:8] (\x,{-10/3*\x^(1/2)*6^(1/2)+\x+50/3});
+				\draw [<->,thick] (0,10.7)--(0,0)--(10.7,0);
+				\draw [fill,blue] (5,5) circle [radius=.2];
+				\node [right,blue] at (5,5) {\textbf{C}};
+				\draw [fill,blue] (6,8/3) circle [radius=.2];
+				\node [right,blue] at (6,8/3) {\textbf{A}};
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (10.7,0) {$x$};
+				\node [left] at (0,8/3) {\tiny $y^\peq{*}_\peq{A}$};
+				\node [below] at (6,0) {\tiny $x^\peq{*}_\peq{A}$};
+				\node [left] at (0,5) {\tiny $y^\peq{*}_\peq{C}$};
+				\node [below] at (5,0) {\tiny $x^\peq{*}_\peq{C}$};
+				\node [right,teal] at (8,1.57265590) {\tiny $I_\peq{0}$};
+				\node [right,teal] at (8,2.70177872) {\tiny $I_\peq{1}$};
+				\node [right,red] at (0,10) {\tiny $RP_\peq{1}$};
+				\node [right,red] at (0,20/3) {\tiny $RP_\peq{0}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Podemos descomponer el efecto...
+			
+			\vspace{.3cm}
+			
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [dashed,help lines] (0,5)--(5,5)--(5,0);
+				\draw [dashed,help lines] (6,0)--(6,8/3)--(0,8/3);
+				\draw [dashed,help lines] (25/6,0)--(25/6,25/6)--(0,25/6);
+				\draw [ultra thick,purple,dashed] plot [domain=0:25/3] (\x,{-\x+25/3});
+				\draw [ultra thick,red] plot [domain=0:10] (\x,{10-\x});
+				\draw [ultra thick,red] plot [domain=0:10] (\x,{-2/3*\x+20/3});
+				\draw [ultra thick,teal] plot [domain=3:8] (\x,{-4*\x^(1/2)*5^(1/2)+\x+20});
+				\draw [ultra thick,teal] plot [domain=3:8] (\x,{-10/3*\x^(1/2)*6^(1/2)+\x+50/3});
+				\draw [<->,thick] (0,10.7)--(0,0)--(10.7,0);
+				\draw [fill,blue] (5,5) circle [radius=.2];
+				\node [right,blue] at (5,5) {\textbf{C}};
+				\draw [fill,blue] (6,8/3) circle [radius=.2];
+				\node [right,blue] at (6,8/3) {\textbf{A}};
+				\draw [fill,purple] (25/6,25/6) circle [radius=.2];
+				\node [right,purple] at (25/6,25/6) {\textbf{B}};
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (10.7,0) {$x$};
+				\node [left] at (0,8/3) {\tiny $y^\peq{*}_\peq{A}$};
+				\node [below] at (6,0) {\tiny $x^\peq{*}_\peq{A}$};
+				\node [left] at (0,5) {\tiny $y^\peq{*}_\peq{C}$};
+				\node [below] at (5,0) {\tiny $x^\peq{*}_\peq{C}$};
+				\node [left] at (0,25/6) {\tiny $y^\peq{*}_\peq{B}$};
+				\node [below] at (25/6,0) {\tiny $x^\peq{*}_\peq{B}$};
+				\node [right,teal] at (8,1.57265590) {\tiny $I_\peq{0}$};
+				\node [right,teal] at (8,2.70177872) {\tiny $I_\peq{1}$};
+				\node [right,red] at (0,10) {\tiny $RP_\peq{1}$};
+				\node [right,red] at (0,20/3) {\tiny $RP_\peq{0}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			\begin{mydef}
+				\begin{itemize}
+						\item \textbf{Efecto sustitución:} Cambio en el consumo cuando un cambio en el precio mueve al consumidor a lo largo de una curva de indiferencia determinada, hasta un punto con una nueva tasa marginal de sustitución.
+							\begin{itemize}
+								\item Mantenemos el nivel de utilidad artificialmente constante y nos preguntamos qué canasta escogería el consumidor para mantener el mismo nivel de utilidad con el nuevo precio relativo. Esto requiere ``quitarle'' ingreso.
+							\end{itemize}
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			\begin{mydef}
+				\begin{itemize}
+						\item \textbf{Efecto ingreso: } Cambio en el consumo cuando un cambio en el precio mueve al consumidor a una curva de indiferencia distinta.
+							\begin{itemize}
+								\item Le ``devolvemos'' el ingreso que le habíamos ``quitado'', permitiéndole alcanzar un nivel de utilidad más alto.  
+							\end{itemize}
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+		%\begin{frame}
+			%\frametitle{Teoría del Consumidor}
+			%Variando $p_\peq{x}$ y manteniendo $p_\peq{y}$ y $m$ constantes, podemos obtener la curva de demanda por $x$:
+			%\begin{figure}[htbp!]
+				%\centering
+				%\begin{subfigure}[b]{0.49\textwidth}
+					%\resizebox{\linewidth}{!}{
+						%\begin{tikzpicture}[scale=.5]
+							%\draw [dashed,help lines] (0,5)--(2.5,5)--(2.5,0);
+							%\draw [dashed,help lines] (5,0)--(5,5)--(2.5,5);
+							%\draw [ultra thick,red] plot [domain=0:10] (\x,{10-\x});
+							%\draw [ultra thick,red] plot [domain=0:5] (\x,{10-2*\x});
+							%\draw [ultra thick,teal] plot [domain=1.5:5.5] (\x,{25/(2*\x)});
+							%\draw [ultra thick,teal] plot [domain=2.8:7.5] (\x,{25/\x});
+							%\draw [<->,thick] (0,12)--(0,0)--(12,0);
+							%\draw [fill,blue] (2.5,5) circle [radius=.2];
+							%\node [above right,blue] at (2.5,5) {\textbf{A}};
+							%\draw [fill,blue] (5,5) circle [radius=.2];
+							%\node [above right,blue] at (5,5) {\textbf{B}};
+							%\node [left] at (0,12) {$y$};
+							%\node [below] at (12,0) {$x$};
+							%\node [left] at (0,5) {\tiny $y^\peq{*}_\peq{A}=y^\peq{*}_\peq{B}$};
+							%\node [below] at (2.5,0) {\tiny $x^\peq{*}_\peq{A}$};
+							%\node [below] at (5,0) {\tiny $x^\peq{*}_\peq{B}$};
+							%\node [right,teal] at (5.5,25/11) {\tiny $I_\peq{0}$};
+							%\node [right,teal] at (7.5,25/7.5) {\tiny $I_\peq{1}$};
+							%\node [above right,red] at (10,0) {\tiny $RP_\peq{1}$};
+							%\node [above right,red] at (5,0) {\tiny $RP_\peq{0}$};
+							%\node [below] at (0,0) {\tiny 0};
+						%\end{tikzpicture}
+					%}
+				%\end{subfigure}
+				%\begin{subfigure}[b]{0.45\textwidth}
+					%\resizebox{\linewidth}{!}{
+						%\begin{tikzpicture}[scale=.5]
+							%\draw [dashed,help lines] (0,10/2.5)--(2.5,10/2.5)--(2.5,0);
+							%\draw [dashed,help lines] (0,10/5)--(5,10/5)--(5,0);
+							%\draw [ultra thick,teal] plot [domain=1:10] (\x,{10/\x});
+							%\draw [<->,thick] (0,12)--(0,0)--(12,0);
+							%\draw [fill,blue] (5,10/5) circle [radius=.2];
+							%\node [above right,blue] at (5,10/5) {\textbf{B}};
+							%\draw [fill,blue] (2.5,10/2.5) circle [radius=.2];
+							%\node [above right,blue] at (2.5,10/2.5) {\textbf{A}};
+							%\node [left] at (0,12) {$p_\peq{x}$};
+							%\node [below] at (12,0) {$q^\peq{d}_\peq{x}$};
+							%\node [left] at (0,10/2.5) {\tiny $p^\peq{0}_\peq{x}$};
+							%\node [below] at (2.5,0) {\tiny $x^\peq{*}_\peq{A}$};
+							%\node [left] at (0,10/5) {\tiny $p^\peq{1}_\peq{x}$};
+							%\node [below] at (5,0) {\tiny $x^\peq{*}_\peq{B}$};
+							%\node [right,teal] at (10,1) {$D_\peq{x}$};
+							%\node [below] at (0,0) {\tiny 0};
+						%\end{tikzpicture}
+					%}
+				%\end{subfigure}
+			%\end{figure}	
+		%\end{frame}	
+
+		\begin{frame}
+			\frametitle{Teoría del Consumidor}
+			Variando $p_\peq{x}$ y manteniendo $p_\peq{y}$ y $m$ constantes, podemos obtener la curva de demanda por $x$:
+			\begin{figure}[htbp!]
+				\centering
+				\begin{subfigure}[b]{0.49\textwidth}
+					\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.5]
+							\draw [dashed,help lines] (0,20/3)--(5/3,20/3)--(5/3,0);
+							\draw [dashed,help lines] (5,0)--(5,5)--(0,5);
+							\draw [ultra thick,red] plot [domain=0:10] (\x,{10-\x});
+							\draw [ultra thick,red] plot [domain=0:5] (\x,{10-2*\x});
+							\draw [ultra thick,teal] plot [domain=2:9.2] (\x,{-4*sqrt(5*\x)+\x+20});
+							\draw [ultra thick,teal] plot [domain=.8:9] (\x,{-2*sqrt(15*\x)+\x+15});
+							\draw [<->,thick] (0,12)--(0,0)--(12,0);
+							\draw [fill,blue] (5/3,20/3) circle [radius=.2];
+							\node [above right,blue] at (5/3,20/3) {\textbf{A}};
+							\draw [fill,blue] (5,5) circle [radius=.2];
+							\node [above right,blue] at (5,5) {\textbf{B}};
+							\node [left] at (0,12) {$y$};
+							\node [below] at (12,0) {$x$};
+							\node [left] at (0,5) {\tiny $y^\peq{*}_\peq{B}$};
+							\node [left] at (0,20/3) {\tiny $y^\peq{*}_\peq{A}$};
+							\node [below] at (5/3,0) {\tiny $x^\peq{*}_\peq{A}$};
+							\node [below] at (5,0) {\tiny $x^\peq{*}_\peq{B}$};
+							\node [right,teal] at (8.8,.76209992) {\tiny $I_\peq{0}$};
+							\node [right,teal] at (9,2.07068007) {\tiny $I_\peq{1}$};
+							\node [above right,red] at (10,0) {\tiny $RP_\peq{1}$};
+							\node [above right,red] at (5,0) {\tiny $RP_\peq{0}$};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+					}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.49\textwidth}
+					\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.5]
+							\draw [dashed,help lines] (0,8.43908891)--(5/3,8.43908891)--(5/3,0);
+							\draw [dashed,help lines] (0,3.41640786)--(5,3.41640786)--(5,0);
+							\draw [ultra thick,teal] plot [domain=1.2:11] (\x,{10/\x*(-\x+sqrt(\x^2+4*\x))});
+							\draw [<->,thick] (0,12)--(0,0)--(12,0);
+							\draw [fill,blue] (5,3.41640786) circle [radius=.2];
+							\node [above right,blue] at (5,3.41640786) {\textbf{B}};
+							\draw [fill,blue] (5/3,8.43908891) circle [radius=.2];
+							\node [above right,blue] at (5/3,8.43908891) {\textbf{A}};
+							\node [left] at (0,12) {$p_\peq{x}$};
+							\node [below] at (12,0) {$q^\peq{d}_\peq{x}$};
+							\node [left] at (0,8.43908891) {\tiny $p^\peq{0}_\peq{x}$};
+							\node [below] at (5/3,0) {\tiny $x^\peq{*}_\peq{A}$};
+							\node [left] at (0,3.41640786) {\tiny $p^\peq{1}_\peq{x}$};
+							\node [below] at (5,0) {\tiny $x^\peq{*}_\peq{B}$};
+							\node [right,teal] at (11,1.67748416) {$D_\peq{x}$};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+					}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			\begin{mydef}
+						\textbf{Bien Giffen:} Un bien para el cual un aumento en el precio incrementa la cantidad demandada.
+			\end{mydef}
+			En otras palabras, un bien cuya demanda tiene pendiente positiva:
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=1]
+					\draw[<->, thick] (0,4) -- (0,0) -- (4,0);
+					\draw plot [domain=0:ln(20)](\x,{exp(\x)/5});
+					\node [right] at (3,4) {$D$};
+					\node [below] at (4,0) {$q^\peq{d}$};
+					\node [left] at (0,4) {$p$};
+				\end{tikzpicture}
+			\end{figure}
+		\end{frame}	
+			
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			Ejemplo: Elección entre carne y arroz para un consumidor pobre
+			\begin{itemize}
+				\item Bien $x$: Arroz
+				\item Bien $y$: Carne
+				\item Calorías por peso gastado: $\frac{c_\peq{x}}{p_\peq{x}}>\frac{c_\peq{y}}{p_\peq{y}}$
+				\item Restricción presupuestaria: $p_\peq{x}\cdot x + p_\peq{y}\cdot y\leq m$
+				\item Restricción de ingesta calórica: $c_\peq{x}\cdot x + c_\peq{y}\cdot y\geq c^\peq{*}$
+			\end{itemize}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [fill,opacity=.2,blue] (0,5)--(0,0)--(5,0);
+				%\draw [dashed,help lines] (0,2.5)--(2.5,2.5)--(2.5,0);
+				%\draw [dashed,help lines] (5/3,0)--(5/3,10/3)--(0,10/3);
+				\draw [ultra thick,red] plot [domain=0:5] (\x,{5-\x});
+				%\draw [ultra thick,purple] plot [domain=0:10/4] (\x,{10-4*\x});
+				%\draw [ultra thick,teal] plot [domain=1.5:4] (\x,{6.25/\x});
+				%\draw [ultra thick,teal] plot [domain=3:8.2] (\x,{50/9/\x});
+				\draw [<->,thick] (0,10.7)--(0,0)--(10.7,0);
+				%\draw [fill,blue] (2.5,2.5) circle [radius=.2];
+				%\node [right,blue] at (2.5,2.5) {\textbf{A}};
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (10.7,0) {$x$};
+				%\node [left] at (0,2.5) {\tiny $y^\peq{*}$};
+				%\node [below] at (2.5,0) {\tiny $x^\peq{*}$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [fill,opacity=.2,blue] (0,5)--(0,0)--(5,0);
+				\draw [dashed,help lines] (0,2.5)--(2.5,2.5)--(2.5,0);
+				%\draw [dashed,help lines] (5/3,0)--(5/3,10/3)--(0,10/3);
+				\draw [ultra thick,red] plot [domain=0:5] (\x,{5-\x});
+				%\draw [ultra thick,purple] plot [domain=0:10/4] (\x,{10-4*\x});
+				\draw [ultra thick,teal] plot [domain=1.5:4] (\x,{6.25/\x});
+				%\draw [ultra thick,teal] plot [domain=3:8.2] (\x,{50/9/\x});
+				\draw [<->,thick] (0,10.7)--(0,0)--(10.7,0);
+				\draw [fill,blue] (2.5,2.5) circle [radius=.2];
+				\node [right,blue] at (2.5,2.5) {\textbf{A}};
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (10.7,0) {$x$};
+				\node [left] at (0,2.5) {\tiny $y^\peq{*}$};
+				\node [below] at (2.5,0) {\tiny $x^\peq{*}$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [fill,opacity=.2,blue] (10/3,5/3)--(10/2.5,0)--(5,0);
+				%\draw [dashed,help lines] (0,2.5)--(2.5,2.5)--(2.5,0);
+				%\draw [dashed,help lines] (10/3,0)--(10/3,5/3)--(0,5/3);
+				\draw [ultra thick,red] plot [domain=0:5] (\x,{5-\x});
+				\draw [ultra thick,purple] plot [domain=0:10/2.5] (\x,{10-2.5*\x});
+				%\draw [ultra thick,teal] plot [domain=1.5:4] (\x,{6.25/\x});
+				%\draw [ultra thick,teal] plot [domain=3:8.2] (\x,{50/9/\x});
+				\draw [<->,thick] (0,10.7)--(0,0)--(10.7,0);
+				%\draw [fill,blue] (2.5,2.5) circle [radius=.2];
+				%\node [right,blue] at (2.5,2.5) {\textbf{A}};
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (10.7,0) {$x$};
+				%\node [left] at (0,2.5) {\tiny $y^\peq{*}$};
+				%\node [below] at (2.5,0) {\tiny $x^\peq{*}$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [fill,opacity=.2,blue] (10/3,5/3)--(10/2.5,0)--(5,0);
+				\draw [dashed,help lines] (0,2.5)--(2.5,2.5)--(2.5,0);
+				%\draw [dashed,help lines] (10/3,0)--(10/3,5/3)--(0,5/3);
+				\draw [ultra thick,red] plot [domain=0:5] (\x,{5-\x});
+				\draw [ultra thick,purple] plot [domain=0:10/2.5] (\x,{10-2.5*\x});
+				%\draw [ultra thick,teal] plot [domain=1.5:4] (\x,{6.25/\x});
+				%\draw [ultra thick,teal] plot [domain=3:8.2] (\x,{50/9/\x});
+				\draw [<->,thick] (0,10.7)--(0,0)--(10.7,0);
+				\draw [fill,blue] (2.5,2.5) circle [radius=.2];
+				\node [right,blue] at (2.5,2.5) {\textbf{A}};
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (10.7,0) {$x$};
+				%\node [left] at (0,2.5) {\tiny $y^\peq{*}$};
+				%\node [below] at (2.5,0) {\tiny $x^\peq{*}$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [fill,opacity=.2,blue] (10/3,5/3)--(10/2.5,0)--(5,0);
+				%\draw [dashed,help lines] (0,2.5)--(2.5,2.5)--(2.5,0);
+				\draw [dashed,help lines] (10/3,0)--(10/3,5/3)--(0,5/3);
+				\draw [ultra thick,red] plot [domain=0:5] (\x,{5-\x});
+				\draw [ultra thick,purple] plot [domain=0:10/2.5] (\x,{10-2.5*\x});
+				%\draw [ultra thick,teal] plot [domain=1.5:4] (\x,{6.25/\x});
+				\draw [ultra thick,teal] plot [domain=2:5] (\x,{50/9/\x});
+				\draw [<->,thick] (0,10.7)--(0,0)--(10.7,0);
+				\draw [fill,blue] (10/3,5/3) circle [radius=.2];
+				\node [right,blue] at (10/3,5/3) {\textbf{B}};
+				\node [left] at (0,10.7) {$y$};
+				\node [below] at (10.7,0) {$x$};
+				\node [left] at (0,5/3) {\tiny $y^\peq{*}$};
+				\node [below] at (10/3,0) {\tiny $x^\peq{*}$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=.45]
+							\draw [dashed,help lines] (0,2.8)--(3.2,2.8)--(3.2,0);
+							\draw [dashed,help lines] (3.764705882,0)--(3.764705882,1.294117647)--(0,1.294117647);
+							\draw [ultra thick,red] plot [domain=0:6] (\x,{6-\x});
+							\draw [ultra thick,purple] plot [domain=0:17/4] (\x,{34/3-8/3*\x});
+							\draw [ultra thick,red] plot [domain=0:24/5] (\x,{-5/4*\x+6});
+							\draw [ultra thick,teal] plot [domain=1:5] (\x,{\x-6.924348870*\x^(1/2)+11.98665182});
+							\draw [ultra thick,teal] plot [domain=1:5] (\x,{\x-6.155755836*\x^(1/2)+9.473332478});
+							\draw [<->,thick] (0,12)--(0,0)--(12,0);
+							\draw [fill,blue] (3.764705882,1.294117647) circle [radius=.2];
+							\node [right,blue] at (3.764705882,1.294117647) {\textbf{B}};
+							\draw [fill,blue] (3.2,2.8) circle [radius=.2];
+							\node [right,blue] at (3.2,2.8) {\textbf{A}};
+							\node [left] at (0,12) {$y$};
+							\node [right,purple] at (0,34/3) {\tiny $RC$};
+							\node [below] at (12,0) {$x$};
+							\node [left] at (0,2.8) {\tiny $y^\peq{*}_\peq{A}$};
+							\node [left] at (0,1.294117647) {\tiny $y^\peq{*}_\peq{B}$};
+							\node [below] at (3.764705882,0) {\tiny $x^\peq{*}_\peq{B}$};
+							\node [below] at (3.2,0) {\tiny $x^\peq{*}_\peq{A}$};
+							\node [right,teal] at (5,1.50333705) {\tiny $I_\peq{0}$};
+							\node [right,teal] at (5,.70864398) {\tiny $I_\peq{1}$};
+							\node [below,red] at (6,0) {\tiny $RP_\peq{0}$};
+							\node [below,red] at (24/5,0) {\tiny $RP_\peq{1}$};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+			\end{figure}
+		\end{frame}			
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{tikzpicture}[scale=.9]
+							\draw [dashed,help lines] (0,2.8)--(3.2,2.8)--(3.2,0);
+							\draw [dashed,help lines] (3.764705882,0)--(3.764705882,1.294117647)--(0,1.294117647);
+							\draw [ultra thick,red] plot [domain=0:6] (\x,{6-\x});
+							\draw [ultra thick,purple] plot [domain=13/8:17/4] (\x,{34/3-8/3*\x});
+							\draw [ultra thick,red] plot [domain=0:24/5] (\x,{-5/4*\x+6});
+							\draw [ultra thick,teal] plot [domain=1:5] (\x,{\x-6.924348870*\x^(1/2)+11.98665182});
+							\draw [ultra thick,teal] plot [domain=1:5] (\x,{\x-6.155755836*\x^(1/2)+9.473332478});
+							\draw [<->,thick] (0,7)--(0,0)--(7,0);
+							\draw [fill,blue] (3.764705882,1.294117647) circle [radius=.15];
+							\node [right,blue] at (3.764705882,1.294117647) {\textbf{B}};
+							\draw [fill,blue] (3.2,2.8) circle [radius=.15];
+							\node [right,blue] at (3.2,2.8) {\textbf{A}};
+							\node [left] at (0,7) {$y$};
+							\node [right,purple] at (13/8,7) {\tiny $RC$};
+							\node [below] at (7,0) {$x$};
+							\node [left] at (0,2.8) {\tiny $y^\peq{*}_\peq{A}$};
+							\node [left] at (0,1.294117647) {\tiny $y^\peq{*}_\peq{B}$};
+							\node [below] at (3.764705882,0) {\tiny $x^\peq{*}_\peq{B}$};
+							\node [below] at (3.2,0) {\tiny $x^\peq{*}_\peq{A}$};
+							\node [right,teal] at (5,1.50333705) {\tiny $I_\peq{0}$};
+							\node [right,teal] at (5,.70864398) {\tiny $I_\peq{1}$};
+							\node [above right,red] at (6,0) {\tiny $RP_\peq{0}$};
+							\node [above right,red] at (24/5,0) {\tiny $RP_\peq{1}$};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+			\end{figure}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 1: Comportamiento Giffen}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{subfigure}[b]{0.49\textwidth}
+					\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.5]
+							\draw [dashed,help lines] (0,2.8)--(3.2,2.8)--(3.2,0);
+							\draw [dashed,help lines] (3.764705882,0)--(3.764705882,1.294117647)--(0,1.294117647);
+							\draw [ultra thick,red] plot [domain=0:6] (\x,{6-\x});
+							\draw [ultra thick,purple] plot [domain=0:17/4] (\x,{34/3-8/3*\x});
+							\draw [ultra thick,red] plot [domain=0:24/5] (\x,{-5/4*\x+6});
+							\draw [ultra thick,teal] plot [domain=1:5] (\x,{\x-6.924348870*\x^(1/2)+11.98665182});
+							\draw [ultra thick,teal] plot [domain=1:5] (\x,{\x-6.155755836*\x^(1/2)+9.473332478});
+							\draw [<->,thick] (0,12)--(0,0)--(12,0);
+							\draw [fill,blue] (3.764705882,1.294117647) circle [radius=.2];
+							\node [right,blue] at (3.764705882,1.294117647) {\textbf{B}};
+							\draw [fill,blue] (3.2,2.8) circle [radius=.2];
+							\node [right,blue] at (3.2,2.8) {\textbf{A}};
+							\node [left] at (0,12) {$y$};
+							\node [right,purple] at (0,34/3) {\tiny $RC$};
+							\node [below] at (12,0) {$x$};
+							\node [left] at (0,2.8) {\tiny $y^\peq{*}_\peq{A}$};
+							\node [left] at (0,1.294117647) {\tiny $y^\peq{*}_\peq{B}$};
+							\node [below] at (3.764705882,0) {\tiny $x^\peq{*}_\peq{B}$};
+							\node [below] at (3.2,0) {\tiny $x^\peq{*}_\peq{A}$};
+							\node [right,teal] at (5,1.50333705) {\tiny $I_\peq{0}$};
+							\node [right,teal] at (5,.70864398) {\tiny $I_\peq{1}$};
+							\node [below,red] at (6,0) {\tiny $RP_\peq{0}$};
+							\node [below,red] at (24/5,0) {\tiny $RP_\peq{1}$};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+					}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.49\textwidth}
+					\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.5]
+							\draw [dashed,help lines] (0,5.2)--(3.2,5.2)--(3.2,0);
+							\draw [dashed,help lines] (0,5.764705882)--(3.764705882,5.764705882)--(3.764705882,0);
+							\draw [ultra thick,teal] plot [domain=0:10] (\x,{2+\x});
+							\draw [<->,thick] (0,12)--(0,0)--(12,0);
+							\draw [fill,blue] (3.2,5.2) circle [radius=.2];
+							\node [right,blue] at (3.2,5.2) {\textbf{A}};
+							\draw [fill,blue] (3.764705882,5.764705882) circle [radius=.2];
+							\node [right,blue] at (3.764705882,5.764705882) {\textbf{B}};
+							\node [left] at (0,12) {$p_\peq{x}$};
+							\node [below] at (12,0) {$q^\peq{d}_\peq{x}$};
+							\node [left] at (0,5.2) {\tiny $p^\peq{0}_\peq{x}$};
+							\node [below] at (3.2,0) {\tiny $x^\peq{*}_\peq{A}$};
+							\node [left] at (0,5.764705882) {\tiny $p^\peq{1}_\peq{x}$};
+							\node [below] at (3.764705882,0) {\tiny $x^\peq{*}_\peq{B}$};
+							\node [right,teal] at (10,12) {$D_\peq{x}$};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+					}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Cantidad ofrecida de trabajo ($\mathbf{L^\peq{s}}$):} Cantidad de horas que los trabajadores quieren y pueden trabajar.
+					\item \textbf{Oferta de trabajo:} Relación entre $L^\peq{s}$ y el salario por hora de trabajo ($w$), manteniendo otros determiantes de $L^\peq{s}$ constantes.
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			Modelo neoclásico de elección ocio-consumo
+			\begin{itemize}
+				\item Preferencias sobre consumo y ocio: $u\rp{C,O}$
+				\item Restricción presupuestaria: $C\leq w\cdot L + Z$
+				\item Restricción de tiempo: $T=L+O$
+				\item Combinando las restricciones: $C\leq\rp{w\cdot T+Z} - w\cdot O$
+			\end{itemize}
+		\end{frame}	
+			
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw [fill,blue,opacity=.2] (0,0)--(0,100)--(80,20)--(80,0);
+				\draw [ultra thick,dashed,teal] (0,20)--(80,20);
+				\draw [ultra thick,teal] (80,0)--(80,20);
+				\draw [ultra thick,teal] plot [domain=0:80] (\x,{100-\x});
+				\draw [<->,thick] (0,120)--(0,0)--(120,0);
+				\draw [fill,blue] (0,100) circle [radius=2];
+				\draw [fill,blue] (80,20) circle [radius=2];
+				\node [left] at (0,120) {$C$};
+				\node [below] at (120,0) {$O$};
+				\node [left] at (0,100) {\tiny $w\cdot T+Z$};
+				\node [left] at (0,20) {\tiny $Z$};
+				\node [below] at (80,0) {\tiny $T$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}				
+
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				%\draw [fill,blue,opacity=.2] (0,0)--(0,100)--(80,20)--(80,0);
+				\draw [dashed] (0,20)--(80,20);
+				\draw [dashed] (80,0)--(80,20);
+				\draw [dashed,help lines] (0,50)--(50,50)--(50,0);
+				\draw [ultra thick,teal] plot [domain=0:80] (\x,{100-\x});
+				\draw [ultra thick,purple] plot [domain=30:80](\x,{2500/\x});
+				\draw [<->,thick] (0,120)--(0,0)--(120,0);
+				%\draw [fill,blue] (0,100) circle [radius=2];
+				%\draw [fill,blue] (80,20) circle [radius=2];
+				\draw [fill,blue] (50,50) circle [radius=2];
+				\node [above right,blue] at (50,50) {\textbf{A}};
+				\node [left] at (0,120) {$C$};
+				\node [below] at (120,0) {$O$};
+				\node [left] at (0,100) {\tiny $w\cdot T+Z$};
+				\node [left] at (0,20) {\tiny $Z$};
+				\node [below] at (80,0) {\tiny $T$};
+				\node [below] at (0,0) {\tiny 0};
+				\node [below] at (50,0) {\tiny $O^\peq{*}_\peq{A}$};
+				\node [left] at (0,50) {\tiny $C^\peq{*}_\peq{A}$};
+			\end{tikzpicture}
+		\end{frame}
+					
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\centering
+			\begin{tikzpicture}[scale=.05]
+				\draw [dashed,help lines] (0,20)--(80,20);
+				\draw [dashed,help lines] (0,40)--(80,40)--(80,0);
+				\draw [dashed,help lines] (0,50)--(50,50)--(50,0);
+				\draw [dashed,help lines] (0,60)--(60,60)--(60,0);
+				\draw [ultra thick,teal] plot [domain=0:80] (\x,{100-\x});
+				\draw [ultra thick,teal] plot [domain=0:80] (\x,{120-\x});
+				\draw [ultra thick,purple] plot [domain=30:80](\x,{2500/\x});
+				\draw [ultra thick,purple] plot [domain=40:80](\x,{3600/\x});
+				\draw [<->,thick] (0,130)--(0,0)--(120,0);
+				%\draw [fill,blue] (0,100) circle [radius=2];
+				%\draw [fill,blue] (80,20) circle [radius=2];
+				\draw [fill,blue] (50,50) circle [radius=2];
+				\node [above right,blue] at (50,50) {\textbf{A}};
+				\draw [fill,blue] (60,60) circle [radius=2];
+				\node [above right,blue] at (60,60) {\textbf{B}};
+				\node [left] at (0,130) {$C$};
+				\node [below] at (120,0) {$O$};
+				\node [left] at (0,100) {\tiny $w\cdot T+Z_\peq{0}$};
+				\node [left] at (0,120) {\tiny $w\cdot T+Z_\peq{1}$};
+				\node [left] at (0,20) {\tiny $Z_\peq{0}$};
+				\node [left] at (0,40) {\tiny $Z_\peq{1}$};
+				\node [below] at (80,0) {\tiny $T$};
+				\node [below] at (0,0) {\tiny 0};
+				\node [below] at (50,0) {\tiny $O^\peq{*}_\peq{A}$};
+				\node [left] at (0,50) {\tiny $C^\peq{*}_\peq{A}$};
+				\node [below] at (60,0) {\tiny $O^\peq{*}_\peq{B}$};
+				\node [left] at (0,60) {\tiny $C^\peq{*}_\peq{B}$};
+			\end{tikzpicture}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\centering
+			\begin{tikzpicture}[scale=2.4]
+				\draw [dashed,help lines] (0,9)--(1,9)--(1,8);
+				\draw [dashed,help lines] (0,9.8)--(.6,9.8)--(.6,8);
+				\draw [dashed,help lines] (1.8,8)--(1.8,8.2)--(0,8.2);
+				\draw [dashed,help lines] (1.8,8.2)--(1.8,8.6)--(0,8.6);
+				\draw [ultra thick,teal] plot [domain=0:1.8] (\x,{10-\x});
+				\draw [ultra thick,teal] plot [domain=0:1.8] (\x,{52/5-\x});
+				\draw [ultra thick,purple] plot [domain=.6:1.5] (\x,{-1*exp(.5*ln(\x-.5)+.3465735903)+10});
+				\draw [ultra thick,purple] plot [domain=.500009:1.5] (\x,{-1*exp(.5*ln(\x-.5)-.4581453655)+10});
+				\draw [<->,thick] (0,10.7)--(0,8)--(2.7,8);
+				\draw [fill,blue] (1,9) circle [radius=.05];
+				\node [above right,blue] at (1,9) {\textbf{A}};
+				\draw [fill,blue] (.6,9.8) circle [radius=.05];
+				\node [above right,blue] at (.6,9.8) {\textbf{B}};
+				\node [left] at (0,10.7) {$C$};
+				\node [below] at (2.7,8) {$O$};
+				\node [left] at (0,9) {\tiny $C^\peq{*}_\peq{A}$};
+				\node [below] at (1,8) {\tiny $O^\peq{*}_\peq{A}$};
+				\node [left] at (0,9.8) {\tiny $C^\peq{*}_\peq{B}$};
+				\node [below] at (.6,8) {\tiny $O^\peq{*}_\peq{B}$};
+				\node [left] at (0,8.2) {\tiny $Z_\peq{0}$};
+				\node [left] at (0,8.6) {\tiny $Z_\peq{1}$};
+				\node [below] at (1.8,8) {\tiny $T$};
+				\node [left] at (0,52/5) {\tiny $w\cdot T+Z_\peq{1}$};
+				\node [left] at (0,10) {\tiny $w\cdot T+Z_\peq{0}$};
+				\node [below] at (0,8) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [dashed,help lines] (0,5)--(5,5)--(5,-2);
+				\draw [dashed,help lines] (6,-2)--(6,8/3)--(0,8/3);
+				\draw [dashed,help lines] (0,0)--(10,0)--(10,-2);
+				\draw [ultra thick,teal] plot [domain=0:10] (\x,{10-\x});
+				\draw [ultra thick,teal] plot [domain=0:10] (\x,{-2/3*\x+20/3});
+				\draw [ultra thick,purple] plot [domain=3:8] (\x,{-4*\x^(1/2)*5^(1/2)+\x+20});
+				\draw [ultra thick,purple] plot [domain=3:8] (\x,{-10/3*\x^(1/2)*6^(1/2)+\x+50/3});
+				\draw [<->,thick] (0,10.7)--(0,-2)--(11.7,-2);
+				\draw [fill,blue] (5,5) circle [radius=.2];
+				\node [right,blue] at (5,5) {\textbf{B}};
+				\draw [fill,blue] (6,8/3) circle [radius=.2];
+				\node [right,blue] at (6,8/3) {\textbf{A}};
+				\node [left] at (0,10.7) {$C$};
+				\node [below] at (11.7,-2) {$O$};
+				\node [left] at (0,8/3) {\tiny $C^\peq{*}_\peq{A}$};
+				\node [below] at (6,-2) {\tiny $O^\peq{*}_\peq{A}$};
+				\node [left] at (0,5) {\tiny $C^\peq{*}_\peq{B}$};
+				\node [left] at (0,10) {\tiny $w_\peq{1}\cdot T+Z$};
+				\node [left] at (0,20/3) {\tiny $w_\peq{0}\cdot T+Z$};
+				\node [left] at (0,0) {\tiny $Z$};
+				\node [below] at (5,-2) {\tiny $O^\peq{*}_\peq{B}$};
+				\node [below] at (10,-2) {\tiny $T$};
+				\node [below] at (0,-2) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{subfigure}[b]{0.49\textwidth}
+					\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.5]
+							\draw [dashed,help lines] (0,5)--(5,5)--(5,-2);
+							\draw [dashed,help lines] (6,-2)--(6,8/3)--(0,8/3);
+							\draw [dashed,help lines] (0,0)--(10,0)--(10,-2);
+							\draw [ultra thick,teal] plot [domain=0:10] (\x,{10-\x});
+							\draw [ultra thick,teal] plot [domain=0:10] (\x,{-2/3*\x+20/3});
+							\draw [ultra thick,purple] plot [domain=3:8] (\x,{-4*\x^(1/2)*5^(1/2)+\x+20});
+							\draw [ultra thick,purple] plot [domain=3:8] (\x,{-10/3*\x^(1/2)*6^(1/2)+\x+50/3});
+							\draw [<->,thick] (0,10.7)--(0,-2)--(11.7,-2);
+							\draw [fill,blue] (5,5) circle [radius=.2];
+							\node [right,blue] at (5,5) {\textbf{B}};
+							\draw [fill,blue] (6,8/3) circle [radius=.2];
+							\node [right,blue] at (6,8/3) {\textbf{A}};
+							\node [left] at (0,10.7) {$C$};
+							\node [below] at (11.7,-2) {$O$};
+							\node [left] at (0,8/3) {\tiny $C^\peq{*}_\peq{A}$};
+							\node [below] at (6,-2) {\tiny $O^\peq{*}_\peq{A}$};
+							\node [left] at (0,5) {\tiny $C^\peq{*}_\peq{B}$};
+							\node [left] at (0,10) {\tiny $w_\peq{1}\cdot T+Z$};
+							\node [left] at (0,20/3) {\tiny $w_\peq{0}\cdot T+Z$};
+							\node [left] at (0,0) {\tiny $Z$};
+							\node [below] at (5,-2) {\tiny $O^\peq{*}_\peq{B}$};
+							\node [below] at (10,-2) {\tiny $T$};
+							\node [below] at (0,-2) {\tiny 0};
+						\end{tikzpicture}
+					}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.49\textwidth}
+					\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.5]
+							\draw [dashed,help lines] (0,4)--(2,4)--(2,0);
+							\draw [dashed,help lines] (0,8)--(6,8)--(6,0);
+							\draw [ultra thick,teal] plot [domain=0:10] (\x,{2+\x});
+							\draw [<->,thick] (0,12)--(0,0)--(12,0);
+							\draw [fill,blue] (2,4) circle [radius=.2];
+							\node [right,blue] at (2,4) {\textbf{A}};
+							\draw [fill,blue] (6,8) circle [radius=.2];
+							\node [right,blue] at (6,8) {\textbf{B}};
+							\node [left] at (0,12) {$w$};
+							\node [below] at (12,0) {$L^\peq{s}$};
+							\node [left] at (0,4) {\tiny $w_\peq{0}$};
+							\node [below] at (2,0) {\tiny $\rp{T-O^\peq{*}_\peq{A}}$};
+							\node [left] at (0,8) {\tiny $w_\peq{1}$};
+							\node [below] at (6,0) {\tiny $\rp{T-O^\peq{*}_\peq{B}}$};
+							\node [right,teal] at (10,12) {$S_\peq{L}$};
+							\node [below] at (0,0) {\tiny 0};
+						\end{tikzpicture}
+					}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\begin{itemize}
+				\item Si domina el efecto sustitución $\implies$ oferta laboral tiene pendiente positiva
+				\item Si domina el efecto ingreso $\implies$ oferta laboral tiene pendiente negativa
+				\item Decisión de participación laboral está determinada por el salario de reserva...
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\begin{mydef}
+				\begin{itemize}
+					\item \textbf{Salario de reserva ($\mathbf{\tilde{w}}$):} Salario que deja al consumidor indiferente entre trabajar y no trabajar. $$L^\peq{*}\left\{
+								\begin{array}{ll}
+									\geq 0 & \mbox{si } w \geq \tilde{w} \\
+									 = 0	 & \mbox{si } w < \tilde{w} 
+								\end{array}
+							\right.$$
+					\item \textbf{Utilidad de reserva ($\mathbf{\tilde{u}}$):} Nivel de utilidad que el individuo obtiene si decide no trabajar. $$\tilde{u}=u(Z,T)$$
+				\end{itemize}
+			\end{mydef}
+		\end{frame}	
+
+\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\centering
+			\begin{tikzpicture}[scale=.45]
+				%\draw [dashed,help lines] (0,5)--(5,5)--(5,-2);
+				%\draw [dashed,help lines] (6,-2)--(6,8/3)--(0,8/3);
+				\draw [dashed,help lines] (0,2)--(10,2)--(10,-2);
+				%\draw [ultra thick,teal] (0,4)--(10,2);
+				%\draw [ultra thick,teal] plot [domain=0:10] (\x,{10-\x});
+				%\draw [ultra thick,teal] plot [domain=0:10] (\x,{-2/3*\x+20/3});
+				%\draw [ultra thick,teal] plot [domain=0:10] (\x,{6.472135950-.4472135950*\x});
+				%\draw [ultra thick,purple] plot [domain=3:13] (\x,{-4*\x^(1/2)*5^(1/2)+\x+20});
+				%\draw [ultra thick,purple] plot [domain=3:13] (\x,{-10/3*\x^(1/2)*6^(1/2)+\x+50/3});
+				\draw [ultra thick,purple] plot [domain=7:12.5] (\x,{-2*sqrt(\x)*sqrt(5)*sqrt(2)+4*sqrt(5)-2*sqrt(\x)*sqrt(2)+\x+12});
+				%\draw [ultra thick,purple] plot [domain=3:13] (\x,{-2*sqrt(\x)*sqrt(10)+\x+10});
+				\draw [<->,thick] (0,10.7)--(0,-2)--(13,-2);
+				\draw [fill,blue] (10,2) circle [radius=.2];
+				\node [above right,blue] at (10,2) {\textbf{R}};
+				%\draw [fill,blue] (6,8/3) circle [radius=.2];
+				%\node [right,blue] at (6,8/3) {\textbf{A}};
+				\node [left] at (0,10.7) {$C$};
+				\node [below] at (13,-2) {$O$};
+				%\node [left] at (0,8/3) {\tiny $C^\peq{*}_\peq{A}$};
+				%\node [below] at (6,-2) {\tiny $O^\peq{*}_\peq{A}$};
+				%\node [left] at (0,5) {\tiny $C^\peq{*}_\peq{B}$};
+				%\node [left] at (0,10) {\tiny $w_\peq{1}\cdot T+Z$};
+				%\node [left] at (0,20/3) {\tiny $w_\peq{0}\cdot T+Z$};
+				\node [left] at (0,2) {\tiny $Z$};
+				%\node [below] at (5,-2) {\tiny $O^\peq{*}_\peq{B}$};
+				\node [below] at (10,-2) {\tiny $T$};
+				\node [right,purple] at (12.5,1.08359214) {\tiny $\tilde{u}$};
+				\node [below] at (0,-2) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\centering
+			\begin{tikzpicture}[scale=.45]
+				%\draw [dashed,help lines] (0,5)--(5,5)--(5,-2);
+				%\draw [dashed,help lines] (6,-2)--(6,8/3)--(0,8/3);
+				\draw [dashed,help lines] (0,2)--(10,2)--(10,-2);
+				%\draw [ultra thick,teal] (0,4)--(10,2);
+				%\draw [ultra thick,teal] plot [domain=0:10] (\x,{10-\x});
+				%\draw [ultra thick,teal] plot [domain=0:10] (\x,{-2/3*\x+20/3});
+				\draw [ultra thick,teal] plot [domain=0:10] (\x,{6.472135950-.4472135950*\x});
+				%\draw [ultra thick,purple] plot [domain=3:13] (\x,{-4*\x^(1/2)*5^(1/2)+\x+20});
+				%\draw [ultra thick,purple] plot [domain=3:13] (\x,{-10/3*\x^(1/2)*6^(1/2)+\x+50/3});
+				\draw [ultra thick,purple] plot [domain=7:12.5] (\x,{-2*sqrt(\x)*sqrt(5)*sqrt(2)+4*sqrt(5)-2*sqrt(\x)*sqrt(2)+\x+12});
+				%\draw [ultra thick,purple] plot [domain=3:13] (\x,{-2*sqrt(\x)*sqrt(10)+\x+10});
+				\draw [<->,thick] (0,10.7)--(0,-2)--(13,-2);
+				\draw [fill,blue] (10,2) circle [radius=.2];
+				\node [above right,blue] at (10,2) {\textbf{R}};
+				%\draw [fill,blue] (6,8/3) circle [radius=.2];
+				%\node [right,blue] at (6,8/3) {\textbf{A}};
+				\node [left] at (0,10.7) {$C$};
+				\node [below] at (13,-2) {$O$};
+				%\node [left] at (0,8/3) {\tiny $C^\peq{*}_\peq{A}$};
+				%\node [below] at (6,-2) {\tiny $O^\peq{*}_\peq{A}$};
+				%\node [left] at (0,5) {\tiny $C^\peq{*}_\peq{B}$};
+				\node [left] at (0,6.472135950) {\tiny $\tilde{w}\cdot T+Z$};
+				%\node [left] at (0,20/3) {\tiny $w_\peq{0}\cdot T+Z$};
+				\node [left] at (0,2) {\tiny $Z$};
+				%\node [below] at (5,-2) {\tiny $O^\peq{*}_\peq{B}$};
+				\node [below] at (10,-2) {\tiny $T$};
+				\node [right,purple] at (12.5,1.08359214) {\tiny $\tilde{u}$};
+				\node [below] at (0,-2) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 2: Oferta de Trabajo}
+			\centering
+			\begin{tikzpicture}[scale=.45]
+				%\draw [dashed,help lines] (0,5)--(5,5)--(5,-2);
+				%\draw [dashed,help lines] (6,-2)--(6,8/3)--(0,8/3);
+				\draw [dashed,help lines] (0,2)--(10,2)--(10,-2);
+				\draw [ultra thick,teal] (0,4)--(10,2);
+				\draw [ultra thick,teal] (0,10)--(10,2);
+				\draw [ultra thick,teal] plot [domain=0:10] (\x,{6.472135950-.4472135950*\x});
+				%\draw [ultra thick,purple] plot [domain=3:13] (\x,{-4*\x^(1/2)*5^(1/2)+\x+20});
+				%\draw [ultra thick,purple] plot [domain=3:13] (\x,{-10/3*\x^(1/2)*6^(1/2)+\x+50/3});
+				\draw [ultra thick,purple] plot [domain=7:12.5] (\x,{-2*sqrt(\x)*sqrt(5)*sqrt(2)+4*sqrt(5)-2*sqrt(\x)*sqrt(2)+\x+12});
+				\draw [ultra thick,purple] plot [domain=4.5:10] (\x,{-3*sqrt(\x)*sqrt(10)+\x+45/2});
+				%\draw [ultra thick,purple] plot [domain=3:13] (\x,{-2*sqrt(\x)*sqrt(10)+\x+10});
+				\draw [<->,thick] (0,10.7)--(0,-2)--(13,-2);
+				\draw [fill,blue] (10,2) circle [radius=.2];
+				\node [above right,blue] at (10,2) {\textbf{R}};
+				\draw [fill,blue] (125/18,40/9) circle [radius=.2];
+				\node [above right,blue] at (125/18,40/9) {\textbf{A}};
+				\node [left] at (0,10.7) {$C$};
+				\node [below] at (13,-2) {$O$};
+				%\node [left] at (0,8/3) {\tiny $C^\peq{*}_\peq{A}$};
+				%\node [below] at (6,-2) {\tiny $O^\peq{*}_\peq{A}$};
+				%\node [left] at (0,5) {\tiny $C^\peq{*}_\peq{B}$};
+				\node [left] at (0,6.472135950) {\tiny $\tilde{w}\cdot T+Z$};
+				\node [left] at (0,4) {\tiny $w_\peq{0}\cdot T+Z$};
+				\node [left] at (0,10) {\tiny $w_\peq{1}\cdot T+Z$};
+				\node [left] at (0,2) {\tiny $Z$};
+				%\node [below] at (5,-2) {\tiny $O^\peq{*}_\peq{B}$};
+				\node [below] at (10,-2) {\tiny $T$};
+				\node [right,purple] at (12.5,1.08359214) {\tiny $\tilde{u}$};
+				\node [below] at (0,-2) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\begin{itemize}
+				\item $c_\peq{t}$: consumo en el peroido $t$
+				\item $m_\peq{t}$: ingreso en el peroido $t$
+				\item 2 periodos: $t\in\{0,1\}$
+				\item El consumidor puede ahorrar o endeudarse: $s=m_\peq{0}-c_\peq{0}$
+					\begin{itemize}
+						\item $s > 0 \implies \text{ahorro}$
+						\item $s < 0 \implies \text{deuda}$
+					\end{itemize}
+			\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\begin{itemize}
+				\item $r$: tasa de interés. 
+					\begin{itemize}
+						\item Si ahorra en $t=0$, puede consumir $\$\rp{1+r}s$ adicionales en $t=1$.
+						\item Si se endeuda en $t=0$, debe pagar $\$\rp{1+r}s$ en $t=1$.
+					\end{itemize}
+				\item Restricciones: $$c_\peq{0}+s=m_\peq{0}$$ $$c_\peq{1}\leq m_\peq{1}+\rp{1+r}s$$
+				\item Combinando: $$c_\peq{0}+\frac{c_\peq{1}}{\rp{1+r}}\leq m_\peq{0}+\frac{m_\peq{1}}{\rp{1+r}}$$
+			\end{itemize}
+		\end{frame}	
+
+\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\centering
+			\begin{tikzpicture}[scale=.5]
+				\draw [dashed,help lines] (0,4.5)--(5,4.5)--(5,0);
+				\draw [fill,opacity=.2,blue] (0,10)--(0,0)--(9.090909091,0);
+				\draw [ultra thick,teal] plot [domain=0:9.090909091] (\x,{10-1.1*\x});
+				\draw [<->,thick] (0,12)--(0,0)--(13,0);
+				\node [left] at (0,12) {$c_\peq{1}$};
+				\node [below] at (13,0) {$c_\peq{0}$};
+				\draw [fill,blue] (5,4.5) circle [radius=.2];
+				\node [above right,blue] at (5,4.5) {\textbf{D}};
+				\node [left] at (0,10) {\tiny $\rp{1+r}m_\peq{0}+m_\peq{1}$};
+				\node [below] at (9.090909091,0) {\tiny $m_\peq{0}+\frac{m_\peq{1}}{\rp{1+r}}$};
+				\node [left] at (0,4.5) {\tiny $m_\peq{1}$};
+				\node [below] at (5,0) {\tiny $m_\peq{0}$};
+				\node [below] at (0,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+				\begin{itemize}
+					\item La pendiente de la restricción presupuestaria es $-\rp{1+r}$ y representa el precio relativo del consumo presente en términos del consumo futuro:
+					\begin{itemize}
+						\item Consumir $\$1$ adicional en el presente significa dejar de consumir $\$\rp{1+r}$ en el futuro.
+					\end{itemize}
+				\item Alternativamente, $\frac{1}{\rp{1+r}}$ es el precio relativo del consumo futuro en términos del consumo presente:
+					\begin{itemize}
+						\item Consumir $\$1$ en el futuro significa dejar de consumir $\$\frac{1}{\rp{1+r}}$ en el presente.
+					\end{itemize}
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+				\begin{itemize}
+					\item La restricción presupuestaria intertemporal indica que el valor presente de la corriente de flujos de consumo no puede superar el valor presente de la corriente de flujos de ingreso.
+					\item Dicho de otra forma, durante toda su vida, el individuo no puede gastar más que el valor de su riqueza.\footnote{ Ver definición de valor presente en Wikipedia: \url{https://en.wikipedia.org/wiki/Present_value}}
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\centering
+			\begin{tikzpicture}[scale=.45]
+				\draw [dashed,help lines] (0,4.5)--(5,4.5)--(5,0);
+				\draw [dashed,help lines] (3,4.5)--(3,0);
+				\draw [ultra thick,teal] plot [domain=0:6] (\x,{9-1.5*\x});
+				\draw [ultra thick,teal] plot [domain=0:8] (\x,{12-1.5*\x});
+				\draw [<->,thick] (0,13)--(0,0)--(13,0);
+				\node [left] at (0,13) {$c_\peq{1}$};
+				\node [below] at (13,0) {$c_\peq{0}$};
+				\draw [fill,blue] (5,4.5) circle [radius=.2];
+				\node [above right,blue] at (5,4.5) {$\text{\textbf{D}}_\peq{\text{\textbf{B}}}$};
+				\draw [fill,blue] (3,4.5) circle [radius=.2];
+				\node [above right,blue] at (3,4.5) {$\text{\textbf{D}}_\peq{\text{\textbf{A}}}$};
+				\node [left] at (0,12) {\tiny $\rp{1+r}w_\peq{B}$};
+				\node [below] at (8,0) {\tiny $w_\peq{B}$};
+				\node [left] at (0,9) {\tiny $\rp{1+r}w_\peq{A}$};
+				\node [below] at (6,0) {\tiny $w_\peq{A}$};
+				\node [left] at (0,4.5) {\tiny $m_\peq{1}$};
+				\node [below] at (5,0) {\tiny $m_\peq{0}^\peq{B}$};
+				\node [below] at (3,0) {\tiny $m_\peq{0}^\peq{A}$};
+				\node [below] at (0,0) {\tiny 0};
+				\node [left] at (-4,13) {$\Delta^\peq{+}m_\peq{0}:$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\centering
+			\begin{tikzpicture}[scale=.9]
+				\draw [dashed,help lines] (0+2,4.5)--(5,4.5)--(5,0+3);
+				\draw [dashed,help lines] (0+2,6.582392777)--(3.611738149,6.582392777)--(3.611738149,0+3);
+				\draw [dashed,help lines] (0+2,4.936794582)--(2.708803612,4.936794582)--(2.708803612,0+3);
+				\draw [dashed,help lines] (3,4.5)--(3,0+3);
+				\draw [ultra thick,teal] plot [domain=0+2:4] (\x,{9-1.5*\x});
+				\draw [ultra thick,teal] plot [domain=0+2:6] (\x,{12-1.5*\x});
+				\draw [ultra thick,purple] plot [domain=2:4] (\x,{1.234567901*\x-9.001346237*\x^(1/2)+16.40740740});
+				\draw [ultra thick,purple] plot [domain=2.5:5] (\x,{1.234567901*\x-10.39385935*\x^(1/2)+21.87654321});
+				\draw [<->,thick] (0+2,10)--(0+2,0+3)--(9,0+3);
+				\node [left] at (0+2,10) {$c_\peq{1}$};
+				\node [below] at (9,0+3) {$c_\peq{0}$};
+				\draw [fill,blue] (5,4.5) circle [radius=.1];
+				\node [above right,blue] at (5,4.5) {$\text{\textbf{D}}_\peq{\text{\textbf{B}}}$};
+				\draw [fill,blue] (3,4.5) circle [radius=.1];
+				\node [above right,blue] at (3,4.5) {$\text{\textbf{D}}_\peq{\text{\textbf{A}}}$};
+				\draw [fill,blue] (2.708803612,4.936794582) circle [radius=.1];
+				\node [above right,blue] at (2.708803612,4.936794582) {\textbf{A}};
+				\draw [fill,blue] (3.611738149,6.582392777) circle [radius=.1];
+				\node [above right,blue] at (3.611738149,6.582392777) {\textbf{B}};
+				\node [left] at (0+2,9) {\tiny $\rp{1+r}w_\peq{B}$};
+				\node [below] at (9/1.5,0+3) {\tiny $w_\peq{B}$};
+				\node [left] at (0+2,6) {\tiny $\rp{1+r}w_\peq{A}$};
+				\node [below] at (6/1.5,0+3) {\tiny $w_\peq{A}$};
+				\node [left] at (0+2,4.5) {\tiny $m_\peq{1}$};
+				\node [left] at (0+2,4.936794582) {\tiny $c_\peq{1}^\peq{A}$};
+				\node [left] at (0+2,6.582392777) {\tiny $c_\peq{1}^\peq{B}$};
+				\node [below] at (5,0+3) {\tiny $m_\peq{0}^\peq{B}$};
+				\node [below] at (3,0+3) {\tiny $m_\peq{0}^\peq{A}$};
+				\node [below] at (2.5,0+3) {\tiny $c_\peq{0}^\peq{A}$};
+				\node [below] at (3.611738149,0+3) {\tiny $c_\peq{0}^\peq{B}$};
+				\node [below] at (0+2,0+3) {\tiny 0};
+				\node [left] at (-2+2,10) {$\Delta^\peq{+}m_\peq{0}:$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\centering
+			\begin{tikzpicture}[scale=.45]
+				\draw [dashed,help lines] (0,4.5)--(5,4.5)--(5,0);
+				\draw [dashed,help lines] (5,1.5)--(0,1.5);
+				\draw [ultra thick,teal] plot [domain=0:6] (\x,{9-1.5*\x});
+				\draw [ultra thick,teal] plot [domain=0:8] (\x,{12-1.5*\x});
+				\draw [<->,thick] (0,13)--(0,0)--(13,0);
+				\node [left] at (0,13) {$c_\peq{1}$};
+				\node [below] at (13,0) {$c_\peq{0}$};
+				\draw [fill,blue] (5,4.5) circle [radius=.2];
+				\node [above right,blue] at (5,4.5) {$\text{\textbf{D}}_\peq{\text{\textbf{B}}}$};
+				\draw [fill,blue] (5,1.5) circle [radius=.2];
+				\node [above right,blue] at (5,1.5) {$\text{\textbf{D}}_\peq{\text{\textbf{A}}}$};
+				\node [left] at (0,12) {\tiny $\rp{1+r}w_\peq{B}$};
+				\node [below] at (8,0) {\tiny $w_\peq{B}$};
+				\node [left] at (0,9) {\tiny $\rp{1+r}w_\peq{A}$};
+				\node [below] at (6,0) {\tiny $w_\peq{A}$};
+				\node [left] at (0,4.5) {\tiny $m_\peq{1}^\peq{B}$};
+				\node [left] at (0,1.5) {\tiny $m_\peq{1}^\peq{A}$};
+				\node [below] at (5,0) {\tiny $m_\peq{0}$};
+				\node [below] at (0,0) {\tiny 0};
+				\node [left] at (-4,13) {$\Delta^\peq{+}m_\peq{1}:$};
+			\end{tikzpicture}
+		\end{frame}	
+
+\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\centering
+			\begin{tikzpicture}[scale=.45]
+				\draw [dashed,help lines] (0,4.5)--(5,4.5)--(5,0);
+				\draw [dashed,help lines] (5,1.5)--(0,1.5);
+				\draw [dashed,help lines] (0,6.582392777)--(3.611738149,6.582392777)--(3.611738149,0);
+				\draw [dashed,help lines] (0,4.936794582)--(2.708803612,4.936794582)--(2.708803612,0);
+				\draw [ultra thick,teal] plot [domain=0:6] (\x,{9-1.5*\x});
+				\draw [ultra thick,teal] plot [domain=0:8] (\x,{12-1.5*\x});
+				\draw [ultra thick,purple] plot [domain=1.8:4] (\x,{1.234567901*\x-9.001346237*\x^(1/2)+16.40740740});
+				\draw [ultra thick,purple] plot [domain=2.5:5] (\x,{1.234567901*\x-10.39385935*\x^(1/2)+21.87654321});
+				\draw [<->,thick] (0,13)--(0,0)--(13,0);
+				\node [left] at (0,13) {$c_\peq{1}$};
+				\node [below] at (13,0) {$c_\peq{0}$};
+				\draw [fill,blue] (5,4.5) circle [radius=.2];
+				\node [above right,blue] at (5,4.5) {$\text{\textbf{D}}_\peq{\text{\textbf{B}}}$};
+				\draw [fill,blue] (5,1.5) circle [radius=.2];
+				\node [above right,blue] at (5,1.5) {$\text{\textbf{D}}_\peq{\text{\textbf{A}}}$};
+				\draw [fill,blue] (2.708803612,4.936794582) circle [radius=.2];
+				\node [above right,blue] at (2.708803612,4.936794582) {\textbf{A}};
+				\draw [fill,blue] (3.611738149,6.582392777) circle [radius=.2];
+				\node [above right,blue] at (3.611738149,6.582392777) {\textbf{B}};
+				\node [left] at (0,12) {\tiny $\rp{1+r}w_\peq{B}$};
+				\node [below] at (8,0) {\tiny $w_\peq{B}$};
+				\node [left] at (0,9) {\tiny $\rp{1+r}w_\peq{A}$};
+				\node [below] at (6,0) {\tiny $w_\peq{A}$};
+				\node [left] at (0,4.5) {\tiny $m_\peq{1}^\peq{B}$};
+				\node [left] at (0,1.3) {\tiny $m_\peq{1}^\peq{A}$};
+				\node [below] at (5,0) {\tiny $m_\peq{0}$};
+				\node [below] at (0,0) {\tiny 0};
+				\node [below] at (2.708803612,0) {\tiny $c_\peq{0}^\peq{A}$};
+				\node [below] at (3.611738149,0) {\tiny $c_\peq{0}^\peq{B}$};
+				\node [left] at (0,5.2) {\tiny $c_\peq{1}^\peq{A}$};
+				\node [left] at (0,6.582392777) {\tiny $c_\peq{1}^\peq{B}$};
+				\node [left] at (-4,13) {$\Delta^\peq{+}m_\peq{1}:$};
+			\end{tikzpicture}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\centering
+			\begin{tikzpicture}[scale=.45]
+				\draw [dashed,help lines] (0,4.5)--(5,4.5)--(5,0);
+				\draw [ultra thick,teal] plot [domain=0:9.477611940] (\x,{9.525-1.005*\x});
+				\draw [ultra thick,teal] plot [domain=0:8] (\x,{12-1.5*\x});
+				\draw [<->,thick] (0,13)--(0,0)--(13,0);
+				\node [left] at (0,13) {$c_\peq{1}$};
+				\node [below] at (13,0) {$c_\peq{0}$};
+				\draw [fill,blue] (5,4.5) circle [radius=.2];
+				\node [above right,blue] at (5,4.5) {\textbf{D}};
+				\node [left] at (0,12) {\tiny $\rp{1+r_\peq{B}}m_\peq{0}+m_\peq{1}$};
+				\node [below] at (7.5,0) {\tiny $m_\peq{0}+\frac{m_\peq{1}}{\rp{1+r_\peq{B}}}$};
+				\node [left] at (0,9.525) {\tiny $\rp{1+r_\peq{A}}m_\peq{0}+m_\peq{1}$};
+				\node [below] at (10.5,0) {\tiny $m_\peq{0}+\frac{m_\peq{1}}{\rp{1+r_\peq{A}}}$};
+				\node [left] at (0,4.5) {\tiny $m_\peq{1}$};
+				\node [below] at (5,0) {\tiny $m_\peq{0}$};
+				\node [below] at (0,0) {\tiny 0};
+				\node [left] at (-4,13) {$\Delta^\peq{+}r:$};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\centering
+			\begin{tikzpicture}[scale=.7]
+				\draw [dashed,help lines] (0+3,4.5)--(5,4.5)--(5,0);
+				\draw [dashed,help lines] (0+3,3.272727273)--(5.818181818,3.272727273)--(5.818181818,0);
+				\draw [dashed,help lines] (0+3,1.911608392)--(7.570538914,1.911608392)--(7.570538914,0);
+				\draw [ultra thick,teal] plot [domain=0+3:9.477611940] (\x,{9.525-1.005*\x});
+				\draw [ultra thick,teal] plot [domain=0+3:8] (\x,{12-1.5*\x});
+				\draw [ultra thick,purple] plot [domain=4.5:9] (\x,{4*\x-26.53299833*\x^(1/2)+44.00000002});
+				\draw [ultra thick,purple] plot [domain=5:9] (\x,{4*\x-27.54212694*\x^(1/2)+47.41054729});
+				\draw [<->,thick] (0+3,9)--(0+3,0)--(13,0);
+				\node [left] at (0+3,9) {$c_\peq{1}$};
+				\node [left] at (-2+3,9) {$\Delta^\peq{+}r$};
+				\node [left] at (-2+3,8.5) {Deudor};
+				\node [below] at (13,0) {$c_\peq{0}$};
+				\draw [fill,blue] (5,4.5) circle [radius=.12];
+				\node [below left,blue] at (5,4.5) {\textbf{D}};
+				\draw [fill,blue] (5.818181818,3.272727273) circle [radius=.12];
+				\node [below left,blue] at (5.818181818,3.272727273) {\textbf{B}};
+				\draw [fill,blue] (7.570538914,1.911608392) circle [radius=.12];
+				\node [above right,blue] at (7.570538914,1.911608392) {\textbf{A}};
+				\node [left] at (0+3,7.5) {\tiny $\rp{1+r_\peq{B}}w_\peq{B}$};
+				\node [below] at (8.4,0) {\tiny $w_\peq{B}$};
+				\node [left] at (0+3,6.51) {\tiny $\rp{1+r_\peq{A}}w_\peq{A}$};
+				\node [below] at (9.477611940,0) {\tiny $w_\peq{A}$};
+				\node [left] at (0+3,3.272727273) {\tiny $c^\peq{*}_\peq{1B}$};
+				\node [below] at (5.818181818,0) {\tiny $c^\peq{*}_\peq{0B}$};
+				\node [left] at (0+3,1.911608392) {\tiny $c^\peq{*}_\peq{1A}$};
+				\node [below] at (7.570538914,0) {\tiny $c^\peq{*}_\peq{0A}$};
+				\node [left] at (0+3,4.5) {\tiny $m_\peq{1}$};
+				\node [below] at (5,0) {\tiny $m_\peq{0}$};
+				\node [below] at (0+3,0) {\tiny 0};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			\centering
+			\begin{tikzpicture}[scale=.9]
+				\draw [dashed,help lines] (0+2,4.5)--(5,4.5)--(5,0+3);
+				\draw [dashed,help lines] (0+2,7.141995425)--(3.238669716,7.141995425)--(3.238669716,0+3);
+				\draw [dashed,help lines] (0+2,4.724031435)--(4.772108025,4.724031435)--(4.772108025,0+3);
+				\draw [ultra thick,teal] plot [domain=0+2:6.492537313] (\x,{9.525-1.005*\x});
+				\draw [ultra thick,teal] plot [domain=0+2:6] (\x,{12-1.5*\x});
+				\draw [ultra thick,purple] plot [domain=2.5:4.5] (\x,{1.020304051*\x-9.071231770*\x^(1/2)+20.16243241});
+				\draw [ultra thick,purple] plot [domain=3.5:6.5] (\x,{1.020304051*\x-8.848616233*\x^(1/2)+19.18496971});
+				\draw [<->,thick] (0+2,10)--(0+2,0+3)--(8,0+3);
+				\node [left] at (0+2,10) {$c_\peq{1}$};
+				\node [below] at (8,0+3) {$c_\peq{0}$};
+				\draw [fill,blue] (5,4.5) circle [radius=.1];
+				\node [above right,blue] at (5.1,4.5) {\textbf{D}};
+				\draw [fill,blue] (3.238669716,7.141995425) circle [radius=.1];
+				\node [above right,blue] at (3.238669716,7.141995425) {\textbf{B}};
+				\draw [fill,blue] (4.772108025,4.724031435) circle [radius=.1];
+				\node [above right,blue] at (4.772108025,4.724031435) {\textbf{A}};
+				\node [left] at (0+2,9) {\tiny $\rp{1+r_\peq{B}}w_\peq{B}$};
+				\node [below] at (6,0+3) {\tiny $w_\peq{B}$};
+				\node [left] at (0+2,7.515) {\tiny $\rp{1+r_\peq{A}}w_\peq{A}$};
+				\node [below] at (6.492537313,0+3) {\tiny $w_\peq{A}$};
+				\node [left] at (0+2,4.5-.125) {\tiny $m_\peq{1}$};
+				\node [left] at (0+2,7.141995425) {\tiny $c^\peq{*}_\peq{1B}$};
+				\node [left] at (0+2,4.724031435+.125) {\tiny $c^\peq{*}_\peq{1A}$};
+				\node [below] at (5.125,0+3) {\tiny $m_\peq{0}$};
+				\node [below] at (3.238669716,0+3) {\tiny $c^\peq{*}_\peq{0B}$};
+				\node [below] at (4.772108025-.125,0+3) {\tiny $c^\peq{*}_\peq{0A}$};
+				\node [below] at (0+2,0+3) {\tiny 0};
+				\node [left] at (-2+2,10) {$\Delta^\peq{+}r$};
+				\node [left] at (-2+2,9.5) {Ahorrador};
+			\end{tikzpicture}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Aplicación 3: Consumo Intertemporal}
+			En general:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{10cm}{!}{
+					\begin{tabular}{|l|c c c|c c c|}\hline
+												&\multicolumn{3}{c}{Ahorrador}	\vline&\multicolumn{3}{c}{Deudor}\vline \\
+												&$\Delta c_\peq{0}$&$\Delta c_\peq{1}$&$\Delta s$&$\Delta c_\peq{0}$&$\Delta c_\peq{1}$&$\Delta s$ \\  \hline 
+		 Efecto sustitución &			$-$	 			 &			$+$				&		$+$	 &			$-$	 			 &			$+$				&		$+$	  \\ 
+		 Efecto ingreso 		&			$+$	 			 &			$+$				&		$-$	 &			$-$	 			 &			$-$				&		$+$	  \\  \hline 
+		 Efecto neto 				&			$?$	 			 &			$+$				&		$?$	 &			$-$	 			 &			$?$				&		$+$	  \\  \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+	\section{La Curva de Demanda}
+
+		\begin{frame}
+			\frametitle{Determinantes de la Demanda}
+				\begin{itemize}
+					\item \textbf{Ingreso del consumidor:} 
+						\begin{itemize}
+							\item Bien normal: $\Delta^\peq{+}m\implies\Delta^\peq{+}q^\peq{d}$ 
+							\item Bien neutro: $\Delta m\centernot\implies\Delta q^\peq{d}$
+							\item Bien inferior: $\Delta^\peq{+}m\implies\Delta^\peq{-}q^\peq{d}$ 
+						\end{itemize}
+					\item \textbf{Precios de bienes relacionados:}
+						\begin{itemize}
+							\item Bienes sustitutos: $\Delta^\peq{+}p_\peq{y}\implies\Delta^\peq{+}q^\peq{d}_\peq{x}$ 
+							\item Bienes complementarios: $\Delta^\peq{+}p_\peq{z}\implies\Delta^\peq{-}q^\peq{d}_\peq{x}$
+						\end{itemize}
+				\end{itemize}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Determinantes de la Demanda}
+				\begin{itemize}
+					\item \textbf{Preferencias:} Las suponemos estables. Pero si aumenta el gusto por $X$, es de esperar que aumente $q^\peq{d}_\peq{x}$ para cada $p_\peq{x}$.
+					\item \textbf{Expectativas:} Cambios contemporáneos en alguno de los determinantes pueden alterar la demanda futura.
+					\item \textbf{Cantidad de compradores:} Si hay más compradores, aumenta la demanda de mercado.
+				\end{itemize}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Demanda Individual y Demanda de Mercado}
+			\begin{mydef}
+				La \textbf{demanda de mercado} es la suma (horizontal) de las demandas individuales $$Q^\peq{d}\rp{p}=\sum_\peq{i=1}^{n}{q_\peq{i}^\peq{d}\rp{p}}$$
+			\end{mydef}
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Demanda Individual y Demanda de Mercado}
+			Ejemplo 1: 2 consumidores con demandas idénticas $$q^\peq{d}_\peq{i}=6-2p$$
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{4.5cm}{!}{
+					\begin{tabular}{|l|c|c|c|}\hline
+						$p$&$q^\peq{d}_\peq{A}$&$q^\peq{d}_\peq{B}$&$Q^\peq{d}$\\ [1ex] \hline 
+						0	 &				6	 				 &				6	 				 &		12		 \\ \hline
+					  0,5&				5 				 &				5	 				 &		10		 \\ \hline
+						1	 &				4					 &				4	 				 &		8			 \\ \hline
+					  1,5&				3					 &				3	 				 &		6			 \\ \hline
+						2	 &				2					 &				2	 				 &		4			 \\ \hline
+					  2,5&				1					 &				1	 				 &		2			 \\ \hline
+						3	 &				0					 &				0	 				 &		0 		 \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Demanda Individual y Demanda de Mercado}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,11)--(0,3);
+							\draw [red,ultra thick] plot [domain=0:6](\x,{3-.5*\x});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$q$};
+							\node [below] at (6,0) {\tiny 6};
+							\node [left] at (0,3) {\tiny 3};
+							\node [above right,red] at (6,0) {$D_\peq{A}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,11)--(0,3);
+							\draw [red,ultra thick] plot [domain=0:6](\x,{3-.5*\x});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$q$};
+							\node [below] at (6,0) {\tiny 6};
+							\node [left] at (0,3) {\tiny 3};
+							\node [above right,red] at (6,0) {$D_\peq{B}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (13,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,11)--(0,3);
+							\draw [red,ultra thick] plot [domain=0:12](\x,{3-\x/4});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (13,0) {$q$};
+							\node [below] at (12,0) {\tiny 12};
+							\node [left] at (0,3) {\tiny 3};
+							\node [above right,red] at (12,0) {$D_\peq{A+B}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Demanda Individual y Demanda de Mercado}
+			Ejemplo 2: 2 consumidores con demandas distintas 
+			\begin{align*}
+				q_\peq{A}^\peq{d}&=\left\{
+					\begin{array}{ll}
+						6-2p  & \mbox{si } p \leq 3 \\
+						0  & \mbox{si } p > 3 
+					\end{array}
+				\right. \\
+				& \\
+			  q_\peq{B}^\peq{d}&=\left\{
+					\begin{array}{ll}
+						5-p   & \mbox{si } p \leq 5 \\
+						0  & \mbox{si } p > 5 
+					\end{array}
+				\right.
+			\end{align*}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Demanda Individual y Demanda de Mercado}
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{4.5cm}{!}{
+					\begin{tabular}{|l|c|c|c|}\hline
+						$p$&$q^\peq{d}_\peq{A}$&$q^\peq{d}_\peq{B}$&$Q^\peq{d}$\\ [1ex] \hline 
+						0	 &				6	 				 &				5	 				 &		 11		 \\ \hline
+						1	 &				4					 &				4	 				 &			8		 \\ \hline
+						2	 &				2					 &				3	 				 &		  5		 \\ \hline
+						3	 &			  0					 &			  2	 				 &		  2		 \\ \hline
+						4	 &			  0					 &			  1	 				 &		  1		 \\ \hline
+						5	 &			  0					 &			  0	 				 &		  0		 \\ \hline
+						6	 &			  0					 &			  0	 				 &		  0		 \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Demanda Individual y Demanda de Mercado}
+			La demanda de mercado está descrita por la función
+			\begin{equation*}
+				Q^\peq{d}=\left\{
+					\begin{array}{ll}
+						0  		& \mbox{si } p > 5 \\
+						5-p 	& \mbox{si } 3 < p \leq 5 \\
+						11-3p	& \mbox{si } p \leq 3
+					\end{array}
+				\right.
+			\end{equation*}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Demanda Individual y Demanda de Mercado}
+			\begin{figure}[htbp!]
+				\centering
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,11)--(0,3);
+							\draw [red,ultra thick] plot [domain=0:6](\x,{3-.5*\x});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$q$};
+							\node [below] at (6,0) {\tiny 6};
+							\node [left] at (0,3) {\tiny 3};
+							\node [above right,red] at (6,0) {$D_\peq{A}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,11)--(0,5);
+							\draw [red,ultra thick] plot [domain=0:5](\x,{5-\x});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$q$};
+							\node [below] at (5,0) {\tiny 5};
+							\node [left] at (0,5) {\tiny 5};
+							\node [above right,red] at (5,0) {$D_\peq{B}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+				\begin{subfigure}[b]{0.32\textwidth}
+					%\resizebox{\linewidth}{!}{
+						\begin{tikzpicture}[scale=.2]
+							\draw [dashed] (0,3)--(2,3)--(2,0);
+							\draw [<->,thick] (12,0)--(0,0)--(0,12);
+							\draw [red,ultra thick] (0,11)--(0,5);
+							\draw [red,ultra thick] plot [domain=0:2](\x,{5-\x});
+							\draw [red,ultra thick] plot [domain=2:11](\x,{(11-\x)/3});
+							\node [left] at (0,12) {$p$};
+							\node [below] at (12,0) {$q$};
+							\node [below] at (2,0) {\tiny 2};
+							\node [below] at (11,0) {\tiny 11};
+							\node [left] at (0,3) {\tiny 3};
+							\node [left] at (0,5) {\tiny 5};
+							\node [above right,red] at (11,0) {$D_\peq{A+B}$};
+						\end{tikzpicture}
+					%}
+				\end{subfigure}
+			\end{figure}	
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			\begin{mydef}
+				\textbf{Elasticidad precio de la demanda:} Una medida de cuánto responde $q^\peq{d}$ respecto al cambio en $p$. $$\eta_\peq{q,p}\equiv\frac{\Delta\%q^\peq{d}}{\Delta\%p}$$
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			Notar que
+			\begin{align*}
+				\frac{\Delta\%q^\peq{d}}{\Delta\%p}&=\frac{\Delta q^\peq{d}/q^\peq{d}}{\Delta p/p} \\
+																					 &=\frac{1}{\Delta p / \Delta q^\peq{d}}\cdot\frac{p}{q^\peq{d}}								
+			\end{align*}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			$\text{Ley de la demanda }\implies\eta_\peq{q,p}\leq0$
+			\begin{itemize}
+				\item $\left|\eta_\peq{q,p}\right|>1\implies$ demanda elástica $\rp{\left|\Delta\%q^\peq{d}\right|>\left|\Delta\%p\right|}$
+				\item $\left|\eta_\peq{q,p}\right|=1\implies$ elasticidad unitaria $\rp{\left|\Delta\%q^\peq{d}\right|=\left|\Delta\%p\right|}$
+				\item $\left|\eta_\peq{q,p}\right|<1\implies$ demanda inelástica $\rp{\left|\Delta\%q^\peq{d}\right|<\left|\Delta\%p\right|}$
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			Si calculamos el cambio porcentual como $$\Delta\%x=\frac{x_\peq{final}-x_\peq{inicial}}{x_\peq{inicial}}$$ obtendremos resultados distintos dependiendo del punto de partida. Por eso usamos el método del punto medio $$\Delta\%x=\frac{x_\peq{final}-x_\peq{inicial}}{\rp{\frac{x_\peq{inicial}+x_\peq{final}}{2}}}$$
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			Determinantes de la elasticidad precio de la demanda:
+			\begin{itemize}
+				\item Disponibilidad de sustitutos cercanos (mayor sustitución $\implies$ más elasticidad)
+				\item Necesidades frente a lujos (menos elasticidad en caso de necesidades)
+				\item Definición del mercado (más estrecha $\implies$ más elasticidad)
+				\item Horizonte temporal (más amplio $\implies$ más elasticidad)
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			Ejemplos: (a) Demanda perfectamente inelástica
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed] (0,1)--(100/30,1);
+									\draw [dashed] (0,5)--(100/30,5);
+									\draw [<->,thick] (0,6) -- (0,0) -- (180/30,0);
+									\draw [teal,ultra thick] (100/30,0)--(100/30,5.9);
+									\node [below] at (180/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,right] at (100/30,5.9) {$D$};
+									\draw [fill,blue] (100/30,1) circle [radius=.08];
+									\node [above right,blue] at (100/30,1) {\small $A$};
+									\draw [fill,blue] (100/30,5) circle [radius=.08];
+									\node [above right,blue] at (100/30,5) {\small $B$};
+									\node [below] at (100/30,0) {\tiny 100};
+									\node [left] at (0,1) {\tiny 4};
+									\node [left] at (0,5) {\tiny 5};
+									\node [right] at (180/30,5.5) {$\Delta\%p=22,\overline{2}\%$};
+									\node [right] at (180/30,4.5) {$\Delta\%q^\peq{d}=0\%$};
+									\node [right] at (180/30,3.5) {$\eta_\peq{q,p}=0$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			(b) demanda inelástica
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [<->,thick] (0,6) -- (0,0) -- (6,0);
+									\draw [dashed] (0,1)--(3,1)--(3,0);
+									\draw [dashed] (0,5)--(2.447213595,5)--(2.447213595,0);
+									\draw [teal,ultra thick] plot [domain=(2+.4082482906):5] (\x,{1/(\x-2)^2});
+									\node [below] at (210/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,above right] at (5,1/25) {$D$};
+									\draw [fill,blue] (3,1) circle [radius=.08];
+									\node [above right,blue] at (3,1) {\small $A$};
+									\draw [fill,blue] (2.447213595,5) circle [radius=.08];
+									\node [above right,blue] at (2.447213595,5) {\small $B$};
+									\node [below] at (2.447213595,0) {\tiny 90};
+									\node [below] at (3,0) {\tiny 100};
+									\node [left] at (0,1) {\tiny 4};
+									\node [left] at (0,5) {\tiny 5};
+									\node [right] at (180/30,5.5) {$\Delta\%p=22,\overline{2}\%$};
+									\node [right] at (180/30,4.5) {$\Delta\%q^\peq{d}=-10.52\%$};
+									\node [right] at (180/30,3.5) {$\eta_\peq{q,p}=-0.47$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			(c) demanda elástica unitaria
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed] (0,1)--(3,1)--(3,0);
+									\draw [dashed] (0,5)--(2.2,5)--(2.2,0);
+									\draw [<->,thick] (0,6) -- (0,0) -- (180/30,0);
+									\draw [teal,ultra thick] plot [domain=(2+1/6):5] (\x,{1/(\x-2)});
+									\node [below] at (180/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,right] at (5,1/3) {$D$};
+									\draw [fill,blue] (3,1) circle [radius=.08];
+									\node [above right,blue] at (3,1) {\small $A$};
+									\draw [fill,blue] (2.2,5) circle [radius=.08];
+									\node [above right,blue] at (2.2,5) {\small $B$};
+									\node [below] at (2.2,0) {\tiny 80};
+									\node [below] at (3,0) {\tiny 100};
+									\node [left] at (0,1) {\tiny 4};
+									\node [left] at (0,5) {\tiny 5};
+									\node [right] at (180/30,5.5) {$\Delta\%p=22,\overline{2}\%$};
+									\node [right] at (180/30,4.5) {$\Delta\%q^\peq{d}=-22,\overline{2}\%$};
+									\node [right] at (180/30,3.5) {$\eta_\peq{q,p}=-1$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			(d) demanda elástica
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed] (0,1)--(3,1)--(3,0);
+									\draw [dashed] (0,5)--(2.04,5)--(2.04,0);
+									\draw [<->,thick] (0,6) -- (0,0) -- (6,0);
+									\draw [teal,ultra thick] plot [domain=(2+1/36):5] (\x,{1/sqrt(\x-2)});
+									\node [below] at (180/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,right] at (5,.4472135954) {$D$};
+									\draw [fill,blue] (3,1) circle [radius=.08];
+									\node [above right,blue] at (3,1) {\small $A$};
+									\draw [fill,blue] (2.04,5) circle [radius=.08];
+									\node [above right,blue] at (2.04,5) {\small $B$};
+									\node [below] at (2.04,0) {\tiny 50};
+									\node [below] at (3,0) {\tiny 100};
+									\node [left] at (0,1) {\tiny 4};
+									\node [left] at (0,5) {\tiny 5};
+									\node [right] at (180/30,5.5) {$\Delta\%p=22,\overline{2}\%$};
+									\node [right] at (180/30,4.5) {$\Delta\%q^\peq{d}=-66,\overline{6}\%$};
+									\node [right] at (180/30,3.5) {$\eta_\peq{q,p}=-3$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			(e) demanda perfectamente elástica
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [<->,thick] (0,6) -- (0,0) -- (180/30,0);
+									\draw [teal,ultra thick] (0,4)--(180/30,4);
+									\node [below] at (180/30,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,right] at (180/30,4) {$D$};
+									\node [left] at (0,4) {\tiny 5};
+									\node [right] at (200/30,5.5) {Si $p>5$, $q^\peq{d}=0$};
+									\node [right] at (200/30,4) {Si $p=5$, $q^\peq{d}$ indefinida};
+									\node [right] at (200/30,2.5) {Si $p<5$, $q^\peq{d}\to\infty$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			Ejemplo: demanda lineal $$p=a-b\cdot q^\peq{d}$$ con $a,b>0$. 
+			
+			\vspace{.3cm}
+			¿Qué podemos decir sobre $\eta_\peq{q,p}$?
+			\begin{itemize}
+				\item $q<\frac{a}{2b}\implies\left|\eta_\peq{q,p}\right|>1$
+				\item $q=\frac{a}{2b}\implies\left|\eta_\peq{q,p}\right|=1$
+				\item $q>\frac{a}{2b}\implies\left|\eta_\peq{q,p}\right|<1$
+			\end{itemize}
+		\end{frame}
+		
+	\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed] (0,2.5)--(2.5,2.5)--(2.5,0);
+									\draw [<->,thick] (0,6) -- (0,0) -- (180/30,0);
+									\draw [teal,ultra thick] plot [domain=0:5] (\x,{5-\x});
+									\node [below] at (6,0) {$q$};
+									\node [left] at (0,6) {$p$};
+									\node [teal,above right] at (5,0) {$D$};
+									\draw [fill,blue] (2.5,2.5) circle [radius=.1];
+									\node [above right,blue] at (2.5,2.5) {\small elasticidad unitaria};
+									\node [below] at (2.5,0) {\tiny $\frac{a}{2b}$};
+									\node [below] at (5,0) {\tiny $\frac{a}{b}$};
+									\node [left] at (0,2.5) {\tiny $\frac{a}{2}$};
+									\node [left] at (0,5) {\tiny $a$};
+									\draw [decorate,decoration={brace,amplitude=10pt},xshift=0.2pt,yshift=-0.2pt,color=blue, thick](0,5) -- (2.5,2.5) node[above right,midway,blue,yshift=6pt,xshift=6pt] {\small \pbox{\textwidth}{demanda \\ elástica}};
+									\draw [decorate,decoration={brace,amplitude=10pt},xshift=0.2pt,yshift=-0.2pt,color=blue, thick](2.5,2.5) -- (5,0) node[above right,midway,blue,yshift=6pt,xshift=6pt] {\small \pbox{\textwidth}{demanda \\ inelástica}};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}		
+
+	\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.9]
+									\draw [dashed] (0,6.25)--(2.5,6.25)--(2.5,0);
+									\draw [<->,thick] (0,7) -- (0,0) -- (180/30,0);
+									\draw [teal,ultra thick] plot [domain=0:5] (\x,{(5-\x)*\x});
+									\node [below] at (6,0) {$q$};
+									\node [left] at (0,7) {$p\cdot q$};
+									\node [teal,above right] at (5,0) {$IT$};
+									\draw [fill,blue] (2.5,6.25) circle [radius=.1];
+									\node [below] at (2.5,0) {\tiny $\frac{a}{2b}$};
+									\node [left] at (0,6.25) {\tiny $\frac{a^2}{4b}$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			\begin{mydef}
+				\textbf{Elasticidad ingreso de la demanda:} Una medida de cuánto responde $q^\peq{d}$ respecto al cambio en $m$. $$\eta_\peq{q,m}\equiv\frac{\Delta\%q^\peq{d}}{\Delta\%m}$$
+			\end{mydef}
+		\end{frame}
+
+\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			\begin{itemize}
+				\item $\eta_\peq{q,m}>0\implies$ bien normal
+					\begin{itemize}
+						\item $\eta_\peq{q,m}>1\implies$ ``bien de lujo''
+						\item $\eta_\peq{q,m}\in\rp{0,1}\implies$ ``necesidad''
+					\end{itemize}
+				\item $\eta_\peq{q,m}=0\implies$ bien neutro
+				\item $\eta_\peq{q,m}<0\implies$ bien inferior
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			Ejemplo: Pizza
+			\begin{itemize}
+				\item $m_\peq{0}=975$, $m_\peq{1}=1025$
+				\item $q^\peq{d}_\peq{0}=9$, $q^\peq{d}_\peq{1}=11$
+				\item $\eta_\peq{q,m}=4\implies$ pizza es un bien normal y elástico al ingreso
+			\end{itemize}
+		\end{frame}		
+
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			\begin{mydef}
+				\textbf{Elasticidad precio-cruzada de la demanda:} Una medida de cuánto responde $q^\peq{d}_\peq{x}$ respecto al cambio en $q_\peq{y}$. $$\eta_\peq{q_\peq{x},p_\peq{y}}\equiv\frac{\Delta\%q^\peq{d}_\peq{x}}{\Delta\%p_\peq{y}}$$
+			\end{mydef}
+		\end{frame}
+
+\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			\begin{itemize}
+				\item $\eta_\peq{q,m}>0\implies$ bienes sustitutos
+				\item $\eta_\peq{q,m}=0\implies$ bien no relacionados
+				\item $\eta_\peq{q,m}<0\implies$ bienes complementarios
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			Ejemplo 1: Pizza y bebida
+			\begin{itemize}
+				\item $p_\peq{y,0}=1.5$, $p_\peq{y,1}=2.5$
+				\item $q^\peq{d}_\peq{x,0}=11$, $q^\peq{d}_\peq{x,1}=9$
+				\item $\eta_\peq{q_\peq{x},p_\peq{y}}=-0.4\implies$ pizza y bebida son complementos
+			\end{itemize}
+		\end{frame}		
+		
+		\begin{frame}
+			\frametitle{Elasticidad de la Demanda}
+			Ejemplo 2: Pizza y hamburguesa
+			\begin{itemize}
+				\item $p_\peq{y,0}=1.5$, $p_\peq{y,1}=2.5$
+				\item $q^\peq{d}_\peq{x,0}=9$, $q^\peq{d}_\peq{x,1}=11$
+				\item $\eta_\peq{q_\peq{x},p_\peq{y}}=0.4\implies$ pizza y hamburguesa son sustitutos
+			\end{itemize}
+		\end{frame}		
+
+	\section{Análisis de Bienestar}
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			\begin{mydef}
+				\textbf{Excedente del consumidor ($\mathbf{EC}$):} Diferencia entre la dispocisión del comprador y lo que efectivamente paga.
+			\end{mydef}
+		\end{frame}	
+	
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			Ejemplo:
+			\begin{itemize}
+				\item Sea $v_\peq{i}$ la valoración que asigna el individuo $i$ al consumo de una unidad del bien $x$.
+				\item Cada individuo compra a lo más una unidad $\implies$ la decisión es comprar o no.
+				\item Sea $p$ el precio al que se puede comprar una unidad.
+			\end{itemize}
+		\end{frame}	
+			
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			Decisión racional: $$\text{Si}\left\{
+					\begin{array}{ll}
+						p>v_\peq{i} & \text{no compra} \\
+						p=v_\peq{i} & \text{está indiferente} \\
+						p<v_\peq{i}	& \text{compra}
+					\end{array}
+				\right.$$
+			\textit{Nota:}  supondremos que, en caso de indiferencia, compra. Este supuesto es irrelevante para nuestras conclusiones.
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			Supongamos que hay 4 compradores:
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{4cm}{!}{
+					\begin{tabular}{|c|c|}\hline
+						$i$&$v_\peq{i}$ \\  \hline 
+						 A & \$100/u 		\\ 
+						 B & \$80/u 		\\ 
+						 C & \$70/u 		\\ 
+						 D & \$50/u 		\\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			Caso 1: Se subasta una unidad del bien $x$ (se venderá al comprador que ofrezca el mayor precio).
+			\begin{itemize}
+				\item Precio sube rápidamente hasta que $A$ ofrece $\$\rp{80+\delta}$ con $\delta>0$ y pequeño. (¿Por qué no hasta $v_\peq{A}=\$100$?)
+				\item $A$ compra una unidad de $x$ a $\$80$ y estaba dispuesto a pagar $\$100\implies$ su excedente es $EC_\peq{A}^\peq{caso 1}=\$20/u\cdot1u=\$20$.
+			\end{itemize}
+			\textit{Nota:} pensemos en $\delta$ muy pequeño, es decir $\delta\rightarrow0$.
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			Caso 2: Se subastan dos unidades, ambas al mismo precio (pero a distintos compradores).
+			\begin{itemize}
+				\item Subasta termina cuando $A$ y/o $B$ ofrece $\$\rp{70+\delta}$ con $\delta>0$ y pequeño. 
+				\item $EC_\peq{A}^\peq{caso 2}=\rp{\$100/u-\$70/u}\cdot1u=\$30$.
+				\item $EC_\peq{B}^\peq{caso 2}=\rp{\$80/u-\$70/u}\cdot1u=\$10$.
+				\item $EC_\peq{Total}^\peq{caso 2}=\$30+\$10=\$40$.
+			\end{itemize}
+			\textit{Nota:} Estamos pensando de nuevo en $\delta\rightarrow0$.
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			Caso general: Nos abstraemos de la subasta, dejando que el precio varíe libremente. De esta manera, obtenemos la demanda del mercado.
+			\begin{table}[htbp!]
+				\centering
+				\resizebox{8cm}{!}{
+					\begin{tabular}{|c|c|c|}\hline
+						$p$							&Vendedores		 &$Q^\peq{d}$ \\  \hline 
+						$100< p<\infty$ & $\emptyset$  &	$0$ \\ 
+						$80 < p\leq100$ & $\{A\}$ 		 &	$1$ \\ 
+						$70 < p\leq80$ 	& $\{A,B\}$ 	 &	$2$ \\ 
+						$50 < p\leq70$ 	& $\{A,B,C\}$  &	$3$ \\
+						$0\leq p\leq50$ & $\{A,B,C,D\}$&	$4$ \\ \hline
+					\end{tabular}}
+			\end{table}
+		\end{frame}	
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.54]
+									\draw [dashed,help lines] (2,0)--(2,10);
+									\draw [dashed,help lines] (4,0)--(4,8);
+									\draw [dashed,help lines] (0,8)--(2,8);
+									\draw [dashed,help lines] (6,0)--(6,7);
+									\draw [dashed,help lines] (4,7)--(0,7);
+									\draw [dashed,help lines] (8,0)--(8,5);
+									\draw [dashed,help lines] (0,5)--(6,5);
+									\draw [<->,thick] (0,11.5) -- (0,0) -- (10,0);
+									\draw [red,ultra thick] (0,11)--(0,10);
+									\draw [red,ultra thick,dashed] (0,10)--(2,10);
+									\draw [red,ultra thick] (2,10)--(2,8);
+									\draw [red,ultra thick,dashed] (2,8)--(4,8);
+									\draw [red,ultra thick] (4,8)--(4,7);
+									\draw [red,ultra thick,dashed] (4,7)--(6,7);
+									\draw [red,ultra thick] (6,7)--(6,5);
+									\draw [red,ultra thick,dashed] (6,5)--(8,5);
+									\draw [red,ultra thick] (8,5)--(8,0);
+									\node [below] at (10,0) {$Q$};
+									\node [left] at (0,11.5) {$p$};
+									\node [red,above right] at (8,0) {$D$};
+									\node [left] at (0,10) {\tiny 100};
+									\node [left] at (0,8) {\tiny 80};
+									\node [left] at (0,7) {\tiny 70};
+									\node [left] at (0,5) {\tiny 50};
+									\node [below] at (2,0) {\tiny 1};
+									\node [below] at (4,0) {\tiny 2};
+									\node [below] at (6,0) {\tiny 3};
+									\node [below] at (8,0) {\tiny 4};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.54]
+									\draw [fill=green,opacity=0.2] (0,10) -- (2,10) -- (2,8) -- (0,8);
+									\draw [dashed,help lines] (2,0)--(2,10);
+									\draw [dashed,help lines] (4,0)--(4,8);
+									\draw [dashed,help lines] (0,8)--(2,8);
+									\draw [dashed,help lines] (6,0)--(6,7);
+									\draw [dashed,help lines] (4,7)--(0,7);
+									\draw [dashed,help lines] (8,0)--(8,5);
+									\draw [dashed,help lines] (0,5)--(6,5);
+									\draw [<->,thick] (0,11.5) -- (0,0) -- (10,0);
+									\draw [red,ultra thick] (0,11)--(0,10);
+									\draw [red,ultra thick,dashed] (0,10)--(2,10);
+									\draw [red,ultra thick] (2,10)--(2,8);
+									\draw [red,ultra thick,dashed] (2,8)--(4,8);
+									\draw [red,ultra thick] (4,8)--(4,7);
+									\draw [red,ultra thick,dashed] (4,7)--(6,7);
+									\draw [red,ultra thick] (6,7)--(6,5);
+									\draw [red,ultra thick,dashed] (6,5)--(8,5);
+									\draw [red,ultra thick] (8,5)--(8,0);
+									\node [below] at (10,0) {$Q$};
+									\node [left] at (0,11.5) {$p$};
+									\node [red,above right] at (8,0) {$D$};
+									\node [left] at (0,10) {\tiny 100};
+									\node [left] at (0,8) {\tiny 80};
+									\node [left] at (0,7) {\tiny 70};
+									\node [left] at (0,5) {\tiny 50};
+									\node [below] at (2,0) {\tiny 1};
+									\node [below] at (4,0) {\tiny 2};
+									\node [below] at (6,0) {\tiny 3};
+									\node [below] at (8,0) {\tiny 4};
+									\node at (1,9) {\tiny $EC^\peq{caso 1}_\peq{A}$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.54]
+									\draw [fill=blue,opacity=0.2] (0,10) -- (2,10) -- (2,7) -- (0,7);
+									\draw [fill=purple,opacity=0.2] (2,7) -- (4,7) -- (4,8) -- (2,8);
+									\draw [dashed,help lines] (2,0)--(2,10);
+									\draw [dashed,help lines] (4,0)--(4,8);
+									\draw [dashed,help lines] (0,8)--(2,8);
+									\draw [dashed,help lines] (6,0)--(6,7);
+									\draw [dashed,help lines] (4,7)--(0,7);
+									\draw [dashed,help lines] (8,0)--(8,5);
+									\draw [dashed,help lines] (0,5)--(6,5);
+									\draw [<->,thick] (0,11.5) -- (0,0) -- (10,0);
+									\draw [red,ultra thick] (0,11)--(0,10);
+									\draw [red,ultra thick,dashed] (0,10)--(2,10);
+									\draw [red,ultra thick] (2,10)--(2,8);
+									\draw [red,ultra thick,dashed] (2,8)--(4,8);
+									\draw [red,ultra thick] (4,8)--(4,7);
+									\draw [red,ultra thick,dashed] (4,7)--(6,7);
+									\draw [red,ultra thick] (6,7)--(6,5);
+									\draw [red,ultra thick,dashed] (6,5)--(8,5);
+									\draw [red,ultra thick] (8,5)--(8,0);
+									\node [below] at (10,0) {$Q$};
+									\node [left] at (0,11.5) {$p$};
+									\node [red,above right] at (8,0) {$D$};
+									\node [left] at (0,10) {\tiny 100};
+									\node [left] at (0,8) {\tiny 80};
+									\node [left] at (0,7) {\tiny 70};
+									\node [left] at (0,5) {\tiny 50};
+									\node [below] at (2,0) {\tiny 1};
+									\node [below] at (4,0) {\tiny 2};
+									\node [below] at (6,0) {\tiny 3};
+									\node [below] at (8,0) {\tiny 4};
+									\node at (1,8.5) {\tiny $EC^\peq{caso 2}_\peq{A}$};
+									\node at (3,7.5) {\tiny $EC^\peq{caso 2}_\peq{B}$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.54]
+									\draw [fill=green,opacity=0.2] (0,10) -- (2,10) -- (2,8) -- (0,8);
+									\draw [fill=blue,opacity=0.2] (0,8) -- (2,8) -- (2,7) -- (0,7);
+									\draw [fill=purple,opacity=0.2] (2,7) -- (4,7) -- (4,8) -- (2,8);
+									\draw [dashed,help lines] (2,0)--(2,10);
+									\draw [dashed,help lines] (4,0)--(4,8);
+									\draw [dashed,help lines] (0,8)--(2,8);
+									\draw [dashed,help lines] (6,0)--(6,7);
+									\draw [dashed,help lines] (4,7)--(0,7);
+									\draw [dashed,help lines] (8,0)--(8,5);
+									\draw [dashed,help lines] (0,5)--(6,5);
+									\draw [<->,thick] (0,11.5) -- (0,0) -- (10,0);
+									\draw [red,ultra thick] (0,11)--(0,10);
+									\draw [red,ultra thick,dashed] (0,10)--(2,10);
+									\draw [red,ultra thick] (2,10)--(2,8);
+									\draw [red,ultra thick,dashed] (2,8)--(4,8);
+									\draw [red,ultra thick] (4,8)--(4,7);
+									\draw [red,ultra thick,dashed] (4,7)--(6,7);
+									\draw [red,ultra thick] (6,7)--(6,5);
+									\draw [red,ultra thick,dashed] (6,5)--(8,5);
+									\draw [red,ultra thick] (8,5)--(8,0);
+									\node [below] at (10,0) {$Q$};
+									\node [left] at (0,11.5) {$p$};
+									\node [red,above right] at (8,0) {$D$};
+									\node [left] at (0,10) {\tiny 100};
+									\node [left] at (0,8) {\tiny 80};
+									\node [left] at (0,7) {\tiny 70};
+									\node [left] at (0,5) {\tiny 50};
+									\node [below] at (2,0) {\tiny 1};
+									\node [below] at (4,0) {\tiny 2};
+									\node [below] at (6,0) {\tiny 3};
+									\node [below] at (8,0) {\tiny 4};
+									\node at (1,7.5) {\tiny $\Delta EC_\peq{A}$};
+									\node at (3,7.5) {\tiny $\Delta EC_\peq{B}$};
+									\node at (1,9) {\tiny $EC^\peq{caso 1}_\peq{A}$};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			\begin{mydef}
+				\textbf{Comprador marginal:} El primer comprador que saldría del mercado si el precio fuera más alto.
+			\end{mydef}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			Notar que:
+			\begin{itemize}
+				\item Para cualquier cantidad, el precio dado por la curva de demanda corresponde a la valoración del comprador marginal.
+				\item El excedente del consumidor es el área entre el precio de mercado y la curva de demanda.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			\begin{itemize}
+				\item Cuando se reduce el precio de $p_\peq{0}$ a $p_\peq{1}$, $EC$ aumenta por dos motivos:
+					\begin{enumerate}
+						\item Las unidades ($q_\peq{0}$) que antes se compraban a $p_\peq{0}$ ahora se venden a $p_\peq{1}<p_\peq{0}$.
+						\item Se compran más unidades ($q_\peq{1}-q_\peq{0}$) con $p_\peq{1}<\text{disposición a pagar}$.
+					\end{enumerate}
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del Consumidor}
+			Lo anterior es válido en general para cualquier curva de demanda...
+						\begin{figure}[htbp!]
+							\centering
+								\begin{tikzpicture}[scale=.5]
+									\draw [fill=blue,opacity=0.2] (0,7) -- (2,7) -- (0,9);
+									\draw [fill=red,opacity=0.2] (0,4) -- (2,4) -- (2,7) -- (0,7);
+									\draw [fill=green,opacity=0.2] (2,4) -- (5,4) -- (2,7);
+									\draw [teal,ultra thick] plot [domain=0:9] (\x,{9-\x});
+									\draw [<->,thick] (0,10) -- (0,0) -- (10,0);
+									\draw [red] (5,0)--(5,4)--(0,4);
+									\draw [blue] (2,0)--(2,7)--(0,7);
+									\node [below] at (10,0) {$q$};
+									\node [left] at (0,10) {$p$};
+									\node [teal,above right] at (9,0) {$D$};
+									\draw [fill,red] (5,4) circle [radius=.2];
+									\draw [fill,blue] (2,7) circle [radius=.2];
+									\node [left] at (0,4) {$p_\peq{1}$};
+									\node [left] at (0,7) {$p_\peq{0}$};
+									\node [below] at (5,0) {$q_\peq{1}$};
+									\node [below] at (2,0) {$q_\peq{0}$};
+									\node [below] at (0,0) {$0$};
+									\draw [decorate,decoration={brace,amplitude=6pt,mirror},xshift=0.2pt,yshift=-0.2pt](0,-.8) -- (2,-.8) node[black,midway,yshift=-0.5cm,xshift=-5pt] {\tiny \pbox{\textwidth}{$q_\peq{0}$ unidades \\ más baratas}};
+									\draw [decorate,decoration={brace,amplitude=6pt,mirror},xshift=0.2pt,yshift=-0.2pt](2,-.8) -- (5,-.8) node[black,midway,yshift=-0.5cm,xshift=5pt] {\tiny \pbox{\textwidth}{$\rp{q_\peq{1}-q_\peq{0}}$ unidades \\ adicionales}};
+								\end{tikzpicture}
+						\end{figure}	
+		\end{frame}
+	
+\end{document}

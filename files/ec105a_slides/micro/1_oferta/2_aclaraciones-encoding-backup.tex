@@ -1,0 +1,82 @@
+
+\documentclass[dvipsnames,table]{beamer}
+%\documentclass{beamer}
+%\usepackage{beamerthemesplit} 
+%\usetheme{Berkeley}
+%\usecolortheme{dolphin}
+\usetheme{Szeged}
+
+\usepackage{amsfonts}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[dvips]{graphicx}
+\usepackage{cancel}
+%\usepackage{bm}
+\usepackage{ae,aecompl,amsmath,amsbsy}
+
+\beamertemplateballitem
+
+\usepackage{tikz}
+\usepackage{pbox}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+
+\newtheorem{mydef}{Definición}
+\newcommand{\peq}[1]{{\scriptscriptstyle{#1}}} 
+\newcommand{\rp}[1]{\left(#1\right)}
+
+\usetikzlibrary{babel,decorations.pathreplacing,decorations.markings}
+
+\title{EAE105A \\ Introducción a la Economía}
+\subtitle{II. Microeconomía: Teoría de la Oferta} 
+\author{Pinjas Albagli}
+\institute{Instituto de Economía \\ Pontificia Universidad Católica de Chile}
+\date{Segundo Semestre de 2017}
+
+\begin{document}
+
+		\begin{frame}
+			\frametitle{Elasticidad unitaria y oferta lineal}
+			Recordar que 
+			\begin{align*}
+				\frac{\Delta\%q^\peq{s}}{\Delta\%p}&=\frac{\Delta q^\peq{s}/q^\peq{s}}{\Delta p/p} \\
+																					 &=\frac{1}{\Delta p / \Delta q^\peq{s}}\cdot\frac{p}{q^\peq{s}}								
+			\end{align*}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad unitaria y oferta lineal}
+			Notar que
+			\begin{itemize}
+				\item Si la oferta es lineal, su pendiente ($\frac{\Delta p}{\Delta q^\peq{s}}$) es constante.
+				\item Si además pasa por el origen ($a=0$ en $p=a+b\cdot q^\peq{s}$), la razón $\frac{p}{q^\peq{s}}$ es constante: $$\frac{p}{q^\peq{s}}=\frac{b\cdot q^\peq{s}}{q^\peq{s}}=b$$
+				\item Luego, en este caso, la elasticidad precio de la oferta es constante (e igual a 1).
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Elasticidad unitaria y oferta lineal}
+			Esto significa que lo que dije en clase no es precisamente correcto. Debí decir que
+			\begin{itemize}
+				\item Si la oferta es lineal \textbf{y no pasa por el origen}, la elasticidad no puede ser constante.
+			\end{itemize}
+			Por lo tanto, no hay ninguna inconsistencia entre esta afirmación y la relación entre el intercepto y la elasticidad precio de la oferta lineal que les mostré en clase.
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Excedente del productor y ganancia}
+			Para ordenar lo que discutimos al final de la clase:
+			\begin{itemize}
+				\item Si el precio sube de $p_\peq{0}$ a $p_\peq{1}$, el cambio en la ganancia de la empresa está dado por $$
+					\begin{array}{ll}
+					\Delta \pi &= \pi\rp{q^\peq{s}_\peq{1}} - \pi\rp{q^\peq{s}_\peq{0}} \\
+										 &= IT\rp{q^\peq{s}_\peq{1}}-CV\rp{q^\peq{s}_\peq{1}}-CF-\rp{IT\rp{q^\peq{s}_\peq{0}}-CV\rp{q^\peq{s}_\peq{0}}-CF}\\
+										 &= IT\rp{q^\peq{s}_\peq{1}}-CV\rp{q^\peq{s}_\peq{1}} - \rp{IT\rp{q^\peq{s}_\peq{0}}-CV\rp{q^\peq{s}_\peq{0}}} \\
+										 &= EP\rp{q^\peq{s}_\peq{1}}-EP\rp{q^\peq{s}_\peq{0}}\\
+										 &= \Delta EP
+					\end{array}$$
+			\end{itemize}
+		\end{frame}
+
+\end{document}
