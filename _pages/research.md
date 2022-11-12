@@ -25,7 +25,7 @@ author_profile: true
 (with Sekyu Choi and Benjamín Villena-Roldán).
 <br>
 
-- Effects of Chilean welfare program *Chile Crece Contigo* on child development
+- Prenatal welfare programs and child development
 (with Carmen Cifuentes and Tomás Rau).
 
 ## Technical Reports
