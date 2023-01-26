@@ -17,7 +17,7 @@ author_profile: true
 
 ## Working Papers
 
-- **[Effects of a Reduction in Credit Constraints on Educational Attainment: Evidence from Chile](https://sistemas.colmex.mx/Reportes/LACEALAMES/LACEA-LAMES2019_paper_476.pdf)** <br> (with Andrés García) (November 2022)
+- **[Effects of a Reduction in Credit Constraints on Educational Attainment: Evidence from Chile](https://sistemas.colmex.mx/Reportes/LACEALAMES/LACEA-LAMES2019_paper_476.pdf)** <br> (with Andrés García) (February 2023)
 
 ## Work in Progress
 
