@@ -83,7 +83,7 @@ author:
   name             : "Pinjas Albagli"
   avatar           : "profile_grey _centered(1).png"
   bio              : "PhD Candidate, LSE"
-  location         : "London"
+  location         : "https://www.lse.ac.uk/economics/people/research-students/pinjas-albagli"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=D0XeN9oAAAAJ"
@@ -176,16 +176,16 @@ kramdown:
 # Collections
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
-    output: true
+    output: false
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 
