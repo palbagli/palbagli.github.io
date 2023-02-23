@@ -18,7 +18,7 @@ author_profile: true
 ## Working Papers
 
 - **[The Unintended Effects of an Intensive Margin Reform to Student Loans on Educational Attainment](https://sistemas.colmex.mx/Reportes/LACEALAMES/LACEA-LAMES2019_paper_476.pdf)** <br> (with Andrés García-Echalar) (February 2023)<br>
-[[Online appendix]](/files/student_loan/online_appendix.pdf)
+[[Online appendix]](https://palbagli.github.io/files/student_loan/online_appendix.pdf)
 
 ## Work in Progress
 
