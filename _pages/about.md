@@ -1,6 +1,10 @@
 ---
 permalink: /
 title: ""
+output: 
+  html_document:
+    includes:
+       in_header: ga_script.html
 excerpt: "Home page"
 author_profile: true
 redirect_from: 
