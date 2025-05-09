@@ -27,8 +27,8 @@ author_profile: true
 (with Sekyu Choi and Benjamín Villena-Roldán).
 <br>
 
-- Minimum Wages and Alternative Work Arrangements
-(with Rui Costa and Stephen Machin)
+- Minimum wages and alternative work arrangements
+(with Rui Costa and Stephen Machin).
 <br>
 
 - Prenatal welfare programs and child development
