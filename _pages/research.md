@@ -17,7 +17,7 @@ author_profile: true
 
 ## Working Papers
 
-- **[The Unintended Effects of an Intensive Margin Reform to Student Loans on Educational Attainment](https://palbagli.github.io/files/student_loan/student_loan.pdf)** <br> (with Andrés García-Echalar) (April 2023)<br>
+- **[The Unintended Effects of an Intensive Margin Reform to Student Loans on Educational Attainment](https://palbagli.github.io/files/student_loan/student_loan.pdf)** <br> (with Andrés García-Echalar) (May 2025)<br>
 
 ## Work in Progress
 
