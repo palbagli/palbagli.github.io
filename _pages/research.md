@@ -37,7 +37,7 @@ author_profile: true
 ## Technical/Policy Reports
 
 - **[Minimum Wage Effects: Adjustment through Labour Market Dynamics and Alternative Work Arrangements](https://cep.lse.ac.uk/_NEW/PUBLICATIONS/abstract.asp?index=11348)**
-<br> (with Rui Costa and Stephen Machin) <br> ***CEP*** Paper Number CEPSP49, November 2024. *Research Report for the Low Pay Commission.*
+<br> *Research Report for the Low Pay Commission.* (with Rui Costa and Stephen Machin) <br> ***CEP*** Report Number CEPSP49, November 2024.
 
 - **[Desarrollo e Implementación de un Índice de Precios del Sector Inmobiliario para la Región Metropolitana de Santiago](https://s3.us-east-2.amazonaws.com/assets.clapesuc.cl/media_post_5675_0c1d9d5c25.pdf)**
 <br> (with Arturo Cifuentes and Patricio Hempel) <br> ***CLAPES-UC*** Working Paper Number 46, March 2018.
