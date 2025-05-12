@@ -17,7 +17,7 @@ author_profile: true
 
 ## Working Papers
 
-- **[Rethinking Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://palbagli.github.io/files/student_loan/student_loan.pdf)** <br> (with Andrés García-Echalar) (May 2025)<br>
+- **[Rethinking Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://palbagli.github.io/files/student_loan/student_loan.pdf)** <br> (with Andrés García-Echalar) <br> May, 2025 <br>
 
 - **Estimating Preferences from Coarse Rankings: On the Equivalence of the Multichoice and Tied Rank-Ordered Logit Models** <br> (draft coming soon)<br>
 
@@ -37,7 +37,7 @@ author_profile: true
 ## Technical/Policy Reports
 
 - **[Minimum Wage Effects: Adjustment through Labour Market Dynamics and Alternative Work Arrangements](https://cep.lse.ac.uk/_NEW/PUBLICATIONS/abstract.asp?index=11348)**
-<br> *Research Report for the Low Pay Commission.* (with Rui Costa and Stephen Machin) <br> ***CEP*** Report Number CEPSP49, November 2024.
+<br> (with Rui Costa and Stephen Machin) <br> *Research Report for the Low Pay Commission.* <br> ***CEP*** Report Number CEPSP49, November 2024.
 
 - **[Desarrollo e Implementación de un Índice de Precios del Sector Inmobiliario para la Región Metropolitana de Santiago](https://s3.us-east-2.amazonaws.com/assets.clapesuc.cl/media_post_5675_0c1d9d5c25.pdf)**
 <br> (with Arturo Cifuentes and Patricio Hempel) <br> ***CLAPES-UC*** Working Paper Number 46, March 2018.
