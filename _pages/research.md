@@ -11,7 +11,7 @@ author_profile: true
 
 ## Job Market Paper
 
-- **[Estimating Labor Market Power from Job Applications](https://palbagli.github.io/files/jmp/job_apps.pdf)** <br> (draft coming soon) <br>
+- **Estimating Labor Market Power from Job Applications** <br> (draft coming soon) <br>
 
 ## Publications
 
