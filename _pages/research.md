@@ -9,6 +9,10 @@ author_profile: true
   You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
 {% endif %}
 
+## Job Market Paper
+
+- **[Estimating Labor Market Power from Job Applications](https://github.com/palbagli/jmp/blob/master/paper/draft/job_apps.pdf)** <br> (draft coming soon) <br>
+
 ## Publications
 
 - **[The Effects of a Maternity Leave Reform on Children's Abilities and Maternal Outcomes in Chile](https://doi.org/10.1111/ecoj.12586)**     
@@ -22,10 +26,6 @@ author_profile: true
 - **Estimating Preferences from Coarse Rankings: On the Equivalence of the Multichoice and Tied Rank-Ordered Logit Models** <br> (draft coming soon)<br>
 
 ## Work in Progress
-
-- Estimating labor market power from online job applications
-(with Sekyu Choi and Benjamín Villena-Roldán).
-<br>
 
 - Minimum wages and alternative work arrangements
 (with Rui Costa and Stephen Machin).
