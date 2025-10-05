@@ -37,7 +37,7 @@ author_profile: true
 - Student loan terms and vocationsl choice in a simultaneous search framework.
 <br>
 
-- Stata command for maximum likelihood estimation of the partially rank-ordered logit with large choice sets.
+- Stata command for maximum likelihood estimation of the partially rank-ordered logit model with large choice sets.
 <br>
 
 - Prenatal welfare programs and child development
