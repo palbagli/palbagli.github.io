@@ -31,6 +31,15 @@ author_profile: true
 (with Rui Costa and Stephen Machin).
 <br>
 
+- The returns to job mobility in the UK
+(with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura).
+
+- Student loan terms and vocationsl choice in a simultaneous search framework
+<br>
+
+- Stata command for maximum likelihood estimation of the partially rank-ordered logit with large choice sets
+<br>
+
 - Prenatal welfare programs and child development
 (with Carmen Cifuentes and Tomás Rau).
 
