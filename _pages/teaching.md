@@ -9,7 +9,9 @@ author_profile: true
 
 ### Graduate Teaching Assistant, 2020-Present
 - Econometric Theory (x2)
-- Labour Economics (x2) 
+- Labor Economics (x2)
+<br>
+[Slides](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)(introduction to empirical methods in labor economics based on [Angrist & Pischke (2015)](https://www.masteringmetrics.com) and [Angrist & Pischke (2009)](https://www.mostlyharmlesseconometrics.com))
 - Principles of Microeconomics I
 - Static Optimization and Fixed Points (x2)
 - Dynamic Programming and Differential Equations (x2) 

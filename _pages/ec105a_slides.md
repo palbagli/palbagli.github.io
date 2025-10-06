@@ -16,5 +16,3 @@ author_profile: true
 
 ## 3. Macroeconomía
 - [Agregados Económicos + Sistema Monetario e Inflación](https://palbagli.github.io/files/ec105a_slides/macro/1_dinero/1_macro.pdf)
-- Mercado Laboral y Desempleo
-- Crecimiento Económico
