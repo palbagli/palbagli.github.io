@@ -33,8 +33,6 @@ author_profile: true
 [Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com))]
 - Principles of Microeconomics I
 
-
-<br>
 ## Pontificia Universidad Católica de Chile
 ### Lecturer, 2015-2018
 - Principles of Economics (x8)	
