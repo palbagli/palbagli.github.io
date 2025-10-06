@@ -9,12 +9,7 @@ author_profile: true
 
 ### Teaching Fellow, 2023-2025
 - Labor Economics (x1, 4 weeks only)
-<br>
 - Microeconomics (x2)
-<br>
-[[Slides: PS1](https://palbagli.github.io/files/ec400_slides/dpde_class1_2024.pdf)]
-[[Slides: PS2](https://palbagli.github.io/files/ec400_slides/dpde_class2_2024.pdf)]
-[[Slides: PS3](https://palbagli.github.io/files/ec400_slides/dpde_class3_2024.pdf)]
 
 ### Graduate Teaching Assistant, 2020-2025
 - Static Optimization and Fixed Points (x4)
