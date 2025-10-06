@@ -7,14 +7,20 @@ author_profile: true
 
 ## The London School of Economics and Political Science
 
-### Graduate Teaching Assistant, 2020-Present
-- Econometric Theory (x2)
-- Labor Economics (x2)
+### Graduate Teaching Assistant, 2020-2025
+- Static Optimization and Fixed Points (x4)
+- Dynamic Programming and Differential Equations (x4)
+- Econometric Theory (x6)
 <br>
-[Slides](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)(introduction to empirical methods in labor economics based on [Angrist & Pischke (2015)](https://www.masteringmetrics.com) and [Angrist & Pischke (2009)](https://www.mostlyharmlesseconometrics.com))
+[Notes: Some useful results](https://palbagli.github.io/files/ec309_notes/useful_results.pdf)
+[Notes: Simultaneous Equations Models](https://palbagli.github.io/files/ec309_notes/sem.pdf)
+[Notes: Problems on simultaneous equations models](https://palbagli.github.io/files/ec309_notes/EC337_WT_PS5.pdf)
+- Labor Economics (x3)
+<br>
+[Slides](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)
+<br>
+(introduction to empirical methods in labor economics based on [Angrist & Pischke (2015)](https://www.masteringmetrics.com) and [Angrist & Pischke (2009)](https://www.mostlyharmlesseconometrics.com))
 - Principles of Microeconomics I
-- Static Optimization and Fixed Points (x2)
-- Dynamic Programming and Differential Equations (x2) 
 
 
 <br>
