@@ -10,7 +10,7 @@ redirect_from:
 
 I am a PhD Candidate in Economics at the London School of Economics and Political Science ([LSE](https://www.lse.ac.uk/economics)) and affiliated with the Centre for Economic Performance ([CEP](https://cep.lse.ac.uk)).
 
-My research combines **structural and reduced-form** approaches in **labor and applied microeconomics** to study how different **frictions and policies** shape **labor-market and educational outcomes**. I work on questions related to wage setting, labour-market power, and the evaluation of public policies. 
+My research combines **structural and reduced-form** approaches in **labor and applied microeconomics** to study how different **frictions and policies** shape **labor-market and educational outcomes**. I work on questions related to wage setting, labor-market power, and the evaluation of public policies. 
 
 **I will be on the 2025-26 academic job market.** You can find my CV [here](https://palbagli.github.io/files/CV/Pinjas_Albagli_CV.pdf)
 
