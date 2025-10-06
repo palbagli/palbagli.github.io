@@ -39,7 +39,7 @@ author_profile: true
 ### Lecturer, 2015-2018
 - Principles of Economics (x8)	
 <br>
-[Slides [in Spanish]](https://palbagli.github.io/teaching/ec105a_slides)
+[[Slides](https://palbagli.github.io/teaching/ec105a_slides)][in Spanish]
 
 ### Teaching Assistant, 2010-2014
 - Economics of Education
