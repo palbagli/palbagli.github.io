@@ -8,7 +8,7 @@ author_profile: true
 ## The London School of Economics and Political Science
 
 ### Teaching Fellow, 2023-2025
-- Labor Economics (x1, 4 weeks only)
+- Labor Economics (x1, 4 weeks)
 - Microeconomics (x2)
 
 ### Graduate Teaching Assistant, 2020-2025
@@ -30,14 +30,14 @@ author_profile: true
 - Labor Economics (x3)
 <br>
 [[Slides: Introduction to empirical methods](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)]
-[Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com))]
-- Principles of Microeconomics I
+(Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com)))
+- Principles of Microeconomics I (x1)
 
 ## Pontificia Universidad Católica de Chile
 ### Lecturer, 2015-2018
 - Principles of Economics (x8)	
 <br>
-[[Slides](https://palbagli.github.io/teaching/ec105a_slides)][in Spanish]
+[[Slides](https://palbagli.github.io/teaching/ec105a_slides)](in Spanish)
 
 ### Teaching Assistant, 2010-2014
 - Economics of Education
