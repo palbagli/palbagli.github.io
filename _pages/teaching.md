@@ -30,7 +30,7 @@ author_profile: true
 - Labor Economics (x3)
 <br>
 [[Slides: Introduction to empirical methods](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)]
-(Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com)))
+`(Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com)))`
 - Principles of Microeconomics I (x1)
 
 ## Pontificia Universidad Católica de Chile
