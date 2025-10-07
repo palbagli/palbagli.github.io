@@ -29,6 +29,7 @@ author_profile: true
 [[Notes: Problems on SEM](https://palbagli.github.io/files/ec309_notes/EC337_WT_PS5.pdf)]
 - Labor Economics (x3)
 <br>
+[[Slides: Introduction to empirical methods](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)]
 [Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com))]
 - Principles of Microeconomics I (x1)
 
@@ -36,7 +37,7 @@ author_profile: true
 ### Lecturer, 2015-2018
 - Principles of Economics (x8)	
 <br>
-[[Slides](https://palbagli.github.io/teaching/ec105a_slides)]<p style="font-size: small;">(in Spanish)</p>
+[[Slides](https://palbagli.github.io/teaching/ec105a_slides)][in Spanish]
 
 ### Teaching Assistant, 2010-2014
 - Economics of Education
