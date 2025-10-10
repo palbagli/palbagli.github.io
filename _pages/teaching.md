@@ -12,16 +12,10 @@ author_profile: true
 - Microeconomics (x2)
 
 ### Graduate Teaching Assistant, 2020-2025
-- Static Optimization and Fixed Points (x4)
+- Labor Economics (x3)
 <br>
-[[Slides: PS1](https://palbagli.github.io/files/ec400_slides/sofp_class1_2024.pdf)]
-[[Slides: PS2](https://palbagli.github.io/files/ec400_slides/sofp_class2_2024.pdf)]
-[[Slides: PS3](https://palbagli.github.io/files/ec400_slides/sofp_class3_2024.pdf)]
-- Dynamic Programming and Differential Equations (x4)
-<br>
-[[Slides: PS1](https://palbagli.github.io/files/ec400_slides/dpde_class1_2024.pdf)]
-[[Slides: PS2](https://palbagli.github.io/files/ec400_slides/dpde_class2_2024.pdf)]
-[[Slides: PS3](https://palbagli.github.io/files/ec400_slides/dpde_class3_2024.pdf)]
+[[Slides: Introduction to empirical methods](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)]
+[Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com))]
 - Econometric Theory (x6)
 <br>
 [[Notes: Some useful results](https://palbagli.github.io/files/ec309_notes/useful_results.pdf)]
@@ -30,10 +24,16 @@ author_profile: true
 <br>
 [[Slides: Estimating demand for differentiated products](https://palbagli.github.io/files/ec309_extra/ec309_class10_MT22_handout)]
 [[Code: Simulations and estimation for the demand slides](https://palbagli.github.io/files/ec309_extra/class10_simulations.do)]
-- Labor Economics (x3)
+- Dynamic Programming and Differential Equations (x4)
 <br>
-[[Slides: Introduction to empirical methods](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)]
-[Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com))]
+[[Slides: PS1](https://palbagli.github.io/files/ec400_slides/dpde_class1_2024.pdf)]
+[[Slides: PS2](https://palbagli.github.io/files/ec400_slides/dpde_class2_2024.pdf)]
+[[Slides: PS3](https://palbagli.github.io/files/ec400_slides/dpde_class3_2024.pdf)]
+- Static Optimization and Fixed Points (x4)
+<br>
+[[Slides: PS1](https://palbagli.github.io/files/ec400_slides/sofp_class1_2024.pdf)]
+[[Slides: PS2](https://palbagli.github.io/files/ec400_slides/sofp_class2_2024.pdf)]
+[[Slides: PS3](https://palbagli.github.io/files/ec400_slides/sofp_class3_2024.pdf)]
 - Principles of Microeconomics I (x1)
 
 ## Pontificia Universidad Católica de Chile
