@@ -27,6 +27,9 @@ author_profile: true
 [[Notes: Some useful results](https://palbagli.github.io/files/ec309_notes/useful_results.pdf)]
 [[Notes: Simultaneous Equations Models (SEM)](https://palbagli.github.io/files/ec309_notes/sem.pdf)]
 [[Notes: Problems on SEM](https://palbagli.github.io/files/ec309_notes/EC337_WT_PS5.pdf)]
+<br>
+[[Slides: Estimating demand for differentiated products](https://palbagli.github.io/files/ec309_extra/ec309_class10_MT22_handout)]
+[[Code: Simulations and estimation for the demand slides](class10_simulations.do)]
 - Labor Economics (x3)
 <br>
 [[Slides: Introduction to empirical methods](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)]
