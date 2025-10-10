@@ -8,15 +8,21 @@ author_profile: true
 ## The London School of Economics and Political Science
 
 ### Teaching Fellow, 2023-2025
-- Labor Economics (x1, 4 weeks)
-- Microeconomics (x2)
+- Labor Economics (4 weeks)
+- Microeconomics
 
 ### Graduate Teaching Assistant, 2020-2025
-- Labor Economics (x3)
+- Labor Economics
 <br>
 [[Slides: Introduction to empirical methods](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)]
 [Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com))]
-- Econometric Theory (x6)
+<br>
+[[Class sample 1: notes](https://palbagli.github.io/files/ec317_notes/ps4_notes.pdf)]
+[[Class sample 2: notes](https://palbagli.github.io/files/ec317_notes/PS10_sol.pdf)]
+[[Class sample 2: code](https://palbagli.github.io/files/ec317_notes/ps10.do)]
+[[Class sample 3: notes](https://palbagli.github.io/files/ec317_notes/PS11_sol.pdf)]
+[[Class sample 3: code](https://palbagli.github.io/files/ec317_notes/ps11_advanced.do)]
+- Econometric Theory
 <br>
 [[Notes: Some useful results](https://palbagli.github.io/files/ec309_notes/useful_results.pdf)]
 [[Notes: Simultaneous Equations Models (SEM)](https://palbagli.github.io/files/ec309_notes/sem.pdf)]
@@ -24,21 +30,21 @@ author_profile: true
 <br>
 [[Slides: Estimating demand for differentiated products](https://palbagli.github.io/files/ec309_extra/ec309_class10_MT22_handout.pdf)]
 [[Code: Simulations and estimation for the demand slides](https://palbagli.github.io/files/ec309_extra/class10_simulations.do)]
-- Dynamic Programming and Differential Equations (x4)
+- Dynamic Programming and Differential Equations
 <br>
 [[Slides: PS1](https://palbagli.github.io/files/ec400_slides/dpde_class1_2024.pdf)]
 [[Slides: PS2](https://palbagli.github.io/files/ec400_slides/dpde_class2_2024.pdf)]
 [[Slides: PS3](https://palbagli.github.io/files/ec400_slides/dpde_class3_2024.pdf)]
-- Static Optimization and Fixed Points (x4)
+- Static Optimization and Fixed Points
 <br>
 [[Slides: PS1](https://palbagli.github.io/files/ec400_slides/sofp_class1_2024.pdf)]
 [[Slides: PS2](https://palbagli.github.io/files/ec400_slides/sofp_class2_2024.pdf)]
 [[Slides: PS3](https://palbagli.github.io/files/ec400_slides/sofp_class3_2024.pdf)]
-- Principles of Microeconomics I (x1)
+- Principles of Microeconomics I
 
 ## Pontificia Universidad Católica de Chile
 ### Lecturer, 2015-2018
-- Principles of Economics (x8)	
+- Principles of Economics
 <br>
 [[Slides](https://palbagli.github.io/teaching/ec105a_slides)][in Spanish]
 
@@ -46,8 +52,8 @@ author_profile: true
 - Economics of Education
 - Econometric Theory II
 - Economics and Evaluation of Social Policies
-- Econometrics I (x2)
-- Intermediate Microeconomics I (x2)
-- Intermediate Microeconomics II (x2)
-- Introductory Macroeconomics (x3)
-- Principles of Economics (x3)
+- Econometrics I
+- Intermediate Microeconomics I
+- Intermediate Microeconomics II
+- Introductory Macroeconomics
+- Principles of Economics
