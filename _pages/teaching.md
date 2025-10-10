@@ -22,7 +22,7 @@ author_profile: true
 [[Notes: Simultaneous Equations Models (SEM)](https://palbagli.github.io/files/ec309_notes/sem.pdf)]
 [[Notes: Problems on SEM](https://palbagli.github.io/files/ec309_notes/EC337_WT_PS5.pdf)]
 <br>
-[[Slides: Estimating demand for differentiated products](https://palbagli.github.io/files/ec309_extra/ec309_class10_MT22_handout)]
+[[Slides: Estimating demand for differentiated products](https://palbagli.github.io/files/ec309_extra/ec309_class10_MT22_handout.pdf)]
 [[Code: Simulations and estimation for the demand slides](https://palbagli.github.io/files/ec309_extra/class10_simulations.do)]
 - Dynamic Programming and Differential Equations (x4)
 <br>
