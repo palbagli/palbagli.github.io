@@ -17,20 +17,20 @@ author_profile: true
 [[Slides: Introduction to empirical methods](https://palbagli.github.io/files/ec317_slides/EC317_LT_Empirical_Methods.pdf)]
 [Based on Angrist & Pischke ([2009](https://www.mostlyharmlesseconometrics.com), [2015](https://www.masteringmetrics.com))]
 <br>
-[[Class sample 1: notes](https://palbagli.github.io/files/ec317_notes/ps4_notes.pdf)]
-[[Class sample 2: notes](https://palbagli.github.io/files/ec317_notes/PS10_sol.pdf)]
-[[Class sample 2: code](https://palbagli.github.io/files/ec317_notes/ps10.do)]
+[[Class sample 1: Notes](https://palbagli.github.io/files/ec317_notes/ps4_notes.pdf)]
+[[Class sample 2: Notes](https://palbagli.github.io/files/ec317_notes/PS10_sol.pdf)]
+[[Class sample 2: Code](https://palbagli.github.io/files/ec317_notes/ps10.do)]
 <br>
-[[Class sample 3: notes](https://palbagli.github.io/files/ec317_notes/PS11_sol.pdf)]
-[[Class sample 3: code](https://palbagli.github.io/files/ec317_notes/ps11_advanced.do)]
+[[Class sample 3: Notes](https://palbagli.github.io/files/ec317_notes/PS11_sol.pdf)]
+[[Class sample 3: Code](https://palbagli.github.io/files/ec317_notes/ps11_advanced.do)]
 - Econometric Theory
 <br>
 [[Notes: Some useful results](https://palbagli.github.io/files/ec309_notes/useful_results.pdf)]
-[[Notes: Simultaneous Equations Models (SEM)](https://palbagli.github.io/files/ec309_notes/sem.pdf)]
+[[Notes: Simultaneous Equations Models](https://palbagli.github.io/files/ec309_notes/sem.pdf)]
 [[Notes: Problems on SEM](https://palbagli.github.io/files/ec309_notes/EC337_WT_PS5.pdf)]
 <br>
-[[Slides: Estimating demand for differentiated products](https://palbagli.github.io/files/ec309_extra/ec309_class10_MT22_handout.pdf)]
-[[Code: Simulations and estimation for the demand slides](https://palbagli.github.io/files/ec309_extra/class10_simulations.do)]
+[[Demand for differentiated products: Slides](https://palbagli.github.io/files/ec309_extra/ec309_class10_MT22_handout.pdf)]
+[[Demand for differentiated products: Code](https://palbagli.github.io/files/ec309_extra/class10_simulations.do)]
 - Dynamic Programming and Differential Equations
 <br>
 [[Slides: PS1](https://palbagli.github.io/files/ec400_slides/dpde_class1_2024.pdf)]
