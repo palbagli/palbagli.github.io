@@ -20,6 +20,7 @@ author_profile: true
 [[Class sample 1: notes](https://palbagli.github.io/files/ec317_notes/ps4_notes.pdf)]
 [[Class sample 2: notes](https://palbagli.github.io/files/ec317_notes/PS10_sol.pdf)]
 [[Class sample 2: code](https://palbagli.github.io/files/ec317_notes/ps10.do)]
+<br>
 [[Class sample 3: notes](https://palbagli.github.io/files/ec317_notes/PS11_sol.pdf)]
 [[Class sample 3: code](https://palbagli.github.io/files/ec317_notes/ps11_advanced.do)]
 - Econometric Theory
