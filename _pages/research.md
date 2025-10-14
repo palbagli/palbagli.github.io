@@ -34,7 +34,8 @@ author_profile: true
 - The returns to job mobility in the UK
 (with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura).
 
-- Student loan terms and vocational choice in a simultaneous search framework.
+- Student loan terms and vocational choice in a simultaneous search framework
+(with Andrés García-Echalar).
 <br>
 
 - Stata command for maximum likelihood estimation of the partially rank-ordered logit model with large choice sets.
