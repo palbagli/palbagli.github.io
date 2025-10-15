@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
+<div style="text-align: justify;">
 I am a PhD Candidate in Economics at the London School of Economics and Political Science ([LSE](https://www.lse.ac.uk/economics)) and affiliated with the Centre for Economic Performance ([CEP](https://cep.lse.ac.uk)).
+</div>
 
 My research combines **structural and reduced-form** approaches in **labor and applied microeconomics** to study how different **frictions and policies** shape **labor-market and educational outcomes**. I work on questions related to wage setting, labor-market power, and the evaluation of public policies. 
 
