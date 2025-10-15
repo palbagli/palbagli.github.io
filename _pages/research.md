@@ -21,7 +21,7 @@ author_profile: true
 
 ## Working Papers
 
-- **[Rethinking Student Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://palbagli.github.io/files/student_loan/student_loan.pdf)** <br> (with Andrés García-Echalar) <br> Revise and resubmit, ***Economics of Education Review***. May 2025.<br>
+- **[Rethinking Student Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://palbagli.github.io/files/student_loan/student_loan.pdf)** <br> (with Andrés García-Echalar) <br> Revised and resubmitted, ***Economics of Education Review***. October 2025.<br>
 
 - **Estimating Preferences from Coarse Rankings: On the Equivalence of the Multichoice and Tied Rank-Ordered Logit Models** <br> (draft coming soon)<br>
 
