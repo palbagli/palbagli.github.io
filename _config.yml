@@ -23,7 +23,7 @@ repository               : "palbagli/palbagli.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile_grey _centered(1).png"
+  avatar           : "profile_grey_centered.png" # "profile_grey _centered(1).png"
   name             : "Pinjas Albagli"
   pronouns         : # example: "she/her"  
   bio              : "PhD Candidate, LSE"
