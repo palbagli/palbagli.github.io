@@ -15,13 +15,13 @@ author_profile: true
 
 ## Publications
 
+- **[Rethinking Student Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://palbagli.github.io/files/student_loan/student_loan.pdf)** <br> (with Andrés García-Echalar) <br> Accepted, ***Economics of Education Review***. October 2025.<br>
+
 - **[The Effects of a Maternity Leave Reform on Children's Abilities and Maternal Outcomes in Chile](https://doi.org/10.1111/ecoj.12586)**     
 (with Tomás Rau)  
 ***The Economic Journal***, Vol. 129(619), pp. 1015-1047, April 2019.   
 
 ## Working Papers
-
-- **[Rethinking Student Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://palbagli.github.io/files/student_loan/student_loan.pdf)** <br> (with Andrés García-Echalar) <br> Revised and resubmitted, ***Economics of Education Review***. October 2025.<br>
 
 - **Estimating Preferences from Coarse Rankings: On the Equivalence of the Multichoice and Tied Rank-Ordered Logit Models** <br> (draft coming soon)<br>
 
