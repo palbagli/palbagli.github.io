@@ -23,16 +23,21 @@ author_profile: true
 
 ## Working Papers
 
+- **Changing Jobs: Worker Mobility and Wages in the UK Labour Market** <br>
+(with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura).
+<br>
+Submitted. October 2025.
+<br>
+
+- **Minimum Wages and Job Contracts**
+(with Rui Costa and Stephen Machin)
+<br>
+June 2025.
+<br>
+
 - **Estimating Preferences from Coarse Rankings: On the Equivalence of the Multichoice and Tied Rank-Ordered Logit Models** <br> (draft coming soon)<br>
 
 ## Work in Progress
-
-- Minimum wages and alternative work arrangements
-(with Rui Costa and Stephen Machin).
-<br>
-
-- The returns to job mobility in the UK
-(with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura).
 
 - Student loan terms and vocational choice in a simultaneous search framework
 (with Andrés García-Echalar).
