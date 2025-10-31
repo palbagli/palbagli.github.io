@@ -33,10 +33,14 @@ Submitted. October 2025.
 <br>
 (with Rui Costa and Stephen Machin)
 <br>
-June 2025.
+July 2025.
 <br>
 
-- **Estimating Preferences from Coarse Rankings: On the Equivalence of the Multichoice and Tied Rank-Ordered Logit Models** <br> (draft coming soon)<br>
+- **Estimating Preferences from Coarse Rankings: On the Equivalence of the Multichoice and Tied Rank-Ordered Logit Models**
+<br>
+(draft coming soon)
+<br>
+May 2025.
 
 ## Work in Progress
 
