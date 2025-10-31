@@ -30,6 +30,7 @@ Submitted. October 2025.
 <br>
 
 - **Minimum Wages and Job Contracts**
+<br>
 (with Rui Costa and Stephen Machin)
 <br>
 June 2025.
