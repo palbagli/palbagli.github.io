@@ -8,10 +8,10 @@
 %%%%%%%%%%%%
 \usepackage[
 	includehead,
-	left=.5in,
-	top=.8in,
-	right=1in,
-	bottom=1in
+	top		=	.4in,
+	bottom	=	.7in,
+	right	=	1in,
+	left	=	.5in,
 ]{geometry}
 \usepackage[english]{babel}
 
@@ -23,10 +23,36 @@
 	114,
 	178
 }
+\definecolor{mypurple}{rgb}{
+	0.6,
+	0.2,
+	0.6
+}
+\definecolor{stlavender}{RGB}{
+	147,
+	141,
+	210
+}
+\definecolor{stebblue}{RGB}{
+	0,
+	139,
+	188
+}
+\definecolor{storange}{RGB}{
+	255,
+	127,
+	0
+}
+\definecolor{stemerald}{RGB}{
+	45,
+	109,
+	130
+}
 
 % Fonts
 %%%%%%%
 \usepackage{newpxtext}
+\usepackage{fontawesome}
 
 % Headers and footers
 %%%%%%%%%%%%%%%%%%%%%
@@ -39,8 +65,7 @@
 %%%%%%%%%%%%
 \usepackage[
 	colorlinks	=	true,
-	citecolor	=	cmurryblue,
-	urlcolor		=	cmurryblue,
+	urlcolor		=	stebblue,
 	linkcolor	=	black
 ]{hyperref}
 
@@ -89,28 +114,42 @@
 	\end{center}
 %	\smallskip
 	
-%	\vspace{-10pt}
+%	\vspace{-20pt}
 	\begin{center}
-		\small\textbf{Main field:} Labor Economics\\
-		\textbf{Secondary fields:} Applied Microeconomics, Industrial Organization
+		\small
+		Department of Economics, London School of Economics, London WC2A 2AE, UK
+		\\[.5ex]
+		\textcolor{stlavender}{\faEnvelopeO}~~\href{mailto:p.m.albagli@lse.ac.uk}{\texttt{p.m.albagli@lse.ac.uk}}
+		|
+		\textcolor{stlavender}{\faLaptop}~~\href{https://palbagli.github.io}{\texttt{palbagli.github.io}}
 	\end{center}
-	\vspace{1.5ex}
+	\smallskip
+
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-	% Contact Information
+	% Job market contacts
 	%%%%%%%%%%%%%%%%%%%%%
 	
 	\input{./sections/contact_info.tex}
-	\vspace{.5ex}
+%	\vspace{.5ex}
+	\bigskip\medskip
 		
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	% References
+	%%%%%%%%%%%%
+	
+	\input{./sections/references.tex}
+	\bigskip\medskip
+	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	% Education
 	%%%%%%%%%%%
 	
 	\input{./sections/education.tex}
-	\bigskip
+	\bigskip\medskip
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
@@ -118,7 +157,7 @@
 	%%%%%%%%%%%
 	
 	\input{./sections/research.tex}
-	\bigskip
+	\bigskip\medskip
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
@@ -126,7 +165,7 @@
 	%%%%%%%%%%%%%%%%%%%%%
 	
 	\input{./sections/teaching.tex}
-	\bigskip
+	\bigskip\medskip
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
@@ -134,7 +173,7 @@
 	%%%%%%%%%%%%
 	
 	\input{./sections/employment.tex}
-	\bigskip
+	\bigskip\medskip
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
@@ -142,7 +181,7 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\input{./sections/professional.tex}
-	\bigskip
+	\bigskip\medskip
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
@@ -150,7 +189,7 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\input{./sections/awards.tex}
-	\bigskip
+	\bigskip\medskip
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
