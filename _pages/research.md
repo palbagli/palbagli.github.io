@@ -38,8 +38,6 @@ July 2025.
 
 - **Estimating Preferences from Coarse Rankings: On the Equivalence of the Multichoice and Tied Rank-Ordered Logit Models**
 <br>
-(draft coming soon)
-<br>
 May 2025.
 
 ## Work in Progress
