@@ -19,10 +19,9 @@ author_profile: true
 <br>
 (with Andrés García-Echalar)
 <br>
-[[Free access](https://authors.elsevier.com/c/1m1Y7~1QCCId1) until December 20, 2025]
+Forthcoming in ***Economics of Education Review***, Vol. 109, 102735, December 2025.
 <br>
-***Economics of Education Review***, Forthcoming in Vol. 109, 102735, December 2025.
-<br>
+[Free access [link]](https://authors.elsevier.com/c/1m1Y7~1QCCId1) available until December 20, 2025]
 
 - **[The Effects of a Maternity Leave Reform on Children's Abilities and Maternal Outcomes in Chile](https://doi.org/10.1111/ecoj.12586)**     
 (with Tomás Rau)  
