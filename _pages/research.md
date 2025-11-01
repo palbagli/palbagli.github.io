@@ -16,7 +16,8 @@ author_profile: true
 ## Publications
 
 - **[Rethinking Student Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://doi.org/10.1016/j.econedurev.2025.102735)** (with Andrés García-Echalar)
-Forthcoming, ***Economics of Education Review***, Vol. 109, December 2025, 102735.
+***Economics of Education Review***, Forthcoming in Vol. 109, December 2025, 102735.
+[Free access until December 20, 2025](https://authors.elsevier.com/c/1m1Y7~1QCCId1)
 
 - **[The Effects of a Maternity Leave Reform on Children's Abilities and Maternal Outcomes in Chile](https://doi.org/10.1111/ecoj.12586)**     
 (with Tomás Rau)  
