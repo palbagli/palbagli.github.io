@@ -16,7 +16,9 @@ author_profile: true
 ## Publications
 
 - **[Rethinking Student Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://doi.org/10.1016/j.econedurev.2025.102735)**
-<br>(with Andrés García-Echalar)
+<br>
+(with Andrés García-Echalar)
+<br>
 [[Free access](https://authors.elsevier.com/c/1m1Y7~1QCCId1) until December 20, 2025]
 <br>
 ***Economics of Education Review***, Forthcoming in Vol. 109, 102735, December 2025.
