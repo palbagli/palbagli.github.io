@@ -23,9 +23,7 @@ author_profile: true
 [[Free access](https://authors.elsevier.com/c/1m1Y7~1QCCId1) until December 20, 2025]
 
 - **[The Effects of a Maternity Leave Reform on Children's Abilities and Maternal Outcomes in Chile](https://doi.org/10.1111/ecoj.12586)**     
-<br>
 (with Tomás Rau)  
-<br>
 ***The Economic Journal***, Vol. 129(619), pp. 1015-1047, April 2019.   
 
 ## Working Papers
