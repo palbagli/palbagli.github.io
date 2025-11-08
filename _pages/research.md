@@ -14,7 +14,8 @@ author_profile: true
 - **[Estimating Labor Market Power from Job Applications](https://palbagli.github.io/files/jmp/job_apps.pdf)**
 <br>
 November 2025.
-[Online appendix](https://palbagli.github.io/files/jmp/job_apps_online_app.pdf)
+<br>
+[[Online appendix](https://palbagli.github.io/files/jmp/job_apps_online_app.pdf)]
 
 ## Publications
 
