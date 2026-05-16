@@ -17,15 +17,13 @@ November 2025.
 <br>
 [[Online appendix](https://palbagli.github.io/files/jmp/job_apps_online_app.pdf)]
 
-## Publications
+## Peer-Reviewed Publications
 
 - **[Rethinking Student Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://doi.org/10.1016/j.econedurev.2025.102735)**
 <br>
 (with Andrés García-Echalar)
 <br>
-Forthcoming in ***Economics of Education Review***, Vol. 109, 102735, December 2025.
-<br>
-[Free access [link](https://authors.elsevier.com/c/1m1Y7~1QCCId1) available until December 20, 2025]
+***Economics of Education Review***, Vol. 109, 102735, December 2025.
 
 - **[The Effects of a Maternity Leave Reform on Children's Abilities and Maternal Outcomes in Chile](https://doi.org/10.1111/ecoj.12586)**     
 (with Tomás Rau)  
@@ -33,23 +31,23 @@ Forthcoming in ***Economics of Education Review***, Vol. 109, 102735, December 2
 
 ## Working Papers
 
+- **[Estimating Preferences from Coarse Rankings: Partially Rank-Ordered Logit](https://palbagli.github.io/files/prol/prol_equiv.pdf)**
+<br>
+May 2026.
+<br>
+
 - **Changing Jobs: Worker Mobility and Wages in the UK Labour Market**
 <br>
 (with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura).
 <br>
-Submitted. October 2025.
+Revised and resubmitted, ***Economica***. May 2026.
 <br>
 
-- **Minimum Wages and Job Contracts**
+- **[Minimum Wages and the Nature of Work](https://cep.lse.ac.uk/_new/publications/abstract.asp?index=12198)**
 <br>
 (with Rui Costa and Stephen Machin)
 <br>
-July 2025.
-<br>
-
-- **Estimating Preferences from Coarse Rankings: On the Equivalence of the Multichoice and Tied Rank-Ordered Logit Models**
-<br>
-May 2025.
+Submitted. April 2026.
 
 ## Work in Progress
 
@@ -59,9 +57,6 @@ May 2025.
 
 - Stata command for maximum likelihood estimation of the partially rank-ordered logit model with large choice sets.
 <br>
-
-- Prenatal welfare programs and child development
-(with Carmen Cifuentes and Tomás Rau).
 
 ## Technical/Policy Reports
 
