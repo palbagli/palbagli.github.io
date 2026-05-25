@@ -19,6 +19,13 @@ November 2025.
 
 ## Peer-Reviewed Publications
 
+- **Changing Jobs: Worker Mobility and Wages in the UK Labour Market**
+<br>
+(with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura).
+<br>
+Accepted, ***Economica***. May 2026.
+<br>
+
 - **[Rethinking Student Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://doi.org/10.1016/j.econedurev.2025.102735)**
 <br>
 (with Andrés García-Echalar)
@@ -34,13 +41,6 @@ November 2025.
 - **[Estimating Preferences from Coarse Rankings: Partially Rank-Ordered Logit](https://palbagli.github.io/files/prol/prol_equiv.pdf)**
 <br>
 May 2026.
-<br>
-
-- **Changing Jobs: Worker Mobility and Wages in the UK Labour Market**
-<br>
-(with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura).
-<br>
-Revised and resubmitted, ***Economica***. May 2026.
 <br>
 
 - **[Minimum Wages and the Nature of Work](https://cep.lse.ac.uk/_new/publications/abstract.asp?index=12198)**
