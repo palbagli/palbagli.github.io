@@ -5,6 +5,16 @@ permalink: /teaching/
 author_profile: true
 ---
 
+## Universidad Técnica Federico Santa María
+
+### Lecturer, 2026
+- Econometrics
+
+## Universidad de los Andes, Chile
+
+### Lecturer, 2026
+- Econometrics
+
 ## The London School of Economics and Political Science
 
 ### Teaching Fellow, 2023-2025
