@@ -21,7 +21,7 @@ November 2025.
 
 - **Changing Jobs: Worker Mobility and Wages in the UK Labour Market**
 <br>
-(with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura).
+(with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura)
 <br>
 Accepted, ***Economica***. May 2026.
 <br>
