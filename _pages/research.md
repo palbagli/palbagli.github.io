@@ -25,6 +25,7 @@ November 2025.
 <br>
 Accepted, ***Economica***. May 2026.
 <br>
+[[CEP discussion paper](https://cep.lse.ac.uk/_new/publications/abstract.asp?index=12279)]
 
 - **[Rethinking Student Loan Design: Evidence from a Price-Based Reform in Chilean Higher Education](https://doi.org/10.1016/j.econedurev.2025.102735)**
 <br>
