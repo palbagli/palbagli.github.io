@@ -52,7 +52,7 @@ Submitted. April 2026.
 
 ## Work in Progress
 
-- Student loan terms and vocational choice in a simultaneous search framework
+- Student financial aid policy design and field of study choice in a simultaneous search framework
 (with Andrés García-Echalar).
 <br>
 
