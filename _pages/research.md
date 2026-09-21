@@ -19,11 +19,11 @@ November 2025.
 
 ## Peer-Reviewed Publications
 
-- **Changing Jobs: Worker Mobility and Wages in the UK Labour Market**
+- **[Changing Jobs: Worker Mobility and Wages in the UK Labour Market](https://doi.org/10.1111/ecca.70067)**
 <br>
 (with Nye Cominetti, Rui Costa, Andrew Eyles, and Guglielmo Ventura)
 <br>
-Accepted, ***Economica***. May 2026.
+***Economica***, 93(372), 1501-1532, October 2026.
 <br>
 [[CEP discussion paper](https://cep.lse.ac.uk/_new/publications/abstract.asp?index=12279)]
 
@@ -48,7 +48,8 @@ May 2026.
 <br>
 (with Rui Costa and Stephen Machin)
 <br>
-Submitted. April 2026.
+April 2026.
+Revise and resubmit, ***ILR Review***.
 
 ## Work in Progress
 
